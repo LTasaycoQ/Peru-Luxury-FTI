@@ -1,0 +1,25 @@
+---
+import HeaderTop from "./HeaderTop.astro"
+
+import { Image } from "astro:assets";
+import logo from "../assets/logo/PLJ-LOGO-1.webp";
+---
+
+
+<header class="w-full flex flex-col justify-center items-center ">
+
+    <HeaderTop />
+
+    <nav class="w-[80%] max-md:hidden">
+        <div class="flex w-full justify-between">
+        <Image src={logo} loading="eager" alt="logo-peru-luxy" />
+
+        <ul class=" w-[50%] flex items-center jutify-center justify-around">
+            <li class="flex items-center gap-[5px]">DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i></li>
+            <li>PROGRAMS</li>
+            <li>ABOUT US</li>
+        </ul>
+</div>
+    </nav>
+
+</header>
