@@ -2,6 +2,20 @@
 *{
     margin: 0;
 }
+
+
+
 html{
     scroll-behavior: smooth;
+}
+
+
+.linksEffect {
+    display: flex;
+    gap: 12px;
+    align-items:center;
+    cursor: pointer;
+}
+.linksEffect:hover{
+    color: #97873E;
 }
