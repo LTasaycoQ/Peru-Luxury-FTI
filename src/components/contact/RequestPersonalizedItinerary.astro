@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets"
+import contactImage from "../../assets/image/contact-us.webp"
+---
+
+<section class="section-form-Itinerary">
+    <div class="container__All--itinerary">
+        <div class="container-itinerary">
+            <h2 class="title-h2">Your Journey Starts Here</h2>
+            <p class="text-parrafo">Request Your personalizaed itinerary and start your <br> unforgettable journey.</p>
+
+            <div class="w-full">
+
+                <form action="" class="formulario-itinerary">
+                    <input placeholder="Full Name" type="text">
+                    <input type="email" placeholder="Email" >
+                    <button type="button">Submit</button>
+                </form>
+
+            </div>
+
+        </div>
+        <div>
+            <Image class="imagenItineray" alt="imagen - contact" src={contactImage} />
+        </div>
+    </div>
+</section>
+
+<style>
+    .title-h2{
+        margin-bottom: 25px;
+        font-size: 37.5px;
+    }
+    .text-parrafo{
+        margin-bottom: 65px;
+        font-size: 18.4px;
+        color: rgb(8, 35, 92);
+        font-weight: 300;
+    }
+    
+    .section-form-Itinerary{ 
+        padding: 100px;
+        margin-top: 12em;
+        width: 100%;
+     
+        background-color: #F7F7F7;
+        font-family: 'Poppins';
+        display: flex; 
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container__All--itinerary{
+        width: 110em;
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+    }
+    .formulario-itinerary{
+        width: 100%;
+        display: flex;
+        gap:20px;
+    }
+    .formulario-itinerary input{
+        padding: 10px;
+        width: 300px;   
+        color: rgb(116, 116, 116);
+        outline: none;
+        border-radius: 80px;
+        background-color: white;
+        border: 1px solid rgb(201, 201, 201);
+    }
+    .formulario-itinerary button{
+        padding: 10px;
+        width: 200px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        border: 0.8px solid rgb(168, 168, 168);
+        background-color: #DABB42;
+        cursor: pointer;
+    }
+    .formulario-itinerary button:hover{
+        background-color: #F7D30E;
+
+    }
+    .imagenItineray{
+        width: 42em;
+    }
+</style>

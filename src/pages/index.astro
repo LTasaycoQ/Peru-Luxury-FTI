@@ -1,15 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Fondo from "../components/Fondo.astro";
 import AboutLuxury from "../components/Home/AboutLuxury.astro";
 import PremiumPrograms from "../components/Home/PremiumPrograms.astro"
-	
- const title = "home"
+import LuxuryTrains from "../components/Home/LuxuryTrains.astro"
+import AmazonRiver from "../components/Home/AmazonRiver.astro"
+import LiveExclusivePeru from "../components/Home/LiveExclusivePeru.astro"
+import RequestPersonalizedItinerary from "../components/contact/RequestPersonalizedItinerary.astro"
 
+import background from "../assets/backgrounds/cover-index.webp" 
+
+const title = "home"
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} >
+	<Fondo  fondo={`url(${background.src})`} />
 	<main>
 		<AboutLuxury />
 		<PremiumPrograms />
+		<LuxuryTrains />
+		<AmazonRiver />
+		<LiveExclusivePeru />
+		<RequestPersonalizedItinerary />
 	</main>
-<BaseLayout />
+
+
+</BaseLayout>

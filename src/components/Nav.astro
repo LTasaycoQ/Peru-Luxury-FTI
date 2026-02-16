@@ -1,25 +1,78 @@
 ---
-import HeaderTop from "./HeaderTop.astro"
+import HeaderTop from "./HeaderTop.astro";
 
 import { Image } from "astro:assets";
 import logo from "../assets/logo/PLJ-LOGO-1.webp";
 ---
 
-
-<header class="w-full flex flex-col justify-center items-center ">
-
+<header class="w-full flex flex-col justify-center items-center">
     <HeaderTop />
 
-    <nav class="w-[80%] max-md:hidden">
-        <div class="flex w-full justify-between">
-        <Image src={logo} loading="eager" alt="logo-peru-luxy" />
+    <nav class="w-[70%] max-xl:w-[90%] p-[14px]">
+        <div class="flex w-full justify-between items-center">
+            <a href="/"><Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" /></a>
 
-        <ul class=" w-[50%] flex items-center jutify-center justify-around">
-            <li class="flex items-center gap-[5px]">DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i></li>
-            <li>PROGRAMS</li>
-            <li>ABOUT US</li>
-        </ul>
-</div>
+
+            <div class="text-[25px] lg:hidden ">
+                <div id="btnMenu" class="rounded-[2px] p-[14px] w-[20px] h-[20px] flex flex-col items-center justify-center bg-[#E6E6E6]">
+                    <i id="openMenu" class="bi bi-list"></i>
+                    <i id="closeMenu" class="hidden bi bi-x-lg"></i>
+                </div>
+            </div>
+            <ul class="w-[40%] max-lg:hidden  flex items-center jutify-center justify-around">
+                <li class="flex items-center gap-[5px]">
+                    DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i>
+                </li>
+                <li>PROGRAMS</li>
+                <li><a href="/about-us">ABOUT US</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <div id="menuResponsive" class="w-full hidden">
+        <ul class="flex flex-col bg-[#393939] text-white text-start w-full items-start p-[10px] jutify-center justify-around">
+                <li class="p-[8px] flex items-center gap-[10px]">
+                    DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i>
+                </li>
+                <li class="p-[8px]">PROGRAMS</li>
+                <li class="p-[8px]">ABOUT US</li>
+            </ul>
+    </div>
 </header>
+
+
+<style>
+    #menuResponsive{
+        
+        animation: nav-animation 0.1s ease-in-out ;
+
+    }
+
+    @keyframes nav-animation {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<script type="module">
+
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const menuResponsive = document.getElementById("menuResponsive");
+    document.getElementById("openMenu").addEventListener("click", function () {
+        closeMenu.style.display = "block";
+        openMenu.style.display = "none";
+
+        menuResponsive.style.display = "block";
+    }) 
+    document.getElementById("closeMenu").addEventListener("click", function () {
+        closeMenu.style.display = "none";
+        openMenu.style.display = "block";
+        menuResponsive.style.display = "none";
+    })
+
+</script>

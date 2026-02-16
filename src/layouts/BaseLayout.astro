@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css"
 import Nav from "../components/Nav.astro";
-const {title} = Astro.props;
+import Footer from "../components/Footer.astro";
+const {title,fondo} = Astro.props;
 ---
 
 <html lang="en">
@@ -20,5 +21,6 @@ const {title} = Astro.props;
 	<body>
 		<Nav />
         <slot />
+		<Footer />
 	</body>
 </html>

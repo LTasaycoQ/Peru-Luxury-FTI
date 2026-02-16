@@ -3,15 +3,15 @@ import { Image } from "astro:assets";
 import peopleImg from "../../assets/plj01.webp"
 ---
 
-<section class="font-[Poppins] flex items-center justify-center ">
-    <div class="flex max-lg:flex-col-reverse w-[50%] max-lg:w-[90%] justify-center max-md:gap-[30px] gap-[80px] items-center">
-        <div class="flex flex-col gap-[20px]">
-            <h1  class="text-[32px] max-lg:text-[40px] max-sm:text-[30px] max-md:text-center">Crafting Tailor-Made <br>
+<section class="font-[Poppins] pt-[90px] pb-[80px]  flex items-center justify-center ">
+    <div class="flex max-lg:flex-col-reverse  lg:w-[90%] 2xl:w-[100em] max-lg:w-[90%] pl-[20px] pr-[20px] lg:justify-between justify-center max-md:gap-[30px] gap-[80px] items-center">
+        <div class="lg:w-[500px] xl:w-[630px]  flex flex-col gap-[20px]">
+            <h1  class="text-[40px] max-xl:text-[35px] max-lg:text-[40px] max-sm:text-[30px] max-md:text-center">Crafting Tailor-Made <br>
                 <span class="font-bold">Luxury Experiences Since 1976</span>
             </h1>
-            <div class="lg:w-[500px] max-lg:flex flex-col justify-center items-center ">
-                <p class="text-gray-600 text-[13px] max-md:text-center">
-                    Since 1976, Peru Luxury Journeys has been a luxury travel operator specializing in tailor-made journeys that showcase the very best of Peru. With nearly five decades of experience, we combine in-depth destination knowledge with meticulous attention to detail, offering exclusive experiences that exceed the expectations of the most discerning travelers. We design personalized itineraries to the country’s top destinations—from the majesty of Machu Picchu to the vastness of the Amazon—committed to delivering excellence, authenticity, and impeccable service at every stage of the journey.
+            <div class="max-lg:flex flex-col  justify-center items-center ">
+                <p class="text-gray-600 pb-[30px] lg:text-[15px] text-[13px]   max-md:text-center">
+                    Since 1976, <i>Peru Luxury Journeys </i> has been a luxury travel operator specializing in tailor-made journeys that showcase the very best of Peru. With nearly five decades of experience, we combine in-depth destination knowledge with meticulous attention to detail, offering exclusive experiences that exceed the expectations of the most discerning travelers. We design personalized itineraries to the country’s top destinations—from the majesty of Machu Picchu to the vastness of the Amazon—committed to delivering excellence, authenticity, and impeccable service at every stage of the journey.
                 </p>
                 <br>
                 <a href="#" class="flex justify-center items-center text-center bg-[#DABB42] hover:bg-[#F7D30E] rounded-full p-2 border-[1px] border-gray-400 text-white font-semibold text-center w-[150px]">About us</a>
@@ -20,6 +20,6 @@ import peopleImg from "../../assets/plj01.webp"
 
         </div>
 
-        <Image class="w-[27em] max-lg:w-[100%]" src={peopleImg} alt="persona en la playa" loading="lazy"/>
+        <Image class="w-[27em] 2xl:w-[45em] max-lg:w-[100%]" src={peopleImg} alt="persona en la playa" loading="lazy"/>
     </div>
 </section>
