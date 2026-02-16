@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Fondo from "../components/Fondo.astro";
+import ExclusiveExperiences from "../components/programs/ExclusiveExperiences.astro";
+
+
+import background from "../assets/backgrounds/banner-mapi.webp" 
+
+const title = "Programs"
+---
+
+<BaseLayout title={title} >
+	<Fondo  fondo={`url(${background.src})`} />
+	<main>
+		<ExclusiveExperiences />
+		
+	</main>
+
+
+</BaseLayout>

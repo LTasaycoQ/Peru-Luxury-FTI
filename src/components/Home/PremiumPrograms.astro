@@ -1,54 +1,172 @@
 ---
 ---
-
-<section class="font-[Poppins] flex flex-col justify-center items-center bg-[#F7F7F7] w-full">
-
-    <div class="pt-[70px] w-full text-center ">
-        <span class="text-[36px]">Premium Programs</span>
-        <h2 class="max-lg:text-[37px] lg:text-[18px] text-gray-900 font-light">
+<section class="premium-programs">
+    <div class="header-section">
+        <span class="title-accent">Premium Programs</span>
+        <h2 class="subtitle">
             Need Some inspiration? <br>
             Take a look at some of our travelers’ recommended programs
         </h2>
     </div>
-    <div class="pt-[4em] pb-[70px]  w-full flex justify-center items-center ">
-        <div class="flex  justify-center  items-center w-full">
-            <div class="grid grid-cols-3  max-md:grid-cols-1  max-lg:gap-[1.5em] gap-[4.8em] pl-[20px] pr-[20px] max-md:w-full">
-                <div class="elemento max-md:w-[100%]    lg:w-[320px] xl:w-[370px]">
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/incas-legacy.jpg?fit=800%2C583&ssl=1')] bg-cover max-md:bg-center bg-no-repeat image xl:h-[350px] lg:h-[280px] max-lg:h-[180px]"></div>
-                    
-                    <div class="flex flex-col w-full pt-[20px]">
-                        <span class="max-lg:font-semibold text-[18px] ">Legacy of The Incas</span>
-                        
-                        <p class="pt-[10px] text-gray-700 font-light text-[14.4px] ">A two program including Belmond hotels an trains</p>
 
-                        <a href="#" class="pt-[20px] max-w-24 text-[#DABB42] hover:text-[#F7D30E] border-b-[1px] border-[#DABB42]"><i>Read More</i></a>
-                    </div>
+    <div class="grid-container">
+        <div class="programs-grid">
+            <div class="card">
+                <div class="image card-1"></div>
+                <div class="card-content">
+                    <span class="card-title">Legacy of The Incas</span>
+                    <p class="card-text">A two week program including Belmond hotels and trains.</p>
+                    <a href="#" class="card-link">Read More</a>
                 </div>
-                 <div class="elemento max-md:w-[100%]   lg:w-[320px] xl:w-[370px]">
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/wonders-of-peru.jpg?fit=800%2C583&ssl=1')] bg-cover max-md:bg-center bg-no-repeat image xl:h-[350px] lg:h-[280px] max-lg:h-[180px]"></div>
-                    
-                    <div class="flex flex-col w-full pt-[20px]">
-                        <span class="max-lg:font-semibold text-[18px] ">Legacy of The Incas</span>
-                        
-                        <p class="pt-[10px] text-gray-700 font-light text-[14.4px] ">A two program including Belmond hotels an trains</p>
+            </div>
 
-                        <a href="#" class="pt-[20px] max-w-24 text-[#DABB42] hover:text-[#F7D30E] border-b-[1px] border-[#DABB42]"><i>Read More</i></a>
-                    </div>
+            <div class="card">
+                <div class="image card-2"></div>
+                <div class="card-content">
+                    <span class="card-title">Wonders of Peru</span>
+                    <p class="card-text">Explore the highlights of Lima and Cusco in one week.</p>
+                    <a href="#" class="card-link">Read More</a>
                 </div>
-                <div class="elemento max-md:w-[100%]   lg:w-[320px] xl:w-[370px]">
-                        <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/peru-boutique.jpg?fit=800%2C583&ssl=1')] bg-cover max-md:bg-center bg-no-repeat image xl:h-[350px] lg:h-[280px] max-lg:h-[180px]"></div>
-                        
-                        <div class="flex flex-col w-full pt-[20px]">
-                            <span class="max-lg:font-semibold text-[18px] ">Legacy of The Incas</span>
-                            
-                            <p class="pt-[10px] text-gray-700 font-light text-[14.4px] ">A two program including Belmond hotels an trains</p>
+            </div>
 
-                            <a href="#" class="pt-[20px] max-w-24 text-[#DABB42] hover:text-[#F7D30E] border-b-[1px] border-[#DABB42]"><i>Read More</i></a>
-                        </div>
+            <div class="card">
+                <div class="image card-3"></div>
+                <div class="card-content">
+                    <span class="card-title">Peru Boutique</span>
+                    <p class="card-text">Luxury programs featuring the exclusive Relais & Chateaux properties</p>
+                    <a href="#" class="card-link">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-
-
 </section>
+
+<style>
+    .premium-programs {
+        font-family: 'Poppins', sans-serif;
+        background-color: #F7F7F7;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .header-section {
+        padding-top: 70px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .title-accent {
+        font-size: 36px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        color: #1a1a1a;
+        font-weight: 300;
+        line-height: 1.4;
+        font-size: 18px; 
+    }
+
+    @media (max-width: 1024px) {
+        .subtitle {
+            font-size: 22px; 
+            padding: 0 20px;
+        }
+    }
+
+    .grid-container {
+        padding-top: 4em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        width: 90%;
+        max-width: 1400px;
+        padding: 0 20px;
+    }
+
+    @media (max-width: 1024px) {
+        .programs-grid {
+            gap: 1.5em;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .programs-grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+        height: 400px; 
+    }
+
+    @media (max-width: 1024px) { .image { height: 280px; } }
+    @media (max-width: 768px) { .image { height: 300px; } }
+
+    .card-1 { background-image: url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/incas-legacy.jpg?fit=800%2C583&ssl=1'); }
+    .card-2 { background-image: url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/wonders-of-peru.jpg?fit=800%2C583&ssl=1'); }
+    .card-3 { background-image: url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/peru-boutique.jpg?fit=800%2C583&ssl=1'); }
+
+    .card-content {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    @media (max-width: 1024px) {
+        .card-title { font-weight: 600; }
+    }
+
+    .card-text {
+        padding-top: 10px;
+        color: #4b5563;
+        font-weight: 300;
+        font-size: 16.5px;
+    }
+
+    .card-link {
+        margin-top: 20px;
+        width: fit-content;
+        color: #DABB42;
+        text-decoration: none;
+        font-style: italic;
+        border-bottom: 1px solid #DABB42;
+        transition: all 0.3s ease;
+    }
+
+    .card-link:hover {
+        color: #F7D30E;
+        border-color: #F7D30E;
+    }
+
+
+
+
+   
+</style>

@@ -1,0 +1,131 @@
+---
+interface Section {
+  image: string;
+  title: string;
+  text: string;
+  link: string;
+}
+
+const roomsImport = import.meta.glob("../../content/programs/programas-experiences.md", { eager: true });
+const roomsData = Object.values(roomsImport) as any[];
+const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
+---
+
+<section class="font-[Poppins]">
+    <div class="container-Experiences">
+        <div class="container-title">
+            <h1 class="title">
+                Exclusive Experiences to <br>
+                Discover the Best of Peru.
+            </h1>
+            <div class="line"></div>
+        </div>
+
+        <p class="text-parrafo">
+            At Peru Luxury Journeys, we craft unique itineraries for travelers striving for greatness. <br>
+            Each tour combines iconic destinations, meticulously planned details, and authentic experiences. <br>
+            Let our experts guide you on an unforgettable journey.
+        </p>
+
+        <div class="cards-grid">
+            {
+                sections.map((section) => (
+                    <div class="card">
+                        <div class="image-container">
+                            <img src={section.image} alt={section.title} class="card-image" />
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">{section.title}</h3>
+                            <p class="card-text">{section.text}</p>
+                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .container-Experiences {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 50px;
+    }
+
+    .card {
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px 0px;
+    }
+
+    .card-title {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #212121;
+        margin-bottom: 10px;
+    }
+    .card-text{
+        color: rgb(54, 54, 54);
+        font-weight: 300;
+    }
+    .card-link {
+        display: inline-block;
+        margin-top: 30px;
+        color: #C5A822;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px solid #C5A822;
+    }
+    .card-link:hover{
+        transform: translateY(-10px); 
+        transition: all 0.5s;
+        color: #F9D60E;
+    }
+
+
+    .text-parrafo {
+        margin-top: 15px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #4e4e4e;
+        font-weight: 300;
+
+    }
+    .container-title {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .title {
+        text-align: center;
+        font-size: 28px;
+    }
+    .line {
+        width: 280px;
+        border-top: 2px solid #C5A822;
+    }
+</style>

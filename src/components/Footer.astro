@@ -1,125 +1,170 @@
 ---
-
 ---
+
 <footer class="footer">
-        <div class="footer-feature">
-            <div class="container-enlaces">
-                <div class="container-lista">
-                    <h4>CONTACT</h4>
-                    <ul>
-                        <li> Av. San Luis 2642 San Borja, Lima - Peru</li>
-                        <li> (51) 345-7558</li>
-                        <li> Sales@PeruLuxuryJourneys.com</li>
-                    </ul>
-                </div>
-                <div class="container-lista">
-                    <h4>PAGES</h4>
-                    <ul>
-                        <li> Destinations</li>
-                        <li> Programs</li>
-                        <li> About us</li>
-                    </ul>
-                </div>
-
-                <div class="container-lista">
-                    <h4>DESTINATIONS</h4>
-                    <ul>
-                        <li>Lima</li>
-                        <li>Cusco</li>
-                        <li>Sacred Valley</li>
-                        <li>Machu Picchu</li>
-                        <li>Puno</li>
-                        <li>Arequipa</li>
-                        <li>Amazon River Cruises</li>
-                        <li>Nazca - Paracas</li>
-                        <li>Luxury Trains</li>
-                    </ul>
-                </div>
+    <div class="footer-container">
+        <div class="container-enlaces">
+            <div class="container-lista">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li><i class="bi bi-geo-alt-fill"></i>Av. San Luis 2642 San Borja, Lima - Peru</li>
+                    <li><i class="bi bi-telephone-fill"></i>(51) 345-7558</li>
+                    <li><i class="bi bi-envelope"></i>Sales@PeruLuxuryJourneys.com</li>
+                </ul>
             </div>
 
-            <div class="formulario-subscribe">
-                <h4>JOIN NEWSLETTER</h4>
-                <form action="">
-
-                    <div class="inputPersonal">
-                        <input type="text" placeholder="FirstName" >
-                        <input type="text" placeholder="Last Name" >
-                    </div>
-                        <input type="email" placeholder="Email" >
-
-                    <button>SUBSCRIBE</button>
-                </form>
-
-
+            <div class="container-lista">
+                <h4>PAGES</h4>
+                <ul>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
             </div>
 
+            <div class="container-lista">
+                <h4>DESTINATIONS</h4>
+                <ul>
+                    <li>Lima</li>
+                    <li>Cusco</li>
+                    <li>Sacred Valley</li>
+                    <li>Luxury Trains</li>
+                </ul>
+            </div>
         </div>
+
+        <div class="formulario-subscribe">
+            <h4>JOIN NEWSLETTER</h4>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <input type="email" placeholder="Email">
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
 </footer>
 
 <style>
-    .footer{
-        padding: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #313131;
-    }
-    .footer-feature{
-        display: flex;
-        background-color: rebeccapurple;
-        justify-content: center;
+    .footer {
+        padding: 60px 20px;
+        background-color: #313131; 
         color: white;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
     }
 
-    .container-enlaces{
+    .footer-container {
         display: flex;
+        flex-direction: column;
+        gap: 50px;
         width: 100%;
-        justify-content: center;
-        gap: 100px;
-        color: white;
+        max-width: 1400px;
     }
-    .container-lista h4{
+
+    @media (min-width: 1024px) {
+        .footer-container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .container-enlaces {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 40px;
+        flex: 2;
+    }
+
+    .container-lista h4, .formulario-subscribe h4 {
+        font-size: 16px;
         font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        color: #DABB42; 
     }
-    .container-lista ul{
-        margin-top: 15px;
+
+    .container-lista ul {
+        list-style: none;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
         font-weight: 300;
-        font-size: 15px;
-
-    }
-
-    .formulario-subscribe form{
-        margin-top: 25px;
-    }
-
-    .formulario-subscribe form{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .formulario-subscribe input{
-        background-color: white;
-        color: gray;
-        border: 0.2px solid gray;
-        padding: 8px;
-        outline: none;
-    }
-    .inputPersonal{
-        display: flex;
-        gap:15px;
+        font-size: 14px;
+        color: #cccccc;
     }
    
-    .formulario-subscribe button{
-        background-color: #3F5C3A;
+    .container-lista ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .container-lista a {
+        text-decoration: none;
+        display: flex;
+        color: inherit;
+        transition: color 0.3s;
+    }
+
+    .container-lista a:hover {
+        color: white;
+    }
+
+    .formulario-subscribe {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .formulario-subscribe form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-group {
+        display: flex;
+        gap: 10px;
+    }
+
+    .formulario-subscribe input {
+        width: 100%;
+        background-color: white;
+        border: 1px solid #444;
         color: white;
         padding: 12px;
+        font-size: 14px;
+        border-radius: 4px;
         outline: none;
-        cursor: pointer;
     }
-   
 
+    .formulario-subscribe input::placeholder {
+        color: #777;
+    }
+
+    .formulario-subscribe button {
+        background-color: #3F5C3A;
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-top: 5px;
+    }
+
+    .formulario-subscribe button:hover {
+        background-color: #4d7046;
+    }
+
+    @media (max-width: 480px) {
+        .input-group {
+            flex-direction: column;
+        }
+    }
 </style>
