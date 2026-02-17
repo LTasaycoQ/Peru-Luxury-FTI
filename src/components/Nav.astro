@@ -30,17 +30,17 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         </div>
     </nav>
      <div id="submenu" class="hidden bg-green-400 w-full relative">
-            <div class="absolute  right-[43em] bg-[#393939] w-[225px]">
-                <ul class="text-[17px] text-white w-full">
-                    <li class="flex"><a class="p-[15px] w-full" href="/lima">LIMA</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/cusco">CUSCO</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/puno">PUNO</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/arequipa">AREQUIPA</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/nazca-paracas">NAZCA - PARACAS</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/amazon-river-cruises">AMAZON RIVER CRUISES</a></li>
-                    <li class="flex"><a class="p-[15px] w-full" href="/luxury-trains">LUXURY TRAINS</a></li>
+            <div class="absolute  right-[36em] bg-[#393939] w-[225px]">
+                <ul class="text-[14px] text-white w-full"> 
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/lima">LIMA</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/cusco">CUSCO</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/puno">PUNO</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/arequipa">AREQUIPA</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/nazca-paracas">NAZCA - PARACAS</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/amazon-river-cruises">AMAZON RIVER CRUISES</a></li>
+                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/luxury-trains">LUXURY TRAINS</a></li>
                 </ul>
             </div>
         </div>
@@ -103,6 +103,11 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     .icon-flecha{
        transform: rotate(90deg);
        transition: all 0.4s;
+    }
+
+    .items-Submenu:hover{
+        background-color: #515050;
+        transition: all 0.5s ;
     }
 
     @keyframes nav-animation {

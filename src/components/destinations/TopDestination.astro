@@ -6,16 +6,19 @@ interface Section {
   link: string;
 }
 
-const roomsImport = import.meta.glob("../../content/programs/programas-experiences.md", { eager: true });
-const roomsData = Object.values(roomsImport) as any[];
-const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
+const roomsImport = import.meta.glob("../../content/Destinations/top-destinations.md", { eager: true });
+const destinationData = Object.values(roomsImport) as any[];
+const sections: Section[] = destinationData[0]?.frontmatter?.section ?? [];
 ---
 <section class="premium-programs">
     <div class="header-section">
-        <span class="title-accent">Premium Programs</span>
+        <div class="container-title">
+            <span class="title-accent">Top destinations</span>
+            <div class="line"></div>
+        </div>
         <h2 class="subtitle">
-            Need Some inspiration? <br>
-            Take a look at some of our travelers’ recommended programs
+            Explore Peru with us! <br>
+            We design unique experiences to discover the best of our history, culture and nature.
         </h2>
     </div>
 
@@ -23,7 +26,7 @@ const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
         <div class="programs-grid">
 
             {
-                sections.slice(0, 3).map((section) => (
+                sections.map((section) => (
                     <div class="card">
                         <div class="image-container">
                             <img src={section.image} alt={section.title} class="card-image" />
@@ -42,9 +45,21 @@ const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
 </section>
 
 <style>
+
+    .line{
+        width: 200px;
+        border-top: 2px solid #DFAF24;
+    }
+    .container-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
     .premium-programs {
+        margin-top: 50px;
         font-family: 'Poppins', sans-serif;
-        background-color: #F7F7F7;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -59,7 +74,8 @@ const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
     }
 
     .title-accent {
-        font-size: 36px;
+        color: #222;
+        font-size: 40px;
         display: block;
         margin-bottom: 10px;
     }
