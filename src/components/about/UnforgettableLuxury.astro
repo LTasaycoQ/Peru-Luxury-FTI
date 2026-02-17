@@ -1,33 +1,19 @@
 ---
+import SectionWidget from "../widgets/SectionWidget.astro";
+
+const title = " Crafting Unforgettable Luxury Travel in Peru Since 1976";
+const description =
+    "Peru Luxury Journeys is a DMC and Incoming Tour Operator with more than 48 years of experience, and a trademark of Fiesta Tours International S.A.Our passion is to offer unique and extraordinary private adventures. Whether your clients are discerning travelers, honeymooners, a jetsetter, a royalty, a celebrity or family vacation, we have the knowledge and sophistication to create unforgettable travel experiences. Due to our special attention to details, the time and care we take designing a tour itinerary, our clients often acknowledge us as one of the most reliable Tour Operators in Latin America.We operate debt free. With our fleet of luxury minivans, our hotel in Cusco and our head-quarter offices in Lima, we can proudly state we are among the financially strongest tour operators in the country.Our strength lies in our prompt and accurate responses, in the politeness of our bilingual drivers, in the etiquette of our transfer representatives, in the proficiency of our tour guides, in our competitive prices and specially in the outstanding quality of services we provide.";
+
+const image1 = "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-01.jpg?fit=413%2C589&ssl=1";
+const image2 = "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-02.jpg?fit=900%2C646&ssl=1";
+const image3 = "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-03.jpg?fit=413%2C282&ssl=1";
 ---
 
-<section class="font-[Poppins] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-[40px] xl:gap-[8em] w-[90%] ">
-        
-        <div class="flex flex-col 2xl:w-[84em]  lg:w-[80em] max-lg:w-full px-[20px] items-center lg:items-start text-center lg:text-left">
-            <h1 class="text-[20px] md:text-[44px] font-medium pb-[20px] leading-tight">
-                Crafting Unforgettable Luxury Travel in Peru Since 1976
-            </h1>
-            <p class="text-gray-700 text-[15px] font-light pb-[30px]">
-                Peru Luxury Journeys is a DMC and Incoming Tour Operator with more than 48 years of experience, and a trademark of Fiesta Tours International S.A. <br><br>
-                Our passion is to offer unique and extraordinary private adventures. Whether your clients are discerning travelers, honeymooners, a jetsetter, a royalty, a celebrity or family vacation, we have the knowledge and sophistication to create unforgettable travel experiences. <br><br>
-                Due to our special attention to details, the time and care we take designing a tour itinerary, our clients often acknowledge us as one of the most reliable Tour Operators in Latin America. <br><br>
-                We operate debt free. With our fleet of luxury minivans, our hotel in Cusco and our head-quarter offices in Lima, we can proudly state we are among the financially strongest tour operators in the country. <br><br>
-                Our strength lies in our prompt and accurate responses, in the politeness of our bilingual drivers, in the etiquette of our transfer representatives, in the proficiency of our tour guides, in our competitive prices and specially in the outstanding quality of services we provide. <br><br>
-            </p>
-           
-        </div>
-
-        <div class="flex w-full justify-center">
-            <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
-                
-                <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-01.jpg?fit=413%2C589&ssl=1')] bg-cover bg-center bg-no-repeat w-full md:w-1/2 h-[400px] md:h-full max-md:h-[700px] max-md:bg-center"></div>
-                
-                <div class="flex flex-col gap-[15px] w-full md:w-1/2">
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-02.jpg?fit=900%2C646&ssl=1')] bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2"></div> 
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/about-us-03.jpg?fit=413%2C282&ssl=1')] bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2"></div>            
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<SectionWidget
+    title={title}
+    description={description}
+    image1={image1}
+    image2={image2}
+    image3={image3}
+/>
