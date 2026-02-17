@@ -21,17 +21,17 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 </div>
             </div>
             <ul class="w-[40%] max-lg:hidden  flex items-center jutify-center justify-around">
-                <li class="linksEffect flex items-center gap-[5px]">
-                    <i id="iconSubmenu" class="p-2 bg-red-400 rounded-full bi bi-caret-right-fill"></i> <a href="/destinations">DESTINATIONS</a> 
+                <li id="iconSubmenu"  class="linksEffect flex items-center gap-[5px]">
+                    <i id="icono" class="p-2 rounded-full bi bi-caret-right-fill"></i> <a href="/destinations">DESTINATIONS</a> 
                 </li>
                 <li class="linksEffect"><a href="/programs">PROGRAMS</a></li>
                 <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
             </ul>
         </div>
     </nav>
-     <div id="submenu" class="hidden bg-green-400 w-full relative">
-            <div class="absolute  right-[36em] bg-[#393939] w-[225px]">
-                <ul class="text-[14px] text-white w-full"> 
+     <div id="submenu" class=" w-full relative ">
+            <div class="absolute  right-[36em]  bg-[#393939] w-[225px]">
+                <ul class="text-[14px] text-white w-full shadow-lg shadow-black"> 
                     <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/lima">LIMA</a></li>
                     <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/cusco">CUSCO</a></li>
                     <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
@@ -48,10 +48,10 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     <div id="menuResponsive" class="w-full hidden">
         <ul class="flex flex-col bg-[#393939] text-white text-start w-full items-start p-[10px] jutify-center justify-around">
                 <li class="p-[8px] flex items-center gap-[10px]">
-                    <a href="/destinations"></a>DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i>
+                    <a href="/destinations">DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i></a>
                 </li>
                 <li class="p-[8px]"><a href="/programs">PROGRAMS</a></li>
-                <li class="p-[8px]"><a href="/about-us"></a> ABOUT US</li>
+                <li class="p-[8px]"><a href="/about-us">ABOUT US</a></li>
             </ul>
     </div>
 </header>
@@ -68,6 +68,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
         menuResponsive.style.display = "block";
     }) 
+
     document.getElementById("closeMenu").addEventListener("click", function () {
         closeMenu.style.display = "none";
         openMenu.style.display = "block";
@@ -75,16 +76,22 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     })
 
 
+    
+
 
     document.getElementById("iconSubmenu").addEventListener("click", function() {
         var submenu = document.getElementById("submenu");
-        let iconFlecha = document.getElementById("iconSubmenu");
+        let iconFlecha = document.getElementById("icono");
 
         if (submenu.style.display === "none") {
             iconFlecha.classList.add("icon-flecha");
+            iconFlecha.classList.remove("icon-flecha-oculto");
             submenu.style.display = "block";
         } else {
             iconFlecha.classList.remove("icon-flecha");
+
+            iconFlecha.classList.add("icon-flecha-oculto");
+
             submenu.style.display = "none"; 
         }
     })
@@ -102,6 +109,10 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     }
     .icon-flecha{
        transform: rotate(90deg);
+       transition: all 0.4s;
+    }
+    .icon-flecha-oculto{
+       transform: rotate(0deg);
        transition: all 0.4s;
     }
 
