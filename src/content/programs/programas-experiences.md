@@ -1,5 +1,8 @@
 ---
 section:
+
+      # 3 PRIMEROS ELEMENTOS DE HOME
+
       - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/incas-legacy.jpg?fit=800%2C583&ssl=1"
         title: "Legacy of The Incas"
         text: "A two week program including Belmond hotels and trains."
@@ -16,6 +19,8 @@ section:
         title: "Peru Boutique"
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties."
         link: "#"
+
+      # --------
 
       - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/12/cam-cusco.jpg?fit=800%2C583&ssl=1"
         title: "Legacy of The Incas"

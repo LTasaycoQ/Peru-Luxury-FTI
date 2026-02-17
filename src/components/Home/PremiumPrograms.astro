@@ -1,4 +1,14 @@
 ---
+interface Section {
+  image: string;
+  title: string;
+  text: string;
+  link: string;
+}
+
+const roomsImport = import.meta.glob("../../content/programs/programas-experiences.md", { eager: true });
+const roomsData = Object.values(roomsImport) as any[];
+const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
 ---
 <section class="premium-programs">
     <div class="header-section">
@@ -11,32 +21,22 @@
 
     <div class="grid-container">
         <div class="programs-grid">
-            <div class="card">
-                <div class="image card-1"></div>
-                <div class="card-content">
-                    <span class="card-title">Legacy of The Incas</span>
-                    <p class="card-text">A two week program including Belmond hotels and trains.</p>
-                    <a href="#" class="card-link">Read More</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="image card-2"></div>
-                <div class="card-content">
-                    <span class="card-title">Wonders of Peru</span>
-                    <p class="card-text">Explore the highlights of Lima and Cusco in one week.</p>
-                    <a href="#" class="card-link">Read More</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="image card-3"></div>
-                <div class="card-content">
-                    <span class="card-title">Peru Boutique</span>
-                    <p class="card-text">Luxury programs featuring the exclusive Relais & Chateaux properties</p>
-                    <a href="#" class="card-link">Read More</a>
-                </div>
-            </div>
+            {
+                sections.slice(0, 3).map((section) => (
+                    <div class="card">
+                        <div class="image-container">
+                            <img src={section.image} alt={section.title} class="card-image" />
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">{section.title}</h3>
+                            <p class="card-text">{section.text}</p>
+                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                        </div>
+                    </div>
+                ))
+            }
+           
         </div>
     </div>
 </section>

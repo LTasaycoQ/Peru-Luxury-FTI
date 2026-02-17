@@ -3,12 +3,9 @@
     margin: 0;
 }
 
-
-
 html{
     scroll-behavior: smooth;
 }
-
 
 .linksEffect {
     display: flex;
@@ -16,6 +13,7 @@ html{
     align-items:center;
     cursor: pointer;
 }
+
 .linksEffect:hover{
     color: #97873E;
 }
