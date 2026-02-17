@@ -10,10 +10,9 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 <header class="w-full flex flex-col justify-center items-center">
     <HeaderTop />
 
-    <nav class="w-[70%] max-xl:w-[90%] p-[14px]">
+    <nav class="w-[70%] max-xl:w-[90%] p-[5px]">
         <div class="flex w-full justify-between items-center">
             <a href="/"><Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" /></a>
-
 
             <div class="text-[25px] lg:hidden ">
                 <div id="btnMenu" class="rounded-[2px] p-[14px] w-[20px] h-[20px] flex flex-col items-center justify-center bg-[#E6E6E6]">
@@ -23,13 +22,28 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
             </div>
             <ul class="w-[40%] max-lg:hidden  flex items-center jutify-center justify-around">
                 <li class="linksEffect flex items-center gap-[5px]">
-                    DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i>
+                    <i id="iconSubmenu" class="bi bi-caret-right-fill"></i> DESTINATIOS
                 </li>
                 <li class="linksEffect"><a href="programs">PROGRAMS</a></li>
                 <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
             </ul>
         </div>
     </nav>
+     <div id="submenu" class="hidden bg-green-400 w-full relative">
+            <div class="absolute  right-[43em] bg-[#393939] w-[225px]">
+                <ul class="text-[17px] text-white w-full">
+                    <li class="flex"><a class="p-[15px] w-full" href="/lima">LIMA</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/cusco">CUSCO</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/machu-picchu">SACRED VALLEY</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/puno">PUNO</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/lima">AREQUIPA</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/cusco">NAZCA - PARACAS</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/puno">AMAZON RIVER CRUISES</a></li>
+                    <li class="flex"><a class="p-[15px] w-full" href="/machu-picchu">LUXURY TRAINS</a></li>
+                </ul>
+            </div>
+        </div>
 
     <div id="menuResponsive" class="w-full hidden">
         <ul class="flex flex-col bg-[#393939] text-white text-start w-full items-start p-[10px] jutify-center justify-around">
@@ -41,24 +55,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
             </ul>
     </div>
 </header>
-
-
-<style>
-    #menuResponsive{
-        
-        animation: nav-animation 0.1s ease-in-out ;
-
-    }
-
-    @keyframes nav-animation {
-        0% {
-            transform: scaleY(0);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-</style>
 
 <script type="module">
 
@@ -77,4 +73,45 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         menuResponsive.style.display = "none";
     })
 
+
+
+    document.getElementById("iconSubmenu").addEventListener("click", function() {
+        var submenu = document.getElementById("submenu");
+        let iconFlecha = document.getElementById("iconSubmenu");
+
+        if (submenu.style.display === "none") {
+            iconFlecha.classList.add("icon-flecha");
+            submenu.style.display = "block";
+        } else {
+            iconFlecha.classList.remove("icon-flecha");
+            submenu.style.display = "none"; 
+        }
+    })
+
+
+
 </script>
+
+<style>
+    #menuResponsive{    
+        animation: nav-animation 0.1s ease-in-out ;
+    }
+    #iconSubmenu{
+        cursor: pointer;
+    }
+    .icon-flecha{
+       transform: rotate(90deg);
+       transition: all 0.4s;
+    }
+
+    @keyframes nav-animation {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+

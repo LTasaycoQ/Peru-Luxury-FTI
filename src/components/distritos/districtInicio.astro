@@ -1,0 +1,38 @@
+---
+const { title, text, image1, image2, image3 } = Astro.props;
+---
+
+<section class="font-[Poppins] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-[40px] xl:gap-[8rem] w-[90%]">
+        
+        <div class="flex flex-col 2xl:w-[84rem] lg:w-[80rem] max-lg:w-full px-[20px] items-center lg:items-start text-center lg:text-left">
+            <h1 class="text-[32px] md:text-[70px] font-medium pb-[35px] leading-tight text-balance">
+                {title}
+            </h1>
+            <p class="text-gray-700 text-[15.4px] font-light pb-[30px] whitespace-pre-line">
+                {text}
+            </p>
+        </div>
+
+        <div class="flex w-full justify-center">
+            <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
+                
+                <div 
+                    class="bg-cover bg-center bg-no-repeat w-full md:w-1/2 h-[400px] md:h-full " 
+                    style={`background-image: url('${image1}')`}>
+                </div>
+                
+                <div class="flex flex-col gap-[15px] w-full md:w-1/2">
+                    <div 
+                        class="bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2" 
+                        style={`background-image: url('${image2}')`}>
+                    </div> 
+                    <div 
+                        class="bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2" 
+                        style={`background-image: url('${image3}')`}>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
