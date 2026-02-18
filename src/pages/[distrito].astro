@@ -20,7 +20,7 @@ export function getStaticPaths() {
 const { title, description, image1, image2, image3, fondo, partnersTitle, partnersVariant, partners } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
 
 
     <Fondo fondo={`url(${fondo})`} />

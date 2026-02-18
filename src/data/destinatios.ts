@@ -19,6 +19,7 @@ export interface Destination {
 }
 
 export const destinations: Destination[] = [
+
   {
     fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/lima0001.jpg?fit=1890%2C700&ssl=1",
     distrito: "lima",
@@ -41,7 +42,7 @@ export const destinations: Destination[] = [
     ],
   },
 
-
+  
   {
     fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/04/Cusco-portada2.jpg?fit=1920%2C900&ssl=1",
     distrito: "cusco",
@@ -159,7 +160,6 @@ export const destinations: Destination[] = [
     ],
 
   },
-
   {
     fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.png?w=1920&ssl=1",
     distrito: "nazca-paracas",
@@ -171,9 +171,9 @@ export const destinations: Destination[] = [
 
     partnersVariant: "default",
     partners: [
-      { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "...", name: "Hotel B", link: "#" },
-      { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      { image: "", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+      { image: "", name: "Hotel B", link: "#" },
+      { image: "", name: "JW Marriott Hotel Lima", link: "#" },
     ],
 
   },

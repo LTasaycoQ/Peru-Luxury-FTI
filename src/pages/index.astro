@@ -9,10 +9,12 @@ import LiveExclusivePeru from "../components/Home/LiveExclusivePeru.astro"
 import RequestPersonalizedItinerary from "../components/Home/RequestPersonalizedItinerary.astro"
 
 import background from "../assets/backgrounds/cover-index.webp" 
+
 const title = "home"
+const description = ""
 ---
 
-<BaseLayout title={title} >
+<BaseLayout title={title} description={description}>
 	<Fondo  fondo={`url(${background.src})`} />
 	<main>
 		<AboutLuxury />

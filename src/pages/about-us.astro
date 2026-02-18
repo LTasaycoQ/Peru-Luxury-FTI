@@ -6,9 +6,10 @@ import UnforgettableLuxury from "../components/about/UnforgettableLuxury.astro"
 import background from "../assets/backgrounds/banner-about-us3.webp"
 
 const title = "About us"
+const description = ""
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description} >
     <Fondo  fondo={`url(${background.src})`} />
 	<main>
         <UnforgettableLuxury />
