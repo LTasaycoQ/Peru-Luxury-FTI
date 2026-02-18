@@ -12,22 +12,22 @@ interface Props {
   partners: Partner[];
 }
 
-const { title = "Our Partners", variant, partners } = Astro.props;
+const { title = "Our Parners", variant, partners } = Astro.props;
 ---
 
-<section class="our-parnes">
+<section class="our-parnes font-[Poppins]">
   <div class="container-title">
     <h2>{title}</h2>
     <hr class="line" />
   </div>
 
   {variant === "default" ? (
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-3 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
       {partners.map((partner) => (
-        <div>
-          <img src={partner.image} alt={partner.name} class="w-full h-[350px] object-cover" />
-          <p class="font-bold mt-2">{partner.name}</p>
-          <a href={partner.link} class="text-yellow-600 text-sm">Read More</a>
+        <div class="card-default">
+          <img src={partner.image} alt={partner.name} class="imagen w-full h-[350px] object-cover" />
+          <p class="text-default">{partner.name}</p>
+          <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
     </div>
@@ -39,12 +39,14 @@ const { title = "Our Partners", variant, partners } = Astro.props;
       </div>
     </div>
   ) : variant === "detailed" ? (
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-3 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
       {partners.map((partner) => (
-        <div>
-          <img src={partner.image} alt={partner.name} class="w-full h-[350px] object-cover" />
-          <h3 class="font-bold mt-2">{partner.name}</h3>
+        <div class="card-default">
+          <img src={partner.image} alt={partner.name} class="imagen w-full h-[350px] object-cover" />
+          <h3 class="text-default">{partner.name}</h3>
           <p class="text-sm text-gray-600 mt-1">{partner.description}</p>
+          
+          <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
     </div>
@@ -52,15 +54,49 @@ const { title = "Our Partners", variant, partners } = Astro.props;
 </section>
 
 <style>
+
+  .card-default{
+  }
+
+
+  .text-default{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #212121;
+  }
+
+  .link-default {
+    cursor: pointer;
+    display: inline-block; 
+    margin-top: 20px;
+    color: #af991b;
+    transition: all 0.5s ease;
+  }
+
+  .link-default:hover {
+    color: #f7d30e;
+    transform: translateY(-10px);
+  }
+
   .container-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #222;
     margin-bottom: 40px;
   }
   .our-parnes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
+    margin-bottom: 60px;
   }
   .line {
     width: 220px;

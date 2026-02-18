@@ -78,23 +78,15 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
     
 
+document.getElementById("iconSubmenu").addEventListener("click", function() {
+    const submenu = document.getElementById("submenu");
+    const iconFlecha = document.getElementById("icono");
 
-    document.getElementById("iconSubmenu").addEventListener("click", function() {
-        var submenu = document.getElementById("submenu");
-        let iconFlecha = document.getElementById("icono");
+    submenu.classList.toggle("hidden");
+    iconFlecha.classList.toggle("icon-flecha");
 
-        if (submenu.style.display === "none") {
-            iconFlecha.classList.add("icon-flecha");
-            iconFlecha.classList.remove("icon-flecha-oculto");
-            submenu.style.display = "block";
-        } else {
-            iconFlecha.classList.remove("icon-flecha");
+});
 
-            iconFlecha.classList.add("icon-flecha-oculto");
-
-            submenu.style.display = "none"; 
-        }
-    })
 
 
 
@@ -111,11 +103,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
        transform: rotate(90deg);
        transition: all 0.4s;
     }
-    .icon-flecha-oculto{
-       transform: rotate(0deg);
-       transition: all 0.4s;
-    }
-
+   
     .items-Submenu:hover{
         background-color: #515050;
         transition: all 0.5s ;
