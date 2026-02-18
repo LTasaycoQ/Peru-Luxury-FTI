@@ -5,28 +5,28 @@
   <div class="footer-content">
     
     <div class="footer-brand">
-      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo">
-      <p class="brand-description">
+      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-sm:justify-items-center  max-sm:items-center">
+      <p class="brand-description max-sm:text-center">
         Crafting unique and unforgettable luxury experiences across the wonders of Peru.
       </p>
-      <div class="social-links">
+      <div class="social-links max-sm:justify-center max-sm:pb-[30px]">
         <a href="#"><i class="bi bi-facebook"></i></a>
         <a href="#"><i class="bi bi-instagram"></i></a>
         <a href="#"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
 
-    <div class="footer-grid-links">
+    <div class="flex gap-[60px] max-sm:flex-col ">
       <div class="link-group">
-        <h4>Explore</h4>
+        <h4 class="max-sm:text-center">Explore</h4>
         <ul>
-          <li><a href="#">Destinations</a></li>
-          <li><a href="#">Luxury Programs</a></li>
-          <li><a href="#">About Our Story</a></li>
+          <li><a class="" href="#">Destinations</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="#">Luxury Programs</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="#">About Our Story</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
         </ul>
       </div>
       <div class="link-group">
-        <h4>Top Destinations</h4>
+        <h4 class="max-sm:text-center">Top Destinations</h4>
         <ul class="grid grid-cols-2 justify-center w-full">
           <li><i class="bi bi-link-45deg"></i><a href="/cusco">Lima</a></li>
           <li><i class="bi bi-link-45deg"></i><a href="/amazon">Cusco</a></li>
@@ -76,11 +76,14 @@
     font-family: 'Poppins', sans-serif;
   }
 
+
+
+
   .footer-content {
-    max-width: 1800px;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 3.5fr 1.5fr;
+    grid-template-columns: 2fr 3fr 1.8fr;
     gap:20px;
   }
 
@@ -102,6 +105,8 @@
     gap: 15px;
   }
 
+  .link-group{
+  }
   .social-links a {
     color: #DABB42;
     font-size: 20px;
@@ -115,7 +120,7 @@
 
   .footer-grid-links {
     display: grid;
-    grid-template-columns: 0.2fr 0.7fr;
+    grid-template-columns: 0.3fr 0.7fr;
     gap: 20px;
   }
 
