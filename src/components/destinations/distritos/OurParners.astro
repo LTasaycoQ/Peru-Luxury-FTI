@@ -1,34 +1,69 @@
 ---
+interface Partner {
+  image: string;
+  name: string;
+  description?: string;
+  link?: string;
+}
 
+interface Props {
+  title?: string;
+  variant: "default" | "single" | "detailed";
+  partners: Partner[];
+}
+
+const { title = "Our Partners", variant, partners } = Astro.props;
 ---
 
-<section class="our-parnes font-[Poppins] text-center">
-    <div class="container-title">
-        <h2 class="text-[44px] text-[#222] font-normal">Our Parners</h2>
-        <div class="line"></div>
+<section class="our-parnes">
+  <div class="container-title">
+    <h2>{title}</h2>
+    <hr class="line" />
+  </div>
+
+  {variant === "default" ? (
+    <div class="grid grid-cols-3 gap-4">
+      {partners.map((partner) => (
+        <div>
+          <img src={partner.image} alt={partner.name} class="w-full h-[350px] object-cover" />
+          <p class="font-bold mt-2">{partner.name}</p>
+          <a href={partner.link} class="text-yellow-600 text-sm">Read More</a>
+        </div>
+      ))}
     </div>
-
-    <div>
-
-        
-
+  ) : variant === "single" ? (
+    <div class="flex justify-center">
+      <div class="relative">
+        <img src={partners[0].image} alt={partners[0].name} class="w-[400px] object-cover" />
+        <span class="absolute bottom-4 left-4 text-white font-medium">{partners[0].name}</span>
+      </div>
     </div>
-
+  ) : variant === "detailed" ? (
+    <div class="grid grid-cols-3 gap-4">
+      {partners.map((partner) => (
+        <div>
+          <img src={partner.image} alt={partner.name} class="w-full h-[350px] object-cover" />
+          <h3 class="font-bold mt-2">{partner.name}</h3>
+          <p class="text-sm text-gray-600 mt-1">{partner.description}</p>
+        </div>
+      ))}
+    </div>
+  ) : null}
 </section>
 
 <style>
-    .container-title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-    .our-parnes {
-        margin-top: 40px;
-    }
-    .line{
-        width: 220px;
-        border-top: 3px solid rgb(196, 160, 95);
-    }
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .our-parnes {
+    margin-top: 40px;
+  }
+  .line {
+    width: 220px;
+    border-top: 3px solid rgb(196, 160, 95);
+  }
 </style>

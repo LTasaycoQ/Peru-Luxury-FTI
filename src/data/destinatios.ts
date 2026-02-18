@@ -1,14 +1,25 @@
----
-import BaseLayout from "../layouts/BaseLayout.astro";
+export interface Partner {
+  image: string;
+  name: string;
+  description?: string;
+  link?: string;
+}
 
-import DistrictInicio from "../components/destinations/distritos/districtInicio.astro";
-import OurParners from "../components/destinations/distritos/OurParners.astro";
-import Fondo from "../components/Fondo.astro";
+export interface Destination {
+  fondo: string;
+  distrito: string;
+  title: string;
+  description: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  partnersTitle?: string;
+  partnersVariant: "default" | "single" | "detailed";
+  partners: Partner[];
+}
 
-
-export function getStaticPaths() {
-  const pages = [
-    {
+export const destinations: Destination[] = [
+   {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/lima0001.jpg?fit=1890%2C700&ssl=1",
       distrito: "lima",
       title: "Lima",
@@ -16,8 +27,17 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco1.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco3.jpg?fit=413%2C282&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
+
+      partnersVariant: "default",
+      partners: [
+        { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+        { image: "...", name: "Hotel B", link: "#" },
+        { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      ],
     },
-     {
+
+    
+    {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/04/Cusco-portada2.jpg?fit=1920%2C900&ssl=1",
       distrito: "cusco",
       title: "Cusco",
@@ -25,8 +45,17 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco1.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco3.jpg?fit=413%2C282&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
+    
+      partnersVariant: "default",
+      partners: [
+        { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+        { image: "...", name: "Hotel B", link: "#" },
+        { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      ],    
     },
-     {
+
+
+    {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/mapi-portada.jpg?fit=1920%2C1280&ssl=1",
       distrito: "machu-picchu",
       title: "Machu Picchu",
@@ -34,6 +63,13 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco1.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco3.jpg?fit=413%2C282&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
+      partnersVariant: "default",
+      partners: [
+        { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+        { image: "...", name: "Hotel B", link: "#" },
+        { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      ],
+    
     },     
     {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Arequipa-portada.jpg?fit=1920%2C1280&ssl=1",
@@ -43,8 +79,16 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/arequipa1.jpg?fit=290%2C375&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/arequipa3.jpg?fit=290%2C183&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/arequipa2.jpg?fit=290%2C183&ssl=1",
+     
+      partnersVariant: "single", 
+      partners: [
+        { image: "...", name: "Titilaka" },
+      ],   
     },
-     {
+
+
+
+    {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Titicaca-Lake-portada2.jpg?fit=1920%2C1280&ssl=1",
       distrito: "puno",
       title: "Puno",
@@ -52,7 +96,13 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco1.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco3.jpg?fit=413%2C282&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
+      partnersVariant: "single", 
+      partners: [
+        { image: "...", name: "Titilaka" },
+      ],     
     },
+
+
     {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/04/sacred-valley-portada.jpg?fit=1920%2C900&ssl=1",
       distrito: "sacred-valley",
@@ -61,8 +111,14 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/sv1.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/sv2-2.jpg?fit=413%2C282&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/sv2.jpg?fit=413%2C295&ssl=1",
+      partnersVariant: "default",
+      partners: [
+        { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+        { image: "...", name: "Hotel B", link: "#" },
+        { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      ],    
     },
-     {
+    {
       fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/banner-amazon-river-cruises.png?resize=1536%2C560&ssl=1",
       distrito: "amazon-river-cruises",
       title: "Amazon River Cruises",
@@ -70,6 +126,13 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/aria-amazon.png?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/amazon-cruises.png?fit=1680%2C1205&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/amazon-cruises2.png?fit=413%2C282&ssl=1",
+     
+      partnersVariant: "detailed", 
+      partners: [
+       { image: "...", name: "Aria Amazon", description: "A five-star, eco-friendly..." },
+       { image: "...", name: "Delfin I", description: "This river vessel..." },
+       { image: "...", name: "Delfin II", description: "The 14 cabins..." },
+      ],    
     },
 
     {
@@ -80,6 +143,15 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train2.jpg?fit=1680%2C1205&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train3.jpg?fit=413%2C282&ssl=1",
+
+      
+      partnersVariant: "detailed", 
+      partners: [
+        { image: "...", name: "Aria Amazon", description: "A five-star, eco-friendly..." },
+        { image: "...", name: "Delfin I", description: "This river vessel..." },
+        { image: "...", name: "Delfin II", description: "The 14 cabins..." },
+      ],
+   
     },
     
     {
@@ -90,32 +162,13 @@ export function getStaticPaths() {
       image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.jpg?fit=413%2C589&ssl=1",
       image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train2.jpg?fit=1680%2C1205&ssl=1",
       image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train3.jpg?fit=413%2C282&ssl=1",
+   
+      partnersVariant: "default",
+      partners: [
+        { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+        { image: "...", name: "Hotel B", link: "#" },
+        { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      ],
+   
     },
-  ];
-
-  return pages.map((page) => ({
-    params: { distrito: page.distrito },
-    props: { ...page }, 
-  }));
-}
-
-const { title, description, image1, image2, image3, fondo } = Astro.props;
----
-
-<BaseLayout title={title}>
-
-
-    <Fondo fondo={`url(${fondo})`} />
-
-    <main>
-      <DistrictInicio 
-        title={title} 
-        description={description} 
-        image1={image1} 
-        image2={image2} 
-        image3={image3} 
-      />
-
-      <OurParners />
-    </main>
-</BaseLayout>
+];
