@@ -1,173 +1,237 @@
 ---
 ---
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="container-enlaces">
-            <div class="container-lista">
-                <h4>CONTACT</h4>
-                <ul>
-                    
-                    <li><i class="bi bi-caret-right-fill"></i><i class="bi bi-geo-alt-fill"></i><a href="https://maps.app.goo.gl/7VNMJu9L5yj15rj97">Av. San Luis 2642 San Borja, Lima - Peru</a> </li>
-                    <li><i class="bi bi-caret-right-fill"></i><i class="bi bi-telephone-fill"></i>(51) 345-7558</li>
-                    <li><i class="bi bi-caret-right-fill"></i><i class="bi bi-envelope"></i>Sales@PeruLuxuryJourneys.com</li>
-                </ul>
-            </div>
-
-            <div class="container-lista">
-                <h4>PAGES</h4>
-                <ul>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="#">Destinations</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="#">Programs</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="#">About us</a></li>
-                </ul>
-            </div>
-
-            <div class="container-lista">
-                <h4>DESTINATIONS</h4>
-                <ul>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/lima">Lima</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/cusco">Cusco</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/sacred-valley">Sacred Valley</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/machu-picchu">Machu Picchu</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/puno">Puno</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/arequipa">Arequipa</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/amazon-river-cruises">Amazon River Cruises</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/nazca-paracas">Nazca - Paracas</a></li>
-                    <li><i class="bi bi-caret-right-fill"></i><a href="/luxury-trains">Luxury - Trains</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="formulario-subscribe">
-            <h4>JOIN NEWSLETTER</h4>
-            <form>
-                <div class="input-group">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
-                </div>
-                <input type="email" placeholder="Email">
-                <button type="submit">SUBSCRIBE</button>
-            </form>
-        </div>
+<footer class="footer-modern">
+  <div class="footer-content">
+    
+    <div class="footer-brand">
+      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo">
+      <p class="brand-description">
+        Crafting unique and unforgettable luxury experiences across the wonders of Peru.
+      </p>
+      <div class="social-links">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+      </div>
     </div>
+
+    <div class="footer-grid-links">
+      <div class="link-group">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Luxury Programs</a></li>
+          <li><a href="#">About Our Story</a></li>
+        </ul>
+      </div>
+      <div class="link-group">
+        <h4>Top Destinations</h4>
+        <ul>
+          <li><a href="/cusco">Cusco & Machu Picchu</a></li>
+          <li><a href="/amazon">Amazon River</a></li>
+          <li><a href="/puno">Lake Titicaca</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Join Our Newsletter</h4>
+      <p>Receive exclusive travel tips and luxury offers.</p>
+      <form class="newsletter-form">
+        <div class="input-box">
+            <div class="box-input--form">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Last Name">
+            </div>
+            <input type="email" placeholder="Email">
+            <button class="">Subscription</button>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Peru Luxury Journeys. All rights reserved.</p>
+    <div class="bottom-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
 </footer>
 
 <style>
-    .footer {
-        padding: 60px 20px;
-        background-color: #313131; 
-        color: white;
-        font-family: 'Poppins', sans-serif;
+  .footer-modern {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 80px 5% 30px 5%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 60px;
+  }
+
+  .footer-logo {
+    max-width: 300px;
+    margin-bottom: 20px;
+    filter: brightness(9.2);
+  }
+
+  .brand-description {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-links a {
+    color: #DABB42;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-5px);
+    color: #fff;
+  }
+
+  .footer-grid-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .link-group h4 {
+    color: #DABB42;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .link-group ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .link-group ul li {
+    margin-bottom: 12px;
+  }
+
+  .link-group a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .link-group a:hover {
+    color: #fff;
+    transform: translateX(8px);
+  }
+  .footer-newsletter h4 {
+    color: #DABB42;
+    margin-bottom: 15px;
+  }
+
+  .footer-newsletter p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .box-input--form{
         display: flex;
-        justify-content: center;
+        gap: 15px
     }
 
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        width: 100%;
-        max-width: 1600px;
-    }
+  .input-box {
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    padding: 5px 0;
+  }
 
-    @media (min-width: 1024px) {
-        .footer-container {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
+  .input-box input {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    color: rgb(107, 107, 107);
+    padding: 10px;
+    width: 100%;
+    outline: none;
+  }
 
-    .container-enlaces {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 40px;
-        flex: 2;
-    }
+  .input-box button {
+    background-color:#ffbb00;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s;
+  }
 
-    .container-lista h4, .formulario-subscribe h4 {
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        color: #DABB42; 
-    }
+  .input-box button:hover {
+    background-color:#ff9900;
+  }
 
-    .container-lista ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        font-weight: 300;
-        font-size: 14px;
-        color: #cccccc;
-    }
-   
-    .container-lista ul li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .container-lista a {
-        text-decoration: none;
-        display: flex;
-        color: inherit;
-        transition: color 0.3s;
-    }
+  .footer-bottom {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+  }
 
-    .container-lista a:hover {
-        color: white;
-    }
+  .bottom-legal {
+    display: flex;
+    gap: 20px;
+  }
 
-    .formulario-subscribe {
-        flex: 1;
-        min-width: 300px;
-    }
+  .bottom-legal a {
+    color: #666;
+    text-decoration: none;
+  }
 
-    .formulario-subscribe form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
     }
-
-    .input-group {
-        display: flex;
-        gap: 10px;
+    .footer-newsletter {
+      grid-column: span 2;
     }
+  }
 
-    .formulario-subscribe input {
-        width: 100%;
-        background-color: white;
-        border: 1px solid #444;
-        color: white;
-        padding: 12px;
-        font-size: 14px;
-        border-radius: 4px;
-        outline: none;
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
     }
-
-    .formulario-subscribe input::placeholder {
-        color: #777;
+    .footer-newsletter, .footer-grid-links {
+      grid-column: span 1;
     }
-
-    .formulario-subscribe button {
-        background-color: #CC8D3D;
-        color: white;
-        padding: 14px;
-        border: none;
-        width: 100%;
-        border-radius: 4px;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 5px;
+    .footer-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
     }
-
-
-    @media (max-width: 480px) {
-        .input-group {
-            flex-direction: column;
-        }
-    }
+  }
 </style>
