@@ -20,7 +20,7 @@ export interface Destination {
 
 export const destinations: Destination[] = [
   {
-    fondo: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/lima0001.jpg?fit=1890%2C700&ssl=1",
+    fondo: "../assets/backgrounds/distritos-backgrounds/banner-about-us3.webp",
     distrito: "lima",
     title: "Lima",
     description: "Lima, known as “the City of Kings”, is usually the first step in a journey to Peru. It is a city that blends modern neighbourhoods with the colonial-style buildings of the Main Plaza. Barranco has a large collection of museums, iconic bars and restaurants, shops and art studios. Miraflores, the tourist district for excellence, offers beautiful parks along its boardwalk, with stunning views of the Pacific Ocean. You can enjoy lovely sunsets from Larcomar, a shopping mall located in the heart of the district. Lima has plenty of colonial buildings to see. It is a must to walk around the Historical Centre of the city, considered as a World Heritage Site by UNESCO. It really worth to visit the Plaza de Armas where the Presidential Palace and the Archbishop Palace are located, the Aliaga House -the oldest Colonial mansion in Lima-, the Municipal Palace and the Monastery of San Francisco, famous for its baroque architecture and for its catacombs. Considered the Gastronomic Capital of Latin America, Lima has become the culinary hub of several huariques -small and family-run restaurants that keep traditional recipes- and many fancy and renowned restaurants included in The World’s 50 Best Restaurants list.",

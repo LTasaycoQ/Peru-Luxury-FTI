@@ -2,15 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import DestinationsPeru from "../components/destinations/DestinationsPeru.astro"
 import TopDestination from "../components/destinations/TopDestination.astro"
-
 import Fondo from "../components/Fondo.astro"
+import background from "../assets/backgrounds/banner-destinations.webp"
 
 const title = "Destinations"
 ---
 
 <BaseLayout title={title}>
 
-    <Fondo fondo={`url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/banner-destinations.jpg?fit=1920%2C700&ssl=1')`} />
+    <Fondo fondo={`url(${background.src})`} />
     <main>
         <DestinationsPeru />
         <TopDestination />
