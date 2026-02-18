@@ -72,9 +72,9 @@ export const destinations: Destination[] = [
     image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
     partnersVariant: "default",
     partners: [
-      { image: "...", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "...", name: "Hotel B", link: "#" },
-      { image: "...", name: "JW Marriott Hotel Lima", link: "#" },
+      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Sanctuary-lodge.jpg?fit=450%2C400&ssl=1", name: "Sanctuary Lodge A Belmond Hotel", link: "#" },
+      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/inkaterra-mapi.jpg?fit=450%2C400&ssl=1", name: "Inkaterra Machu Picchu Pueblo Hotel", link: "#" },
+      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/sumaq.jpg?fit=450%2C400&ssl=1", name: "Sumaq Machu Picchu Hotel", link: "#" },
     ],
 
   },
@@ -105,7 +105,7 @@ export const destinations: Destination[] = [
     image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/06/cusco2.jpg?fit=413%2C295&ssl=1",
     partnersVariant: "single",
     partners: [
-      { image: "...", name: "Titilaka" },
+      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/inkaterra-mapi.jpg?fit=450%2C400&ssl=1", name: "Titilaka" },
     ],
   },
 
