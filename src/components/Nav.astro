@@ -1,122 +1,180 @@
 ---
 import HeaderTop from "./HeaderTop.astro";
-
 import { Image } from "astro:assets";
 import logo from "../assets/logo/PLJ-LOGO-1.webp";
-
-
 ---
 
-<header class="w-full flex flex-col justify-center items-center">
+<header class="w-full flex flex-col justify-center items-center relative">
     <HeaderTop />
 
     <nav class="w-[70%] max-xl:w-[90%] p-[5px]">
         <div class="flex w-full justify-between items-center">
-            <a href=""><Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" /></a>
+            <a href="/">
+                <Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" />
+            </a>
 
-            <div class="text-[25px] lg:hidden ">
-                <div id="btnMenu" class="rounded-[2px] p-[14px] w-[20px] h-[20px] flex flex-col items-center justify-center bg-[#E6E6E6]">
-                    <i id="openMenu" class="bi bi-list"></i>
-                    <i id="closeMenu" class="hidden bi bi-x-lg"></i>
-                </div>
-            </div>
-            <ul class="w-[40%] max-lg:hidden  flex items-center jutify-center justify-around">
-                <li class="linksEffect flex items-center gap-[5px]">
-                    <i id="iconSubmenu" class="p-2 rounded-full bi bi-caret-right-fill"></i> <a href="/destinations">DESTINATIONS</a> 
+            <button
+                id="btnMenu"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                class="lg:hidden rounded-[2px] p-[14px] w-[48px] h-[48px] flex flex-col items-center justify-center bg-[#E6E6E6] cursor-pointer border-none"
+            >
+                <i id="openMenu" class="bi bi-list text-[22px]"></i>
+                <i id="closeMenu" class="bi bi-x-lg text-[22px] hidden"></i>
+            </button>
+
+            <ul class="w-[40%]  max-lg:hidden flex items-center justify-around">
+                <li class="linksEffect  flex items-center gap-[5px] relative">
+                    <button id="btnSubmenuDesktop" class="flex items-center gap-[5px] bg-transparent border-none cursor-pointer linksEffect">
+                        <i id="iconSubmenu" class="bi bi-caret-right-fill transition-transform duration-300"></i>
+                        <a href="/destinations">DESTINATIONS</a>
+                    </button>
+                    <div id="submenu" class="hidden absolute  top-[58px] left-[-35px] z-50 bg-[#393939] w-[225px] shadow-lg shadow-black">
+                        <ul class="text-[14px] text-white w-full">
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/lima">LIMA</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/cusco">CUSCO</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/puno">PUNO</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/arequipa">AREQUIPA</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/nazca-paracas">NAZCA - PARACAS</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/amazon-river-cruises">AMAZON RIVER CRUISES</a></li>
+                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/luxury-trains">LUXURY TRAINS</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="linksEffect"><a href="/programs">PROGRAMS</a></li>
                 <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
             </ul>
         </div>
     </nav>
-     <div id="submenu" class=" w-full hidden relative ">
-            <div class="absolute lg:right-[13em] max-lg:hidden max-xl:right-[18em] xl:right-[25em] max-2xl:right-[24em] 2xl:right-[36em]  bg-[#393939] w-[225px]">
-                <ul class="text-[14px] text-white w-full shadow-lg shadow-black"> 
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/lima">LIMA</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/cusco">CUSCO</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/puno">PUNO</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/arequipa">AREQUIPA</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/nazca-paracas">NAZCA - PARACAS</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/amazon-river-cruises">AMAZON RIVER CRUISES</a></li>
-                    <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/luxury-trains">LUXURY TRAINS</a></li>
-                </ul>
-            </div>
+
+    <div id="menuResponsive" class="hidden w-full bg-[#393939] text-white z-40">
+
+        <div class="flex items-center justify-between border-b border-[#555]">
+            <a class="p-[14px] flex-1 text-[14px] tracking-widest" href="/destinations">DESTINATIONS</a>
+            <button
+                id="btnSubMenuResponsive"
+                aria-label="Ver destinos"
+                aria-expanded="false"
+                class="p-[14px] bg-transparent border-none cursor-pointer text-white"
+            >
+                <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill text-[14px]"></i>
+            </button>
         </div>
 
-    <div id="menuResponsive" class="w-full hidden">
-        <ul class="flex flex-col bg-[#393939] text-white text-start w-full items-start p-[10px] jutify-center justify-around">
-                <li class="p-[8px] flex items-center gap-[10px]">
-                    <a href="/destinations">DESTINATIOS<i class="text-[12px] bi bi-caret-down-fill"></i></a>
-                </li>
-                <li class="p-[8px]"><a href="/programs">PROGRAMS</a></li>
-                <li class="p-[8px]"><a href="/about-us">ABOUT US</a></li>
+        <div id="submenuResponsive" class="hidden bg-[#2e2e2e] submenu-anim">
+            <ul class="text-[13px] py-[8px]">
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/lima">Lima</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/cusco">Cusco</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/sacred-valley">Sacred Valley</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/machu-picchu">Machu Picchu</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/puno">Puno</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/arequipa">Arequipa</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/nazca-paracas">Nazca - Paracas</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/amazon-river-cruises">Amazon River Cruises</a></li>
+                <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/luxury-trains">Luxury Trains</a></li>
             </ul>
+        </div>
+
+        <div class="border-b border-[#555]">
+            <a class="block p-[14px] text-[14px] tracking-widest" href="/programs">PROGRAMS</a>
+        </div>
+        <div>
+            <a class="block p-[14px] text-[14px] tracking-widest" href="/about-us">ABOUT US</a>
+        </div>
     </div>
 </header>
 
 
-<script type="module">
+<script>
+    const btnMenu = document.getElementById("btnMenu") as HTMLButtonElement;
+    const openMenuIcon = document.getElementById("openMenu") as HTMLElement;
+    const closeMenuIcon = document.getElementById("closeMenu") as HTMLElement;
+    const menuResponsive = document.getElementById("menuResponsive") as HTMLElement;
 
-    const openMenu = document.getElementById("openMenu");
-    const closeMenu = document.getElementById("closeMenu");
-    const menuResponsive = document.getElementById("menuResponsive");
-    document.getElementById("openMenu").addEventListener("click", function () {
-        closeMenu.style.display = "block";
-        openMenu.style.display = "none";
+    btnMenu.addEventListener("click", () => {
+        const isOpen = !menuResponsive.classList.contains("hidden");
 
-        menuResponsive.style.display = "block";
-    }) 
+        menuResponsive.classList.toggle("hidden");
+        openMenuIcon.classList.toggle("hidden", isOpen);   
+        closeMenuIcon.classList.toggle("hidden", !isOpen); 
+        btnMenu.setAttribute("aria-expanded", String(!isOpen));
+    });
 
-    document.getElementById("closeMenu").addEventListener("click", function () {
-        closeMenu.style.display = "none";
-        openMenu.style.display = "block";
-        menuResponsive.style.display = "none";
-    })
+    const btnSubmenuDesktop    = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
+    const submenuDesktop       = document.getElementById("submenu") as HTMLElement;
+    const iconSubmenu          = document.getElementById("iconSubmenu") as HTMLElement;
 
+    btnSubmenuDesktop.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !submenuDesktop.classList.contains("hidden");
+        submenuDesktop.classList.toggle("hidden");
+        iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+        btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
+    });
 
-    
+    document.addEventListener("click", (e) => {
+        if (!btnSubmenuDesktop.contains(e.target as Node)) {
+            submenuDesktop.classList.add("hidden");
+            iconSubmenu.style.transform = "rotate(0deg)";
+            btnSubmenuDesktop.setAttribute("aria-expanded", "false");
+        }
+    });
 
-document.getElementById("iconSubmenu").addEventListener("click", function() {
-    const submenu = document.getElementById("submenu");
-    const iconFlecha = document.getElementById("iconSubmenu");
+    const btnSubMenuResponsive  = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
+    const submenuResponsive = document.getElementById("submenuResponsive") as HTMLElement;
+    const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon") as HTMLElement;
 
-    submenu.classList.toggle("hidden");
-    iconFlecha.classList.toggle("icon-flecha");
+    btnSubMenuResponsive.addEventListener("click", () => {
+        const isOpen = !submenuResponsive.classList.contains("hidden");
+        submenuResponsive.classList.toggle("hidden");
 
-});
-
-
-
-
+        iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+        btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
+    });
 </script>
 
 <style>
-    #menuResponsive{    
-        animation: nav-animation 0.1s ease-in-out ;
+    .linksEffect a {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        transition: color 0.3s;
     }
-    #iconSubmenu{
-        cursor: pointer;
+    .linksEffect a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background-color: currentColor;
+        transition: width 0.3s ease;
     }
-    .icon-flecha{
-       transform: rotate(90deg);
-       transition: all 0.4s;
+    .linksEffect a:hover::after {
+        width: 100%;
     }
-   
-    .items-Submenu:hover{
+
+    .items-Submenu {
+        transition: background-color 0.25s;
+    }
+    .items-Submenu:hover {
         background-color: #515050;
-        transition: all 0.5s ;
     }
 
-    @keyframes nav-animation {
-        0% {
-            transform: scaleY(0);
-        }
-        100% {
-            transform: scale(1);
-        }
+    #iconSubmenu {
+        transition: transform 0.35s ease;
     }
+
+    #iconSubMenuResponsiveIcon {
+        transition: transform 0.35s ease;
+    }
+
+    #menuResponsive {
+        transform-origin: top center;
+        animation: none; 
+    }
+  
+
 </style>
-
-
