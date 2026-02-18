@@ -21,8 +21,8 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 </div>
             </div>
             <ul class="w-[40%] max-lg:hidden  flex items-center jutify-center justify-around">
-                <li id="iconSubmenu"  class="linksEffect flex items-center gap-[5px]">
-                    <i id="icono" class="p-2 rounded-full bi bi-caret-right-fill"></i> <a href="/destinations">DESTINATIONS</a> 
+                <li class="linksEffect flex items-center gap-[5px]">
+                    <i id="iconSubmenu" class="p-2 rounded-full bi bi-caret-right-fill"></i> <a href="/destinations">DESTINATIONS</a> 
                 </li>
                 <li class="linksEffect"><a href="/programs">PROGRAMS</a></li>
                 <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
@@ -80,7 +80,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
 document.getElementById("iconSubmenu").addEventListener("click", function() {
     const submenu = document.getElementById("submenu");
-    const iconFlecha = document.getElementById("icono");
+    const iconFlecha = document.getElementById("iconSubmenu");
 
     submenu.classList.toggle("hidden");
     iconFlecha.classList.toggle("icon-flecha");
