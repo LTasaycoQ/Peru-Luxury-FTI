@@ -44,19 +44,16 @@
     <div class="footer-newsletter">
       <h4>Join Our Newsletter</h4>
       <p>Receive exclusive travel tips and luxury offers.</p>
-      <form class="newsletter-form">
+      <form id="formulario-subcription" class="form-contacto" >
         <div class="input-box">
             <div class="box-input--form">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Last Name">
+            <input name="Name" type="text" required placeholder="Name">
             </div>
-            <input type="email" placeholder="Email">
-            <button type="submit" class="">Subscription</button>
-
+            <input name="Email" type="email" required placeholder="Email">
+            <button id="btn-submit" class="button" type="submit">Subscription</button>
         </div>
       </form>
     </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -68,6 +65,60 @@
   </div>
 </footer>
 
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script is:inline>
+  const apiMailEndpoint = "https://urban-space-spork-4x7gj5jx4w5cqq7v-8000.app.github.dev/subscribe";
+  const form = document.querySelector(".form-contacto");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(form);
+    const data = {
+      nombre: formData.get("Name"),
+      email: formData.get("Email")
+    };
+
+    try {
+      const response = await fetch(apiMailEndpoint, {
+        method: "POST", 
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error en el servidor: ${response.status}`);
+      }
+
+      const resultado = await response.json();
+      console.log("Respuesta servidor:", resultado);
+
+      Swal.fire({
+        title: '¡Suscrito!',
+        text: 'Revisa tu correo pronto.',
+        icon: 'success',
+        confirmButtonColor: '#DABB42'
+      });
+
+      form.reset();
+
+    } catch (error) {
+      console.error("Error detallado:", error);
+      Swal.fire('Error', 'No pudimos procesar tu suscripción.', 'error');
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Subscription";
+    }
+  });
+</script>
 <style>
   .footer-modern {
     background-color: #1a1a1a;
