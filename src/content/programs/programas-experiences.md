@@ -3,38 +3,38 @@ section:
 
       # 3 PRIMEROS ELEMENTOS DE HOME
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/incas-legacy.jpg?fit=800%2C583&ssl=1"
+      - image: "incas-legacy.webp"
         title: "Legacy of The Incas"
         text: "A two week program including Belmond hotels and trains."
         link: "#"
 
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/wonders-of-peru.jpg?fit=800%2C583&ssl=1"
+      - image: "wonders-of-peru.webp"
         title: "Wonders of Peru"
         text: "Explore the highlights of Lima and Cusco in one week."
         link: "#"
 
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/peru-boutique.jpg?fit=800%2C583&ssl=1"
+      - image: "peru-boutique.webp"
         title: "Peru Boutique"
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties."
         link: "#"
 
       # --------
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/12/cam-cusco.jpg?fit=800%2C583&ssl=1"
+      - image: "cam-cusco.webp"
         title: "Legacy of The Incas"
         text: "A two week program including Belmond hotels and trains."
         link: "#"
 
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/12/isla-uros.jpg?fit=800%2C583&ssl=1"
+      - image: "isla-uros.webp"
         title: "Peru Magic"
         text: "Explore the highlights of Lima and Cusco in one week."
         link: "#"
 
 
-      - image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/12/conv-sta-catalina.jpg?fit=800%2C583&ssl=1"
+      - image: "conv-sta-catalina.webp"
         title: "Peru Boutique"
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties."
         link: "#"

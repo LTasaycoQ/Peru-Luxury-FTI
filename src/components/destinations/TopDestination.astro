@@ -8,62 +8,52 @@ interface Section {
   link: string;
 }
 
-const destinations = import.meta.glob<{ default: ImageMetadata }>(
+const imagenes = import.meta.glob<{ default: ImageMetadata }>(
   '../../assets/image/destinations/*.webp',
   { eager: true }
 );
-
 const roomsImport = import.meta.glob("../../content/Destinations/top-destinations.md", { eager: true });
 const destinationData = Object.values(roomsImport) as any[];
 const sections: Section[] = destinationData[0]?.frontmatter?.section ?? [];
 
-function getImage(path: string): ImageMetadata | undefined {
-  const directKey = `../../assets/image/destinations/${path}`;
-  if (destinations[directKey]) return destinations[directKey].default;
+function getImage(path: string): ImageMetadata {
   const filename = path.split('/').pop();
   const key = `../../assets/image/destinations/${filename}`;
-  return destinations[key]?.default;
+  return imagenes[key]?.default;
 }
 ---
-
 <section class="premium-programs">
-  <div class="header-section">
-    <div class="container-title">
-      <span class="title-accent">Top Destinations</span>
-      <div class="line"></div>
+    <div class="header-section">
+        <div class="container-title">
+            <span class="title-accent">Top destinations</span>
+            <div class="line"></div>
+        </div>
+        <h2 class="subtitle">
+            Explore Peru with us! <br>
+            We design unique experiences to discover the best of our history, culture and nature.
+        </h2>
     </div>
-    <h2 class="subtitle">
-      Explore Peru with us!<br />
-      We design unique experiences to discover the best of our history, culture and nature.
-    </h2>
-  </div>
 
-  <div class="grid-container">
-    <div class="programs-grid">
-      {sections.map((section) => {
-        const img = getImage(section.image);
-        return (
-          <div class="card">
-            <div class="image-container">
-              {img ? (
-                <Image src={img} alt={section.title} class="card-image" width={600} height={400} />
-              ) : (
-                <div class="card-image-fallback">
-                  <span>⚠ No Se pudo Cargar la Imagen</span>
-                </div>
-              )}
-              <div class="image-overlay" />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">{section.title}</h3>
-              <p class="card-text">{section.text}</p>
-              <a href={section.link} class="card-link"><i>Read More</i></a>
-            </div>
-          </div>
-        );
-      })}
+    <div class="grid-container">
+        <div class="programs-grid">
+
+            {
+                sections.map((section) => (
+                    <div class="card">
+                        <div class="image-container">
+                            <Image src={getImage(section.image)} alt={section.title} class="card-image" />
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">{section.title}</h3>
+                            <p class="card-text">{section.text}</p>
+                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                        </div>
+                    </div>
+                ))
+            }
+
+        </div>
     </div>
-  </div>
 </section>
 
 <style>
