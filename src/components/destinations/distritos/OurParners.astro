@@ -14,7 +14,9 @@ interface Props {
   partners: Partner[];
 }
 
-const { title = "Our Parners", variant, partners } = Astro.props;
+const { title = "Our Partners", variant, partners } = Astro.props;
+
+const isValidImage = (src: string) => src && src.startsWith('http');
 ---
 
 <section class="our-parnes font-[Poppins]">
@@ -23,55 +25,71 @@ const { title = "Our Parners", variant, partners } = Astro.props;
     <hr class="line" />
   </div>
 
-  {variant === "default" ? (
-    <div class="grid grid-cols-3 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
+  {variant === "default" && (
+    <div class="grid grid-cols-3 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
       {partners.map((partner) => (
         <div class="card-default">
-          <Image 
-            src={partner.image} 
-            alt={partner.name} 
-            width={600}
-            height={350}
-            class="imagen w-full h-[350px] object-cover" 
-          />
+          {isValidImage(partner.image) ? (
+            <Image 
+              src={partner.image} 
+              alt={partner.name} 
+              width={600}
+              height={350}
+              class="imagen w-full h-[350px] object-cover" 
+            />
+          ) : (
+            <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
+          )}
           <p class="text-default">{partner.name}</p>
           <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
     </div>
-  ) : variant === "single" ? (
+  )}
+
+  {variant === "single" && (
     <div class="flex justify-center items-center flex-wrap gap-[30px]">
       {partners.map((partner) => (
         <div class="relative">
-          <Image 
-            src={partner.image} 
-            alt={partner.name} 
-            width={400}
-            height={300}
-            class="w-[400px] object-cover" 
-          />
+          {isValidImage(partner.image) ? (
+            <Image 
+              src={partner.image} 
+              alt={partner.name} 
+              width={400}
+              height={300}
+              class="w-[400px] h-[300px] object-cover" 
+            />
+          ) : (
+            <div class="w-[400px] h-[300px] bg-gray-200"></div>
+          )}
           <span class="absolute bottom-4 left-4 text-white text-[25px] font-medium">{partner.name}</span>
         </div>
       ))}
     </div>
-  ) : variant === "detailed" ? (
-    <div class="grid grid-cols-2 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
+  )}
+
+  {variant === "detailed" && (
+    <div class="grid grid-cols-2 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
       {partners.map((partner) => (
         <div class="card-default">
-          <Image 
-            src={partner.image} 
-            alt={partner.name} 
-            width={600}
-            height={350}
-            class="imagen w-full h-[350px] object-cover" 
-          />
+          {isValidImage(partner.image) ? (
+            <Image 
+              src={partner.image} 
+              alt={partner.name} 
+              width={600}
+              height={350}
+              class="imagen w-full h-[350px] object-cover" 
+            />
+          ) : (
+            <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
+          )}
           <h3 class="text-default">{partner.name}</h3>
           <p class="text-sm text-gray-600 mt-1">{partner.description}</p>
           <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
     </div>
-  ) : null}
+  )}
 </section>
 
 <style>

@@ -9,7 +9,7 @@ interface Section {
 }
 
 const destinations = import.meta.glob<{ default: ImageMetadata }>(
-  '../../assets/destinations/*.webp',
+  '../../assets/image/destinations/*.webp',
   { eager: true }
 );
 
@@ -18,10 +18,10 @@ const destinationData = Object.values(roomsImport) as any[];
 const sections: Section[] = destinationData[0]?.frontmatter?.section ?? [];
 
 function getImage(path: string): ImageMetadata | undefined {
-  const directKey = `../../assets/destinations/${path}`;
+  const directKey = `../../assets/image/destinations/${path}`;
   if (destinations[directKey]) return destinations[directKey].default;
   const filename = path.split('/').pop();
-  const key = `../../assets/destinations/${filename}`;
+  const key = `../../assets/image/destinations/${filename}`;
   return destinations[key]?.default;
 }
 ---
