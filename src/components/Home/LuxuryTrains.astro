@@ -1,4 +1,10 @@
 ---
+import { Image } from "astro:assets";
+
+import trainGirl from "../../assets/image/Home-img/peru-train.webp"
+import bar from "../../assets/image/Home-img/luxury-trains.webp"
+import train from "../../assets/image/Home-img/peru-train3.webp"
+
 ---
 
 <section class="font-[Poppins] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
@@ -19,12 +25,31 @@
         <div class="flex w-full justify-center">
             <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
                 
-                <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/peru-train.jpg?fit=413%2C589&ssl=1')] bg-cover bg-center bg-no-repeat w-full md:w-1/2 h-[400px] md:h-full rounded-lg"></div>
+                <div class="w-full md:w-1/2 h-[400px] md:h-full rounded-lg overflow-hidden">
+                    <Image 
+                        src={trainGirl} 
+                        alt="Luxury train Peru"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
                 
                 <div class="flex flex-col gap-[15px] w-full md:w-1/2">
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-trains.jpg?fit=1680%2C1205&ssl=1')] bg-cover bg-center bg-no-repeat w-full h-[250px] md:h-1/2 rounded-lg"></div> 
-                    <div class="bg-[url('https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/peru-train3.jpg?fit=413%2C282&ssl=1')] bg-cover bg-center bg-no-repeat w-full h-[250px] md:h-1/2 rounded-lg"></div>            
+                    <div class="w-full h-[250px] md:h-1/2 rounded-lg overflow-hidden">
+                        <Image 
+                            src={bar} 
+                            alt="Luxury trains interior"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="w-full h-[250px] md:h-1/2 rounded-lg overflow-hidden">
+                        <Image 
+                            src={train}
+                            alt="Peru train journey"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

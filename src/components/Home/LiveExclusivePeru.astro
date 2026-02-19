@@ -1,5 +1,10 @@
 ---
+import { Image } from "astro:assets";
 
+import RC1 from "../../assets/image/Home-img/RC1.webp"
+import RC5 from "../../assets/image/Home-img/rc5.webp"
+import cena from "../../assets/image/Home-img/rc4.webp"
+import restaurant from "../../assets/image/Home-img/rc2.webp"
 ---
 
 <section
@@ -19,12 +24,12 @@
 
     <div class="flex w-[90%] max-md:flex-col pt-[80px] justify-center items-center">
         <div class="flex">
-            <img class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-1 relative left-[30px] max-md:left-[10px]  max-sm:left-[5px]" src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/RC1.png?ssl=1" alt=""/>
-            <img class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-2 relative right-[60px] top-[70px] max-md:top-[20px] max-md:right-[30px] max-sm:right-[20px]" src="http://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/rc5.png?w=407&ssl=1"  alt=""/>
+            <Image src={RC1} alt="bed-img1" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-1 relative left-[30px] max-md:left-[10px]  max-sm:left-[5px]"/>
+            <Image src={RC5} alt="bed-img2" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-2 relative right-[60px] top-[70px] max-md:top-[20px] max-md:right-[30px] max-sm:right-[20px]" />
         </div>
         <div class="flex relative ">
-            <img class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-3 relative  right-[60px] max-md:left-[30px] max-md:top-[-20px] max-sm:left-[20px] max-sm:top-[-18px]" src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/rc4.png?w=407&ssl=1" alt=""/>
-            <img class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-4 relative right-[120px] top-[70px] max-md:right-[0px] max-md:top-[0px] max-sm:right-[8px] max-sm:top-[-10px] max-md:z-1" src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/rc2.png?w=407&ssl=1" alt=""/>
+            <Image src={cena} alt="centa-img" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-3 relative  right-[60px] max-md:left-[30px] max-md:top-[-20px] max-sm:left-[20px] max-sm:top-[-18px]" />
+            <Image src={restaurant} alt="restaurant-img" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-4 relative right-[120px] top-[70px] max-md:right-[0px] max-md:top-[0px] max-sm:right-[8px] max-sm:top-[-10px] max-md:z-1"/>
         </div>
     </div>
 </section>
