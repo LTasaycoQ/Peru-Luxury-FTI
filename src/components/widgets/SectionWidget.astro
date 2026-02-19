@@ -1,5 +1,8 @@
 ---
-const {title, description , image1, image2, image3} = Astro.props
+const {title, description, image1, image2, image3} = Astro.props
+
+
+
 ---
 
 <section class="font-[Poppins] bg-[#F7F7F7] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
@@ -13,24 +16,35 @@ const {title, description , image1, image2, image3} = Astro.props
                 {description}
             </p>
         </div>
+
         <div class="flex w-full justify-center">
             <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
                 
-                <div 
-                    class="bg-cover bg-center bg-no-repeat w-full md:w-1/2 h-[400px] md:h-full " 
-                    style={`background-image: url('${image1}')`}>
+                <div class="w-full md:w-1/2 h-[400px] md:h-full overflow-hidden flex items-center justify-center">
+                    <img 
+                        src={image1} 
+                        alt={image1} 
+                        class="w-full h-full object-cover object-center"
+                    />
                 </div>
                 
                 <div class="flex flex-col gap-[15px] w-full md:w-1/2">
-                    <div 
-                        class="bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2" 
-                        style={`background-image: url('${image2}')`}>
-                    </div> 
-                    <div 
-                        class="bg-cover bg-center bg-no-repeat w-full h-[350px] md:h-1/2" 
-                        style={`background-image: url('${image3}')`}>
-                    </div>            
+                    <div class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center">
+                        <img 
+                            src={image2} 
+                            alt="" 
+                            class="w-full h-full object-cover object-center"
+                        />
+                    </div>
+                    <div class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center">
+                        <img 
+                            src={image3} 
+                            alt="" 
+                            class="w-full h-full object-cover object-center"
+                        />
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

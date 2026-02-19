@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Partner {
   image: string;
   name: string;
@@ -25,17 +27,29 @@ const { title = "Our Parners", variant, partners } = Astro.props;
     <div class="grid grid-cols-3 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
       {partners.map((partner) => (
         <div class="card-default">
-          <img src={partner.image} alt={partner.name} class="imagen w-full h-[350px] object-cover" />
+          <Image 
+            src={partner.image} 
+            alt={partner.name} 
+            width={600}
+            height={350}
+            class="imagen w-full h-[350px] object-cover" 
+          />
           <p class="text-default">{partner.name}</p>
           <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
     </div>
   ) : variant === "single" ? (
-    <div class="flex justify-center justify-center items-center  flex-wrap gap-[30px] items-center ">
+    <div class="flex justify-center items-center flex-wrap gap-[30px]">
       {partners.map((partner) => (
         <div class="relative">
-          <img src={partner.image} alt={partner.name} class="w-[400px] object-cover" />
+          <Image 
+            src={partner.image} 
+            alt={partner.name} 
+            width={400}
+            height={300}
+            class="w-[400px] object-cover" 
+          />
           <span class="absolute bottom-4 left-4 text-white text-[25px] font-medium">{partner.name}</span>
         </div>
       ))}
@@ -44,10 +58,15 @@ const { title = "Our Parners", variant, partners } = Astro.props;
     <div class="grid grid-cols-2 gap-4 w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1 gap-[50px]">
       {partners.map((partner) => (
         <div class="card-default">
-          <img src={partner.image} alt={partner.name} class="imagen w-full h-[350px] object-cover" />
+          <Image 
+            src={partner.image} 
+            alt={partner.name} 
+            width={600}
+            height={350}
+            class="imagen w-full h-[350px] object-cover" 
+          />
           <h3 class="text-default">{partner.name}</h3>
           <p class="text-sm text-gray-600 mt-1">{partner.description}</p>
-          
           <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
@@ -56,12 +75,7 @@ const { title = "Our Parners", variant, partners } = Astro.props;
 </section>
 
 <style>
-
-  .card-default{
-  }
-
-
-  .text-default{
+  .text-default {
     font-size: 20px;
     font-weight: 600;
     margin-top: 20px;
@@ -92,6 +106,7 @@ const { title = "Our Parners", variant, partners } = Astro.props;
     color: #222;
     margin-bottom: 40px;
   }
+
   .our-parnes {
     display: flex;
     flex-direction: column;
@@ -100,6 +115,7 @@ const { title = "Our Parners", variant, partners } = Astro.props;
     margin-top: 40px;
     margin-bottom: 60px;
   }
+
   .line {
     width: 220px;
     border-top: 3px solid rgb(196, 160, 95);
