@@ -7,7 +7,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{j
 
 const resolveImage = async (src: string) => {
   if (!src) return null;
-  if (src.startsWith('http')) return { type: 'external' as const, src };
+  if (src.startsWith('https')) return { type: 'external' as const, src };
   const mod = await images[src]?.();
   return mod?.default ? { type: 'local' as const, src: mod.default } : null;
 };
