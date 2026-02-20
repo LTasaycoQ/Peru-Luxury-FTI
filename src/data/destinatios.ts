@@ -78,6 +78,9 @@ export const destinations: Destination[] = [
     ],
 
   },
+
+  
+
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/Arequipa-portada_gfm0cu.webp",
     distrito: "arequipa",
