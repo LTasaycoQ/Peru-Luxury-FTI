@@ -4,7 +4,6 @@ import HeaderTop from "./HeaderTop.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <header class="w-full flex flex-col justify-center items-center relative">
@@ -12,7 +11,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
     <nav class="w-[70%] max-xl:w-[90%] p-[5px]">
         <div class="flex w-full justify-between items-center">
-            <a href={`${base}/`}>
+            <a href="/">
                 <Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" />
             </a>
 
@@ -30,13 +29,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 <li class="linksEffect flex items-center gap-[5px] relative">
                     <button id="btnSubmenuDesktop" class="flex items-center gap-[5px] bg-transparent border-none cursor-pointer linksEffect">
                         <i id="iconSubmenu" class="bi bi-caret-right-fill transition-transform duration-300"></i>
-                        <a href={`${base}/destinations`}>DESTINATIONS</a>
+                        <a href="/destinations">DESTINATIONS</a>
                     </button>
                     <div id="submenu" class="hidden absolute top-[58px] left-[-35px] z-50 bg-[#393939] w-[225px] shadow-lg shadow-black">
                         <ul class="text-[14px] text-white w-full">
                             {destinations.map(d => (
                                 <li class="flex">
-                                    <a class="items-Submenu p-[15px] w-full" href={`${base}/${d.distrito}`}>
+                                    <a class="items-Submenu p-[15px] w-full" href={`/${d.distrito}`}>
                                         {d.distrito.toUpperCase().replace(/-/g, " ")}
                                     </a>
                                 </li>
@@ -44,8 +43,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                         </ul>
                     </div>
                 </li>
-                <li class="linksEffect"><a href={`${base}/programs`}>PROGRAMS</a></li>
-                <li class="linksEffect"><a href={`${base}/about-us`}>ABOUT US</a></li>
+                <li class="linksEffect"><a href="/programs">PROGRAMS</a></li>
+                <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
             </ul>
         </div>
     </nav>
@@ -54,7 +53,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <div id="menuResponsive" class="hidden w-full bg-[#393939] text-white z-40">
 
             <div class="flex items-center justify-between border-b border-[#555]">
-                <a class="p-[14px] flex-1 text-[14px] tracking-widest" href={`${base}/destinations`}>DESTINATIONS</a>
+                <a class="p-[14px] flex-1 text-[14px] tracking-widest" href="/destinations">DESTINATIONS</a>
                 <button
                     id="btnSubMenuResponsive"
                     aria-label="Ver destinos"
@@ -69,7 +68,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 <ul class="text-[13px] py-[8px]">
                     {destinations.map(d => (
                         <li>
-                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`${base}/${d.distrito}`}>
+                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`/${d.distrito}`}>
                                 {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
                             </a>
                         </li>
@@ -78,10 +77,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             </div>
 
             <div class="border-b border-[#555]">
-                <a class="block p-[14px] text-[14px] tracking-widest" href={`${base}/programs`}>PROGRAMS</a>
+                <a class="block p-[14px] text-[14px] tracking-widest" href="/programs">PROGRAMS</a>
             </div>
             <div>
-                <a class="block p-[14px] text-[14px] tracking-widest" href={`${base}/about-us`}>ABOUT US</a>
+                <a class="block p-[14px] text-[14px] tracking-widest" href="/about-us">ABOUT US</a>
             </div>
         </div>
     </div>
