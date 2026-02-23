@@ -25,20 +25,19 @@ export const destinations: Destination[] = [
     distrito: "lima",
     title: "Lima",
     description: "Lima, known as “the City of Kings”, is usually the first step in a journey to Peru. It is a city that blends modern neighbourhoods with the colonial-style buildings of the Main Plaza. Barranco has a large collection of museums, iconic bars and restaurants, shops and art studios. Miraflores, the tourist district for excellence, offers beautiful parks along its boardwalk, with stunning views of the Pacific Ocean. You can enjoy lovely sunsets from Larcomar, a shopping mall located in the heart of the district. Lima has plenty of colonial buildings to see. It is a must to walk around the Historical Centre of the city, considered as a World Heritage Site by UNESCO. It really worth to visit the Plaza de Armas where the Presidential Palace and the Archbishop Palace are located, the Aliaga House -the oldest Colonial mansion in Lima-, the Municipal Palace and the Monastery of San Francisco, famous for its baroque architecture and for its catacombs. Considered the Gastronomic Capital of Latin America, Lima has become the culinary hub of several huariques -small and family-run restaurants that keep traditional recipes- and many fancy and renowned restaurants included in The World’s 50 Best Restaurants list.",
+  
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima1_qwgyub.webp",    
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima2_obyqay.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
-
+  
     partnersVariant: "default",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Miraflores-Park.jpg?fit=450%2C380&ssl=1", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Hotel-B.jpg?fit=450%2C380&ssl=1", name: "Hotel B", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Marriott-Miraflores.jpg?fit=450%2C380&ssl=1", name: "JW Marriott Hotel Lima", link: "#" },
-
-
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Westin.jpg?fit=450%2C380&ssl=1", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/country-club.jpg?fit=450%2C380&ssl=1", name: "Hotel B", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/AC.jpg?fit=450%2C380&ssl=1", name: "JW Marriott Hotel Lima", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
   },
 
@@ -54,11 +53,11 @@ export const destinations: Destination[] = [
 
     partnersVariant: "default",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/monasterio.jpg?fit=450%2C380&ssl=1", name: "Miraflores Park, A Belmond Hotel Cusco", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/nazarenas.jpg?fit=450%2C380&ssl=1", name: "Palacio Nazarenas", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/ink-la-casona.jpg?fit=450%2C380&ssl=1", name: "Inkaterra La Casona Relais Chateau", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/marriott-cusco.jpg?fit=450%2C380&ssl=1", name: "JW Marriott El Convento Cusco", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/palacio-del-inka.jpg?fit=450%2C380&ssl=1", name: "Palacio del Inka, A luxury Collection", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/monasterio_v66tbl.webp", name: "Miraflores, A Belmond Hotel Cusco", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/nazarenas_s42qi2.webp", name: "Palacio Nazarenas", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/ink-la-casona_qmjyfs.webp", name: "Inkaterra La Casona Relais Chateau", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/marriott-cusco_jhzguk.webp", name: "JW Marriott El Convento Cusco", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/palacio-del-inka_iyacvk.webp", name: "Palacio del Inka, A luxury Collection", link: "#" },
     ],
   },
 
@@ -71,11 +70,11 @@ export const destinations: Destination[] = [
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi11_x6owuk.webp",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi22_cdjtrl.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi33_tvifmb.webp",
-    partnersVariant: "default",
+    partnersVariant: "single",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Sanctuary-lodge.jpg?fit=450%2C400&ssl=1", name: "Sanctuary Lodge A Belmond Hotel", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/inkaterra-mapi.jpg?fit=450%2C400&ssl=1", name: "Inkaterra Machu Picchu Pueblo Hotel", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/sumaq.jpg?fit=450%2C400&ssl=1", name: "Sumaq Machu Picchu Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Sanctuary-lodge_fcinjh.webp", name: "Sanctuary Lodge A Belmond Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-mapi_xhz39g.webp", name: "Inkaterra Machu Picchu Pueblo Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/sumaq_rhesqt.webp", name: "Sumaq Machu Picchu Hotel", link: "#" },
     ],
 
   },
@@ -93,7 +92,9 @@ export const destinations: Destination[] = [
 
     partnersVariant: "single",
     partners: [
-      { image: "...", name: "Titilaka" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/CASITA-GARDEN_goxo5t.webp", name: "Las Casistas A Belmond Hotel" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/DESTINO_iy0m0r.webp", name: "Aranwa Pueblito Encantado Del Colca" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/CIRQA2_kqgw1k.webp", name: "Cirqa" },
     ],
   },
 
@@ -108,13 +109,13 @@ export const destinations: Destination[] = [
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno3_pruvdn.webp",
     partnersVariant: "single",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/inkaterra-mapi.jpg?fit=450%2C400&ssl=1", name: "Titilaka" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-mapi_xhz39g.webp", name: "Titilaka" },
     ],
   },
 
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webpp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp",
     distrito: "sacred-valley",
     title: "Sacred Valley",
     description: "This amazing valley offers a glimpse into Peruvian history and allows travellers exploring numerous Inca archaeological sites, visiting typical Andean villages that have retained their ancestral customs and traditions, and enjoying fascinating landscapes. Some highlights of the Sacred Valley of the Incas are the local market and the agricultural terraces of Pisac, the fortress of Ollantaytambo -one of the best testimonies of the Incan architectural work-, the more than 5,000 salt ponds located in Maras, the agricultural terraces of Moray; and the town of Chinchero, famous for its textile houses, the Sunday local market and the Inca agricultural terraces located in the surrounding area. If you are an adrenaline lover, you cannot miss the opportunity to paraglide over the Andes, practice rafting in the Urubamba river or to drive an ATV across the valley.",
@@ -123,11 +124,12 @@ export const destinations: Destination[] = [
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2_lu3d4q.webp",
     partnersVariant: "default",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/tambo-inka.jpg?fit=450%2C380&ssl=1", name: "Tambo del inka, A Luxury Collection", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/Belmond-rio-sagrado.jpg?fit=450%2C380&ssl=1", name: "Rio Sagardo, A Belmond Hotel Sacred Valley", link: "#" },
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/07/inkaterra-hacienda.jpg?fit=450%2C380&ssl=1", name: "Inkaterra Hacienda Urubamba", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/tambo-inka_rixdeu.webp", name: "Tambo del inka, A Luxury Collection", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Belmond-rio-sagrado_va7vha.webp", name: "Rio Sagardo, A Belmond Hotel Sacred Valley", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-hacienda_i1y8x9.webp", name: "Inkaterra Hacienda Urubamba", link: "#" },
     ],
   },
+
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a.webp",
     distrito: "amazon-river-cruises",
@@ -139,29 +141,31 @@ export const destinations: Destination[] = [
 
     partnersVariant: "detailed",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/aria-cruises.jpg?fit=800%2C583&ssl=1", name: "Aria Amazon", description: "A five-star, eco-friendly, luxury and comfort vessel. Sail the Aria Amazon, an all-inclusive luxury Amazon river cruise experience with spacious suites, Amazonian cuisine and expert-guided wildlife excursions.", link: "#"},
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/delfin1-cruises.jpg?fit=800%2C583&ssl=1", name: "Delfin I", description: "This river vessel takes you one step beyond in terms of service, intimacy and personal attention. It offers only 04 exclusive oversized suites with panoramic private terraces; 02 of these with a private whirlpool for the ultimate treat.", link:"#"},
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/delfin2-cruises.jpg?fit=800%2C583&ssl=1", name: "Delfin II", description: "The 14 cabins of this vessel include 04 Master Suites with 180° panoramic windows and 10 Suites -including 02 sets of Suites that can be interconnected to accomodate families- with movie screen size windows and first-rate design.", link:"#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/amazon-cruises_p0ij0b.webp", name: "Aria Amazon", description: "A five-star, eco-friendly, luxury and comfort vessel. Sail the Aria Amazon, an all-inclusive luxury Amazon river cruise experience with spacious suites, Amazonian cuisine and expert-guided wildlife excursions.", link: "#"},
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/delfin1-cruises_uez3zm.webp", name: "Delfin I", description: "This river vessel takes you one step beyond in terms of service, intimacy and personal attention. It offers only 04 exclusive oversized suites with panoramic private terraces; 02 of these with a private whirlpool for the ultimate treat.", link:"#"},
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/delfin2-cruises_l11b9r.webp", name: "Delfin II", description: "The 14 cabins of this vessel include 04 Master Suites with 180° panoramic windows and 10 Suites -including 02 sets of Suites that can be interconnected to accomodate families- with movie screen size windows and first-rate design.", link:"#" },
     ],
   },
 
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_i18flh.webp",
     distrito: "luxury-trains",
-    title: "Elegance on Rails: The Art of Traveling Through Peru on Luxury Trains",
+    title: "Luxury Trains",
     description: "Discover the most exquisite Peru aboard luxury trains that redefine the notion of travel. Refined ambience, impeccable service and sublime scenery combine in a journey that celebrates sophistication in every detail. From Belle Époque-inspired lounges to private suites overlooking the Andes, every moment is designed to delight the senses. More than a transfer, it is an immersive experience where luxury moves to the rhythm of the Peruvian landscape.",
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_dlzryx.webp",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train2_stgvca.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train3_w9ysql.webp",
 
-
     partnersVariant: "detailed",
     partners: [
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/hiram-bingham.jpg?fit=800%2C583&ssl=1", name: "Belmond Hiram Bingham", description: "Launched in 2003 to escort guests in lavish style high into the Andes. The train carries guests in unrivaled style between Cusco, the Sacred Valley and Machu Picchu. During this journey, you can relax in 1920s-style carriages featuring highly polished wood and brass décor and enjoy gourmet dining, vibrant entertainment and awe-inspiring views. Here, elegance and old-fashioned charm come first.", link: "#"},
-      { image: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/andean-explorer.jpg?fit=800%2C583&ssl=1", name: "Belmond Andean Explorer", description: "Discover pioneering luxury and breathtaking rural mountainscapes on the world’s highest rail route. South America’s first luxury sleeper train glides from Cusco, the capital of the Inca Empire, across the lofty Andean plains to the white city of Arequipa. Take in the region’s spectacular highlights en route, including Lake Titicaca and the Sumbay Caves.",  link: "#"},
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/hiram-bingham_dfwjik.webp", name: "Belmond Hiram Bingham", description: "Launched in 2003 to escort guests in lavish style high into the Andes. The train carries guests in unrivaled style between Cusco, the Sacred Valley and Machu Picchu. During this journey, you can relax in 1920s-style carriages featuring highly polished wood and brass décor and enjoy gourmet dining, vibrant entertainment and awe-inspiring views. Here, elegance and old-fashioned charm come first.", link: "#"},
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/andean-explorer_ry8rv8.webp", name: "Belmond Andean Explorer", description: "Discover pioneering luxury and breathtaking rural mountainscapes on the world’s highest rail route. South America’s first luxury sleeper train glides from Cusco, the capital of the Inca Empire, across the lofty Andean plains to the white city of Arequipa. Take in the region’s spectacular highlights en route, including Lake Titicaca and the Sumbay Caves.",  link: "#"},
     ],
 
   },
+
+
+
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/caption_natyae.jpg",
     distrito: "nazca-paracas",
@@ -170,7 +174,7 @@ export const destinations: Destination[] = [
     image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.jpg?fit=413%2C589&ssl=1",
     image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train2.jpg?fit=1680%2C1205&ssl=1",
     image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train3.jpg?fit=413%2C282&ssl=1",
-
+    partnersTitle: "Luxury Trains",
     partnersVariant: "default",
     partners: [
       { image: "", name: "Miraflores Park, A Belmond Hotel", link: "#" },
