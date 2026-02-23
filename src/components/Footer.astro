@@ -65,7 +65,7 @@ const topDestinations = destinations.slice(0, 9);
 
 
 <script is:inline>
-  const apiMailEndpoint = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
+  const apiMailEndpointSubscribete = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
   const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
   formSubscribete?.addEventListener("submit", async (e) => {
@@ -83,7 +83,7 @@ const topDestinations = destinations.slice(0, 9);
     };
 
     try {
-      const response = await fetch(apiMailEndpoint, {
+      const response = await fetch(apiMailEndpointSubscribete, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
