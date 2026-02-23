@@ -46,7 +46,7 @@ const topDestinations = destinations.slice(0, 9);
     <div class="footer-newsletter">
       <h4>Join Our Newsletter</h4>
       <p>Receive exclusive travel tips and luxury offers.</p>
-      <form id="formulario-subcription" class="form-contacto">
+      <form id="formulario-subcription" class="form-contacto-subcribete">
         <div class="input-box">
           <div class="box-input--form">
             <input name="Nombre" type="text" required placeholder="First Name">
@@ -66,7 +66,7 @@ const topDestinations = destinations.slice(0, 9);
 
 <script is:inline>
   const apiMailEndpoint = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
-  const formSubscribete = document.querySelector(".form-contacto");
+  const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
   formSubscribete?.addEventListener("submit", async (e) => {
     e.preventDefault();
