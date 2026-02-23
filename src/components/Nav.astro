@@ -1,7 +1,10 @@
 ---
+import { destinations } from "../data/destinatios";
 import HeaderTop from "./HeaderTop.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/logo/PLJ-LOGO-1.webp";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <header class="w-full flex flex-col justify-center items-center relative">
@@ -9,7 +12,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
     <nav class="w-[70%] max-xl:w-[90%] p-[5px]">
         <div class="flex w-full justify-between items-center">
-            <a href="/">
+            <a href={`${base}/`}>
                 <Image src={logo} loading="eager" class="max-sm:w-[150px]" alt="logo-peru-luxy" />
             </a>
 
@@ -23,28 +26,26 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 <i id="closeMenu" class="bi bi-x-lg text-[22px] hidden"></i>
             </button>
 
-            <ul class="w-[40%]  max-lg:hidden flex items-center justify-around">
-                <li class="linksEffect  flex items-center gap-[5px] relative">
+            <ul class="w-[40%] max-lg:hidden flex items-center justify-around">
+                <li class="linksEffect flex items-center gap-[5px] relative">
                     <button id="btnSubmenuDesktop" class="flex items-center gap-[5px] bg-transparent border-none cursor-pointer linksEffect">
                         <i id="iconSubmenu" class="bi bi-caret-right-fill transition-transform duration-300"></i>
-                        <a href="/destinations">DESTINATIONS</a>
+                        <a href={`${base}/destinations`}>DESTINATIONS</a>
                     </button>
-                    <div id="submenu" class="hidden absolute  top-[58px] left-[-35px] z-50 bg-[#393939] w-[225px] shadow-lg shadow-black">
+                    <div id="submenu" class="hidden absolute top-[58px] left-[-35px] z-50 bg-[#393939] w-[225px] shadow-lg shadow-black">
                         <ul class="text-[14px] text-white w-full">
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/lima">LIMA</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/cusco">CUSCO</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/sacred-valley">SACRED VALLEY</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/machu-picchu">MACHU PICCHU</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/puno">PUNO</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/arequipa">AREQUIPA</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/nazca-paracas">NAZCA - PARACAS</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/amazon-river-cruises">AMAZON RIVER CRUISES</a></li>
-                            <li class="flex"><a class="items-Submenu p-[15px] w-full" href="/luxury-trains">LUXURY TRAINS</a></li>
+                            {destinations.map(d => (
+                                <li class="flex">
+                                    <a class="items-Submenu p-[15px] w-full" href={`${base}/${d.distrito}`}>
+                                        {d.distrito.toUpperCase().replace(/-/g, " ")}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </li>
-                <li class="linksEffect"><a href="/programs">PROGRAMS</a></li>
-                <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
+                <li class="linksEffect"><a href={`${base}/programs`}>PROGRAMS</a></li>
+                <li class="linksEffect"><a href={`${base}/about-us`}>ABOUT US</a></li>
             </ul>
         </div>
     </nav>
@@ -53,7 +54,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         <div id="menuResponsive" class="hidden w-full bg-[#393939] text-white z-40">
 
             <div class="flex items-center justify-between border-b border-[#555]">
-                <a class="p-[14px] flex-1 text-[14px] tracking-widest" href="/destinations">DESTINATIONS</a>
+                <a class="p-[14px] flex-1 text-[14px] tracking-widest" href={`${base}/destinations`}>DESTINATIONS</a>
                 <button
                     id="btnSubMenuResponsive"
                     aria-label="Ver destinos"
@@ -64,31 +65,27 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 </button>
             </div>
 
-        
-                <div id="submenuResponsive" class="hidden bg-[#2e2e2e] submenu-anim">
-                    <ul class="text-[13px] py-[8px]">
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/lima">Lima</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/cusco">Cusco</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/sacred-valley">Sacred Valley</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/machu-picchu">Machu Picchu</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/puno">Puno</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/arequipa">Arequipa</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/nazca-paracas">Nazca - Paracas</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/amazon-river-cruises">Amazon River Cruises</a></li>
-                        <li><a class="flex p-[12px] pl-[24px] items-Submenu" href="/luxury-trains">Luxury Trains</a></li>
-                    </ul>
-                </div>
-            
+            <div id="submenuResponsive" class="hidden bg-[#2e2e2e] submenu-anim">
+                <ul class="text-[13px] py-[8px]">
+                    {destinations.map(d => (
+                        <li>
+                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`${base}/${d.distrito}`}>
+                                {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
             <div class="border-b border-[#555]">
-                <a class="block p-[14px] text-[14px] tracking-widest" href="/programs">PROGRAMS</a>
+                <a class="block p-[14px] text-[14px] tracking-widest" href={`${base}/programs`}>PROGRAMS</a>
             </div>
             <div>
-                <a class="block p-[14px] text-[14px] tracking-widest" href="/about-us">ABOUT US</a>
+                <a class="block p-[14px] text-[14px] tracking-widest" href={`${base}/about-us`}>ABOUT US</a>
             </div>
         </div>
     </div>
 </header>
-
 
 <script>
     const btnMenu = document.getElementById("btnMenu") as HTMLButtonElement;
@@ -98,16 +95,15 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
     btnMenu.addEventListener("click", () => {
         const isOpen = !menuResponsive.classList.contains("hidden");
-
         menuResponsive.classList.toggle("hidden");
-        openMenuIcon.classList.toggle("hidden", isOpen);   
-        closeMenuIcon.classList.toggle("hidden", !isOpen); 
+        openMenuIcon.classList.toggle("hidden", isOpen);
+        closeMenuIcon.classList.toggle("hidden", !isOpen);
         btnMenu.setAttribute("aria-expanded", String(!isOpen));
     });
 
-    const btnSubmenuDesktop    = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
-    const submenuDesktop       = document.getElementById("submenu") as HTMLElement;
-    const iconSubmenu          = document.getElementById("iconSubmenu") as HTMLElement;
+    const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
+    const submenuDesktop    = document.getElementById("submenu") as HTMLElement;
+    const iconSubmenu       = document.getElementById("iconSubmenu") as HTMLElement;
 
     btnSubmenuDesktop.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -125,14 +121,13 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         }
     });
 
-    const btnSubMenuResponsive  = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
-    const submenuResponsive = document.getElementById("submenuResponsive") as HTMLElement;
+    const btnSubMenuResponsive      = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
+    const submenuResponsive         = document.getElementById("submenuResponsive") as HTMLElement;
     const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon") as HTMLElement;
 
     btnSubMenuResponsive.addEventListener("click", () => {
         const isOpen = !submenuResponsive.classList.contains("hidden");
         submenuResponsive.classList.toggle("hidden");
-
         iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
         btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
     });
@@ -176,8 +171,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
     #menuResponsive {
         transform-origin: top center;
-        animation: none; 
+        animation: none;
     }
-  
-
 </style>

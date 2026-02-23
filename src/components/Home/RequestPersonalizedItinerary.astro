@@ -13,11 +13,13 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp"
 
                 <form action="" class="formulario-itinerary">
                     <div class="container-input">
-                        <input placeholder="Full Name" type="text">
-                        <input type="email" placeholder="Email" >
+                        <input name="Nombre" placeholder="Full Name" type="text">
+                        <input name="Email" type="email" placeholder="Email" >
                     </div>
-                    <button type="button">Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
+                <p id="form-msg-itenerary" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ Sent Successfully</p>
+
 
             </div>
 
@@ -122,3 +124,46 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp"
         }
      }
 </style>
+
+<script is:inline>
+  const apiMailEndpoint = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/contact";
+  const form = document.querySelector(".formulario-itinerary");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(form);
+    const data = {
+      nombre: formData.get("Nombre"),
+      email: formData.get("Email")
+    };
+
+    try {
+      const response = await fetch(apiMailEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+      await response.json();
+
+      document.getElementById("form-msg-itenerary").style.display = "block";
+      form.reset();
+
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("form-msg-itenerary").innerText = "Something went wrong. Please try again.";
+      document.getElementById("form-msg-itenerary").style.color = "#e57373";
+      document.getElementById("form-msg-itenerary").style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Subscribe";
+    }
+  });
+</script>

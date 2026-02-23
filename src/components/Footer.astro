@@ -1,4 +1,8 @@
 ---
+import { destinations } from "../data/destinatios";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const topDestinations = destinations.slice(0, 9);
 ---
 
 <footer class="footer-modern">
@@ -20,23 +24,22 @@
       <div class="link-group">
         <h4 class="max-sm:text-center">Explore</h4>
         <ul>
-          <li><a href="#">Destinations</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
-          <li><a href="#">Luxury Programs</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
-          <li><a href="#">About Our Story</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href={`${base}/destinations`}>Destinations</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href={`${base}/programs`}>Luxury Programs</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href={`${base}/about-us`}>About Our Story</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
         </ul>
       </div>
       <div class="link-group">
         <h4 class="max-sm:text-center">Top Destinations</h4>
         <ul class="grid grid-cols-2 justify-center w-full">
-          <li><i class="bi bi-link-45deg"></i><a href="/lima">Lima</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/cusco">Cusco</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/sacred-valley">Sacred Valley</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/machu-picchu">Machu Picchu</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/puno">Puno</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/arequipa">Arequipa</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/nazca-paracas">Nazca Paracas</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/amazon-river-cruises">Amazon River Cruises</a></li>
-          <li><i class="bi bi-link-45deg"></i><a href="/luxury-trains">Luxury Trains</a></li>
+          {topDestinations.map(d => (
+            <li>
+              <i class="bi bi-link-45deg"></i>
+              <a href={`${base}/${d.distrito}`}>
+                {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
@@ -58,18 +61,12 @@
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 Peru Luxury Journeys. All rights reserved.</p>
-    <div class="bottom-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </div>
 </footer>
 
 
+
 <script is:inline>
-  const apiMailEndpoint = "https://urban-space-spork-4x7gj5jx4w5cqq7v-8000.app.github.dev/subscribe";
+  const apiMailEndpoint = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
   const form = document.querySelector(".form-contacto");
 
   form?.addEventListener("submit", async (e) => {

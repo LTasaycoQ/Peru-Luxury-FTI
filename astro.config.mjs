@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
 
-  base: "/",
+  base: "/2026-3",
   devToolbar: {
       enabled: false,
   },
