@@ -15,9 +15,11 @@ export async function getStaticPaths() {
 
 const { titleSEO,  title, description, image1, image2, image3, fondo, partnersTitle, partnersVariant, partners } = Astro.props;
 
+
+
 ---
 
-<BaseLayout title={titleSEO} description={description}>
+<BaseLayout title={titleSEO} description={description} ogImage={fondo}>
     <Fondo fondo={`url(${fondo})`} />
     <main>
       <DistrictInicio 
