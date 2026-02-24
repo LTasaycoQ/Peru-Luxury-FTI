@@ -40,7 +40,7 @@ function getImage(path: string): ImageMetadata {
                 sections.slice(0, 3).map((section) => (
                     <div class="card"  data-aos="flip-left">
                         <div class="image-container">
-                            <Image src={getImage(section.image)} alt={section.title} class="card-image" />
+                            <Image src={getImage(section.image)} alt={section.title} class="card-image rounded-[15px]" />
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">{section.title}</h3>
