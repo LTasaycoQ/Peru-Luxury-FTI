@@ -38,7 +38,7 @@ function getImage(path: string): ImageMetadata {
 
             {
                 sections.slice(0, 3).map((section) => (
-                    <div class="card">
+                    <div class="card"  data-aos="flip-left">
                         <div class="image-container">
                             <Image src={getImage(section.image)} alt={section.title} class="card-image" />
                         </div>
@@ -56,6 +56,8 @@ function getImage(path: string): ImageMetadata {
 </section>
 
 <style>
+
+
     .premium-programs {
         font-family: 'Poppins', sans-serif;
         background-color: #F7F7F7;

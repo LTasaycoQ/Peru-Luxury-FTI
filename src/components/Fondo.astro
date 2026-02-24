@@ -1,12 +1,21 @@
 ---
 const { fondo } = Astro.props;
 ---
-<section class="fondo-section">
+<section class="fondo-section fade-in">
     <div class="fondo">
     </div>
 </section>
 
 <style define:vars={{ fondo }}>
+    
+    .fade-in {
+        opacity: 0.8;
+        animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
     .fondo {
         width: 100%;
         height: 43em;
