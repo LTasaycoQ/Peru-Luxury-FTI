@@ -33,16 +33,16 @@ export const destinationsExp: expDestinatiosData[] = [
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-about-us3_w9sapa.webp",
 
-    experienciaLugar: "/capilla2",
+    experienciaLugar: "/cuscoExperience",
     title: "Lima ya no es capilla",
     titleSEO:  "a ya no es capilla",
     description: "Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.Lim’s 50 Best Restaurants list.",
   
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima2_obyqay.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
-    image4: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
-    image5: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865821/marriott-cusco_jhzguk.webp",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865835/palacio-del-inka_iyacvk.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865805/ink-la-casona_qmjyfs.webp",
+    image4: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865790/nazarenas_s42qi2.webp",
+    image5: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865774/monasterio_v66tbl.webp",
     
   },
 
