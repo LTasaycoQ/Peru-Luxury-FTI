@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 *{
     margin: 0;
 }
@@ -16,4 +17,160 @@ html{
 
 .linksEffect:hover{
     color: #97873E;
+}
+
+
+
+/* EFECTO BOTON DE LINKS  */
+
+.btn-link {
+  position: relative;
+  padding: 12px 48px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #cf7b4e, #DABB42);
+  transition: all 0.2s ease;
+}
+
+.btn-link:active {
+  transform: scale(0.96);
+}
+
+.btn-link:before,
+.btn-link:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.btn-link:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #e8b52a 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #f0b446 20%, transparent 30%),
+    radial-gradient(circle, #ffc247 20%, transparent 20%),
+    radial-gradient(circle, #ffd51c 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #fbd040 15%, transparent 20%),
+    radial-gradient(circle, #ffb042 20%, transparent 20%),
+    radial-gradient(circle, #ffcf4a 20%, transparent 20%),
+    radial-gradient(circle, #ffbc05 20%, transparent 20%),
+    radial-gradient(circle, #ffb326 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.btn-link:hover::after {
+
+  bottom: -70%;
+  background-image: radial-gradient(circle, #ffb30e 20%, transparent 20%),
+    radial-gradient(circle, #ffb70e 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ffa825 15%, transparent 20%),
+    radial-gradient(circle, #ffb811 20%, transparent 20%),
+    radial-gradient(circle, #e8b22a 20%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, #e8992a 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+
+
+
+
+
+.btn {
+  width: 245px;
+  height: 50px;
+  background: linear-gradient(135deg, #cf7b4e, #DABB42);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn span {
+  font-size: 14px; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
 }
