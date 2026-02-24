@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { destinationsExp } from "../data/experienceDestinations";
+import ExpDestinations from "../components/ExpDestinations/ExpDestinations.astro";
+import Fondo from "../components/Fondo.astro";
+
+// export async function getStaticPaths() {
+//   return [
+//     { params: { experienceDestinations: 'capilla' } },
+//     { params: { experienceDestinations: 'lima-food-tour' } },
+//     { params: { experienceDestinations: 'cusco-luxury' } },
+//   ];
+// }
+
+export async function getStaticPaths() {
+  return destinationsExp.map((dest) => ({
+    params: { experienceDestinations: dest.experienciaLugar },
+    props: { ...dest },
+  }));
+}
+
+const {
+  titleSEO,
+  title,
+  description,
+  fondo,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+} = Astro.props;
+---
+
+<BaseLayout title={titleSEO}>
+  <Fondo fondo={`url(${fondo})`} />
+  <main>
+    <ExpDestinations
+      title={title}
+      texto={description}
+      imagen1={image1}
+      imagen2={image2}
+      imagen3={image3}
+      imagen4={image4}
+      imagen5={image5}
+    />
+  </main>
+</BaseLayout>

@@ -1,16 +1,61 @@
 ---
+import { Image } from "astro:assets";
 
+interface Section {
+  image: string;
+  title: string;
+  text: string;
+  link: string;
+}
+
+const imagenes = import.meta.glob<{ default: ImageMetadata }>(
+  '../../../assets/image/destinations/*.webp',
+  { eager: true }
+);
+const roomsImport = import.meta.glob("../../../content/Destinations/top-destinations.md", { eager: true });
+const destinationData = Object.values(roomsImport) as any[];
+const sections: Section[] = destinationData[0]?.frontmatter?.section ?? [];
+
+function getImage(path: string): ImageMetadata {
+  const filename = path.split('/').pop();
+  const key = `../../../assets/image/destinations/${filename}`;
+  return imagenes[key]?.default;
+}
 ---
 
-<section class="newSection ">
+<div class="newSection text-center flex flex-col justify-center items-center">
+
+
+   <h2 class="text-[38px] font-medium text-gray-800">Explore our collection of <br> exceptional experiences throughout Peru. </h2>
+   <p class="pt-[20px] text-gray-700 text-[18px] font-light">A carefully curated selection of iconic destinations and extraordinary settings that reflect the country’s cultural, natural, and historical <br>  richness—designed for travelers who seek to discover Peru with distinction.</p>
     
-</section>
+
+
+    <div class="grid pt-[40px] grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-[60px] justify-center items-center ">
+            {
+                sections.slice(0, 4).map((section) => (
+                    <div class="w-[340px]"  data-aos="fade-up" data-aos-duration="3000">
+                        <div class="image-container">
+                            <Image src={getImage(section.image)} alt={section.title} class="w-[100%]" />
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">{section.title}</h3>
+                            <p class="card-text">{section.text}</p>
+                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                        </div>
+                    </div>
+                ))
+            }
+
+        </div>
+
+      </div>
 
 <style>
  .newSection{
+   margin-top: 30px;
+   margin-bottom:40px;
     width: 100%;
-    height:700px;
-    background-color: rgb(82, 115, 144);
  }
 </style>
 
