@@ -20,43 +20,30 @@ const isValidImage = (src: string) => src && src.startsWith('http');
 ---
 
 <section class="our-parnes font-[Poppins]">
-  <div class="container-title text-center">
-   
-   <h2 class="text-[38px] font-medium text-gray-800">Explore our collection of <br> exceptional experiences throughout Peru. </h2>
-   <p class="pt-[20px] text-gray-700 text-[18px] font-light">A carefully curated selection of iconic destinations and extraordinary settings that reflect the country’s cultural, natural, and historical <br>  richness—designed for travelers who seek to discover Peru with distinction.</p>
-    
-
+  <div class="container-title">
+    <h2>{title}</h2>
+    <hr class="line" />
   </div>
 
   {variant === "default" && (
-    <div class="grid grid-cols-4 gap-[70px] w-[82%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
-      {partners.slice(0,4).map((partner) => (
+    <div class="grid grid-cols-3 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
+      {partners.map((partner) => (
         <div class="card-default">
           {isValidImage(partner.image) ? (
             <Image 
               src={partner.image} 
               alt={partner.name} 
               width={600}
-              height={300}
-              class="imagen w-full h-[250px] object-cover" 
+              height={350}
+              class="imagen w-full h-[350px] object-cover" 
             />
           ) : (
             <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
           )}
-
-        <div class="card-content pt-[10px]">
-                            <h3 class="card-title text-gray-700 text-[18px]  font-bold">{partner.name}</h3>
-                            <a href={partner.link} class="card-link"><i>Read More</i></a>
-                        </div>
+          <p class="text-default">{partner.name}</p>
+          <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
-      ))
-      
-
-
-
-
-
-      }
+      ))}
     </div>
   )}
 
@@ -153,20 +140,4 @@ const isValidImage = (src: string) => src && src.startsWith('http');
     width: 220px;
     border-top: 3px solid rgb(196, 160, 95);
   }
-
-
-  
-    .card-link {
-        margin-top: 25px;
-        width: fit-content;
-        color: #DABB42;
-        text-decoration: none;
-        font-style: italic;
-        border-bottom: 1px solid #DABB42;
-        transition: all 0.3s ease;
-    }
-
-    .card-link:hover{
-        transform: translateY(-10px);
-    }
 </style>

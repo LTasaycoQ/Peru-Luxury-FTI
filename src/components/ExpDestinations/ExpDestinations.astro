@@ -7,10 +7,10 @@ const { texto, title, imagen1, imagen2, imagen3, imagen4, imagen5 } = Astro.prop
 
 <section class="font-[Poppins] pt-[90px] pb-[80px]  flex flex-col items-center justify-center ">
     
-    <h1 data-aos="fade-down"  class="text-[40px] max-xl:text-[35px] max-lg:text-[40px] max-sm:text-[30px] max-md:text-center">
+    <h1 data-aos="fade-down" class="text-[40px] font-medium max-xl:text-[35px] max-lg:text-[40px] max-sm:text-[30px] max-md:text-center">
         {title}
     </h1>
-    <div class="flex max-lg:flex-col-reverse pt-[60px]  lg:w-[90%] 2xl:w-[79em] max-lg:w-[90%] pl-[20px] pr-[20px] lg:justify-between justify-center max-md:gap-[30px] gap-[80px] items-center">
+    <div class="flex max-lg:flex-col-reverse pt-[60px]  lg:w-[90%] 2xl:w-[85em] max-lg:w-[90%] pl-[20px] pr-[20px] lg:justify-between justify-center max-md:gap-[30px] gap-[80px] items-center">
         <div class="lg:w-[500px] xl:w-[700px]  flex flex-col gap-[20px]">
             
             <div class="max-lg:flex flex-col  justify-center items-center ">
@@ -22,23 +22,19 @@ const { texto, title, imagen1, imagen2, imagen3, imagen4, imagen5 } = Astro.prop
             </div>
 
         </div>
-
-
-        <div class="2xl:w-[21em] max-lg:w-[100%] rounded-[20px] flex flex-col gap-[30px]">
-
+        <div class="2xl:w-[25em] max-lg:w-[100%] rounded-[20px] flex flex-col gap-[30px]">
             <img src={imagen1} class="w-[100%] h-[230px]" alt="">
             <img src={imagen2} class="w-[100%] h-[230px]" alt="">
-
         </div>
 
     </div>
 
-    <div class="flex pt-[40px] justify-center items-center gap-[90px] flex-wrap pt-[40px]" >
+    <div class="flex pt-[40px] justify-center items-center gap-[60px] flex-wrap pt-[40px]" >
 
 
-        <img src={imagen3} class="w-[350px] h-[230px]" alt="">
-        <img src={imagen4} class="w-[350px] h-[230px]" alt="">
-        <img src={imagen5} class="w-[350px] h-[230px]" alt="">
+        <img src={imagen3} class="w-[400px] h-[240px]" alt="">
+        <img src={imagen4} class="w-[400px] h-[240px]" alt="">
+        <img src={imagen5} class="w-[400px] h-[240px]" alt="">
 
     </div>
 </section>

@@ -5,10 +5,11 @@ import OurParners from "../components/destinations/distritos/OurParners.astro";
 import Fondo from "../components/Fondo.astro";
 
 import { destinations } from "../data/destinatios"; 
+import NewSection from "../components/destinations/distritos/newSection.astro";
 
 export async function getStaticPaths() {
   return destinations.map((dest) => ({
-    params: { distrito: dest.distrito },
+    params: { destination: dest.distrito },
     props: { ...dest },
   }));
 }
@@ -29,6 +30,7 @@ const { titleSEO,  title, description, image1, image2, image3, fondo, partnersTi
       />
 
 
+      <NewSection />
 
 
       <OurParners 

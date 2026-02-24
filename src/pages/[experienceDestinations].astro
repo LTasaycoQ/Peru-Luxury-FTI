@@ -4,13 +4,6 @@ import { destinationsExp } from "../data/experienceDestinations";
 import ExpDestinations from "../components/ExpDestinations/ExpDestinations.astro";
 import Fondo from "../components/Fondo.astro";
 
-// export async function getStaticPaths() {
-//   return [
-//     { params: { experienceDestinations: 'capilla' } },
-//     { params: { experienceDestinations: 'lima-food-tour' } },
-//     { params: { experienceDestinations: 'cusco-luxury' } },
-//   ];
-// }
 
 export async function getStaticPaths() {
   return destinationsExp.map((dest) => ({
