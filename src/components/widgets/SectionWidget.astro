@@ -9,7 +9,7 @@ const { title, description, image1, image2, image3 } = Astro.props;
   <div class="flex flex-col lg:flex-row items-center justify-center gap-[40px] xl:gap-[8rem] w-[90%]">
     
     <div class="flex flex-col 2xl:w-[84rem] lg:w-[80rem] max-lg:w-full px-[20px] items-center lg:items-start text-center lg:text-left">
-      <h1 class="text-[32px] md:text-[47px] font-medium pb-[35px] leading-tight text-balance">{title}</h1>
+      <h1 data-aos="fade-right" class="text-[32px] md:text-[47px] font-medium pb-[35px] leading-tight text-balance">{title}</h1>
       <p class="tracking-wide text-gray-700 text-[15.4px] font-light pb-[30px] whitespace-pre-line">{description}</p>
     </div>
 
@@ -17,18 +17,18 @@ const { title, description, image1, image2, image3 } = Astro.props;
       <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
         
         <!-- Imagen 1 -->
-        <div class="w-full md:w-1/2 h-[400px] md:h-full overflow-hidden flex items-center justify-center bg-gray-200">
+        <div  data-aos="flip-down" class="w-full md:w-1/2 h-[400px] md:h-full overflow-hidden flex items-center justify-center bg-gray-200">
             <img src={image1} alt={title} width={800} height={600} class="w-full h-full object-cover" />
         </div>
 
         <div class="flex flex-col gap-[15px] w-full md:w-1/2">
 
           <!-- Imagen 2 -->
-          <div class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
+          <div  data-aos="flip-down" class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
               <img src={image2} alt={title} width={400} height={300} class="w-full h-full object-cover" />
           </div>
 
-          <div class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
+          <div  data-aos="flip-down" class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
               <img src={image3} alt={title} width={400} height={300} class="w-full h-full object-cover" />
           </div>
 

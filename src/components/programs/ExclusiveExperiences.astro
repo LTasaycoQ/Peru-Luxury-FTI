@@ -45,7 +45,7 @@ function getImage(path: string): ImageMetadata {
         <div class="cards-grid">
             {
                 sections.map((section) => (
-                    <div class="card">
+                    <div class="card"  data-aos="fade-up" data-aos-duration="3000">
                         <div class="image-container">
                             <Image  src={getImage(section.image)} alt={section.title} class="card-image" />
                         </div>
