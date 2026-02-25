@@ -1,41 +1,40 @@
 ---
-
-
 const { texto, title, imagen1, imagen2, imagen3, imagen4, imagen5 } = Astro.props;
-
 ---
 
-<section class="font-[Poppins] pt-[90px] pb-[80px]  pb-[40px]  flex flex-col items-center justify-center ">
+<section class="font-[Poppins] py-[40px] flex flex-col items-center w-full bg-white">
     
-    <h1 data-aos="fade-down" class="text-[40px] font-medium max-xl:text-[35px] max-lg:text-[40px] max-sm:text-[30px] max-md:text-center">
-        {title}
-    </h1>
-    <div class="flex max-lg:flex-col pt-[60px]  lg:w-[90%] 2xl:w-[85em] max-lg:w-[90%] pl-[20px] pr-[20px] lg:justify-between justify-center max-md:gap-[30px] gap-[80px] items-center">
-        <div class="lg:w-[500px] xl:w-[700px]  flex flex-col gap-[20px]">
+    <div class="w-[90%] max-w-[1000px] flex flex-col">
+        
+        <h1 class="text-[28px] md:text-[36px] font-semibold mb-[40px] text-center text-black">
+            {title}
+        </h1>
+
+        <div class="flex pt-[50px] flex-col lg:flex-row gap-[90px] w-full mb-[30px] items-center">
             
-            <div class="max-lg:flex flex-col  justify-center items-center ">
-                <p class="max-lg:text-center text-gray-600 pb-[30px] lg:text-[16px] text-[13px]   max-md:text-center">
+            <div class="flex-1">
+                <p class="text-gray-700 text-[15px] leading-relaxed text-center lg:text-left whitespace-pre-line">
                    {texto}
                 </p>
-                <br>
             </div>
-
+            
+            <div class="w-full lg:w-[250px] flex flex-col gap-[15px]">
+                <img src={imagen1} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+                <img src={imagen2} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+            </div>
         </div>
-        
-        <div class="2xl:w-[20.5em]  max-lg:w-[100%] rounded-[20px] flex lg:flex-col gap-[30px]">
-            <img src={imagen1} class="w-[100%] h-[210px]" alt="">
-            <img src={imagen2} class="w-[100%] h-[210px]" alt="">
+
+        <div class="flex pt-[40px] flex-col  md:flex-row justify-between gap-[15px] w-full">
+            <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
+                <img src={imagen3} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+            </div>
+            <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
+                <img src={imagen4} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+            </div>
+            <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
+                <img src={imagen5} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+            </div>
         </div>
-
-    </div>
-
-    <br>
-
-    <div class="flex justify-between items-center    w-[69%]  flex-wrap" >
-
-        <img src={imagen3} class="w-[330px] h-[200px]" alt="">
-        <img src={imagen4} class="w-[330px] h-[200px]" alt="">
-        <img src={imagen5} class="w-[330px] h-[200px]" alt="">
 
     </div>
 </section>

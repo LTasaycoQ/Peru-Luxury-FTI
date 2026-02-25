@@ -1,0 +1,72 @@
+---
+interface ExceptionalExperience {
+  image: string;
+  name: string;
+  description?: string;
+  link?: string;
+}
+
+interface Props {
+  experience: ExceptionalExperience[];
+}
+
+const { experience } = Astro.props;
+---
+
+<section class="font-[Poppins] w-full bg-white  lg:py-[50px] flex flex-col items-center">
+
+  <!-- Header -->
+  <div class="text-center max-w-[800px] ">
+    <span class="inline-block w-[40px] h-[2px] bg-[#b8986a] mb-[20px]"></span>
+    <h2 class="text-[30px] md:text-[38px] font-semibold text-[#1a1a1a] leading-tight tracking-[-0.02em] mb-[18px]">
+      Explore our collection of<br />exceptional experiences throughout Peru.
+    </h2>
+    <p class="text-[15px] md:text-[16px] text-[#666] font-light leading-[1.8]">
+      A carefully curated selection of iconic destinations and extraordinary settings that reflect the country's
+      cultural, natural, and historical richness — designed for travelers who seek to discover Peru with distinction.
+    </p>
+  </div>
+
+  <!-- Grid -->
+  <div class="w-[90%] py-[60px] max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[30px] gap-y-[40px] justify-items-center">
+    {
+      experience.map((item, i) => (
+        <a
+          href={item.link ?? "#"}
+          data-aos="fade-up"
+          data-aos-delay={`${i * 80}`}
+          class="group w-full max-w-[320px] flex flex-col cursor-pointer"
+        >
+          <div class="w-full h-[200px] overflow-hidden bg-gray-100 rounded-[4px]">
+            <img
+              src={item.image}
+              alt={item.name}
+              width={400}
+              height={500}
+              class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-[1.06]"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="pt-[16px] flex flex-col gap-[8px]">
+            <h3 class="text-[15px] font-semibold text-[#1a1a1a] leading-snug group-hover:text-[#b8986a] transition-colors duration-300">
+              {item.name}
+            </h3>
+            {item.description && (
+              <p class="text-[13px] text-[#777] font-light leading-relaxed line-clamp-2">
+                {item.description}
+              </p>
+            )}
+            <span class="flex items-center gap-[6px] text-[12px] font-medium tracking-widest uppercase text-[#b8986a] mt-[4px]">
+              Discover
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-[4px]">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+</section>
