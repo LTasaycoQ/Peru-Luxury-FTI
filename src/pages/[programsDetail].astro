@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { title,  programBreve, programItenerario} = Astro.props;
+const { title,  programBreve, programItenerario, programNoIncluye, programIncluye } = Astro.props;
 
 
 ---
@@ -24,7 +24,7 @@ const { title,  programBreve, programItenerario} = Astro.props;
 <BaseLayout title={title}>
     <Fondo fondo={`url(${fondoOfi})`} />
     <main>
-        <DetailPrograms title={title}  programBreve={programBreve}, programItenerario={programItenerario} />
+        <DetailPrograms title={title} programNoIncluye={programNoIncluye} programIncluye={programIncluye}   programBreve={programBreve}, programItenerario={programItenerario} />
     
     </main>
 
