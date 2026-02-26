@@ -78,8 +78,8 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                     <div class="p-[20px] rounded-[10px] bg-[#FAFAFF]">
                         {
                             programIncluye.map((item) => (
-                                <ul class="flex flex-col gap-[14px]">
-                                    <li class=" text-[14px] text-gray-700 flex gap-[13.5px]"> <i class="text-[15px] text-green-600 bi bi-patch-check"></i> {item.text}</li>
+                                <ul class="flex flex-col">
+                                    <li class=" text-[14px] text-gray-700 pb-[8px] flex gap-[13.5px]"> <i class="text-[15px] text-green-600 bi bi-patch-check"></i> {item.text}</li>
                                 </ul> 
                             ))
                         }
@@ -87,8 +87,8 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                     <div class="p-[20px] rounded-[10px] bg-[#FAFAFF]">
                         {
                             programNoIncluye.map((item) => (
-                                <ul>
-                                    <li class=" text-[14px] text-gray-700 flex gap-[13.5px]"><i class="text-red-400 bi bi-x-circle"></i> {item.text}</li>
+                                <ul class="flex flex-col">
+                                    <li class=" text-[14px]  pb-[8px] text-gray-700 flex gap-[13.5px]"><i class="text-red-400 bi bi-x-circle"></i> {item.text}</li>
                                 </ul> 
                             ))
                         }
