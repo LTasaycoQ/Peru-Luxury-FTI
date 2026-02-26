@@ -1,31 +1,8 @@
 ---
-import { Image } from "astro:assets";
 
-interface Section {
-  image: string;
-  title: string;
-  text: string;
-  link: string;
-}
-
-const imagenes = import.meta.glob<{ default: ImageMetadata }>(
-  '../../assets/image/programs/*.webp',
-  { eager: true }
-);
-
-
-const roomsImport = import.meta.glob("../../content/programs/programas-experiences.md", { eager: true });
-const roomsData = Object.values(roomsImport) as any[];
-const sections: Section[] = roomsData[0]?.frontmatter?.section ?? [];
-
-function getImage(path: string): ImageMetadata {
-  const filename = path.split('/').pop();
-  const key = `../../assets/image/programs/${filename}`;
-  return imagenes[key]?.default;
-}
+import { programs } from "../../data/programs/programs-experiences";
 
 ---
-
 <section class="font-[Poppins]">
     <div class="container-Experiences">
         <div class="container-title">
@@ -44,15 +21,15 @@ function getImage(path: string): ImageMetadata {
 
         <div class="cards-grid">
             {
-                sections.map((section) => (
-                    <div class="card"   data-aos="fade-up" data-aos-duration="2000">
+                programs.map((items) => (
+                    <div class="card">
                         <div class="image-container">
-                            <Image  src={getImage(section.image)} alt={section.title} class="card-image" />
+                            <img  src={items.fondo} alt={items.title} class="card-image" />
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">{section.title}</h3>
-                            <p class="card-text">{section.text}</p>
-                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                            <h3 class="card-title">{items.title}</h3>
+                            <p class="card-text">{items.text}</p>
+                            <a href={`/${items.name}`} class="card-link"><i>Read More</i></a>
                         </div>
                     </div>
                 ))
@@ -61,10 +38,12 @@ function getImage(path: string): ImageMetadata {
     </div>
 </section>
 
+
+
 <style>
 
-    .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
-    .image-container {overflow:hidden;}
+    /* .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
+    .image-container {overflow:hidden;} */
 
 
     .container-Experiences {
@@ -149,3 +128,6 @@ function getImage(path: string): ImageMetadata {
         border-top: 2px solid #C5A822;
     }
 </style>
+
+
+
