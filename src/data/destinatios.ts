@@ -199,14 +199,12 @@ export const destinations: Destination[] = [
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv1_w8jas3.webp",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2-2_f3xlg8.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2_lu3d4q.webp",
-   
-
-
+  
 
     execptionalEXperience: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/chinchero-town" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "/ollantaytambo-town" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "/pachamanca-inca" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
 

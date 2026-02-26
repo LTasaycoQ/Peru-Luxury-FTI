@@ -148,6 +148,7 @@ html{
   font-size: 14px; 
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
   transition: top 0.5s;
 }
 

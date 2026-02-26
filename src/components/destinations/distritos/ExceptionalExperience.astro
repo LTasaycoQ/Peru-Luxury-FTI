@@ -16,11 +16,11 @@ const { experience } = Astro.props;
 <section class="font-[Poppins] w-full bg-white  lg:py-[50px] flex flex-col items-center">
 
   <div class="text-center max-w-[800px] ">
-    <span class="inline-block w-[40px] h-[2px] bg-[#b8986a] mb-[20px]"></span>
     <h2 class="text-[30px] md:text-[38px] font-semibold text-[#1a1a1a] leading-tight tracking-[-0.02em] mb-[18px]">
       Explore our collection of<br />exceptional experiences throughout Peru.
     </h2>
-    <p class="text-[15px] md:text-[16px] text-[#666] font-light leading-[1.8]">
+    <span class="inline-block w-[120px] h-[2px] bg-[#b8986a] mb-[20px]"></span>
+    <p class="text-[15px] pt-[20px] md:text-[16px] text-[#666] font-light leading-[1.8]">
       A carefully curated selection of iconic destinations and extraordinary settings that reflect the country's
       cultural, natural, and historical richness — designed for travelers who seek to discover Peru with distinction.
     </p>
@@ -33,7 +33,7 @@ const { experience } = Astro.props;
           href={item.link ?? "#"}
           data-aos="fade-up"
           data-aos-delay={`${i * 80}`}
-          class="group w-full max-w-[320px] flex flex-col cursor-pointer"
+          class="group w-full max-w-[350px] flex flex-col cursor-pointer"
         >
           <div class="w-full h-[200px] overflow-hidden bg-gray-100 rounded-[4px]">
             <img
