@@ -33,14 +33,14 @@ const isValidImage = (src: string) => src && src.startsWith('http');
             <Image 
               src={partner.image} 
               alt={partner.name} 
-              width={600}
+              width={100}
               height={350}
-              class="imagen w-full h-[350px] object-cover" 
+              class="imagen w-full h-[280px] object-cover" 
             />
           ) : (
             <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
           )}
-          <p class="text-default">{partner.name}</p>
+          <p class="text-default ">{partner.name}</p>
           <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
         </div>
       ))}
@@ -98,7 +98,7 @@ const isValidImage = (src: string) => src && src.startsWith('http');
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 15px;
-    color: #212121;
+    color: #3f3f3f;
   }
 
   .link-default {
