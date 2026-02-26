@@ -54,7 +54,7 @@ export const destinations: Destination[] = [
     partnersTitle: "Our Parners",
     partnersVariant: "default",
     partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
@@ -77,7 +77,7 @@ export const destinations: Destination[] = [
 
 
     execptionalEXperience: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },

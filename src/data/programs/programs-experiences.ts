@@ -499,10 +499,6 @@ export const programs: programsData[] = [
         {text: "Expenses such us beverages on meals, tips, laundry, phone calls and other personal expenses are not included. " },
     ],
   },
-
- 
-
-
 ];
 
 
