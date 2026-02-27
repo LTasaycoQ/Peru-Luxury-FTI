@@ -30,7 +30,7 @@ export interface programNoIncluye {
 export const programs: programsData[] = [
 
   {
-    fondo: "https://wallpapers.com/images/high/dragon-ball-pictures-8ysxg9ho676kf3g7.webp",
+    fondo: "https://img.freepik.com/foto-gratis/disparo-vertical-hombre-acostado-hamaca-junto-cascada-que-fluye-abajo-colina_181624-2060.jpg?t=st=1772206541~exp=1772210141~hmac=c1483eea2dc46f8dd0d27b50fbab89892abf8eddf3a28769b318fcd930a137fc&w=1060",
     title: "Nuevo Programa",
     text: "por implmentar",
     name:"#",
@@ -112,7 +112,7 @@ export const programs: programsData[] = [
             text_breve: "Experience South America’s first luxury sleeper train: elegant overnight stays across the Peruvian Andes."
         }
     ],
-    
+
     programItenerario: [
         {   
             ite_titulo: "Day 1 – Lima - Arrival", 
