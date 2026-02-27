@@ -62,7 +62,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                                     {itenerario.ite_titulo} 
                                     <i class="text-[30px] group-open:-rotate-90 transition-transform hover:text-orange-400 bi bi-caret-left-fill"></i>
                                 </summary>
-                                <div class="fadein pt-[30px] bg-[#FAFAFF] border-[1px] border-gray-200 border-t-transparent p-[20px] flex max-md:flex-col">
+                                <div class="fadein pt-[30px] bg-[#FAFAFF] border-[1px] border-gray-200 border-t-transparent p-[20px] flex max-md:flex-col max-md:gap-[50px]">
                                     <p class="w-[50%] max-md:w-full text-[14px] text-gray-700 font-light">{itenerario.ite_text}</p>
                                     <div class="flex justify-center items-center w-[50%] max-md:w-full">
                                         <img class="w-[300] rounded-lg" src={itenerario.ite_image} alt={itenerario.ite_titulo}>
@@ -75,7 +75,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
 
                 <div id="include" class="tab-content hidden flex justify-center gap-[60px] max-md:flex-col">
                     
-                    <div class="p-[20px] rounded-[10px] bg-[#FAFAFF]">
+                    <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF]">
                         {
                             programIncluye.map((item) => (
                                 <ul class="flex flex-col">
@@ -84,7 +84,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                             ))
                         }
                     </div>
-                    <div class="p-[20px] rounded-[10px] bg-[#FAFAFF]">
+                    <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF]">
                         {
                             programNoIncluye.map((item) => (
                                 <ul class="flex flex-col">
