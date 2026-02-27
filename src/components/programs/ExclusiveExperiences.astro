@@ -22,7 +22,7 @@ import { programs } from "../../data/programs/programs-experiences";
         <div class="cards-grid">
             {
                 programs.map((items) => (
-                    <div class="card">
+                    <div class="card" data-aos="fade-up">
                         <div class="image-container">
                             <img  src={items.fondo} alt={items.title} class="card-image" />
                         </div>
@@ -42,8 +42,8 @@ import { programs } from "../../data/programs/programs-experiences";
 
 <style>
 
-    /* .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
-    .image-container {overflow:hidden;} */
+    .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
+    .image-container {overflow:hidden;}
 
 
     .container-Experiences {
