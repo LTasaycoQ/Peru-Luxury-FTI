@@ -55,17 +55,17 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                 </div>
 
                 <div id="itinerary" class="tab-content hidden">
-                    {programItenerario.map((itenerario) => (
-                        <div class="py-[8px]">
-                            <details class="group cursor-pointer flex flex-col">
+                    {programItenerario.map((itenerario, index) => (
+                        <div class="py-[8px]" > 
+                            <details open={index === 0 ? true : undefined} class="group cursor-pointer flex flex-col">
                                 <summary class="bg-[#FAFAFF] p-[13px] rounded-[10px] font-normal text-gray-700 border-[1px] border-gray-200 flex md:gap-[90px] justify-between items-center list-none">
                                     {itenerario.ite_titulo} 
                                     <i class="text-[30px] group-open:-rotate-90 transition-transform hover:text-orange-400 bi bi-caret-left-fill"></i>
                                 </summary>
                                 <div class="fadein pt-[30px] bg-[#FAFAFF] border-[1px] border-gray-200 border-t-transparent p-[20px] flex max-md:flex-col max-md:gap-[50px]">
-                                    <p class="w-[50%] max-md:w-full text-[14px] text-gray-700 font-light">{itenerario.ite_text}</p>
+                                    <p class="w-[50%] max-md:w-full text-[14px] text-gray-700 font-light" set:html={itenerario.ite_text}></p>
                                     <div class="flex justify-center items-center w-[50%] max-md:w-full">
-                                        <img class="w-[300] rounded-lg" src={itenerario.ite_image} alt={itenerario.ite_titulo}>
+                                        <img class="w-[300px] rounded-lg" src={itenerario.ite_image} alt={itenerario.ite_titulo} />
                                     </div>
                                 </div>
                             </details>    
