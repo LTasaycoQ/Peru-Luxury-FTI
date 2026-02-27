@@ -11,7 +11,7 @@ import { programs } from "../../data/programs/programs-experiences";
                 Exclusive Experiences to <br>
                 Discover the Best of Peru.
             </h1>
-            <div class="line"></div>
+            <div class="line max-sm:hidden"></div>
         </div>
 
         <p class="text-parrafo">
@@ -23,7 +23,7 @@ import { programs } from "../../data/programs/programs-experiences";
         <div class="cards-grid">
             {
                 programs.map((items) => (
-                    <div class="card" data-aos="fade-up">
+                    <div class="card" data-aos="flip-left">
                         <div class="image-container">
                             <img  src={items.fondo} alt={items.title} class="card-image" />
                         </div>
