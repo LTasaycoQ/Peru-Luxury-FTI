@@ -28,12 +28,14 @@ interface Props {
 const { title, programBreve, programItenerario, programNoIncluye, programIncluye } = Astro.props;
 ---
 
-<section class="font-[Poppins] w-full flex flex-col justify-center items-center p-[30px]">
-    <div class="w-[80%] max-lg:w-full">
+<section class="font-[Poppins] bg-[#FAFAF8] w-full flex flex-col justify-center items-center p-[30px]">
+    <div class="w-[80%] max-lg:w-full pt-[30px]">
+        <span class="text-[#BA9216] font-bold">Programs</span>
         <h1 class="text-start text-[36px] text-gray-800 font-medium">
             {title}
         </h1>
 
+        <br>
         <br>
         <div class="w-full">
             <div class="flex flex-col pb-[20px] text-center  items-start">
@@ -128,6 +130,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
     .active {
         color: white;
         background-color: #d4c06d;
+        font-weight: 600;
     }
 
     .detalle {
@@ -150,6 +153,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
     .menu-list:hover {
         background-color: #dabc42cb;
         color: white;
+        font-weight: 500;
     }
 
     /* Hide the default triangle on <summary> */
