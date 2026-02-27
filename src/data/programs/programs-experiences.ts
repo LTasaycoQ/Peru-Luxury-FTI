@@ -37,29 +37,29 @@ export const programs: programsData[] = [
 
 
     programBreve: [
-        {   titulo_breve: "Dia 1 Lima - Arrival", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Day 2 – Lima (B) City Tour – Modern and Colonial Lima ", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Day 3 – Lima / Cusco / Sacred Valley (B, L)", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Day 4 – Sacred Valley (B) Excursion to Moray Terraces and Maras Salt Pools", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Day 5 – Sacred Valley (B) Visit to Chinchero and Pisac Market", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Day 6 – Sacred Valley / Machu Picchu (B) Machu Picchu excursion aboard the luxury Belmond’s Hiram Bingham Train, operates daily except the last Sunday of the month – Two Night Stay", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+        {   titulo_breve: "", text_breve: "",},
+        {   titulo_breve: "", text_breve: "",},
+        {   titulo_breve: "", text_breve: "",},
+        {   titulo_breve: "", text_breve: "",},
+        {   titulo_breve: "", text_breve: "",},
+        {   titulo_breve: "", text_breve: "",},  
     ],
     
     programItenerario: [
-        {   ite_titulo: "Dia 1 Lima", ite_text: "Una ciudad que vive, donde el pasado se mezcla con el presente. Donde los palacios, monasterios y conventos coloniales existen en asombrosa armonía con modernas edificaciones y las más impresionantes y milenarias huacas Pre-incas. Ya sea en el zaguán de una vieja casona o en la profundidad de una lúgubre catacumba. Lima, la ciudad de los reyes te espera, para deslumbrarte con su magia y embriagarte con su sabor. Al llegar al aeropuerto de Lima, un anfitrión lo recibirá y lo asistirá en su traslado y registro en el hotel. Visita por Lima, moderna y colonial. Una ciudad que siempre te recibirá con los brazos abiertos. La visita a la Lima Colonial incluye un deslumbrador paseo por la Plaza de Armas, enmarcada por la Catedral, el Palacio de Gobierno y el Palacio Torre Tagle transportándote al pasado con solo pisar uno de sus escalones. También pasearemos por Miraflores y San Isidro, dos de los barrios más hermosos y exclusivos de la capital. Disfruta una experiencia fuera de lo común visitando el famoso Museo Larco. Su valiosa colección está compuesta por más de 10.000 piezas de cerámica Mochica, Chimú y de otras civilizaciones Pre-incas. Para los interesados en las costumbres más íntimas de esta antigua cultura, la colección de cerámica erótica del Museo es una representación fiel y única en su género.", ite_image: "",},
-        {   ite_titulo: "Dia 2 Lima", ite_text: "Desayuno. Traslado al aeropuerto para tomar el vuelo a Cusco. Al llegar al aeropuerto, un anfitrión lo recibirá y lo asistirá en su traslado y registro en el hotel. Por la tarde la emoción y el asombro serán inigualables, desde la Catedral a la Plaza de Armas, pasando por el Convento de Santo Domingo, construido sobre el famoso Templo del Koricancha; hasta las ruinas de Kenko, Puca Pucará, Tambomachay y la Fortaleza de Sacsayhuamán. Alguna vez el centro de la civilización Inca; Cusco sigue cautivando a sus visitantes, viviendo en sus recuerdos por mucho, mucho tiempo. (D)", ite_image: "",},
-        {   ite_titulo: "Dia 3 Lima", ite_text: "Desayuno. Traslado a la estación del tren para iniciar nuestro viaje a la ciudad perdida de los Incas, Machu Picchu. Esta impresionante y colosal ciudadela constituye uno de los más importantes atractivos turísticos de Cusco. 400 años escondida por las montañas y la selva tropical, fue descubierta en 1911 por el explorador norteamericano Hiram Bingham. Empezamos la mañana llegando a ella por tren. Machu Picchu, centro de culto y observación astronómica a la vez el refugio privado del Inca Pachacútec, consta de dos grandes áreas, una agrícola y otra urbana, donde se destacan los templos, plazas y mausoleos reales construidos con exquisita perfección. Esta excursión incluye un almuerzo en el hotel Sanctuary Lodge. Por la tarde retorno a Cusco. (D,A)", ite_image: "",},
-        {   ite_titulo: "Dia 4 Lima", ite_text: "Desayuno. Viajaremos por las fértiles campiñas hasta arribar al colonial pueblo de Pisac (Diario). Un mercado colorido y de abundantes maravillas se presentará ante tus ojos, donde tendrás la oportunidad de observar y comprar la más variada artesanía y joyería cuzqueña. Después de almorzar, nuestro tour continúa hacia Ollantaytambo, una antigua fortaleza inca compuesta por numerosos templos y terrazas que se elevan majestuosamente sobre el valle. Por la tarde retorno a Cusco. (D,A)", ite_image: "",},
-        {   ite_titulo: "Dia 5 Lima", ite_text: "Desayuno. Día libre para realizar actividades independientes. Camine a través de esta adorable ciudad, explorando sus asombrosas calles estrechas la cual será una experiencia inolvidable. Excelentes compras son las tradicionales artesanías Peruanas, chompas de lana de alpaca, ponchos, cerámica, joyas de oro y plata, etc. Debido a la gran variedad de productos, nosotros recomendamos que una vez que encuentre un artículo en particular lo compre ya que puede ser que no encuentre uno similar en otra tienda. (D)", ite_image: "",},
-        {   ite_titulo: "Dia 6 Lima", ite_text: "Desayuno. Traslado al aeropuerto para tomar el vuelo a Lima y de ahí tomar el vuelo de conexión de regreso a casa. (D)", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
+        {   ite_titulo: "", ite_text: "", ite_image: "",},
     ],
 
     programIncluye: [
-        {text: "holaaaaa" }
+        {text: "" }
     ],
 
     programNoIncluye: [
-        {text: "holaaaa1" }
+        {text: "" }
     ],
   },
 
