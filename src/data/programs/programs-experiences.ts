@@ -71,22 +71,47 @@ export const programs: programsData[] = [
     name:"legacy-of-the-incas",
 
     programBreve: [
-        {   titulo_breve: "Dia 1 Lima - Arrival", text_breve: "Explore Lima’s history and elite cuisine with a smooth, assisted transfer to your hotel",},
-        {   titulo_breve: "Day 2 – Lima (B) City Tour – Modern and Colonial Lima ", text_breve: "A guided journey through Lima’s colonial history and its vibrant modern districts.",},
-        {   titulo_breve: "Day 3 – Lima / Cusco / Sacred Valley (B, L)", text_breve: "Fly over the Andes to Cusco for an exclusive colonial lunch and a scenic drive into the Sacred Valley.",},
-        {   titulo_breve: "Day 4 – Sacred Valley (B) Excursion to Moray Terraces and Maras Salt Pools", text_breve: "Discover Moray’s 'Inca laboratory,' an ancient agricultural site using circular terraces to create diverse microclimates",},
-        {   titulo_breve: "Day 5 – Sacred Valley (B) Visit to Chinchero and Pisac Market", text_breve: "Explore the 'birthplace of the rainbow' in Chinchero and Pisac: a blend of Inca ruins, colonial history, and vibrant Andean handicrafts.",},
-        {   titulo_breve: "Day 6 – Sacred Valley / Machu Picchu (B) Machu Picchu excursion aboard the luxury Belmond’s Hiram Bingham Train, operates daily except the last Sunday of the month – Two Night Stay", text_breve: "Travel in luxury to Machu Picchu: enjoy brunch and an open bar on South America’s finest train before a guided tour of the 'Lost City of the Incas'",},  
-        {   titulo_breve: "Day 7 – Hike to Huayna Picchu (B", text_breve: "Hike Huayna Picchu for breathtaking views of the site, explore the hidden Temple of the Moon, and witness the 'Inca city' from its most iconic peak",},
-        {   titulo_breve: "Day 8 – Machu Picchu Free Day / Cusco (B)", text_breve: "Enjoy a free morning at Machu Picchu: hike Huayna Picchu, walk the Inca Trail to the Sun Gate, or discover the charm of the local village and markets.",},
-        {   titulo_breve: "Day 9 – Cusco Nearby Ruins (B)", text_breve: "Discover Cusco’s ancient power: visit the colossal fortress of Sacsayhuaman, the Kenko sanctuaries, and the historic military sites of Puca-Pucara and Tambomachay",},
-        {   titulo_breve: "Day 10 – Cusco / Puno (B, L, D) 3-Days Andean Crossing aboard Belmond Andean Explorer Cusco, Puno - Lake Titicaca, Arequipa - Colca Canyon Departs: Thursdays", text_breve: "Experience South America’s first luxury sleeper train: daytime mountain getaways and elegant overnight stays across the Peruvian Andes.",},
-        {   titulo_breve: "Day 11 – Puno (B, L, D)", text_breve: "Explore Lake Titicaca by boat: visit the Uros and Taquile islands, enjoy lunch at Collata Beach, and continue your luxury rail journey toward Arequipa.",},
-        {   titulo_breve: "Day 12 – Puno / Arequipa / Colca Canyon (B, L)", text_breve: "Travel from Lake Titicaca to the Colca Canyon: visit the Sumbay Caves and enjoy lunch on board before starting your private two-day canyon expedition.",},
-        {   titulo_breve: "Day 13 – Colca Canyon / Arequipa / Lima (B) Exploring the Colca Canyon, to Arequipa and fly to Lima", text_breve: "Visit the Condor Cross to witness the majestic flight of the condors and explore the colonial villages of the Colca Valley before your transfer to Arequipa.",},
-        {   titulo_breve: "Day 14 – Lima – Larco Museum (B)", text_breve: "Visit the Larco Museum: explore 3,000 years of history through its world-class gold and silver galleries and its famous pre-Columbian erotic art collection.",},
+        {  
+            titulo_breve: "Day 1 Lima - Arrival", 
+            text_breve: "Explore Lima’s history and elite cuisine with a smooth, assisted transfer to your hotel."
+        },
+        {  
+            titulo_breve: "Day 2 Lima - City Tour", 
+            text_breve: "A guided journey through Lima’s colonial history and its vibrant modern districts."
+        },
+        {  
+            titulo_breve: "Day 3 Lima / Cusco / Sacred Valley", 
+            text_breve: "Fly over the Andes to Cusco for an exclusive colonial lunch and a scenic drive into the Sacred Valley."
+        },
+        {  
+            titulo_breve: "Day 4 Moray and Maras", 
+            text_breve: "Discover Moray’s 'Inca laboratory,' an ancient agricultural site using circular terraces to create microclimates."
+        },
+        {  
+            titulo_breve: "Day 5 Chinchero and Pisac", 
+            text_breve: "Explore the 'birthplace of the rainbow' in Chinchero and Pisac: a blend of Inca ruins and vibrant handicrafts."
+        },
+        {  
+            titulo_breve: "Day 6 Machu Picchu - Luxury Train", 
+            text_breve: "Travel in luxury to Machu Picchu: enjoy brunch and an open bar on the Hiram Bingham train before a guided tour."
+        },
+        {  
+            titulo_breve: "Day 7 Huayna Picchu Hike", 
+            text_breve: "Hike Huayna Picchu for breathtaking views and explore the hidden, otherworldly Temple of the Moon."
+        },
+        {  
+            titulo_breve: "Day 8 Machu Picchu Free Day", 
+            text_breve: "Enjoy a free morning at the sanctuary: hike to the Sun Gate or explore the local village and markets."
+        },
+        {  
+            titulo_breve: "Day 9 Cusco Nearby Ruins", 
+            text_breve: "Discover Cusco’s ancient power: visit the colossal fortress of Sacsayhuaman and the Kenko sanctuaries."
+        },
+        {  
+            titulo_breve: "Day 10 Andean Explorer Train", 
+            text_breve: "Experience South America’s first luxury sleeper train: elegant overnight stays across the Peruvian Andes."
+        }
     ],
-
     programItenerario: [
         {   
             ite_titulo: "Day 1 – Lima - Arrival", 
