@@ -55,11 +55,11 @@ export const programs: programsData[] = [
     ],
 
     programIncluye: [
-        {text: "" }
+        {text: "holaaaaa" }
     ],
 
     programNoIncluye: [
-        {text: "" }
+        {text: "holaaaa1" }
     ],
   },
 
