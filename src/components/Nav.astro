@@ -19,8 +19,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 id="btnMenu"
                 aria-label="Abrir menú"
                 aria-expanded="false"
-                class="lg:hidden rounded-[2px] p-[14px] w-[48px] h-[48px] flex flex-col items-center justify-center bg-[#E6E6E6] cursor-pointer border-none"
-            >
+                class="lg:hidden rounded-[2px] p-[14px] w-[48px] h-[48px] flex flex-col items-center justify-center bg-[#E6E6E6] cursor-pointer border-none" >
                 <i id="openMenu" class="bi bi-list text-[22px]"></i>
                 <i id="closeMenu" class="bi bi-x-lg text-[22px] hidden"></i>
             </button>
@@ -58,8 +57,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                     id="btnSubMenuResponsive"
                     aria-label="Ver destinos"
                     aria-expanded="false"
-                    class="p-[14px] bg-transparent border-none cursor-pointer text-white"
-                >
+                    class="p-[14px] bg-transparent border-none cursor-pointer text-white">
                     <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill text-[14px]"></i>
                 </button>
             </div>
@@ -120,8 +118,8 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         }
     });
 
-    const btnSubMenuResponsive      = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
-    const submenuResponsive         = document.getElementById("submenuResponsive") as HTMLElement;
+    const btnSubMenuResponsive = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
+    const submenuResponsive = document.getElementById("submenuResponsive") as HTMLElement;
     const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon") as HTMLElement;
 
     btnSubMenuResponsive.addEventListener("click", () => {
