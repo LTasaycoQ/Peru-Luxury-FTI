@@ -60,7 +60,7 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                     {programItenerario.map((itenerario, index) => (
                         <div class="py-[8px]" > 
                             <details open={index === 0 ? true : undefined} class="group cursor-pointer flex flex-col">
-                                <summary class="bg-[#FAFAFF]  text-[20px] font-[500] p-[13px] rounded-[10px] font-normal text-gray-700 border-[1px] border-gray-200 flex md:gap-[90px] justify-between items-center list-none">
+                                <summary class="bg-[#FAFAFF]  text-[20px] font-[500] p-[13px] rounded-t-[10px] font-normal text-gray-700 border-[1px] border-gray-200 flex md:gap-[90px] justify-between items-center list-none">
                                     {itenerario.ite_titulo} 
                                     <svg class="group-open:-rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <polyline points="6 9 12 15 18 9"></polyline>
