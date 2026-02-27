@@ -112,6 +112,7 @@ export const programs: programsData[] = [
             text_breve: "Experience South America’s first luxury sleeper train: elegant overnight stays across the Peruvian Andes."
         }
     ],
+    
     programItenerario: [
         {   
             ite_titulo: "Day 1 – Lima - Arrival", 
