@@ -37,12 +37,12 @@ export const programs: programsData[] = [
 
 
     programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 2 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 3 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 4 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 5 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 6 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+        {   titulo_breve: "Dia 1 Lima - Arrival", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
+        {   titulo_breve: "Day 2 – Lima (B) City Tour – Modern and Colonial Lima ", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
+        {   titulo_breve: "Day 3 – Lima / Cusco / Sacred Valley (B, L)", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
+        {   titulo_breve: "Day 4 – Sacred Valley (B) Excursion to Moray Terraces and Maras Salt Pools", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
+        {   titulo_breve: "Day 5 – Sacred Valley (B) Visit to Chinchero and Pisac Market", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
+        {   titulo_breve: "Day 6 – Sacred Valley / Machu Picchu (B) Machu Picchu excursion aboard the luxury Belmond’s Hiram Bingham Train, operates daily except the last Sunday of the month – Two Night Stay", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
     ],
     
     programItenerario: [
@@ -71,12 +71,20 @@ export const programs: programsData[] = [
     name:"legacy-of-the-incas",
 
     programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Día 2 - Lima / Cusco", text_breve: "Traslado al aeropuerto para tomar el vuelo a Cusco. Por la tarde visita a Cusco y sus Ruinas. (D)",},
-        {   titulo_breve: "Día 3 - Cusco / Machu Picchu / Cusco", text_breve: "Excursión a Machu Picchu. (D,A)",},
-        {   titulo_breve: "Día 4 - Cusco / Valle Sagrado / Cusco", text_breve: "Excursión al Mercado Indio de Pisac y Fortaleza de Ollantaytambo. (D,A)",},
-        {   titulo_breve: "Día 5 - Cusco", text_breve: "Día libre en Cusco para realizar actividades independientes. (D)",},
-        {   titulo_breve: "Día 6 - Cusco / Lima / Casa", text_breve: "Traslado al aeropuerto para tomar el vuelo a Lima y de ahí tomar el vuelo de conexión de regreso a casa. (D)",},  
+        {   titulo_breve: "Dia 1 Lima - Arrival", text_breve: "Explore Lima’s history and elite cuisine with a smooth, assisted transfer to your hotel",},
+        {   titulo_breve: "Day 2 – Lima (B) City Tour – Modern and Colonial Lima ", text_breve: "A guided journey through Lima’s colonial history and its vibrant modern districts.",},
+        {   titulo_breve: "Day 3 – Lima / Cusco / Sacred Valley (B, L)", text_breve: "Fly over the Andes to Cusco for an exclusive colonial lunch and a scenic drive into the Sacred Valley.",},
+        {   titulo_breve: "Day 4 – Sacred Valley (B) Excursion to Moray Terraces and Maras Salt Pools", text_breve: "Discover Moray’s 'Inca laboratory,' an ancient agricultural site using circular terraces to create diverse microclimates",},
+        {   titulo_breve: "Day 5 – Sacred Valley (B) Visit to Chinchero and Pisac Market", text_breve: "Explore the 'birthplace of the rainbow' in Chinchero and Pisac: a blend of Inca ruins, colonial history, and vibrant Andean handicrafts.",},
+        {   titulo_breve: "Day 6 – Sacred Valley / Machu Picchu (B) Machu Picchu excursion aboard the luxury Belmond’s Hiram Bingham Train, operates daily except the last Sunday of the month – Two Night Stay", text_breve: "Travel in luxury to Machu Picchu: enjoy brunch and an open bar on South America’s finest train before a guided tour of the 'Lost City of the Incas'",},  
+        {   titulo_breve: "Day 7 – Hike to Huayna Picchu (B", text_breve: "Hike Huayna Picchu for breathtaking views of the site, explore the hidden Temple of the Moon, and witness the 'Inca city' from its most iconic peak",},
+        {   titulo_breve: "Day 8 – Machu Picchu Free Day / Cusco (B)", text_breve: "Enjoy a free morning at Machu Picchu: hike Huayna Picchu, walk the Inca Trail to the Sun Gate, or discover the charm of the local village and markets.",},
+        {   titulo_breve: "Day 9 – Cusco Nearby Ruins (B)", text_breve: "Discover Cusco’s ancient power: visit the colossal fortress of Sacsayhuaman, the Kenko sanctuaries, and the historic military sites of Puca-Pucara and Tambomachay",},
+        {   titulo_breve: "Day 10 – Cusco / Puno (B, L, D) 3-Days Andean Crossing aboard Belmond Andean Explorer Cusco, Puno - Lake Titicaca, Arequipa - Colca Canyon Departs: Thursdays", text_breve: "Experience South America’s first luxury sleeper train: daytime mountain getaways and elegant overnight stays across the Peruvian Andes.",},
+        {   titulo_breve: "Day 11 – Puno (B, L, D)", text_breve: "Explore Lake Titicaca by boat: visit the Uros and Taquile islands, enjoy lunch at Collata Beach, and continue your luxury rail journey toward Arequipa.",},
+        {   titulo_breve: "Day 12 – Puno / Arequipa / Colca Canyon (B, L)", text_breve: "Travel from Lake Titicaca to the Colca Canyon: visit the Sumbay Caves and enjoy lunch on board before starting your private two-day canyon expedition.",},
+        {   titulo_breve: "Day 13 – Colca Canyon / Arequipa / Lima (B) Exploring the Colca Canyon, to Arequipa and fly to Lima", text_breve: "Visit the Condor Cross to witness the majestic flight of the condors and explore the colonial villages of the Colca Valley before your transfer to Arequipa.",},
+        {   titulo_breve: "Day 14 – Lima – Larco Museum (B)", text_breve: "Visit the Larco Museum: explore 3,000 years of history through its world-class gold and silver galleries and its famous pre-Columbian erotic art collection.",},
     ],
 
     programItenerario: [
@@ -156,12 +164,50 @@ export const programs: programsData[] = [
     name:"wonders-of-peru",
 
     programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 2 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 3 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 4 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 5 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 6 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+        {  
+            titulo_breve: "Day 1 Lima", 
+            text_breve: "Arrival in the Gastronomic Capital of the Americas with a seamless transfer to your hotel."
+        },
+        {  
+            titulo_breve: "Day 2 Lima", 
+            text_breve: "Tour of Colonial and Modern Lima, including a visit to the world-renowned Larco Museum."
+        },
+        {  
+            titulo_breve: "Day 3 Arequipa", 
+            text_breve: "Flight to the 'White City' of Arequipa to explore its volcanic stone architecture and cathedral."
+        },
+        {  
+            titulo_breve: "Day 4 Colca / Puno", 
+            text_breve: "Witness the majestic flight of the condors at Colca Canyon before an overland trip to Puno."
+        },
+        {  
+            titulo_breve: "Day 5 Lake Titicaca", 
+            text_breve: "Full-day boat excursion to the floating Uros islands and the traditional community of Taquile."
+        },
+        {  
+            titulo_breve: "Day 6 Puno / Cusco", 
+            text_breve: "Scenic drive to Cusco with stops at the Temple of Viracocha and the 'Sistine Chapel of America'."
+        },
+        {  
+            titulo_breve: "Day 7 Cusco", 
+            text_breve: "Guided tour of Cusco’s Imperial landmarks and the colossal fortress of Sacsayhuaman."
+        },
+        {  
+            titulo_breve: "Day 8 Cusco", 
+            text_breve: "Free day to explore the imperial city’s narrow streets, markets, and local handicrafts."
+        },
+        {  
+            titulo_breve: "Day 9 Sacred Valley", 
+            text_breve: "Visit the Pisac Indian Market and the 'Living Inca Town' of Ollantaytambo."
+        },
+        {  
+            titulo_breve: "Day 10 Machu Picchu", 
+            text_breve: "Luxury train ride and guided tour of the breathtaking 'Lost City of the Incas'."
+        },
+        {  
+            titulo_breve: "Day 11 Home", 
+            text_breve: "Transfer to Cusco airport for your flight to Lima and connection home."
+        }
     ],
     
     programItenerario: [
@@ -248,13 +294,43 @@ export const programs: programsData[] = [
     text: "Luxury programs featuring the exclusive Relais & Chateaux properties.",
     name:"peru-boutique",
 
-        programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 2 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 3 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 4 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 5 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 6 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+    programBreve: [
+        {  
+            titulo_breve: "Day 1 Lima", 
+            text_breve: "Llegada a la 'Ciudad de los Reyes' y traslado al hotel en la capital gastronómica de América."
+        },
+        {  
+            titulo_breve: "Day 2 Lima", 
+            text_breve: "Tour por Lima moderna y colonial con visita al Museo Larco y almuerzo en su café de jardín."
+        },
+        {  
+            titulo_breve: "Day 3 Cusco / Valle Sagrado", 
+            text_breve: "Vuelo sobre los Andes hacia Cusco y traslado inmediato al Valle Sagrado para aclimatación."
+        },
+        {  
+            titulo_breve: "Day 4 Valle Sagrado", 
+            text_breve: "Visita al mercado de Pisac y almuerzo exclusivo en la histórica Hacienda Huayoccari."
+        },
+        {  
+            titulo_breve: "Day 5 Machu Picchu", 
+            text_breve: "Viaje de lujo a bordo del tren Hiram Bingham con brunch y bar abierto hacia Aguas Calientes."
+        },
+        {  
+            titulo_breve: "Day 6 Machu Picchu", 
+            text_breve: "Tour guiado por la ciudadela inca, almuerzo en Sanctuary Lodge y masaje relajante en el spa."
+        },
+        {  
+            titulo_breve: "Day 7 Cusco", 
+            text_breve: "Mañana de actividades naturales y cena gourmet a bordo del tren Hiram Bingham de retorno a Cusco."
+        },
+        {  
+            titulo_breve: "Day 8 Cusco", 
+            text_breve: "Exploración de la Catedral, el Templo del Sol y la imponente fortaleza de Sacsayhuaman."
+        },
+        {  
+            titulo_breve: "Day 9 Lima / Salida", 
+            text_breve: "Traslado al aeropuerto para vuelo de conexión en Lima y retorno internacional."
+        }
     ],
     
     programItenerario: [
@@ -334,14 +410,35 @@ export const programs: programsData[] = [
     text: "A two week program including Belmond hotels and trains",
     name:"peru-spectacular",
 
-
-        programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 2 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 3 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 4 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 5 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 6 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+    programBreve: [
+        {  
+            titulo_breve: "Day 1 Lima", 
+            text_breve: "Arrival in the 'City of Kings' and transfer to your hotel in the Gastronomic Capital of the Americas."
+        },
+        {  
+            titulo_breve: "Day 2 Lima", 
+            text_breve: "Half-day tour of Colonial and Modern Lima, visiting the Plaza Mayor and the exclusive San Isidro district."
+        },
+        {  
+            titulo_breve: "Day 3 Cusco", 
+            text_breve: "Flight to Cusco followed by a tour of the Cathedral, the Temple of the Sun, and the Sacsayhuaman fortress."
+        },
+        {  
+            titulo_breve: "Day 4 Sacred Valley", 
+            text_breve: "Full-day excursion to the Pisac Market and the 'Living Inca Town' of Ollantaytambo with lunch included."
+        },
+        {  
+            titulo_breve: "Day 5 Machu Picchu", 
+            text_breve: "Scenic train ride and guided tour of the 'Lost City of the Incas' before returning to Cusco."
+        },
+        {  
+            titulo_breve: "Day 6 Cusco", 
+            text_breve: "Free day to explore Cusco's narrow colonial streets, local markets, and traditional handicrafts."
+        },
+        {  
+            titulo_breve: "Day 7 Home", 
+            text_breve: "Transfer to the airport for your flight to Lima and your connecting flight back home."
+        }
     ],
     
     programItenerario: [
@@ -420,15 +517,35 @@ export const programs: programsData[] = [
     text: "Explore the highlights of Lima and Cusco in one week.",
     name:"peru-magic",
 
-
-
-        programBreve: [
-        {   titulo_breve: "Dia 1 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 2 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 3 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 4 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 5 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},
-        {   titulo_breve: "Dia 6 Lima", text_breve: "Llegada a Lima. Por la tarde visita por Lima Colonial y Moderna, visita al Museo Larco.",},  
+    programBreve: [
+        {  
+            titulo_breve: "Day 1 Lima", 
+            text_breve: "Arrival in Lima, the 'City of Kings,' with a private transfer to your hotel in the Gastronomic Capital."
+        },
+        {  
+            titulo_breve: "Day 2 Lima", 
+            text_breve: "Tour of Colonial and Modern Lima, including the Plaza de Armas, San Francisco Catacombs, and Miraflores."
+        },
+        {  
+            titulo_breve: "Day 3 Cusco / Sacred Valley", 
+            text_breve: "Flight to Cusco and immediate transfer to the Sacred Valley for a better altitude acclimatization."
+        },
+        {  
+            titulo_breve: "Day 4 Sacred Valley / Aguas Calientes", 
+            text_breve: "Visit Pisac Market and Ollantaytambo Fortress, followed by a scenic train ride to Machu Picchu town."
+        },
+        {  
+            titulo_breve: "Day 5 Machu Picchu / Cusco", 
+            text_breve: "Guided tour of the 'Lost City of the Incas,' Machu Picchu, and afternoon return to the city of Cusco."
+        },
+        {  
+            titulo_breve: "Day 6 Cusco", 
+            text_breve: "Tour of the Imperial City: visit the Cathedral, the Temple of the Sun, and the fortress of Sacsayhuaman."
+        },
+        {  
+            titulo_breve: "Day 7 Home", 
+            text_breve: "Transfer to the airport for your flight to Lima and connection back home with unforgettable memories."
+        }
     ],
     
     programItenerario: [
