@@ -12,10 +12,10 @@ import { programs } from "../../data/programs/programs-experiences";
     <div class="grid-container">
         <div class="programs-grid">
             {
-                programs.slice(1, 4).map((section) => (
+                programs.slice(0, 3).map((section) => (
                     <div class="card"  data-aos="flip-left">
-                        <div class="image-container">
-                            <img src={section.fondo} alt={section.title} class="card-image rounded-[10px]" />
+                        <div class="flex-1 md:max-w-[100%] max-md:w-[100%]">
+                            <img src={section.fondo} class="w-full h-[280px] object-cover rounded-[5px] block shadow-2xl" alt="">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">{section.title}</h3>
