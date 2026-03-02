@@ -4,12 +4,61 @@ import { destinations } from "../data/destinations/destinatios";
 const topDestinations = destinations.slice(0, 9);
 ---
 
-<footer class="footer-modern">
-  <div class="footer-content">
-   
+<footer class="w-full bg-red-400">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 900 50" class="w-full bg-blue-400" width="900" height="50" version="1.1"><path d="M0 11L25 10.2C50 9.3 100 7.7 150 6.2C200 4.7 250 3.3 300 6C350 8.7 400 15.3 450 19.8C500 24.3 550 26.7 600 27.2C650 27.7 700 26.3 750 23.5C800 20.7 850 16.3 875 14.2L900 12L900 51L875 51C850 51 800 51 750 51C700 51 650 51 600 51C550 51 500 51 450 51C400 51 350 51 300 51C250 51 200 51 150 51C100 51 50 51 25 51L0 51Z" fill="#1d1d1d" stroke-linecap="round" stroke-linejoin="miter"/></svg>
+  <div class="w-full bg-green-400">
+  <div class="footer-content w-full">
+    
+    <div class="footer-brand justify-center max-md:items-center flex flex-col">
+      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
+      <p class="brand-description max-sm:text-center">
+        Crafting unique and unforgettable luxury experiences across the wonders of Peru.
+      </p>
+     
+    </div>
 
+    <div class="flex gap-[80px] max-sm:flex-col">
+      <div class="link-group">
+        <h4 class="max-sm:text-center">Explore</h4>
+        <ul>
+          <li><a href="/destinations">Destinations</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="/programs">Luxury Programs</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="/about-us">About Our Story</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+        </ul>
+      </div>
+      <div class="link-group">
+        <h4 class="max-sm:text-center">Top Destinations</h4>
+        <ul class="grid grid-cols-2 justify-center w-full">
+          {topDestinations.map(d => (
+            <li>
+              <i class="bi bi-link-45deg"></i>
+              <a href={`/${d.distrito}`}>
+                {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
 
+    <div class="footer-newsletter">
+      <h4>Join Our Newsletter</h4>
+      <p>Receive exclusive travel tips and luxury offers.</p>
+      <form id="formulario-subcription" class="form-contacto-subcribete">
+        <div class="input-box">
+          <div class="box-input--form">
+            <input name="Nombre" type="text" required placeholder="First Name">
+            <input name="Apellido" type="text" required placeholder="Last Name">
+          </div>
+          <input name="Email" type="email" required placeholder="Email">
+          <button id="btn-submit" class="button" type="submit">Subscribe</button>
+          <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
+        </div>
+      </form>
+    </div>
   </div>
+  </div>
+
 </footer>
 
 <script is:inline>
@@ -58,14 +107,15 @@ const topDestinations = destinations.slice(0, 9);
 
 <style>
   .footer-modern {
-    background-color: #1a1a1a;
     color: #ffffff;
     padding: 80px 5% 30px 5%;
     font-family: 'Poppins', sans-serif;
   }
 
   .footer-content {
-    max-width: 1500px;
+    max-width: 1500px;    
+    background-color: #1D1D1D;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.6fr  3fr 2fr;
