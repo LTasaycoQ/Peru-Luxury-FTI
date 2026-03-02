@@ -105,8 +105,6 @@ export const destinations: Destination[] = [
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi11_x6owuk.webp",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi22_cdjtrl.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi33_tvifmb.webp",
-    
-
 
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
@@ -114,8 +112,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-
-
 
     partnersVariant: "single",
     partners: [
@@ -140,15 +136,12 @@ export const destinations: Destination[] = [
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/arequipa3_nwxkcp.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/arequipa2_v5zysp.webp",
 
-
-
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-
 
     partnersVariant: "single",
     partners: [
@@ -171,15 +164,12 @@ export const destinations: Destination[] = [
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno2_cu7eos.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno3_pruvdn.webp",
    
-
-
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-
 
     partnersVariant: "single",
     partners: [
@@ -200,14 +190,12 @@ export const destinations: Destination[] = [
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2-2_f3xlg8.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2_lu3d4q.webp",
   
-
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/chinchero-town" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "/ollantaytambo-town" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "/pachamanca-inca" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-
 
     partnersVariant: "default",
     partners: [
@@ -216,7 +204,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-hacienda_i1y8x9.webp", name: "Inkaterra Hacienda Urubamba", link: "#" },
     ],
   },
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a.webp",
     distrito: "amazon-river-cruises",
@@ -228,15 +215,12 @@ export const destinations: Destination[] = [
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/amazon-cruises2_zoucke.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/amazon-cruises_p0ij0b.webp",
 
-
-
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
     ],
-
 
     partnersVariant: "detailed",
     partners: [
@@ -245,7 +229,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/delfin2-cruises_l11b9r.webp", name: "Delfin II", description: "The 14 cabins of this vessel include 04 Master Suites with 180° panoramic windows and 10 Suites -including 02 sets of Suites that can be interconnected to accomodate families- with movie screen size windows and first-rate design.", link:"#" },
     ],
   },
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_i18flh.webp",
     distrito: "luxury-trains",
@@ -256,9 +239,6 @@ export const destinations: Destination[] = [
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_dlzryx.webp",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train2_stgvca.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train3_w9ysql.webp",
-
-
-
 
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
@@ -276,8 +256,6 @@ export const destinations: Destination[] = [
 
   },
 
-
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/caption_natyae.jpg",
     distrito: "nazca-paracas",
@@ -288,7 +266,6 @@ export const destinations: Destination[] = [
     image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.jpg?fit=413%2C589&ssl=1",
     image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train2.jpg?fit=1680%2C1205&ssl=1",
     image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train3.jpg?fit=413%2C282&ssl=1",
-   
 
 
     execptionalEXperience: [
@@ -297,9 +274,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-
-
-
     partnersVariant: "default",
     partners: [
       { image: "", name: "Miraflores Park, A Belmond Hotel", link: "#" },
