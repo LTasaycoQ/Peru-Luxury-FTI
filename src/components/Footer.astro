@@ -1,73 +1,35 @@
 ---
 import { destinations } from "../data/destinations/destinatios";
+
 const topDestinations = destinations.slice(0, 9);
 ---
 
-<footer class="footer-lux">
-
-  <!-- Wave -->
-  <div class="footer-wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 90" preserveAspectRatio="none">
-      <path d="M0 55L60 47C120 39 240 23 360 20C480 17 600 27 720 36C840 45 960 53 1080 50C1200 47 1320 33 1440 28L1500 25L1500 91L0 91Z" fill="#141210"/>
-    </svg>
-  </div>
-
-  <!-- Sección oscura: claim + brand -->
-  <div class="section-dark">
-    <div class="ornament-row">
-      <div class="orn-line"></div>
-      <span class="orn-icon">✦</span>
-      <div class="orn-line"></div>
+<footer class="footer-modern">
+  <div class="footer-content">
+    
+    <div class="footer-brand justify-center items-start flex flex-col">
+      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
+      <p class="brand-description max-sm:text-center">
+        Crafting unique and unforgettable luxury experiences across the wonders of Peru.
+      </p>
+     
     </div>
 
-    <div class="footer-claim">
-      <p class="claim-sub">Luxury Travel · Peru</p>
-      <h2 class="claim-title">Journeys beyond the<br/><em>ordinary.</em></h2>
-    </div>
-
-    <div class="brand-strip">
-      <div class="brand-left">
-        <img
-          src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1"
-          alt="Peru Luxury Journeys"
-          class="f-logo"
-        />
-        <p class="f-desc">Crafting private, unforgettable experiences<br/>across the wonders of Peru since 2015.</p>
-        <div class="social-row">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="brand-stat">
-        <div class="stat"><span class="stat-num">+500</span><span class="stat-label">Journeys crafted</span></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years of excellence</span></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Tailor-made</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sección blanca: nav + newsletter -->
-  <div class="section-light">
-    <div class="light-inner">
-
-      <div class="col-nav">
-        <h5 class="col-title">Explore</h5>
+    <div class="flex gap-[80px] max-sm:flex-col">
+      <div class="link-group">
+        <h4 class="max-sm:text-center">Explore</h4>
         <ul>
-          <li><a href="/destinations">Destinations</a></li>
-          <li><a href="/programs">Luxury Programs</a></li>
-          <li><a href="/about-us">Our Story</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/destinations">Destinations</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="/programs">Luxury Programs</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
+          <li><a href="/about-us">About Our Story</a> <i class="pl-[10px] text-[14px] text-gray-400 bi bi-box-arrow-up-right"></i></li>
         </ul>
       </div>
-
-      <div class="col-dest">
-        <h5 class="col-title">Top Destinations</h5>
-        <ul class="dest-grid">
+      <div class="link-group">
+        <h4 class="max-sm:text-center">Top Destinations</h4>
+        <ul class="grid grid-cols-2 justify-center w-full">
           {topDestinations.map(d => (
             <li>
+              <i class="bi bi-link-45deg"></i>
               <a href={`/${d.distrito}`}>
                 {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
               </a>
@@ -75,415 +37,259 @@ const topDestinations = destinations.slice(0, 9);
           ))}
         </ul>
       </div>
-
-      <div class="col-news">
-        <h5 class="col-title">Exclusive Access</h5>
-        <p class="news-desc">Join our private circle and receive curated luxury travel offers.</p>
-        <form id="formulario-subcription" class="form-contacto-subcribete">
-          <div class="form-row">
-            <input name="Nombre" type="text" required placeholder="First Name" />
-            <input name="Apellido" type="text" required placeholder="Last Name" />
-          </div>
-          <input name="Email" type="email" required placeholder="Email Address" />
-          <button id="btn-submit" type="submit">
-            <span>Subscribe</span>
-            <i class="bi bi-arrow-right-short"></i>
-          </button>
-          <p id="form-msg" style="display:none;" class="form-success">✦ Welcome to our collection.</p>
-        </form>
-      </div>
-
     </div>
 
-    <!-- Bottom -->
-    <div class="footer-bottom">
-      <div class="bottom-inner">
-        <span class="copy">© 2025 Peru Luxury Journeys · All rights reserved.</span>
-        <div class="legal">
-          <a href="/privacy">Privacy</a>
-          <span>·</span>
-          <a href="/terms">Terms</a>
-          <span>·</span>
-          <a href="/cookies">Cookies</a>
+    <div class="footer-newsletter">
+      <h4>Join Our Newsletter</h4>
+      <p>Receive exclusive travel tips and luxury offers.</p>
+      <form id="formulario-subcription" class="form-contacto-subcribete">
+        <div class="input-box">
+          <div class="box-input--form">
+            <input name="Nombre" type="text" required placeholder="First Name">
+            <input name="Apellido" type="text" required placeholder="Last Name">
+          </div>
+          <input name="Email" type="email" required placeholder="Email">
+          <button id="btn-submit" class="button" type="submit">Subscribe</button>
+          <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 
 </footer>
 
 <script is:inline>
-  const api = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
-  const form = document.querySelector(".form-contacto-subcribete");
-  form?.addEventListener("submit", async (e) => {
+  const apiMailEndpointSubscribete = "https://tiny-constancy-peru-luxury-fa631626.koyeb.app/subscribe";
+  const formSubscribete = document.querySelector(".form-contacto-subcribete");
+
+  formSubscribete?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const btn = form.querySelector("button");
+
+    const btn = formSubscribete.querySelector("button");
     btn.disabled = true;
-    btn.querySelector("span").innerText = "Sending…";
-    const fd = new FormData(form);
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(formSubscribete);
+    const data = {
+      nombre: formData.get("Nombre"),
+      apellido: formData.get("Apellido"),
+      email: formData.get("Email")
+    };
+
     try {
-      const r = await fetch(api, {
+      const response = await fetch(apiMailEndpointSubscribete, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre: fd.get("Nombre"), apellido: fd.get("Apellido"), email: fd.get("Email") })
+        body: JSON.stringify(data)
       });
-      if (!r.ok) throw new Error();
-      await r.json();
+
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+      await response.json();
+
       document.getElementById("form-msg").style.display = "block";
-      form.reset();
-    } catch {
-      const m = document.getElementById("form-msg");
-      m.innerText = "Something went wrong. Try again.";
-      m.style.color = "#b94a48";
-      m.style.display = "block";
+      formSubscribete.reset();
+
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("form-msg").innerText = "Something went wrong. Please try again.";
+      document.getElementById("form-msg").style.color = "#e57373";
+      document.getElementById("form-msg").style.display = "block";
     } finally {
       btn.disabled = false;
-      btn.querySelector("span").innerText = "Subscribe";
+      btn.innerText = "Subscribe";
     }
   });
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap');
-
-  .footer-lux {
-    --gold: #C9A84C;
-    --gold-lt: #E0C070;
-    --bg-dark: #141210;
-    --bg-light: #FAFAF8;
-    --text-dark: #EDE8DF;
-    --text-light: #1E1B17;
-    --muted-dark: #8A8076;
-    --muted-light: #7A7469;
-    --border-dark: #2C2820;
-    --border-light: #E4E0D8;
-    font-family: 'Jost', sans-serif;
+  .footer-modern {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 80px 5% 30px 5%;
+    font-family: 'Poppins', sans-serif;
   }
 
-  /* Wave */
-  .footer-wave {
-    line-height: 0;
-    margin-bottom: -1px;
-  }
-  .footer-wave svg {
-    display: block;
-    width: 100%;
-    height: 70px;
-  }
-
-  /* ── SECCIÓN OSCURA ── */
-  .section-dark {
-    background: var(--bg-dark);
-    padding: 0 6% 56px;
-    color: var(--text-dark);
-  }
-
-  .ornament-row {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding-top: 52px;
-    margin-bottom: 44px;
-  }
-  .orn-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.35;
-  }
-  .orn-icon {
-    color: var(--gold);
-    font-size: 14px;
-  }
-
-  .footer-claim {
-    text-align: center;
-    margin-bottom: 52px;
-  }
-  .claim-sub {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
-  .claim-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 400;
-    color: var(--text-dark);
-    line-height: 1.2;
-    margin: 0;
-  }
-  .claim-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  /* Brand strip */
-  .brand-strip {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    padding-top: 8px;
-  }
-  .brand-left {
-    flex: 1;
-  }
-  .f-logo {
-    width: 190px;
-    display: block;
-    margin-bottom: 18px;
-    filter: brightness(0) invert(1) opacity(0.85);
-  }
-  .f-desc {
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--muted-dark);
-    line-height: 1.75;
-    margin-bottom: 22px;
-  }
-  .social-row {
-    display: flex;
-    gap: 12px;
-  }
-  .social-row a {
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--border-dark);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted-dark);
-    font-size: 15px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .social-row a:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    transform: translateY(-3px);
-  }
-
-  /* Stats */
-  .brand-stat {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-  .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted-dark);
-    white-space: nowrap;
-  }
-  .stat-div {
-    width: 1px;
-    height: 40px;
-    background: var(--border-dark);
-  }
-
-  /* ── SECCIÓN BLANCA ── */
-  .section-light {
-    background: var(--bg-light);
-    padding: 0 6% 0;
-    color: var(--text-light);
-  }
-
-  .light-inner {
+  .footer-content {
+    max-width: 1500px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.6fr 2fr;
-    gap: 48px;
-    padding: 52px 0 52px;
-    border-bottom: 1px solid var(--border-light);
+    grid-template-columns: 1.6fr  3fr 2fr;
+    gap: 30px;
   }
 
-  .col-title {
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 24px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-light);
+  .footer-logo {
+    max-width: 300px;
+    margin-bottom: 20px;
+    filter: brightness(20.2);
   }
-  .col-nav ul,
-  .col-dest ul {
+
+  .brand-description {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-links a {
+    color: #DABB42;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-5px);
+    color: #fff;
+  }
+
+  .link-group h4 {
+    color: #DABB42;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing:1.2px;
+  }
+
+  .link-group ul {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
-  .col-nav ul li {
-    margin-bottom: 13px;
+
+  .link-group ul li {
+    margin-bottom: 12px;
   }
-  .col-nav ul li a {
-    color: var(--muted-light);
+
+  .link-group a {
     text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 300;
+    color: #ccc;
+    font-size: 13px;
     transition: all 0.3s ease;
     display: inline-block;
   }
-  .col-nav ul li a:hover {
-    color: var(--text-light);
-    padding-left: 8px;
-  }
 
-  .dest-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 16px;
-  }
-  .dest-grid li a {
-    color: var(--muted-light);
-    text-decoration: none;
-    font-size: 12.5px;
-    font-weight: 300;
-    display: block;
-    padding: 4px 0;
-    transition: color 0.25s;
-  }
-  .dest-grid li a:hover {
-    color: var(--gold);
-  }
-
-  .news-desc {
-    font-size: 15px;
-    color: var(--muted-light);
-    font-weight: 300;
-    line-height: 1.7;
-    margin-bottom: 22px;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .form-contacto-subcribete input {
-    width: 100%;
-    background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 2px;
-    color: var(--text-light);
-    padding: 11px 14px;
-    font-size: 12px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    outline: none;
-    transition: border-color 0.3s;
-    box-sizing: border-box;
-  }
-  .form-contacto-subcribete input:focus {
-    border-color: var(--gold);
-  }
-  .form-contacto-subcribete input::placeholder {
-    color: #B8B2A8;
-    font-size: 11.5px;
-    letter-spacing: 0.4px;
-  }
-  .form-contacto-subcribete input[type="email"] {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 14px;
-  }
-  .form-contacto-subcribete button {
-    width: 100%;
-    background: var(--bg-dark);
-    border: none;
+  .link-group a:hover {
     color: #fff;
-    font-family: 'Jost', sans-serif;
-    font-size: 10.5px;
-    font-weight: 500;
-    letter-spacing: 3.5px;
+    transform: translateX(8px);
+  }
+
+  .footer-newsletter h4 {
+    color: #DABB42;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
-    padding: 14px 24px;
-    cursor: pointer;
-    transition: all 0.35s ease;
+    letter-spacing: 1px;
+  }
+
+  .footer-newsletter p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .box-input--form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: 2px;
+    gap: 10px;
   }
-  .form-contacto-subcribete button:hover {
-    background: var(--gold);
-    color: #0e0c0a;
+
+  .input-box {
+    display: flex;
+    gap:14px;
+    flex-direction: column;
+    padding: 5px 0;
   }
-  .form-contacto-subcribete button:disabled {
-    opacity: 0.5;
+
+  .input-box input {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    color: rgb(107, 107, 107);
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+
+  .input-box button {
+    background-color: #DABB42;
+    border-radius: 10px;
+    color: #1a1a1a;
+    border: none;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    padding: 11px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .input-box button:hover {
+    background-color: #c9a830;
+  }
+
+  .input-box button:disabled {
+    opacity: 0.6;
     cursor: not-allowed;
   }
-  .form-success {
-    color: var(--gold);
-    font-size: 12px;
-    margin-top: 12px;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
-  }
 
-  /* Bottom */
   .footer-bottom {
-    padding: 28px 0 40px;
-  }
-  .bottom-inner {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    font-size: 12px;
+    color: #666;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .copy {
-    font-size: 11.5px;
-    color: var(--muted-light);
-    font-weight: 300;
-  }
-  .legal {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 11.5px;
-    color: var(--muted-light);
-  }
-  .legal a {
-    color: var(--muted-light);
-    text-decoration: none;
-    transition: color 0.25s;
-  }
-  .legal a:hover { color: var(--gold); }
-  .legal span { color: var(--border-light); }
 
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .brand-stat { display: none; }
-    .light-inner { grid-template-columns: 1fr 1fr; }
-    .col-news { grid-column: span 2; }
+  .bottom-legal {
+    display: flex;
+    gap: 20px;
   }
-  @media (max-width: 640px) {
-    .light-inner { grid-template-columns: 1fr; }
-    .col-news { grid-column: span 1; }
-    .form-row { grid-template-columns: 1fr; }
-    .bottom-inner { flex-direction: column; gap: 14px; text-align: center; }
-    .brand-strip { flex-direction: column; align-items: flex-start; }
+
+  .bottom-legal a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .bottom-legal a:hover {
+    color: #DABB42;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: 1fr 2fr;
+    }
+    .footer-newsletter {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    .footer-newsletter {
+      grid-column: span 1;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .box-input--form {
+      flex-direction: column;
+    }
   }
 </style>
