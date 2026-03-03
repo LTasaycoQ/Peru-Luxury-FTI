@@ -5,7 +5,6 @@ import HotelsDetail from "../components/destinations/hotels/hotelsDetail.astro";
 
 import { hotels } from "../data/destinations/hotels";
 
-// 🔥 Generamos todas las páginas dinámicas
 export async function getStaticPaths() {
   return hotels.map((hotel) => ({
     params: { slug: hotel.slug },
@@ -16,12 +15,13 @@ export async function getStaticPaths() {
 const { hotel } = Astro.props;
 ---
 
-<BaseLayout title={hotel.title}>
+<BaseLayout title={hotel.title} description={hotel.description}>
   <Fondo fondo={`url(${hotel.fondo})`} />
 
   <main>
     <HotelsDetail 
       title={hotel.title}
+      description={hotel.description}
     />
   </main>
 </BaseLayout>
