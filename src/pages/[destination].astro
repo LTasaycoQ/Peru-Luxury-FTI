@@ -2,10 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DistrictInicio from "../components/destinations/distritos/districtInicio.astro";
 import OurParners from "../components/destinations/distritos/OurParners.astro";
+import ExceptionalExperience from "../components/destinations/distritos/ExceptionalExperience.astro";
 import Fondo from "../components/Fondo.astro";
 
-import { destinations } from "../data/destinations/destinatios"; 
-import ExceptionalExperience from "../components/destinations/distritos/ExceptionalExperience.astro";
+import { destinations } from "../data/destinations/destinatios";
+import { hotels } from "../data/destinations/hotels";
 
 export async function getStaticPaths() {
   return destinations.map((dest) => ({
@@ -14,29 +15,46 @@ export async function getStaticPaths() {
   }));
 }
 
-const { titleSEO,  title, description, image1, image2, image3, fondo, partnersTitle, partnersVariant, partners, execptionalEXperience } = Astro.props;
+const {
+  titleSEO,
+  title,
+  description,
+  image1,
+  image2,
+  image3,
+  fondo,
+} = Astro.props;
 
+// 🔥 FILTRAMOS LOS HOTELES AUTOMÁTICAMENTE
+const destinationHotels = hotels.filter(
+  (hotel) => hotel.destination === Astro.params.destination
+);
+
+// 🔥 LOS FORMATEAMOS PARA OurParners
+const partnersFormatted = destinationHotels.map((hotel) => ({
+  image: hotel.fondo,
+  name: hotel.title,
+  link: `/${hotel.slug}`,
+}));
 ---
 
 <BaseLayout title={titleSEO} description={description} ogImage={fondo}>
-    <Fondo fondo={`url(${fondo})`} />
-    <main>
-      <DistrictInicio 
-        title={title} 
-        description={description} 
-        image1={image1} 
-        image2={image2} 
-        image3={image3} 
-      />
+  <Fondo fondo={`url(${fondo})`} />
+
+  <main>
+    <DistrictInicio
+      title={title}
+      description={description}
+      image1={image1}
+      image2={image2}
+      image3={image3}
+    />
 
 
-      <ExceptionalExperience experience={execptionalEXperience} />
-
-
-      <OurParners 
-        title={partnersTitle} 
-        variant={partnersVariant} 
-        partners={partners} 
-      />
-    </main>
+    <OurParners
+      title="Our Hotels"
+      variant="default"
+      partners={partnersFormatted}
+    />
+  </main>
 </BaseLayout>

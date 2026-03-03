@@ -1,9 +1,4 @@
-export interface Partner {
-  image: string;
-  name: string;
-  description?: string;
-  link?: string;
-}
+
 
 export interface ExceptionalExperience {
   image: string;
@@ -22,8 +17,6 @@ export interface Destination {
   image2: string;
   image3: string;
   partnersTitle?: string;
-  partnersVariant: "default" | "single" | "detailed";
-  partners: Partner[];
   execptionalEXperience: ExceptionalExperience[];
 }
 
@@ -43,20 +36,9 @@ export const destinations: Destination[] = [
 
 
     execptionalEXperience: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "belmond-miraflores-park" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
-    ],
-
-
-
-    partnersTitle: "Our Parners",
-    partnersVariant: "default",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
   },
@@ -83,14 +65,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
     ],
 
-
-
-    partnersVariant: "default",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/monasterio_v66tbl.webp", name: "Miraflores, A Belmond Hotel Cusco", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/marriott-cusco_jhzguk.webp", name: "JW Marriott El Convento Cusco", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/palacio-del-inka_iyacvk.webp", name: "Palacio del Inka, A luxury Collection", link: "#" },
-    ],
   },
 
 
@@ -111,13 +85,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
-    ],
-
-    partnersVariant: "single",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Sanctuary-lodge_fcinjh.webp", name: "Sanctuary Lodge A Belmond Hotel", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-mapi_xhz39g.webp", name: "Inkaterra Machu Picchu Pueblo Hotel", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/sumaq_rhesqt.webp", name: "Sumaq Machu Picchu Hotel", link: "#" },
     ],
 
   },
@@ -143,12 +110,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
 
-    partnersVariant: "single",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/CASITA-GARDEN_goxo5t.webp", name: "Las Casistas A Belmond Hotel" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/DESTINO_iy0m0r.webp", name: "Aranwa Pueblito Encantado Del Colca" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/CIRQA2_kqgw1k.webp", name: "Cirqa" },
-    ],
   },
 
 
@@ -171,10 +132,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
 
-    partnersVariant: "single",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-mapi_xhz39g.webp", name: "Titilaka" },
-    ],
   },
 
 
@@ -197,12 +154,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
 
-    partnersVariant: "default",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/tambo-inka_rixdeu.webp", name: "Tambo del inka, A Luxury Collection", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Belmond-rio-sagrado_va7vha.webp", name: "Rio Sagardo, A Belmond Hotel Sacred Valley", link: "#" },
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/inkaterra-hacienda_i1y8x9.webp", name: "Inkaterra Hacienda Urubamba", link: "#" },
-    ],
   },
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a.webp",
@@ -222,12 +173,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
     ],
 
-    partnersVariant: "detailed",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/amazon-cruises_p0ij0b.webp", name: "Aria Amazon", description: "A five-star, eco-friendly, luxury and comfort vessel. Sail the Aria Amazon, an all-inclusive luxury Amazon river cruise experience with spacious suites, Amazonian cuisine and expert-guided wildlife excursions.", link: "#"},
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/delfin1-cruises_uez3zm.webp", name: "Delfin I", description: "This river vessel takes you one step beyond in terms of service, intimacy and personal attention. It offers only 04 exclusive oversized suites with panoramic private terraces; 02 of these with a private whirlpool for the ultimate treat.", link:"#"},
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/delfin2-cruises_l11b9r.webp", name: "Delfin II", description: "The 14 cabins of this vessel include 04 Master Suites with 180° panoramic windows and 10 Suites -including 02 sets of Suites that can be interconnected to accomodate families- with movie screen size windows and first-rate design.", link:"#" },
-    ],
   },
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_i18flh.webp",
@@ -248,12 +193,6 @@ export const destinations: Destination[] = [
     ],
 
 
-    partnersVariant: "detailed",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/hiram-bingham_dfwjik.webp", name: "Belmond Hiram Bingham", description: "Launched in 2003 to escort guests in lavish style high into the Andes. The train carries guests in unrivaled style between Cusco, the Sacred Valley and Machu Picchu. During this journey, you can relax in 1920s-style carriages featuring highly polished wood and brass décor and enjoy gourmet dining, vibrant entertainment and awe-inspiring views. Here, elegance and old-fashioned charm come first.", link: "#"},
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/andean-explorer_ry8rv8.webp", name: "Belmond Andean Explorer", description: "Discover pioneering luxury and breathtaking rural mountainscapes on the world’s highest rail route. South America’s first luxury sleeper train glides from Cusco, the capital of the Inca Empire, across the lofty Andean plains to the white city of Arequipa. Take in the region’s spectacular highlights en route, including Lake Titicaca and the Sumbay Caves.",  link: "#"},
-    ],
-
   },
 
   {
@@ -272,20 +211,6 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Westin_wieilw.webp", name: "The Westin Lima Hotel & Convention Center", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
-    ],
-    partnersVariant: "detailed",
-    partners: [
-      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772559657/JARANA-BAR_ux98is.jpg", 
-        name: "HOTEL PARACAS A LUXURY COLLECTION",
-        description: "Set in one of the most beautiful natural settings on the Peruvian coast, the Hotel Paracas, a Luxury Collection Resort is part of the Starwood Hotels & Resorts group. The bay is a natural reserve lined with wild beaches and sheltering large populations of sea lions, Humboldt penguins and sea otters. Hotel Paracas is spread over nearly 35 hectares along the bay. It has 120 rooms, two pools, a lounge bar, three restaurants and a spa that offers every luxury imaginable. It also has meeting rooms that can host up to 500 people, a Kid’s Club area, and spaces for reading and family activities. All this contributes to making the Hotel Paracas the very best choice for luxury accommodation along the Peruvian coast.",
-        link: "#" 
-      },
-      { 
-        image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772559640/DESTINO_opoomc.jpg", 
-        name: "ARANWA PARACAS RESORT & SPA", 
-        description: "Paracas Bay is located in the province of Pisco. This place of wonderful natural diversity invites you to take a journey through its vast and rich history, an invitation difficult to resist. This exclusive and modern hotel is the perfect place to relax and enjoy with your friends, partner or family, as it has special spaces and activities for children. Our spacious and beautiful facilities, exquisite cuisine and excellent service are part of the proposal that Aranwa has for you in this new location. The hotel offers 115 sea view rooms, a spa conditioned to offer an experience of beauty, relaxation and renovation, and modern and exclusive facilities specially designed for conferences, cocktails, parties and important events, which can be held at the Convention Center, Lounge Bar on the pier, chapel, gardens, among others.",
-        link: "#" 
-      },
     ],
   },
 ];
