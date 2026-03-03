@@ -1,9 +1,13 @@
+export interface hotelimg {
+  image:string;
+}
 export interface Hotel {
   slug: string;
   description: string;
   title: string;
   fondo: string;
   destination: string;
+  hotelImage?: hotelimg[];
 }
 
 export const hotels: Hotel[] = [
@@ -15,6 +19,15 @@ export const hotels: Hotel[] = [
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp",
     description:"Set in a verdant garden, Belmond Miraflores Park is a true urban sanctuary beside the city’s cultural gems. Located in Miraflores, one of the most exclusive residential areas of Lima, this boutique hotel offers awesome views over the Pacific Ocean. Its modern facilities, spacious suites and personalized service make this hotel the perfect place for travelers. Tragaluz restaurant offers a wide variety of international dishes with Asian, Mediterranean and Peruvian touches, as well as innovative cocktails and snacks served on an elegant terrace.",
     destination: "lima",
+    hotelImage: [
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/v1771862497/Lima3_oipvsa.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+      {image:"https://res.cloudinary.com/dlgeap8h0/image/upload/Rest_3_ccdipv.webp"},
+    ],
   },
   {
     slug: "hotel-b",
