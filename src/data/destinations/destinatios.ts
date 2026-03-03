@@ -259,9 +259,9 @@ export const destinations: Destination[] = [
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557280/Paracas_2_qqpyvv.jpg",
     distrito: "nazca-paracas",
-    title: "Nazca Paracas",
+    title: "Nazca & Paracas",
     titleSEO:  "Nazca Paracas",
-    description: "Discover the most exquisite Peru aboard luxury trains that redefine the notion of travel. Refined ambience, impeccable service and sublime scenery combine in a journey that celebrates sophistication in every detail. From Belle Époque-inspired lounges to private suites overlooking the Andes, every moment is designed to delight the senses. More than a transfer, it is an immersive experience where luxury moves to the rhythm of the Peruvian landscape.",
+    description: "Ica is located south of Lima. This region has a remarkable geography as it is formed by coastal plains. Pisco, one of its provinces, is the place where our national liquor -of the same name- originated. Pisco is also famous for its National Reserve Paracas, a perfect destination for those who love nature. The Ballestas Islands is an ecological area with an great diversity in marine life as Humboldt penguins and sea lions, and vast colonies of sea birds. On the other hand, the endless kilometers of sand dunes in this region represent a perfect rough terrain for 4×4 trips for the adventure travelers. Dinners in the middle of the desert are also set in this area. Another good reason to visit Ica is the enigmatic Nazca Lines. Just a short flight away from Pisco you will be able to discover a group of geoglyphs traced onto the surface of the Nazca Desert. The figures vary in complexity. From the sky, the Spider, the Hummingbird, the Condor, the Monkey and some other zoomorphic designs and geometric shapes are clearly visible. This place was declared a World Heritage Site by UNESCO in 1994",
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557571/ica-5_i0wshc.jpg",
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557572/ica-1_dpnpfx.jpg",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557572/ica-portada_wgf5fw.jpg",
@@ -273,11 +273,19 @@ export const destinations: Destination[] = [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/country-club_zshijx.webp", name: "Country Club Lima Hotel", link: "#" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/AC_j04ali.webp", name: "AC Hotel Lima Miraflores", link: "#" },
     ],
-    partnersVariant: "default",
+    partnersVariant: "detailed",
     partners: [
-      { image: "", name: "Miraflores Park, A Belmond Hotel", link: "#" },
-      { image: "", name: "Hotel B", link: "#" },
-      { image: "", name: "JW Marriott Hotel Lima", link: "#" },
+      { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772559657/JARANA-BAR_ux98is.jpg", 
+        name: "HOTEL PARACAS A LUXURY COLLECTION",
+        description: "Set in one of the most beautiful natural settings on the Peruvian coast, the Hotel Paracas, a Luxury Collection Resort is part of the Starwood Hotels & Resorts group. The bay is a natural reserve lined with wild beaches and sheltering large populations of sea lions, Humboldt penguins and sea otters. Hotel Paracas is spread over nearly 35 hectares along the bay. It has 120 rooms, two pools, a lounge bar, three restaurants and a spa that offers every luxury imaginable. It also has meeting rooms that can host up to 500 people, a Kid’s Club area, and spaces for reading and family activities. All this contributes to making the Hotel Paracas the very best choice for luxury accommodation along the Peruvian coast.",
+        link: "#" 
+      },
+      { 
+        image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772559640/DESTINO_opoomc.jpg", 
+        name: "ARANWA PARACAS RESORT & SPA", 
+        description: "Paracas Bay is located in the province of Pisco. This place of wonderful natural diversity invites you to take a journey through its vast and rich history, an invitation difficult to resist. This exclusive and modern hotel is the perfect place to relax and enjoy with your friends, partner or family, as it has special spaces and activities for children. Our spacious and beautiful facilities, exquisite cuisine and excellent service are part of the proposal that Aranwa has for you in this new location. The hotel offers 115 sea view rooms, a spa conditioned to offer an experience of beauty, relaxation and renovation, and modern and exclusive facilities specially designed for conferences, cocktails, parties and important events, which can be held at the Convention Center, Lounge Bar on the pier, chapel, gardens, among others.",
+        link: "#" 
+      },
     ],
   },
 ];
