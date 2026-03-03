@@ -21,7 +21,7 @@ export interface Destination {
   image1: string;
   image2: string;
   image3: string;
-  partnersTitle: string;
+  partnersTitle?: string;
   partnersVariant: "default" | "single" | "detailed";
   partners: Partner[];
   execptionalEXperience: ExceptionalExperience[];
@@ -257,15 +257,14 @@ export const destinations: Destination[] = [
   },
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/caption_natyae.jpg",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557280/Paracas_2_qqpyvv.jpg",
     distrito: "nazca-paracas",
-    partnersTitle: "Luxury Trains",
     title: "Nazca Paracas",
     titleSEO:  "Nazca Paracas",
     description: "Discover the most exquisite Peru aboard luxury trains that redefine the notion of travel. Refined ambience, impeccable service and sublime scenery combine in a journey that celebrates sophistication in every detail. From Belle Époque-inspired lounges to private suites overlooking the Andes, every moment is designed to delight the senses. More than a transfer, it is an immersive experience where luxury moves to the rhythm of the Peruvian landscape.",
-    image1: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train.jpg?fit=413%2C589&ssl=1",
-    image2: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train2.jpg?fit=1680%2C1205&ssl=1",
-    image3: "https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/05/luxury-train3.jpg?fit=413%2C282&ssl=1",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557571/ica-5_i0wshc.jpg",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557572/ica-1_dpnpfx.jpg",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772557572/ica-portada_wgf5fw.jpg",
 
 
     execptionalEXperience: [
