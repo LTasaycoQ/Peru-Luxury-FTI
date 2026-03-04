@@ -43,8 +43,8 @@ export const destinationsExp: expDestinatiosData[] = [
 
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp",
-    experienciaLugar: "ollantaytambo-pueblo",
-    title: "Ollantaytambo Pueblo",
+    experienciaLugar: "ollantaytambo-town",
+    title: "Ollantaytambo Town",
     titleSEO:  "Ollantaytambo Pueblo",
     description: "Guided exploration of “Ollantaytambo Pueblo” also known as a 'Living Inca Town', an ancient village in Peru's Sacred Valley that has been continuously inhabited since the 13th century and retains its original Inca street grid and stone architecture, the inhabitants maintain ancient living practices and customs.  It’s antique water channels, which remain an integral part of daily life and create a unique and authentic atmosphere.  This extraordinary village was recognized by the World Tourism Organization (UNWTO) as one of the “Best Tourism Villages” in the world, an award that highlights its cultural identity, its heritage preservation, and its sustainable tourism model. Walking through Ollantaytambo Pueblo is to share the serene rhythm of Andean life, to feel history in every corner, and to connect with a community that honors its traditions with pride. A genuine, inspiring, and profoundly human experience that invites you to stop, observe… and say: I want to experience this. ",
     rightImage: [
