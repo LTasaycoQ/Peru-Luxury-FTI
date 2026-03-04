@@ -21,16 +21,15 @@ const {
   description,
   image1,
   image2,
+  partnersTitle,
   image3,
   fondo,
 } = Astro.props;
 
-// 🔥 FILTRAMOS LOS HOTELES AUTOMÁTICAMENTE
 const destinationHotels = hotels.filter(
   (hotel) => hotel.destination === Astro.params.destination
 );
 
-// 🔥 LOS FORMATEAMOS PARA OurParners
 const partnersFormatted = destinationHotels.map((hotel) => ({
   image: hotel.fondo,
   name: hotel.title,
@@ -52,7 +51,7 @@ const partnersFormatted = destinationHotels.map((hotel) => ({
 
 
     <OurParners
-      title="Our Hotels"
+      title={partnersTitle}
       variant="default"
       partners={partnersFormatted}
     />
