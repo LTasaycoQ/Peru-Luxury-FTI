@@ -156,7 +156,7 @@ export const destinations: Destination[] = [
 
   },
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a_1_ponq23.webp",
     distrito: "amazon-river-cruises",
     title: "Amazon River Cruises",
     titleSEO:  "Amazon River Cruises",
