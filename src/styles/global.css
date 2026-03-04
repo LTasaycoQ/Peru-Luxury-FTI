@@ -11,6 +11,7 @@ html{
 .linksEffect {
     display: flex;
     gap: 12px;
+    font-size: 16px;
     align-items:center;
     cursor: pointer;
 }
