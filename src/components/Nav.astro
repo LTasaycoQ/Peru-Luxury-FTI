@@ -85,18 +85,23 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 </header>
 
 <script>
+
     const btnMenu = document.getElementById("btnMenu") as HTMLButtonElement;
     const openMenuIcon = document.getElementById("openMenu") as HTMLElement;
     const closeMenuIcon = document.getElementById("closeMenu") as HTMLElement;
     const menuResponsive = document.getElementById("menuResponsive") as HTMLElement;
 
     btnMenu.addEventListener("click", () => {
-        const isOpen = !menuResponsive.classList.contains("hidden");
+        const isHidden = menuResponsive.classList.contains("hidden");
+        
         menuResponsive.classList.toggle("hidden");
-        openMenuIcon.classList.toggle("hidden", isOpen);
-        closeMenuIcon.classList.toggle("hidden", !isOpen);
-        btnMenu.setAttribute("aria-expanded", String(!isOpen));
+        
+        openMenuIcon.classList.toggle("hidden", isHidden); 
+        closeMenuIcon.classList.toggle("hidden", !isHidden);
+        
+        btnMenu.setAttribute("aria-expanded", String(isHidden));
     });
+
 
     const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
     const submenuDesktop    = document.getElementById("submenu") as HTMLElement;
