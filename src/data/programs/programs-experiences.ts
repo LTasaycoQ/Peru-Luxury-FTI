@@ -31,7 +31,7 @@ export const programs: programsData[] = [
 
   {
     fondo: "https://img.freepik.com/foto-gratis/disparo-vertical-hombre-acostado-hamaca-junto-cascada-que-fluye-abajo-colina_181624-2060.jpg",
-    title: "Pachacútec’s Empire: 8 Nights of Royal History",
+    title: "Eight Unforgettable Nights as you Step Back in Time ",
     text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
     name: "pachacutec-empire",
 
