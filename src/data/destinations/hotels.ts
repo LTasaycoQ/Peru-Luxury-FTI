@@ -12,7 +12,7 @@ export interface Hotel {
 
 export const hotels: Hotel[] = [
 
-  // 1️⃣ LIMA
+  //  LIMA
   {
     slug: "belmond-miraflores-park",
     title: "Miraflores Park, A Belmond Hotel",
@@ -121,7 +121,7 @@ export const hotels: Hotel[] = [
 
   },
 
-  // 2️⃣ CUSCO
+  //  CUSCO
   {
     slug: "monasterio-belmond",
     title: "Monasterio, A Belmond Hotel Cusco",
@@ -221,7 +221,7 @@ export const hotels: Hotel[] = [
 
   },
 
-  // 3️⃣ MACHU PICCHU
+  // MACHU PICCHU
   {
     slug: "sanctuary-lodge",
     title: "Sanctuary Lodge, A Belmond Hotel",
@@ -279,7 +279,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 4️⃣ AREQUIPA
+  //  AREQUIPA
   {
     slug: "las-casitas-colca",
     title: "Las Casitas, A Belmond Hotel",
@@ -337,7 +337,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 5️⃣ PUNO
+  //  PUNO
   {
     slug: "titilaka",
     title: "Titilaka",
@@ -357,7 +357,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 6️⃣ SACRED VALLEY
+  // SACRED VALLEY
   {
     slug: "tambo-del-inka",
     title: "Tambo del Inka, A Luxury Collection",
@@ -433,7 +433,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 7️⃣ AMAZON RIVER CRUISES
+  // AMAZON RIVER CRUISES
   {
     slug: "aria-amazon",
     title: "Aria Amazon",
@@ -492,7 +492,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 8️⃣ LUXURY TRAINS
+  // LUXURY TRAINS
   {
     slug: "belmond-hiram-bingham",
     title: "Belmond Hiram Bingham",
@@ -530,7 +530,7 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // 9️⃣ NAZCA - PARACAS
+  // NAZCA - PARACAS
   {
     slug: "hotel-paracas",
     title: "Hotel Paracas, A Luxury Collection",
