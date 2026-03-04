@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { destinationsExp } from "../data/destinations/experienceDestinations";
-import ExpDestinations from "../components/ExpDestinations/ExpDestinations.astro";
-import Fondo from "../components/Fondo.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { destinationsExp } from "../../data/destinations/experienceDestinations";
+import ExpDestinations from "../../components/ExpDestinations/ExpDestinations.astro";
+import Fondo from "../../components/Fondo.astro";
 
 
 export async function getStaticPaths() {
@@ -13,20 +13,12 @@ export async function getStaticPaths() {
 }
 
 const {
-  titleSEO,
-  title,
   description,
-  fondo,
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
 } = Astro.props;
 ---
 
 <BaseLayout title={titleSEO}>
-  <Fondo fondo={`url(${fondo})`} />
+  <Fondo fondo={`url()`} />
   <main>
     <ExpDestinations
       title={title}

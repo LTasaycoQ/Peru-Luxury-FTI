@@ -7,6 +7,7 @@ import Fondo from "../../components/Fondo.astro";
 
 import { destinations } from "../../data/destinations/destinatios";
 import { hotels } from "../../data/destinations/hotels";
+import { destinationsExp } from "../../data/destinations/experienceDestinations";
 
 export async function getStaticPaths() {
   return destinations.map((dest) => ({
@@ -24,17 +25,33 @@ const {
   partnersTitle,
   image3,
   fondo,
+  execptionalEXperience,
 } = Astro.props;
 
 const destinationHotels = hotels.filter(
   (hotel) => hotel.destination === Astro.params.destination
 );
 
+
+
 const partnersFormatted = destinationHotels.map((hotel) => ({
   image: hotel.fondo,
   name: hotel.title,
   link: `/parners/${hotel.slug}`,
 }));
+
+
+
+const experienceDestinations = destinationsExp.filter(
+  (destinationsExp) => destinationsExp.destination === Astro.params.destination
+);
+
+
+const experienceDestinationsFormatted = experienceDestinations.map((experience) => ({
+
+}));
+
+
 ---
 
 <BaseLayout title={titleSEO} description={description} ogImage={fondo}>
@@ -49,6 +66,7 @@ const partnersFormatted = destinationHotels.map((hotel) => ({
       image3={image3}
     />
 
+    <ExceptionalExperience experience={experienceDestinationsFormatted} />
 
     <OurParners
       title={partnersTitle}
