@@ -30,7 +30,7 @@ const topDestinations = destinations.slice(0, 9);
           {topDestinations.map(d => (
             <li>
               <i class="bi bi-link-45deg"></i>
-              <a href={`/${d.distrito}`}>
+              <a href={`/destinations/${d.distrito}`}>
                 {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
               </a>
             </li>

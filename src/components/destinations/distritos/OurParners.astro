@@ -26,7 +26,8 @@ const isValidImage = (src: string) => src && src.startsWith('http');
   </div>
 
   {variant === "default" && (
-    <div class="grid grid-cols-3 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
+    <div data-aos="fade-up"
+     data-aos-duration="3000" class="grid grid-cols-3 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
       {partners.map((partner) => (
         <div class="card-default">
           {isValidImage(partner.image) ? (
@@ -47,49 +48,6 @@ const isValidImage = (src: string) => src && src.startsWith('http');
     </div>
   )}
 
-  {variant === "single" && (
-    <div class="flex justify-center items-center flex-wrap gap-[30px]">
-      {partners.map((partner) => (
-        <div class="relative">
-          {isValidImage(partner.image) ? (
-            <Image 
-              src={partner.image} 
-              alt={partner.name} 
-              width={400}
-              height={300}
-              class="w-[400px] h-[300px] object-cover" 
-            />
-          ) : (
-            <div class="w-[400px] h-[300px] bg-gray-200"></div>
-          )}
-          <span class="absolute bottom-4 left-4 text-white text-[25px] font-medium">{partner.name}</span>
-        </div>
-      ))}
-    </div>
-  )}
-
-  {variant === "detailed" && (
-    <div class="grid grid-cols-2 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
-      {partners.map((partner) => (
-        <div class="card-default">
-          {isValidImage(partner.image) ? (
-            <Image 
-              src={partner.image} 
-              alt={partner.name} 
-              width={600}
-              height={350}
-              class="imagen w-full h-[350px] object-cover" 
-            />
-          ) : (
-            <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
-          )}
-          <h3 class="text-default">{partner.name}</h3>
-          <p class="text-sm text-gray-600 mt-1">{partner.description}</p>
-          <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
-        </div>
-      ))}
-    </div>
-  )}
 </section>
 
 <style>

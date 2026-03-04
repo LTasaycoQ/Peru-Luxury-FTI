@@ -34,7 +34,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                         <ul class="text-[14px] text-white w-full">
                             {destinations.map(d => (
                                 <li class="flex">
-                                    <a class="items-Submenu p-[15px] w-full" href={`/${d.distrito}`}>
+                                    <a class="items-Submenu p-[15px] w-full" href={`/destinations/${d.distrito}`}>
                                         {d.distrito.toUpperCase().replace(/-/g, " ")}
                                     </a>
                                 </li>
@@ -66,7 +66,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
                 <ul class="text-[13px] py-[8px]">
                     {destinations.map(d => (
                         <li>
-                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`/${d.distrito}`}>
+                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`/destinations/${d.distrito}`}>
                                 {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
                             </a>
                         </li>

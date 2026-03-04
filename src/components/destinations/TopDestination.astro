@@ -46,7 +46,7 @@ function getImage(path: string): ImageMetadata {
                         <div class="card-content">
                             <h3 class="card-title">{section.title}</h3>
                             <p class="card-text">{section.text}</p>
-                            <a href={section.link} class="card-link"><i>Read More</i></a>
+                            <a href={`/destinations/${section.link}`} class="card-link"><i>Read More</i></a>
                         </div>
                     </div>
                 ))

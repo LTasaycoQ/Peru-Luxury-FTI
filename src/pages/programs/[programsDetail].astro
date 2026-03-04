@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Fondo from "../components/Fondo.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Fondo from "../../components/Fondo.astro";
 const fondoOfi = "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514450/mapi-portada_vvfhnw.webp";
 
-import DetailPrograms from "../components/programs/ProgramsDetail/detailPrograms.astro";
+import DetailPrograms from "../../components/programs/ProgramsDetail/detailPrograms.astro";
 
-import { programs } from "../data/programs/programs-experiences";
+import { programs } from "../../data/programs/programs-experiences";
 
 export async function getStaticPaths() {
   return programs.map((dest) => ({

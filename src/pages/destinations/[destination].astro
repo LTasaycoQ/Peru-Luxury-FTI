@@ -1,12 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import DistrictInicio from "../components/destinations/distritos/districtInicio.astro";
-import OurParners from "../components/destinations/distritos/OurParners.astro";
-import ExceptionalExperience from "../components/destinations/distritos/ExceptionalExperience.astro";
-import Fondo from "../components/Fondo.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DistrictInicio from "../../components/destinations/distritos/districtInicio.astro";
+import OurParners from "../../components/destinations/distritos/OurParners.astro";
+import ExceptionalExperience from "../../components/destinations/distritos/ExceptionalExperience.astro";
+import Fondo from "../../components/Fondo.astro";
 
-import { destinations } from "../data/destinations/destinatios";
-import { hotels } from "../data/destinations/hotels";
+import { destinations } from "../../data/destinations/destinatios";
+import { hotels } from "../../data/destinations/hotels";
 
 export async function getStaticPaths() {
   return destinations.map((dest) => ({
@@ -33,7 +33,7 @@ const destinationHotels = hotels.filter(
 const partnersFormatted = destinationHotels.map((hotel) => ({
   image: hotel.fondo,
   name: hotel.title,
-  link: `/${hotel.slug}`,
+  link: `/parners/${hotel.slug}`,
 }));
 ---
 

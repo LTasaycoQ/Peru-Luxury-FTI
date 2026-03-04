@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Fondo from "../components/Fondo.astro";
-import HotelsDetail from "../components/destinations/hotels/hotelsDetail.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Fondo from "../../components/Fondo.astro";
+import HotelsDetail from "../../components/destinations/hotels/hotelsDetail.astro";
 
-import { hotels } from "../data/destinations/hotels";
+import { hotels } from "../../data/destinations/hotels";
 
 export async function getStaticPaths() {
   return hotels.map((hotel) => ({
