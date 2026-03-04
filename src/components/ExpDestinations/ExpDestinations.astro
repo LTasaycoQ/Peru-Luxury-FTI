@@ -26,7 +26,7 @@ const { texto, title, rightImage, downImage} = Astro.props;
                     class="text-gray-700 text-[15px] leading-relaxed text-center lg:text-left" 
                     set:html={texto} />
             </div>
-            <div  data-aos="fade-up" class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col   gap-[15px]">
+            <div  data-aos="fade-up" class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap   gap-[15px]">
                 {
                     rightImage.map((items: { image: string | null | undefined; }) => (
                         <img src={items.image} class=" w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm" alt="">
