@@ -23,7 +23,7 @@ export interface expDestinatiosData {
 export const destinationsExp: expDestinatiosData[] = [
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772634087/HYPNOZE_SPA_pnc8j6.jpg",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659760/chincheros_mfotfy.webp",
 
     experienciaLugar: "chinchero-town",
     title: "Chinchero Town",
@@ -42,8 +42,7 @@ export const destinationsExp: expDestinatiosData[] = [
   },
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772634087/HYPNOZE_SPA_pnc8j6.jpg",
-
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp",
     experienciaLugar: "ollantaytambo-pueblo",
     title: "Ollantaytambo Pueblo",
     titleSEO:  "Ollantaytambo Pueblo",
@@ -62,7 +61,7 @@ export const destinationsExp: expDestinatiosData[] = [
   },
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772634087/HYPNOZE_SPA_pnc8j6.jpg",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660222/jan-kronies-8Hzo5iZaS90-unsplash_js9fs8.webp",
 
     experienciaLugar: "seven-color",
     title: "The best way to visit Rainbow Mountain - Seven Color Mountain (Vinicunca)",
