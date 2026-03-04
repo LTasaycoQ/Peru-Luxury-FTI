@@ -25,9 +25,9 @@ import { programs } from "../../data/programs/programs-experiences";
                         <div class="card-content">
                             <h3 class="card-title">{section.title}</h3>
                             <p class="card-text">{section.text}</p>
-                            <a href={`/programs/${section.name}`} class="card-link" aria-label={`Read more about ${section.name}`}>
-                                <i>Read More</i>
-                            </a>
+                           <a href={`/programs/${section.name}`} class="card-link">
+    <i>Read more about {section.name}</i>
+</a>
                         </div>
                     </div>
                 ))
