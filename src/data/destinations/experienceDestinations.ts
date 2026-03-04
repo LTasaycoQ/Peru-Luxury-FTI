@@ -23,7 +23,7 @@ export interface expDestinatiosData {
 export const destinationsExp: expDestinatiosData[] = [
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659760/chincheros_mfotfy.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659636/pexels-eugeniofr-31746139_1_trnyji.webp",
 
     experienciaLugar: "chinchero-town",
     title: "Chinchero Town",
@@ -42,7 +42,7 @@ export const destinationsExp: expDestinatiosData[] = [
   },
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp",
     experienciaLugar: "ollantaytambo-pueblo",
     title: "Ollantaytambo Pueblo",
     titleSEO:  "Ollantaytambo Pueblo",
