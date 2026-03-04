@@ -30,14 +30,14 @@ export const destinationsExp: expDestinatiosData[] = [
     titleSEO:  "Chinchero Town",
     description: "Chinchero is a majestic Inca archaeological site (palace ruins and terraces) built atop a colonial church. It is known as the 'City of the Rainbow' for the frequent rainbows that adorn its fertile plains. It is a living museum where ancient Inca customs, the Quechua language, and ancestral weaving techniques thrive alongside Spanish colonial influences. It is the perfect place to enjoy breathtaking Andean views, explore ancient terraces, markets, and the colonial church before the golden light bathes the mountains and historical sites, offering a captivating glimpse into Inca and Quechua life near Cusco.",
     rightImage: [
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659769/bell-tower-of-iglesia_cqipqe.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659697/pexels-anyela-malaga-341169564-33341544_vnrbha.webp"},
-      ],
-      downImage: [
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659708/pexels-chrisfotope-24645280_dmn7et.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659636/pexels-eugeniofr-31746139_1_trnyji.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659746/Captura-de-pantalla-2026-03-04-161452_th06qw.webp"},
-      ],
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659769/bell-tower-of-iglesia_cqipqe.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659697/pexels-anyela-malaga-341169564-33341544_vnrbha.webp"},
+    ],
+    downImage: [
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659708/pexels-chrisfotope-24645280_dmn7et.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659636/pexels-eugeniofr-31746139_1_trnyji.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659746/Captura-de-pantalla-2026-03-04-161452_th06qw.webp"},
+    ],
    
   },
 

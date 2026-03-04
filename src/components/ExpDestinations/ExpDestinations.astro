@@ -20,7 +20,7 @@ const { texto, title, rightImage, downImage } = Astro.props;
                     set:html={texto} />
             </div>
             
-            <div data-aos="fade-up" class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
+            <div  class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
                 {
                     rightImage.map((items: ImageItem) => (
                         <img 
@@ -30,14 +30,14 @@ const { texto, title, rightImage, downImage } = Astro.props;
                             loading="eager" 
                             decoding="async"
                             class="w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm" 
-                            alt=""
+                            alt="img"
                         />
                     ))
                 }
             </div>
         </div>
 
-        <div data-aos="fade-up" class="flex pt-[40px] flex-col md:flex-row justify-between gap-[15px] w-full">
+        <div class="flex pt-[40px] flex-col md:flex-row justify-between gap-[15px] w-full">
              {
                 downImage.map((items: ImageItem) => (
                     <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
@@ -48,7 +48,7 @@ const { texto, title, rightImage, downImage } = Astro.props;
                             loading="lazy" 
                             decoding="async"
                             class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" 
-                            alt=""
+                            alt="img1"
                         />
                     </div>
                 ))
