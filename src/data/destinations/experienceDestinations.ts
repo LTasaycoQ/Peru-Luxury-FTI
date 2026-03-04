@@ -30,13 +30,13 @@ export const destinationsExp: expDestinatiosData[] = [
     titleSEO:  "Chinchero Town",
     description: "Chinchero is a majestic Inca archaeological site (palace ruins and terraces) built atop a colonial church. It is known as the 'City of the Rainbow' for the frequent rainbows that adorn its fertile plains. It is a living museum where ancient Inca customs, the Quechua language, and ancestral weaving techniques thrive alongside Spanish colonial influences. It is the perfect place to enjoy breathtaking Andean views, explore ancient terraces, markets, and the colonial church before the golden light bathes the mountains and historical sites, offering a captivating glimpse into Inca and Quechua life near Cusco.",
     rightImage: [
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865219/AC_j04ali.webp"},
+        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659769/bell-tower-of-iglesia_cqipqe.webp"},
+        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659697/pexels-anyela-malaga-341169564-33341544_vnrbha.webp"},
       ],
       downImage: [
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865199/country-club_zshijx.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865176/Westin_wieilw.webp"},
-        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865153/Marriott-Miraflores_obgk9p.webp"},
+        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659708/pexels-chrisfotope-24645280_dmn7et.webp"},
+        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659636/pexels-eugeniofr-31746139_1_trnyji.webp"},
+        {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659746/Captura-de-pantalla-2026-03-04-161452_th06qw.webp"},
       ],
    
   },
@@ -49,13 +49,13 @@ export const destinationsExp: expDestinatiosData[] = [
     titleSEO:  "Ollantaytambo Pueblo",
     description: "Guided exploration of “Ollantaytambo Pueblo” also known as a 'Living Inca Town', an ancient village in Peru's Sacred Valley that has been continuously inhabited since the 13th century and retains its original Inca street grid and stone architecture, the inhabitants maintain ancient living practices and customs.  It’s antique water channels, which remain an integral part of daily life and create a unique and authentic atmosphere.  This extraordinary village was recognized by the World Tourism Organization (UNWTO) as one of the “Best Tourism Villages” in the world, an award that highlights its cultural identity, its heritage preservation, and its sustainable tourism model. Walking through Ollantaytambo Pueblo is to share the serene rhythm of Andean life, to feel history in every corner, and to connect with a community that honors its traditions with pride. A genuine, inspiring, and profoundly human experience that invites you to stop, observe… and say: I want to experience this. ",
     rightImage: [
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865219/AC_j04ali.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660117/shutterstock_103491626_z5gjnu.webp"},
     ],
     downImage: [
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865199/country-club_zshijx.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865176/Westin_wieilw.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865153/Marriott-Miraflores_obgk9p.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659968/shutterstock_103491710_lp15kn.webp"},
     ],
 
     
@@ -88,15 +88,15 @@ export const destinationsExp: expDestinatiosData[] = [
     Thank you for taking the time to read.`,
 
     rightImage: [
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865219/AC_j04ali.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865219/AC_j04ali.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865219/AC_j04ali.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660418/mckayla-crump-hjanvZlqoB8-unsplash_ddxwll.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660244/eddie-kiszka-w-CG0IqRevM-unsplash_s03naa.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660388/johnson-wang-sJa0qmawWnM-unsplash-_1_npeeyk.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660375/alvaro-palacios-CYI-IPHoOgo-unsplash_gcbn0p.webp"},
     ],
     downImage: [
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865199/country-club_zshijx.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865176/Westin_wieilw.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865153/Marriott-Miraflores_obgk9p.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660409/gustavo-leighton-0r7L_LHRvfY-unsplash_tn0atg.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660222/jan-kronies-8Hzo5iZaS90-unsplash_js9fs8.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660238/gabriel-silva-suares-FIMZGAXhp_c-unsplash_nfgpty.webp"},
     ],
 
   },
