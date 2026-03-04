@@ -1,18 +1,12 @@
 ---
-interface downImage {
+interface ImageItem {
   image: string;
 }
 
-interface rightImage {
-  image: string;
-}
-
-
-const { texto, title, rightImage, downImage} = Astro.props;
+const { texto, title, rightImage, downImage } = Astro.props;
 ---
 
 <section class="font-[Poppins] py-[70px] pb-[110px] flex flex-col items-center w-full bg-white">
-    
     <div class="w-[90%] max-w-[1000px] flex flex-col">
         
         <h1 class="text-[28px] md:text-[36px] font-semibold mb-[40px] text-center text-black">
@@ -20,26 +14,42 @@ const { texto, title, rightImage, downImage} = Astro.props;
         </h1>
 
         <div class="flex pt-[50px] flex-col lg:flex-row gap-[90px] w-full mb-[30px] items-center">
-            
             <div class="flex-1">
                 <div 
                     class="text-gray-700 text-[15px] leading-relaxed text-center lg:text-left" 
                     set:html={texto} />
             </div>
-            <div  data-aos="fade-up" class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap   gap-[15px]">
+            
+            <div data-aos="fade-up" class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
                 {
-                    rightImage.map((items: { image: string | null | undefined; }) => (
-                        <img src={items.image} class=" w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm" alt="">
+                    rightImage.map((items: ImageItem) => (
+                        <img 
+                            src={items.image} 
+                            width="250" 
+                            height="160"
+                            loading="eager" 
+                            decoding="async"
+                            class="w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm" 
+                            alt=""
+                        />
                     ))
                 }
             </div>
         </div>
 
-        <div data-aos="fade-up" class="flex pt-[40px] flex-col  md:flex-row justify-between gap-[15px] w-full">
+        <div data-aos="fade-up" class="flex pt-[40px] flex-col md:flex-row justify-between gap-[15px] w-full">
              {
-                downImage.map((items: { image: string | null | undefined; }) => (
+                downImage.map((items: ImageItem) => (
                     <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
-                        <img src={items.image} class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" alt="">
+                        <img 
+                            src={items.image} 
+                            width="290" 
+                            height="160"
+                            loading="lazy" 
+                            decoding="async"
+                            class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" 
+                            alt=""
+                        />
                     </div>
                 ))
             }
