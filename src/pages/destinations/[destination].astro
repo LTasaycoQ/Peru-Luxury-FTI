@@ -42,14 +42,6 @@ const partnersFormatted = destinationHotels.map((hotel) => ({
 
 
 
-const experienceDestinations = destinationsExp.filter(
-  (destinationsExp) => destinationsExp.destination === Astro.params.destination
-);
-
-
-const experienceDestinationsFormatted = experienceDestinations.map((experience) => ({
-
-}));
 
 
 ---
@@ -66,7 +58,6 @@ const experienceDestinationsFormatted = experienceDestinations.map((experience) 
       image3={image3}
     />
 
-    <ExceptionalExperience experience={experienceDestinationsFormatted} />
 
     <OurParners
       title={partnersTitle}
