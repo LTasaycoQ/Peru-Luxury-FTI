@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { hotel } = Astro.props;
 ---
 
-<BaseLayout title={hotel.title} description={hotel.description}>
+<BaseLayout title={hotel.title} description={hotel.description} ogImage={hotel.fondo}>
   <Fondo fondo={`url(${hotel.fondo})`} />
 
   <main>

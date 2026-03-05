@@ -21,7 +21,7 @@ function cloudinaryOptimize(url: string, width: number): string {
 const firstRightImage = rightImage?.[0]?.image;
 ---
 
-<BaseLayout title={titleSEO}>
+<BaseLayout title={titleSEO} description={description} ogImage={fondo}>
   {firstRightImage && (
     <link
       rel="preload"

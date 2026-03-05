@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 
 const {
   title,
+  text,
   programBreve,
   programItenerario,
   programNoIncluye,
@@ -23,7 +24,16 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={text} ogImage={fondoOfi}>
+  {programItenerario?.[0]?.ite_image && (
+    <link
+      rel="preload"
+      as="image"
+      href={`${programItenerario[0].ite_image.replace('/upload/', '/upload/f_auto,q_auto,w_600/')}`}
+      slot="head"
+    />
+  )}
+
   <Fondo fondo={`url(${fondoOfi})`} />
   <main>
     <DetailPrograms
