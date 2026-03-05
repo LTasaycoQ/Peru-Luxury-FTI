@@ -54,7 +54,7 @@ export const programs: programsData[] = [
                 </br>
                 Several Peruvian chefs have received top global honors and had their restaurants ranked as the world's best. 
             `,
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp",
         },
         {   ite_titulo: "Day Two - Colonia Lima & Peruvian Paso Horse Show. (B,L)",
             ite_text: `
@@ -70,7 +70,7 @@ export const programs: programsData[] = [
                 </br>
                 If time permits, complimentary visit to “The Temple of the Sun & The Temple of the Moon” at Pachacamac Archaeological Ceremonial Center. 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750026/2_14_11zon_scv4xy.webp",
         },
         {   
             ite_titulo: "Day Three - Lima, Cusco & Sacred Valley. (B,L)",
@@ -90,7 +90,7 @@ export const programs: programsData[] = [
                 Afternoon transfer to the Sacred Valley, the fertile land of the Incas. On your way to the valley, brief stop at the “Museo Vivo de Yucay” also known as “Museum of Living Culture”. 
 
              `,
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750035/3_15_11zon_yjd5lr.webp",
         },
         {   
             ite_titulo: "Day Four - Pisac Andean Market, Pisac Archaeological Complex and Ollantaytambo Fortress. (B) ",
@@ -108,7 +108,7 @@ export const programs: programsData[] = [
 
                 Continue to the Ollantaytambo archaeological complex, the Incas built it as a fort that included a temple, agricultural terraces, and an urban area. There are two distinct sectors: The religious and worship zone, and the residential area. Ollantaytambo was an important administrative center with probable military functions if one considers the walls and towers. There are also traces of antique roads and aqueducts.
                 `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750027/4_16_11zon_yhdrvg.webp",
         },
         {   
             ite_titulo: "Day Five - Maras Salt Pools, Moray Terraces and time to enjoy resort’ amenities. (B)",
@@ -141,7 +141,7 @@ export const programs: programsData[] = [
 
 
              `, 
-             ite_image: "",
+             ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750033/5_9_11zon_y6t4zl.webp",
         },
         {   
             ite_titulo: "Day Six - Ollantaytambo Pueblo & Journey to Machu Picchu. (B,L)",
@@ -158,7 +158,7 @@ export const programs: programsData[] = [
                 Walking through Ollantaytambo Pueblo is to share the serene rhythm of Andean life, to feel history in every corner, and to connect with a community that honors its traditions with pride. A genuine, inspiring, and profoundly human experience that invites you to stop, observe… and say: I want to experience this. 
 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750028/6_10_11zon_xfdv91.webp",
         },  
         {   
             ite_titulo: "Pachamanca Inca – Ancestral Gastronomic Ritual in Ollantaytambo. ",
@@ -181,7 +181,7 @@ export const programs: programsData[] = [
                 Scenic Andean Rail Adventure to Machu Picchu Pueblo - Aguas Calientes, just below the ancient Citadel. 
 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750023/7_11_11zon_c3jxa0.webp",
         },        
         {   
             ite_titulo: "Day seven - Visit to Machu Picchu and return to Cusco. (B)",
@@ -191,7 +191,7 @@ export const programs: programsData[] = [
                 </br>
                 This impressive citadel, chosen as one of the "7 Wonders of the World," was the private retreat of the Inca Pachacutec as well as a center of worship and astronomical observation. It consists of two large areas, agricultural and urban, where temples, plazas, and royal mausoleums stand out, all built with exquisite precision. It remained hidden for 400 years until the American explorer Hiram Bingham revealed it to the world in 1911. QR
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750029/8_12_11zon_r4mi5c.webp",
         },              
         {   
             ite_titulo: "Optional hike to Huayna Picchu",
@@ -214,7 +214,7 @@ export const programs: programsData[] = [
                 </br>
                 If time permits, before taking the train to Ollantaytambo Station and on to Cusco, complementary guided tour of the Open-Air Market of Aguas Calientes 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750024/9_17_11zon_bzbvwq.webp",
         },        
         {   
             ite_titulo: `Day Eight - Cusco City Tour and Sacsayhuaman; Tipón, a “Masterpiece of the Incas Hydraulic Engineering” and Andahuaylillas Historic Church, the "Sistine Chapel of the Americas". (B)  `,
@@ -230,7 +230,7 @@ export const programs: programsData[] = [
 
                 We will continue to the village of Andahuaylillas, where we will visit the church of San Pedro Apóstol, known as the “Sistine Chapel of America” for its impressive Baroque murals, gilded altars, and colonial paintings. 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750025/10_18_11zon_hfqrhl.webp",
         },           
         {   
             ite_titulo: "Day Nine - Cusco to Lima and Home. (B)",
@@ -253,7 +253,7 @@ export const programs: programsData[] = [
 
 
             `, 
-            ite_image: "",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
         },        
            
 
