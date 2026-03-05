@@ -3,7 +3,19 @@ interface ImageItem {
   image: string;
 }
 
+interface Props {
+  texto: string;
+  title: string;
+  rightImage: ImageItem[];
+  downImage: ImageItem[];
+}
+
 const { texto, title, rightImage, downImage } = Astro.props;
+
+function cloudinaryOptimize(url: string, width: number): string {
+  if (!url.includes('res.cloudinary.com')) return url;
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+}
 ---
 
 <section class="font-[Poppins] py-[70px] pb-[110px] flex flex-col items-center w-full bg-white">
@@ -20,39 +32,36 @@ const { texto, title, rightImage, downImage } = Astro.props;
                     set:html={texto} />
             </div>
             
-            <div  class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
-                {
-                    rightImage.map((items: ImageItem) => (
-                        <img 
-                            src={items.image} 
-                            width="250" 
-                            height="160"
-                            loading="eager" 
-                            decoding="async"
-                            class="w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm" 
-                            alt="img"
-                        />
-                    ))
-                }
+            <div class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
+                {rightImage.map((items: ImageItem, index: number) => (
+                    <img 
+                        src={cloudinaryOptimize(items.image, 700)}
+                        width="250" 
+                        height="160"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchpriority={index === 0 ? "high" : "auto"}
+                        decoding="async"
+                        class="w-full lg:h-[160px] h-[270px] object-cover rounded-[4px] block shadow-sm img-placeholder" 
+                        alt={`${title} - imagen ${index + 1}`}
+                    />
+                ))}
             </div>
         </div>
 
         <div class="flex pt-[40px] flex-col md:flex-row justify-between gap-[15px] w-full">
-             {
-                downImage.map((items: ImageItem) => (
-                    <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
-                        <img 
-                            src={items.image} 
-                            width="290" 
-                            height="160"
-                            loading="lazy" 
-                            decoding="async"
-                            class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm" 
-                            alt="img1"
-                        />
-                    </div>
-                ))
-            }
+            {downImage.map((items: ImageItem, index: number) => (
+                <div class="flex-1 md:max-w-[290px] max-md:w-[100%]">
+                    <img 
+                        src={cloudinaryOptimize(items.image, 700)}
+                        width="290" 
+                        height="160"
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-[160px] object-cover rounded-[4px] block shadow-sm img-placeholder" 
+                        alt={`${title} - imagen ${index + 1}`}
+                    />
+                </div>
+            ))}
         </div>
     </div>
 </section>

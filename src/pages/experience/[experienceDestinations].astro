@@ -12,16 +12,39 @@ export async function getStaticPaths() {
 }
 
 const { titleSEO, title, description, fondo, rightImage, downImage } = Astro.props;
+
+function cloudinaryOptimize(url: string, width: number): string {
+  if (!url.includes('res.cloudinary.com')) return url;
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+}
+
+const firstRightImage = rightImage?.[0]?.image;
 ---
 
 <BaseLayout title={titleSEO}>
-  <Fondo fondo={`url(${fondo})`} />
+  {firstRightImage && (
+    <link
+      rel="preload"
+      as="image"
+      href={cloudinaryOptimize(firstRightImage, 250)}
+      slot="head"
+    />
+  )}
+
+  <link
+    rel="preload"
+    as="image"
+    href={cloudinaryOptimize(fondo, 1920)}
+    slot="head"
+  />
+
+  <Fondo fondo={`url(${cloudinaryOptimize(fondo, 1920)})`} />
   <main>
     <ExpDestinations
       title={title}
       texto={description}
-      rightImage={rightImage}
-      downImage={downImage}
+      rightImage={rightImage ?? []}
+      downImage={downImage ?? []}
     />
   </main>
 </BaseLayout>
