@@ -15,8 +15,9 @@ const { texto, title, rightImage, downImage } = Astro.props;
 
         <div class="flex pt-[50px] flex-col lg:flex-row gap-[90px] w-full mb-[30px] items-center">
             <div class="flex-1">
-                <p>{texto}</p>
-                
+                <div 
+                    class="text-gray-700 text-[15px] leading-relaxed text-center lg:text-left" 
+                    set:html={texto} />
             </div>
             
             <div  class="w-full lg:w-[250px] flex lg:flex-col max-md:flex-col flex-wrap gap-[15px]">
