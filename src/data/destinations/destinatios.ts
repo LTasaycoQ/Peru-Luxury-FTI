@@ -33,8 +33,6 @@ export const destinations: Destination[] = [
     image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima2_obyqay.webp",
     image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
     
-
-
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "belmond-miraflores-park" },
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Hotel-B_wzettc.webp", name: "Hotel B", link: "#" },
