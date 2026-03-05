@@ -71,7 +71,6 @@ export const destinations: Destination[] = [
     distrito: "machu-picchu",
     title: "Machu Picchu",
     titleSEO:  "Machu Picchu",
-    partnersTitle: "Luxury Amazon Cruises",
 
     description: "Machu Picchu is considered one of the New Seven Wonders of the World and it is -definitely- the main tourist attraction in Peru. Built in the 1400s, the citadel of Machu Picchu is a masterpiece of architecture and engineering that demanded massive amounts of labor. It was a religious, political and administrative center, in perfect harmony with nature and represents the most important and well-known legacy of the Inca civilization. With 2,430 m.a.s.l., and located 80 km northwest of Cuzco, this UNESCO World Heritage Site is also one of the most biological wealth areas in the country and harbors more than 20 Andean and Amazonian ecosystems. The easiest way to get to Machu Picchu is by train but if you like hiking and adventure is your passion, you have to try the famous Inca Trail. It is worth the challenge because of the wonderful views of the highlands and the adventure of walking by the same path as the Incas used to use in the past.",
     image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi11_x6owuk.webp",
