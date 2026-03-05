@@ -42,7 +42,7 @@ export const destinationsExp: expDestinatiosData[] = [
   },
 
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp",
     experienciaLugar: "ollantaytambo-town",
     title: "Ollantaytambo Town",
     titleSEO:  "Ollantaytambo Pueblo",
@@ -100,5 +100,37 @@ export const destinationsExp: expDestinatiosData[] = [
 
   },
 
+
+
+  
+  {
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp",
+    experienciaLugar: "pachamanca-inca",
+    title: "Pachamanca Inca – Ancestral Gastronomic Ritual in Ollantaytambo",
+    titleSEO:  "Pachamanca Inca",
+    description: `
+      After exploring the majestic Inca Village of Ollantaytambo, we enjoy an intimate gastronomic experience deeply connected to the land and Andean traditions, before boarding the train to Machu Picchu.
+      </br>
+      Set in the gardens of El Albergue Ollantaytambo, a historic hotel located within the train station, we take part in the Pachamanca, an ancestral cooking technique whose name in Quechua means “earth oven.” Chicken, pork, and lamb, together with Andean vegetables, are slowly cooked underground over heated stones, following pre-Columbian methods that continue to endure in the Andes.
+      </br>
+      The experience includes a guided visit to the organic farm, the Andean artisanal distillery, and the coffee roastery, as well as a demonstration of the traditional Pachamanca cooking process, prior to enjoying lunch.
+      </br>
+      The meal is served outdoors, in a privileged natural setting overlooking the Andean landscape and surrounding mountains. The menu features chicken, pork, and lamb, native potatoes, sweet potatoes, and organic vegetables, accompanied by homemade salads, traditional sauces, and refreshing chicha morada made from purple corn.
+      </br>
+      An authentic and memorable experience that celebrates Peru’s ancestral gastronomy, an ideal conclusion to the visit to “Ollantaytambo Pueblo” before continuing by train to Aguas Calientes – Machu Picchu Pueblo.
+    `,
+    rightImage: [
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660125/shutterstock_51050851_papmym.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660117/shutterstock_103491626_z5gjnu.webp"},
+    ],
+    downImage: [
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659968/shutterstock_103491710_lp15kn.webp"},
+    ],
+
+    
+  },
 
 ];
