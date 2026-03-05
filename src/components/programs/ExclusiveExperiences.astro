@@ -23,6 +23,7 @@ import { programs } from "../../data/programs/programs-experiences";
         <div class="cards-grid">
             {
                 programs.map((items) => (
+                    <a class="card-link-container" href={`/programs/${items.name}`} >
                     <div class="card" data-aos="flip-left">
                         <div class="image-container">
                             <img  src={items.fondo} alt={items.title} class="card-image" />
@@ -30,9 +31,10 @@ import { programs } from "../../data/programs/programs-experiences";
                         <div class="card-content">
                             <h3 class="card-title">{items.title}</h3>
                             <p class="card-text">{items.text}</p>
-                            <a href={`/programs/${items.name}`} class="card-link"><i>Read More</i></a>
+                            <span class="card-link">Read More<i class="bi bi-arrow-right-short"></i></span>
                         </div>
                     </div>
+                    </a>
                 ))
             }
         </div>
@@ -77,6 +79,17 @@ import { programs } from "../../data/programs/programs-experiences";
     .card-content {
         padding: 20px 0px;
     }
+    .card-link-container:hover{
+
+        h3{
+            color: #8d7b14;
+        }
+        .card-link{
+            transition: all 1s;
+            gap:20px;
+        }
+
+    }
 
     .card-title {
         display: block;
@@ -90,15 +103,15 @@ import { programs } from "../../data/programs/programs-experiences";
         font-weight: 300;
     }
     .card-link {
-        display: inline-block;
+        display: flex;
+        gap:8px;
+        align-items: center;
         margin-top: 30px;
         color: #C5A822;
         text-decoration: none;
         font-weight: 600;
-        border-bottom: 1px solid #C5A822;
     }
     .card-link:hover{
-        transform: translateY(-10px); 
         transition: all 0.5s;
         color: #F9D60E;
     }
