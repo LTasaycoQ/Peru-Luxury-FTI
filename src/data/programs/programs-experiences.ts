@@ -171,7 +171,8 @@ export const programs: programsData[] = [
     programItenerario: [
         {   
             ite_titulo: "Day 1 – Lima - Arrival", 
-            ite_text: "Arrival in Lima, the “City of Kings” famous for its Spanish Colonial architecture, extraordinary museums and cuisine. Lima is internationally recognized as the “Gastronomic Capital of the Americas”, and its cuisine is considered among the most diverse and exquisite in the world on par with French cuisine. Upon arrival a host will meet and assist you in transferring to the hotel and in registering.", 
+            ite_text:  `
+            Arrival in Lima, the “City of Kings” famous for its Spanish Colonial architecture, extraordinary museums and cuisine. Lima is internationally recognized as the “Gastronomic Capital of the Americas”, and its cuisine is considered among the most diverse and exquisite in the world on par with French cuisine. Upon arrival a host will meet and assist you in transferring to the hotel and in registering. `, 
             ite_image: "https://www.fiesta-tours-peru.com/img/itineraries/1.jpg",
         },
         {   

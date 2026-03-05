@@ -4,7 +4,6 @@ import { destinationsExp } from "../../data/destinations/experienceDestinations"
 import ExpDestinations from "../../components/ExpDestinations/ExpDestinations.astro";
 import Fondo from "../../components/Fondo.astro";
 
-
 export async function getStaticPaths() {
   return destinationsExp.map((dest) => ({
     params: { experienceDestinations: dest.experienciaLugar },
@@ -12,16 +11,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const {
-  titleSEO,
-  title,
-  description,
-  fondo,
-  rightImage,
-  downImage,
-} = Astro.props;
+const { titleSEO, title, description, fondo, rightImage, downImage } = Astro.props;
 ---
-
 
 <BaseLayout title={titleSEO}>
   <Fondo fondo={`url(${fondo})`} />
