@@ -15,25 +15,26 @@ import { programs } from "../../data/programs/programs-experiences";
         </div>
 
         <p class="text-parrafo">
-            At Peru Luxury Journeys, we craft unique itineraries for travelers striving for greatness.  <br>
-            Each tour combines iconic destinations, meticulously planned details, and authentic experiences that showcase Peru's rich cultural and natural heritage.
-            <br>Let our experts guide you on an unforgettable journey.
+            At Peru Luxury Journeys, we craft unique itineraries for travelers striving for greatness. <br>
+            Each tour combines iconic destinations, meticulously planned details, and authentic experiences. <br>
+            Let our experts guide you on an unforgettable journey.
         </p>
 
         <div class="cards-grid">
             {
                 programs.map((items) => (
-                    <a class="card-link-container" href={`/programs/${items.name}`} >
-                    <div class="card" data-aos="flip-left">
-                        <div class="image-container">
-                            <img  src={items.fondo} alt={items.title} class="card-image" />
+                      <a href={`/programs/${items.name}`} class="card-link">
+                        <div class="card" data-aos="flip-left">
+                            <div class="image-container">
+                                <img  src={items.fondo} alt={items.title} class="card-image" />
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">{items.title}</h3>
+                                <p class="card-text">{items.text}</p>
+                                <br>
+                                <i class="link-read-more">Read More</i>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <h3 class="card-title">{items.title}</h3>
-                            <p class="card-text">{items.text}</p>
-                            <span class="link-read-more">Read More<i class="bi bi-arrow-right-short"></i></span>
-                        </div>
-                    </div>
                     </a>
                 ))
             }
@@ -41,13 +42,10 @@ import { programs } from "../../data/programs/programs-experiences";
     </div>
 </section>
 
-
-
 <style>
 
     .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
     .image-container {overflow:hidden;}
-
 
     .container-Experiences {
         display: flex;
@@ -79,17 +77,6 @@ import { programs } from "../../data/programs/programs-experiences";
     .card-content {
         padding: 20px 0px;
     }
-    .card-link-container:hover{
-
-        h3{
-            color: #8d7b14;
-        }
-        .card-link{
-            transition: all 1s;
-            gap:20px;
-        }
-
-    }
 
     .card-title {
         display: block;
@@ -102,20 +89,6 @@ import { programs } from "../../data/programs/programs-experiences";
         color: rgb(54, 54, 54);
         font-weight: 300;
     }
-    .card-link {
-        display: flex;
-        gap:8px;
-        align-items: center;
-        margin-top: 30px;
-        color: #C5A822;
-        text-decoration: none;
-        font-weight: 600;
-    }
-    .card-link:hover{
-        transition: all 0.5s;
-        color: #F9D60E;
-    }
-
 
     .text-parrafo {
         margin-top: 15px;
