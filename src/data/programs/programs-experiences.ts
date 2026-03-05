@@ -473,7 +473,7 @@ export const programs: programsData[] = [
         {   
             ite_titulo: "Casa Luna", 
             ite_text: "Casa Luna’s Nativity Scenes Gallery - In Casa Luna…every day is Christmas. Located in the exclusive district of San Isidro, Casa Luna exhibits an impressive collection of nativity scenes and cribs, and other figures representing Peruvian religiosity. A magnificent example of pre-Columbian art, colonial. ", 
-            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772744698/28_11zon_smtunm.webp",
+            ite_image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772748343/27_11zon_rkwie2.webp",
         },        
         {   
             ite_titulo: "Lunch at Astrid y Gaston in magnificent 17th century plantation Casa Hacienda Moreyra", 
