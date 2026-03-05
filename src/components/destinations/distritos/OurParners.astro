@@ -29,21 +29,23 @@ const isValidImage = (src: string) => src && src.startsWith('http');
     <div data-aos="fade-up"
      data-aos-duration="3000" class="grid grid-cols-3 gap-[50px] w-[70%] max-xl:w-[90%] max-lg:grid-cols-2 max-md:grid-cols-1">
       {partners.map((partner) => (
+       <a href={partner.link} class="link-default">
         <div class="card-default">
-          {isValidImage(partner.image) ? (
-            <Image 
-              src={partner.image} 
-              alt={partner.name} 
-              width={100}
-              height={350}
-              class="imagen w-full h-[280px] object-cover" 
-            />
-          ) : (
-            <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
-          )}
-          <p class="text-default ">{partner.name}</p>
-          <a href={partner.link} class="link-default"><u><i>Read More</i></u></a>
-        </div>
+            {isValidImage(partner.image) ? (
+              <Image 
+                src={partner.image} 
+                alt={partner.name} 
+                width={100}
+                height={350}
+                class="imagen w-full h-[280px] object-cover" 
+              />
+            ) : (
+              <div class="w-full h-[350px] bg-gray-200 flex items-center justify-center">No Image</div>
+            )}
+            <p class="text-default ">{partner.name}</p>
+            <u><i>Read More</i></u>
+          </div>
+        </a>
       ))}
     </div>
   )}
