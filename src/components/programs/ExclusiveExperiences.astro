@@ -23,15 +23,14 @@ import { programs } from "../../data/programs/programs-experiences";
         <div class="cards-grid">
             {
                 programs.map((items) => (
-                      <a href={`/programs/${items.name}`} class="card-link">
+                    <a href={`/programs/${items.name}`} class="card-link">
                         <div class="card" data-aos="flip-left">
                             <div class="image-container">
                                 <img  src={items.fondo} alt={items.title} class="card-image" />
                             </div>
                             <div class="card-content">
                                 <h3 class="card-title">{items.title}</h3>
-                                <p class="card-text">{items.text}</p>
-                                <br>
+                                <p class="card-text  pb-[20px]">{items.text}</p>
                                 <i class="link-read-more">Read More</i>
                             </div>
                         </div>
