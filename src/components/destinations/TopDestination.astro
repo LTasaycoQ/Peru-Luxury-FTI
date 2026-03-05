@@ -47,7 +47,7 @@ function getImage(path: string): ImageMetadata {
                             <div class="card-content">
                                 <h3 class="card-title">{section.title}</h3>
                                 <p class="card-text">{section.text}</p>
-                                <i class="text-read-more">Read More</i>
+                                <i class="link-read-more">Read More</i>
                             </div>
                         </div>
                     </a>
@@ -187,26 +187,5 @@ function getImage(path: string): ImageMetadata {
         font-weight: 300;
         font-size: 16.5px;
     }
-
-    .card-link {
-        margin-top: 25px;
-        width: fit-content;
-        color: #DABB42;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .card-link:hover{
-        transform: translateY(-10px);
-    }
-
-    .card-link:hover {
-        color: #F7D30E;
-        border-color: #F7D30E;
-    }
-
-
-
-
    
 </style>
