@@ -45,6 +45,9 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                 </ul>
             </div>
 
+
+
+
             <div class="p-[20px] max-md:p-[0]">
                 <div id="brief" class="tab-content">
                     {programBreve.map((breve) => (
@@ -65,7 +68,9 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 </summary>
-                                <div class="fadein detail-intineray pt-[30px] border-[1px] border-gray-200 border-t-transparent p-[20px] flex max-lg:flex-col max-lg:gap-[50px]">
+                                
+                                <div class="fadein detail-intineray flex max-lg:flex-col max-lg:gap-[50px]">
+
                                     <p class="w-[50%] max-lg:w-full  text-[15px] font-[300] text-gray-700 font-light" set:html={itenerario.ite_text}></p>
                                     <div class="flex justify-center items-center w-[50%] max-lg:w-full">
                                         <img class="w-[300px] rounded-lg" src={itenerario.ite_image} alt={itenerario.ite_titulo} />
@@ -140,23 +145,24 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
 </script>
 
 <style>
-/* En tu <style> — agrega esto */
 .detail-intineray {
     background-color: #FAFAFF;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     padding: 0 20px;
-    transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.3s ease;
+    transition: max-height 2.5s ease, opacity 0.4s ease, padding 0.3s ease;
     border: 1px solid #e5e7eb;
     border-top: transparent;
 }
 
 details[open] .detail-intineray {
-    max-height: 600px; /* valor mayor que el contenido real */
+    max-height: 600px;
     opacity: 1;
     padding: 30px 20px 20px 20px;
 }
+
+
 
     .estilosPrueba{
         color:#D4C06D; font-weight:600;
