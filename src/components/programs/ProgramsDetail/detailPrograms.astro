@@ -84,7 +84,8 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                 <div id="include" class="tab-content hidden flex justify-center gap-[60px] max-md:flex-col">
                     <div class="flex-1">
                         <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
-                            <h4 class="font-semibold mb-4 text-green-700">Includes:</h4>
+                            <h4 class="font-semibold mb-4 text-gray-700">Includes:</h4>
+                            <br>
                             {programIncluye.map((item) => (
                                 <ul class="flex flex-col">
                                     <li class="text-[14px] text-gray-700 pb-[8px] flex gap-[13.5px]">
@@ -96,7 +97,8 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                     </div>
                     <div class="flex-1">
                         <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
-                             <h4 class="font-semibold mb-4 text-red-700">Does not include:</h4>
+                            <h4 class="font-semibold mb-4 text-gray-700">Does not include:</h4>
+                            <br>
                             {programNoIncluye.map((item) => (
                                 <ul class="flex flex-col">
                                     <li class="text-[14px] pb-[8px] text-gray-700 flex gap-[13.5px]">
