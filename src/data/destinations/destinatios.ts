@@ -29,9 +29,9 @@ export const destinations: Destination[] = [
     titleSEO:  "Lima",
     description: "Lima, known as “the City of Kings”, is usually the first step in a journey to Peru. It is a city that blends modern neighbourhoods with the colonial-style buildings of the Main Plaza. Barranco has a large collection of museums, iconic bars and restaurants, shops and art studios. Miraflores, the tourist district for excellence, offers beautiful parks along its boardwalk, with stunning views of the Pacific Ocean. You can enjoy lovely sunsets from Larcomar, a shopping mall located in the heart of the district. Lima has plenty of colonial buildings to see. It is a must to walk around the Historical Centre of the city, considered as a World Heritage Site by UNESCO. It really worth to visit the Plaza de Armas where the Presidential Palace and the Archbishop Palace are located, the Aliaga House -the oldest Colonial mansion in Lima-, the Municipal Palace and the Monastery of San Francisco, famous for its baroque architecture and for its catacombs. Considered the Gastronomic Capital of Latin America, Lima has become the culinary hub of several huariques -small and family-run restaurants that keep traditional recipes- and many fancy and renowned restaurants included in The World’s 50 Best Restaurants list.",
   
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima1_qwgyub.webp",    
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima2_obyqay.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Lima3_oipvsa.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812665/lima8_j82d5x.webp",    
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812676/lima4_bu8wrf.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812725/lima6_gpntwj.webp",
     
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "belmond-miraflores-park" },
@@ -41,9 +41,8 @@ export const destinations: Destination[] = [
     ],
   },
 
-  
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/Cusco-portada2_wp8tjx.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813011/Cusco-portada2_uaizlj.webp",
     distrito: "cusco",
     title: "Cusco",    
     titleSEO:  "Cusco",
@@ -51,9 +50,9 @@ export const destinations: Destination[] = [
     partnersTitle: "Our Parners",
 
     description: "Cusco, the former capital of the Incan empire is also renowned as the navel of the Earth. This is a captivating city that blends narrow cobblestone streets, big inca stone walls and colonial period architecture. Inca Temples and Fortresses can be visited in this city. Koricancha, the Sun Temple, combines the Spanish and Incan influences in Cusco and it is located a few blocks from the Main Plaza. Sacsayhuaman is an archaeological site with very impressive stonework. It used to be a very important ceremonial place for the Incas. Visiting the San Pedro Market is a must. Its colorful aisles, kind vendors and fresh products are part of the experience in order to feel the authentic vibe of this city. Finally, do not forget to visit the artisan neighborhood of San Blas. Many of its cafes and bars offer great panoramic views of the city.",
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/cusco1_vqhjoe.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/cusco3_fqisku.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/cusco2_zzjztu.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812916/cusco2_rmbem5.webp",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812892/catedral-cusco_z0lmgr.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812868/sacsayhuaman-cusco_ulhk25.webp",
 
 
     execptionalEXperience: [
@@ -73,9 +72,9 @@ export const destinations: Destination[] = [
     titleSEO:  "Machu Picchu",
 
     description: "Machu Picchu is considered one of the New Seven Wonders of the World and it is -definitely- the main tourist attraction in Peru. Built in the 1400s, the citadel of Machu Picchu is a masterpiece of architecture and engineering that demanded massive amounts of labor. It was a religious, political and administrative center, in perfect harmony with nature and represents the most important and well-known legacy of the Inca civilization. With 2,430 m.a.s.l., and located 80 km northwest of Cuzco, this UNESCO World Heritage Site is also one of the most biological wealth areas in the country and harbors more than 20 Andean and Amazonian ecosystems. The easiest way to get to Machu Picchu is by train but if you like hiking and adventure is your passion, you have to try the famous Inca Trail. It is worth the challenge because of the wonderful views of the highlands and the adventure of walking by the same path as the Incas used to use in the past.",
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi11_x6owuk.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi22_cdjtrl.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi33_tvifmb.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813264/Machu-Picchu4_11zon_ttzn2l.webp",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813177/Machu-Picchu9_jjjicr.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813171/Machu-Picchu3_jnxg2l.webp",
 
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
@@ -86,19 +85,17 @@ export const destinations: Destination[] = [
 
   },
 
-  
-
   {
-    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/Arequipa-portada_gfm0cu.webp",
+    fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813374/Arequipa-portada_11zon_wjt0mn.webp",
     distrito: "arequipa",
     title: "Arequipa",
     titleSEO:  "Arequipa",
     partnersTitle: "Our Parners",
 
     description: "Sitting at 3,820 meters above sea level, Lake Titicaca is famous for being the highest navigable lake in the world. As the scenery of this place is unique, it deserves a closer inspection. A boat trip through the lake will allow you to enjoy a mix of stunning landscapes and a very interesting culture. The first stop is the Uros Floating Islands. These islands are made of interweaved reeds that have sustained a traditional way of life since the time of the Incas. Locals build their boats, houses and even furniture from totora reeds, a plant that prolifers on this part of the lake. Taquile is a remote island in the middle of Lake Titicaca. In this island, locals keep the traditional lifestyle uninterrupted from modernization. Taquile offers beautiful hikes with beautiful scenery and views of the lake. Another interesting attraction in the region is Sillustani. In this place, you can find very impressive funerary towers, called chullpas. These chullpas represent a pre-Inca burial ground and most of them are located around the bank of the Lake Umayo.",
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/arequipa1_z8m0nx.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/arequipa3_nwxkcp.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/arequipa2_v5zysp.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813378/Arequipa-5_11zon_gjmvmc.webp",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813376/Arequipa2_11zon_jqzgge.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813374/Arequipa-portada_11zon_wjt0mn.webp",
 
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/capilla" },
@@ -118,9 +115,9 @@ export const destinations: Destination[] = [
     partnersTitle: "Our Parners",
 
     description: "Sitting at 3,820 meters above sea level, Lake Titicaca is famous for being the highest navigable lake in the world. As the scenery of this place is unique, it deserves a closer inspection. A boat trip through the lake will allow you to enjoy a mix of stunning landscapes and a very interesting culture. The first stop is the Uros Floating Islands. These islands are made of interweaved reeds that have sustained a traditional way of life since the time of the Incas. Locals build their boats, houses and even furniture from totora reeds, a plant that prolifers on this part of the lake. Taquile is a remote island in the middle of Lake Titicaca. In this island, locals keep the traditional lifestyle uninterrupted from modernization. Taquile offers beautiful hikes with beautiful scenery and views of the lake. Another interesting attraction in the region is Sillustani. In this place, you can find very impressive funerary towers, called chullpas. These chullpas represent a pre-Inca burial ground and most of them are located around the bank of the Lake Umayo.",
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno1_qsrtbj.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno2_cu7eos.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/Puno3_pruvdn.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813525/Titicaca-Lake3_11zon_qiyvef.webp",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813539/Titicaca-Lake6_11zon_kdc3up.webp",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813528/Titicaca-Lake2_11zon_fgt2k9.webp",
    
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Marriott-Miraflores_obgk9p.webp", name: "JW Marriott Hotel Lima", link: "#" },
@@ -140,9 +137,9 @@ export const destinations: Destination[] = [
     partnersTitle: "Our Parners",
 
     description: "This amazing valley offers a glimpse into Peruvian history and allows travellers exploring numerous Inca archaeological sites, visiting typical Andean villages that have retained their ancestral customs and traditions, and enjoying fascinating landscapes. Some highlights of the Sacred Valley of the Incas are the local market and the agricultural terraces of Pisac, the fortress of Ollantaytambo -one of the best testimonies of the Incan architectural work-, the more than 5,000 salt ponds located in Maras, the agricultural terraces of Moray; and the town of Chinchero, famous for its textile houses, the Sunday local market and the Inca agricultural terraces located in the surrounding area. If you are an adrenaline lover, you cannot miss the opportunity to paraglide over the Andes, practice rafting in the Urubamba river or to drive an ATV across the valley.",
-    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv1_w8jas3.webp",
-    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2-2_f3xlg8.webp",
-    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/sv2_lu3d4q.webp",
+    image1: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813601/Ollanta02_sovqra.jpg",
+    image2: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813604/Sacred_Valley_8_brhtvk.jpg",
+    image3: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813620/ollantaytambo-valle-sagrado_is320g.jpg",
   
     execptionalEXperience: [
       { image: "https://res.cloudinary.com/dlgeap8h0/image/upload/Miraflores-Park_k8kxau.webp", name: "Miraflores Park, A Belmond Hotel", link: "/chinchero-town" },
@@ -152,6 +149,7 @@ export const destinations: Destination[] = [
     ],
 
   },
+  
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/banner-amazon-river-cruises_orie2a_1_ponq23.webp",
     distrito: "amazon-river-cruises",
