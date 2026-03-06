@@ -10,19 +10,25 @@ interface programIncluye {
 interface programNoIncluye {
     text: string;
 }
+export interface imgCardLink{
+    imagen: string;
+    link: string;
+}
+
 interface programBreve {
     titulo_breve: string;
     text_breve: string;
 }
 interface Props {
     title: string;
+    imgCardLink: imgCardLink[]
     programBreve: programBreve[];
     programItenerario: programItenerario[];
     programIncluye: programIncluye[];
     programNoIncluye: programNoIncluye[];    
 }
 
-const { title, programBreve, programItenerario, programNoIncluye, programIncluye } = Astro.props;
+const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, programIncluye } = Astro.props;
 ---
 
 <section class="font-[Poppins] bg-[#FAFAF8] w-full flex flex-col justify-center items-center p-[30px]">
@@ -41,80 +47,150 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                     <li class="menu-list w-1/3" data-target="include">Include</li>
                 </ul>
             </div>
-
-            <div class="p-[20px] max-md:p-[0]">
-                <div id="brief" class="tab-content">
-                    {programBreve.map((breve) => (
-                        <div class="py-[16px] pb-[10px]">
-                            <h3 class="flex gap-[10px] text-gray-700 text-[20px] font-[500]">{breve.titulo_breve}</h3>
-                            <span class="text-gray-700 text-[15px] font-[300]">{breve.text_breve}</span>
+   
+                <div class="p-[20px] max-md:p-[0]">
+                    <div id="brief" class="tab-content flex gap-[40px]  max-md:flex-col">
+                        <div>
+                            {programBreve.map((breve) => (
+                                <div class="py-[16px] pb-[10px]">
+                                    <h3 class="flex gap-[10px] text-gray-700 text-[20px] font-[500]">{breve.titulo_breve}</h3>
+                                    <span class="text-gray-700 text-[15px] font-[300]">{breve.text_breve}</span>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                        
+                        <div class=" w-[25%]">
+                            <div class="p-[15px] border-[1px] border-gray-300 rounded-[5px] bg-white  max-md:w-[100%]">
+                                <div class="bg-gray-600 text-white text-center p-[12px]">
+                                    <h3>Looking for Domething else?</h3>
+                                </div>
 
-                <div id="itinerary" class="tab-content hidden">
-                    {programItenerario.map((itenerario, index) => (
-                        <div class="py-[8px] accordion-item">
-                            <button class="accordion-header bg-[#FAFAFF] max-md:text-[18px] text-[20px] font-[500] p-[13px] rounded-t-[10px] text-gray-700 border-[1px] border-gray-200 flex justify-between items-center w-full text-left" data-index={index}>
-                                {itenerario.ite_titulo}
-                                <svg class="chevron transition-transform duration-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg>
-                            </button>
-
-                            <div class="accordion-body" style={index === 0 ? "grid-template-rows: 1fr;" : "grid-template-rows: 0fr;"}>
-                                <div class="overflow-hidden">
-                                    <div class="flex flex-row max-lg:flex-col gap-[30px] p-[30px] border-[1px] border-gray-200 border-t-0 bg-[#FAFAFF] rounded-b-[10px]">
-                                        <div class="w-[60%] max-lg:w-full">
-                                            <p class="text-[15px] font-[300] text-gray-700 leading-relaxed" set:html={itenerario.ite_text}></p>
-                                        </div>
+                                <br>
+                                <p class="text-gray-700 text-center">Get in Touch with our Lightfoot Travel experts and they will create a bespoke itinerary designed to your exact needs and budget.</p>
+                                
+                                <div class="flex flex-col justify-start items-start pl-[10px] pt-[30px]">
+                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-envelope"></i> Email</span>
+                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-clipboard2-fill"></i> Enquire Now</span>
+                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-telephone-fill"></i> +51 999999999</span>
+                                </div>
+                                <br>        
+                               
+                                <div class="bg-green-400 relative ">
+                                    <div class="btnRight  bg-gray-700 p-[14px] rounded-full text-white swiper-button-next"></div>
+                                    <div class="btnLeft bg-gray-700 p-[14px] rounded-full text-white swiper-button-prev"></div>
+                                    <div class="swiper mySwiper">
                                         
-                                        <div class="img-gallery w-[40%] max-lg:w-full">
-                                            {itenerario.ite_image.map((img) => (
-                                                <img class="gallery-img" src={img} alt={itenerario.ite_titulo} />
+                                        <div class="swiper-wrapper">
+                                            {imgCardLink.map((item, index) => (
+                                            <div class="swiper-slide">
+                                                <a href={`/destinations/${item.link}`} class="slide-link">
+                                                <img 
+                                                    src={item.imagen} 
+                                                    alt={"Imagen de destino"} 
+                                                    loading="lazy" 
+                                                />
+                                                <div class="slide-info">
+                                                    <span>{item.link}</span>
+                                                </div>
+                                                </a>
+                                            </div>
                                             ))}
                                         </div>
                                     </div>
                                 </div>
+                                
+
+                                <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
 
-                <div id="include" class="tab-content hidden flex justify-center gap-[60px] max-md:flex-col">
-                    <div class="flex-1">
-                        <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
-                            <h4 class="font-semibold mb-4 text-gray-700">Includes:</h4>
-                            <br>
-                            {programIncluye.map((item) => (
-                                <ul class="flex flex-col">
-                                    <li class="text-[14px] text-gray-700 pb-[8px] flex gap-[13.5px]">
-                                        <i class="text-[15px] text-green-600 bi bi-patch-check"></i> {item.text}
-                                    </li>
-                                </ul>
-                            ))}
-                        </div>
+                    <div id="itinerary" class="tab-content hidden">
+                        {programItenerario.map((itenerario, index) => (
+                            <div class="py-[8px] accordion-item">
+                                <button class="accordion-header bg-[#FAFAFF] max-md:text-[18px] text-[20px] font-[500] p-[13px] rounded-t-[10px] text-gray-700 border-[1px] border-gray-200 flex justify-between items-center w-full text-left" data-index={index}>
+                                    {itenerario.ite_titulo}
+                                    <svg class="chevron transition-transform duration-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-body" style={index === 0 ? "grid-template-rows: 1fr;" : "grid-template-rows: 0fr;"}>
+                                    <div class="overflow-hidden">
+                                        <div class="flex flex-row max-lg:flex-col gap-[30px] p-[30px] border-[1px] border-gray-200 border-t-0 bg-[#FAFAFF] rounded-b-[10px]">
+                                            <div class="w-[60%] max-lg:w-full">
+                                                <p class="text-[15px] font-[300] text-gray-700 leading-relaxed" set:html={itenerario.ite_text}></p>
+                                            </div>
+                                            
+                                            <div class="img-gallery w-[40%] max-lg:w-full">
+                                                {itenerario.ite_image.map((img) => (
+                                                    <img class="gallery-img" src={img} alt={itenerario.ite_titulo} />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div class="flex-1">
-                        <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
-                            <h4 class="font-semibold mb-4 text-gray-700">Does not include:</h4>
-                            <br>
-                            {programNoIncluye.map((item) => (
-                                <ul class="flex flex-col">
-                                    <li class="text-[14px] pb-[8px] text-gray-700 flex gap-[13.5px]">
-                                        <i class="text-red-400 bi bi-x-circle"></i> {item.text}
-                                    </li>
-                                </ul>
-                            ))}
+
+                    <div id="include" class="tab-content hidden flex justify-center gap-[60px] max-md:flex-col">
+                        <div class="flex-1">
+                            <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
+                                <h4 class="font-semibold mb-4 text-gray-700">Includes:</h4>
+                                <br>
+                                {programIncluye.map((item) => (
+                                    <ul class="flex flex-col">
+                                        <li class="text-[14px] text-gray-700 pb-[8px] flex gap-[13.5px]">
+                                            <i class="text-[15px] text-green-600 bi bi-patch-check"></i> {item.text}
+                                        </li>
+                                    </ul>
+                                ))}
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
+                                <h4 class="font-semibold mb-4 text-gray-700">Does not include:</h4>
+                                <br>
+                                {programNoIncluye.map((item) => (
+                                    <ul class="flex flex-col">
+                                        <li class="text-[14px] pb-[8px] text-gray-700 flex gap-[13.5px]">
+                                            <i class="text-red-400 bi bi-x-circle"></i> {item.text}
+                                        </li>
+                                    </ul>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>
 
 <script>
+
+  import Swiper from 'swiper';
+  import { Navigation, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation'; 
+
+  const initSwiper = () => {
+    new Swiper(".mySwiper", {
+      modules: [Navigation, Autoplay],
+      loop: true, 
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  };
+
+  document.addEventListener('astro:page-load', initSwiper);
+  initSwiper();
     const tabs = document.querySelectorAll('.menu-list');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -157,6 +233,38 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
 </script>
 
 <style>
+
+    .btnLeft{
+        color: white;
+        left: -10px;
+    }
+    
+    .btnRight{
+        color: white;
+        right: -10px;
+    }
+
+ .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      height: 200px;
+      background: #702424;
+      display: flergb(156, 9, 9)
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 .accordion-body {
     display: grid;
     transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);

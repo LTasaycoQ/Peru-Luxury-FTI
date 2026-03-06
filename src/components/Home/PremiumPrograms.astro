@@ -1,5 +1,10 @@
 ---
 import { programs } from "../../data/programs/programs-experiences";
+
+function cloudinaryOptimize(url: string, width: number): string {
+  if (!url.includes('res.cloudinary.com')) return url;
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+}
 ---
 
 <section class="premium-programs">
@@ -23,7 +28,7 @@ import { programs } from "../../data/programs/programs-experiences";
                         <div class="card" data-aos="flip-left">
                             <div class="flex-1 md:max-w-[100%]">
                                 <img
-                                    src={section.fondo}
+                                    src={cloudinaryOptimize(section.fondo, 700)}
                                     class="w-full h-[400px] object-cover rounded-[5px] block shadow-2xl"
                                     alt={section.name}
                                 />

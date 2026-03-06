@@ -2,6 +2,10 @@
 import { programs } from "../../data/programs/programs-experiences";
 
 const ruta = "tour-itineraries";
+function cloudinaryOptimize(url: string, width: number): string {
+  if (!url.includes('res.cloudinary.com')) return url;
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+}
 ---
 
 <section class="font-[Poppins]">
@@ -34,7 +38,7 @@ const ruta = "tour-itineraries";
                             <div class="card" data-aos="flip-left">
                                 <div class="image-container">
                                     <img
-                                        src={items.fondo}
+                                        src={cloudinaryOptimize(items.fondo,  800)}
                                         alt={items.title}
                                         class="card-image"
                                     />

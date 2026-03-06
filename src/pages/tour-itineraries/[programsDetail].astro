@@ -21,6 +21,7 @@ const {
   programItenerario,
   programNoIncluye,
   programIncluye,
+  imgCardLink,
 } = Astro.props;
 ---
 
@@ -38,6 +39,7 @@ const {
   <main>
     <DetailPrograms
       title={title}
+      imgCardLink={imgCardLink ?? []}
       programNoIncluye={programNoIncluye}
       programIncluye={programIncluye}
       programBreve={programBreve}

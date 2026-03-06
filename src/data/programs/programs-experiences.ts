@@ -3,10 +3,17 @@ export interface programsData {
     name: string;
     title: string;
     text: string;
+    imgCardLink?: imgCardLink[];
     programBreve: programBreve[];
     programItenerario: programItenerario[];
     programIncluye: programIncluye[];
     programNoIncluye: programIncluye[];
+}
+
+
+export interface imgCardLink{
+    imagen: string;
+    link: string;
 }
 
 export interface programBreve {
@@ -30,11 +37,17 @@ export interface programNoIncluye {
 export const programs: programsData[] = [
 
     {
-        fondo: "https://img.freepik.com/foto-gratis/disparo-vertical-hombre-acostado-hamaca-junto-cascada-que-fluye-abajo-colina_181624-2060.jpg",
+        fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
         title: "Eight Unforgettable Nights as you Step Back in Time ",
         text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
         name: "seven",
 
+
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812725/lima6_gpntwj.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772633988/ROOFTOP_s52xek.jpg", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865774/monasterio_v66tbl.webp", link: "cusco",},
+        ],
         programBreve: [
             { titulo_breve: "Day 1 - Arrival in Lima.", text_breve: "Arrival in Lima, the Gastronomic Capital of the Americas." },
             { titulo_breve: "Day 2 - Colonia Lima & Peruvian Paso Horse Show. (B,L) ", text_breve: "Colonial Lima city tour and traditional Peruvian Paso Horse Show." },
@@ -303,7 +316,10 @@ export const programs: programsData[] = [
         title: "Legacy of The Incas",
         text: "A two week program including Belmond hotels and trains.",
         name: "legacy-of-the-incas",
-
+ imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        ],
         programBreve: [
             {
                 titulo_breve: "Day 1 Lima - Arrival",
@@ -548,7 +564,10 @@ export const programs: programsData[] = [
         title: "Wonders of Peru",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "wonders-of-peru",
-
+ imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        ],
         programBreve: [
             {
                 titulo_breve: "Day 1 Lima",
@@ -682,7 +701,10 @@ export const programs: programsData[] = [
         title: "Peru Boutique",
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties.",
         name: "peru-boutique",
-
+ imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        ],
         programBreve: [
             {
                 titulo_breve: "Day 1 Lima",
@@ -835,7 +857,10 @@ export const programs: programsData[] = [
         title: "Peru Spectacular",
         text: "A two week program including Belmond hotels and trains",
         name: "peru-spectacular",
-
+ imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        ],
         programBreve: [
             {
                 titulo_breve: "Day 1 Lima",
@@ -939,7 +964,10 @@ export const programs: programsData[] = [
         title: "Peru Magic",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "peru-magic",
-
+ imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        ],
         programBreve: [
             {
                 titulo_breve: "Day 1 Lima",
