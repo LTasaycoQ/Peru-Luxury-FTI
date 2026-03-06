@@ -4,17 +4,16 @@ import { Image } from "astro:assets";
 import trainGirl from "../../assets/image/Home-img/peru-train.webp"
 import bar from "../../assets/image/Home-img/luxury-trains.webp"
 import train from "../../assets/image/Home-img/peru-train3.webp"
-
 ---
 
-<section class="font-[Poppins] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-[40px] xl:gap-[8em] w-[90%] max-w-[1640px]">
+<section class="trains-section">
+    <div class="trains-container">
         
-        <div class="flex flex-col 2xl:w-[670px] px-[20px] items-center lg:items-start text-center lg:text-left">
-            <h2 data-aos="fade-right" class="text-[30px] md:text-[37.2px] font-medium pb-[20px] leading-tight">
-                Luxury Trains in Peru <br class="hidden md:block"> Epoch-making Journeys
+        <div class="trains-content">
+            <h2 data-aos="fade-right" class="trains-title">
+                Luxury Trains in Peru <br class="br-desktop"> Epoch-making Journeys
             </h2>
-            <p class="text-gray-700 font-light pb-[30px]">
+            <p class="trains-description">
                 In Peru, the journey is as fascinating as the destination. The luxury trains that run through our lands are much more than means of transportation: they are immersive experiences that combine dreamlike landscapes, first-class service and an atmosphere worthy of a novel.
             </p>
             <a href="/destinations/luxury-trains" class="btn">
@@ -23,27 +22,28 @@ import train from "../../assets/image/Home-img/peru-train3.webp"
             </a>
         </div>
 
-        <div class="flex w-full justify-center">
-            <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
+        <div class="trains-gallery">
+            <div class="gallery-grid">
                 
-                <div data-aos="flip-up" class="w-full md:w-1/2 h-[400px] md:h-full rounded-lg overflow-hidden">
+                <div data-aos="flip-up" class="img-wrapper main-img">
                     <Image 
                         src={trainGirl} 
                         alt="Luxury train Peru"
-                        class="w-full h-full object-cover"/>
+                        class="gallery-image"/>
                 </div>
-                <div  data-aos="flip-up" class="flex flex-col gap-[15px] w-full md:w-1/2">
-                    <div class="w-full h-[250px] md:h-1/2 rounded-lg overflow-hidden">
+
+                <div class="gallery-stack">
+                    <div data-aos="flip-up" class="img-wrapper sub-img">
                         <Image 
                             src={bar} 
                             alt="Luxury trains interior"
-                            class="w-full h-full object-cover"/>
+                            class="gallery-image"/>
                     </div>
-                    <div data-aos="flip-up" class="w-full h-[250px] md:h-1/2 rounded-lg overflow-hidden">
+                    <div data-aos="flip-up" class="img-wrapper sub-img">
                         <Image 
                             src={train}
                             alt="Peru train journey"
-                            class="w-full h-full object-cover"/>
+                            class="gallery-image"/>
                     </div>
                 </div>
 
@@ -51,3 +51,131 @@ import train from "../../assets/image/Home-img/peru-train3.webp"
         </div>
     </div>
 </section>
+
+<style>
+    .trains-section {
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .trains-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 90%;
+        max-width: 1640px;
+    }
+
+    .trains-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .trains-title {
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 20px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .trains-description {
+        color: #374151; 
+        font-weight: 300;
+        padding-bottom: 30px;
+        margin: 0;
+    }
+
+    .br-desktop { display: none; }
+
+    .trains-gallery {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 850px;
+    }
+
+    .img-wrapper {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .main-img { height: 400px; }
+    .sub-img { height: 250px; }
+
+    .gallery-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    @media (min-width: 1024px) {
+        .trains-section { padding: 80px 0; }
+        
+        .trains-container {
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        .trains-content {
+            width: 50%; 
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .gallery-grid {
+            flex-direction: row;
+            height: 400px;
+        }
+
+        .main-img, .gallery-stack { width: 50%; }
+        .main-img { height: 100%; }
+        .sub-img { height: 50%; }
+
+        .br-desktop { display: block; }
+    }
+
+    @media (min-width: 1280px) {
+        .trains-container { gap: 8em; }
+        .trains-content { width: 670px; }
+        .trains-title { font-size: 37.2px; }
+    }
+
+    @media (min-width: 1536px) {
+        .gallery-grid { height: 600px; }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .gallery-grid {
+            flex-direction: row;
+            height: 400px;
+        }
+        .main-img, .gallery-stack { width: 50%; }
+        .sub-img { height: 50%; }
+    }
+</style>

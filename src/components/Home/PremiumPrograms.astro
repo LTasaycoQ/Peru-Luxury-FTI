@@ -11,7 +11,7 @@ import { programs } from "../../data/programs/programs-experiences";
         </h2>
     </div>
     <div class="grid-container">
-        <div class="programs-grid">
+        <div class="programs-grid ">
             {
                 programs.slice(0, 3).map((section) => (
                     <a href={`/programs/${section.name}`} class="card-link" >
@@ -78,6 +78,7 @@ import { programs } from "../../data/programs/programs-experiences";
         padding-top: 4em;
         width: 100%;
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 

@@ -3,24 +3,164 @@ import { Image } from "astro:assets";
 import peopleImg from "../../assets/image/Home-img/05-scaled.webp"
 ---
 
-<section class="font-[Poppins] pl-[20px] pr-[20px] pt-[90px] pb-[80px] bg-[#F7F7F7]  flex items-center justify-center ">
-    <div class="flex max-lg:flex-col lg:w-[90%] 2xl:w-[90em] max-lg:w-[90%] pl-[20px] pr-[20px] lg:justify-between justify-center max-md:gap-[30px] gap-[80px] items-center">
-
-        <div class="lg:w-[500px] xl:w-[630px]  flex flex-col gap-[20px]">
-            <h2 data-aos="fade-right"  class="text-[40px] max-xl:text-[35px] max-lg:text-[40px] max-sm:text-[40px] max-md:text-center">Amazon River Cruises<br>
-                <span class="font-bold">Discover The Heart Of The Peruvian Jungle</span>
+<section class="amazon-section">
+    <div class="amazon-container">
+        <div class="amazon-content">
+            <h2 class="amazon-title" data-aos="fade-right">
+                Amazon River Cruises<br>
+                <span class="highlight">Discover The Heart Of The Peruvian Jungle</span>
             </h2>
-            <div class="pt-[20px] max-lg:flex flex-col  justify-center items-center ">
-                <p class="text-[#1C1C1C] pb-[30px] lg:text-[15px] text-[13px] font-extralight  max-md:text-center">
+            
+            <div class="amazon-text-wrapper">
+                <p class="amazon-description">
                     Step into a world of wild beauty and sophistication with our luxury cruises on Peru’s Amazon. This is an invitation to discover one of the last unspoiled paradises on the planet, aboard world-class vessels that redefine the concept of exploration in style.
                 </p>
-                <br>
-               <a href="/destinations/amazon-river-cruises" class="btn">
+                
+                <a href="/destinations/amazon-river-cruises" class="btn">
                     <span class="btn-text-one">Discover The Experience</span>
                     <span class="btn-text-two">Read Me!</span>
                 </a>
             </div>
         </div>
-        <Image  data-aos="zoom-out-down" class="rounded-[20px] w-[27em] 2xl:w-[32em] max-lg:w-[100%]" src={peopleImg} alt="persona en la playa" loading="lazy"/>
+
+        <div class="amazon-image-wrapper">
+            <Image 
+                data-aos="zoom-out-down" 
+                class="amazon-image" 
+                src={peopleImg} 
+                alt="Luxury Amazon Cruise" 
+                loading="lazy"
+            />
+        </div>
     </div>
 </section>
+
+<style>
+    .amazon-section {
+        font-family: 'Poppins', sans-serif;
+        background-color: #F7F7F7;
+        padding: 90px 20px 80px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .amazon-container {
+        display: flex;
+        width: 90%;
+        max-width: 90em;
+        padding: 0 20px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .amazon-content {
+        width: 100%;
+        max-width: 630px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .amazon-title {
+        font-size: 40px;
+        line-height: 1.1;
+        margin: 0;
+        font-weight: 400;
+        color: #1a1a1a;
+    }
+
+    .amazon-title .highlight {
+        font-weight: 700;
+    }
+
+    .amazon-text-wrapper {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .amazon-description {
+        color: #1C1C1C;
+        padding-bottom: 30px;
+        font-size: 15px;
+        font-weight: 200; 
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .amazon-image-wrapper {
+        flex-shrink: 0;
+    }
+
+    .amazon-image {
+        width: 27em;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .btn-custom {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+
+    @media (min-width: 1536px) {
+        .amazon-image {
+            width: 32em;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .amazon-title {
+            font-size: 35px;
+        }
+        .amazon-content {
+            max-width: 500px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .amazon-container {
+            flex-direction: column; 
+            gap: 40px;
+        }
+
+        .amazon-content {
+            max-width: 100%;
+        }
+
+        .amazon-title {
+            font-size: 40px;
+        }
+
+        .amazon-text-wrapper {
+            align-items: center;
+        }
+
+        .amazon-description {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .amazon-image {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .amazon-title {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .amazon-container {
+            gap: 30px;
+        }
+    }
+</style>

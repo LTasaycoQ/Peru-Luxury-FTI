@@ -7,28 +7,146 @@ import cena from "../../assets/image/Home-img/rc4.webp"
 import restaurant from "../../assets/image/Home-img/rc2.webp"
 ---
 
-<section
-    class="pt-[40px] font-[Poppins] flex flex-col items-center justify-center text-center text-[#212121]"
->
-    <div class="2xl:w-[60%] max-2xl:w-[90%]">
-        <h2 data-aos="fade-down" class="text-[36px] pb-[20px]">
+<section class="relais-section">
+    <div class="relais-header">
+        <h2 class="relais-title" data-aos="fade-down">
             Live the most exclusive Peru with Relais & Châteaux
         </h2>
-        <p class="font-light">
+        <p class="relais-description">
             We invite you to explore our select collection of Relais & Châteaux
             hotels and restaurants in Peru and begin designing a trip that will
             exceed all your expectations. Get ready to experience Peru in a
             unique, sophisticated and unforgettable way.
         </p>
     </div>
-    <div class="flex w-[90%] max-md:flex-col pt-[80px] justify-center items-center">
-        <div class="flex">
-            <Image src={RC1} alt="bed-img1" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-1 relative left-[30px] max-md:left-[10px]  max-sm:left-[5px]"/>
-            <Image src={RC5} alt="bed-img2" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-2 relative right-[60px] top-[70px] max-md:top-[20px] max-md:right-[30px] max-sm:right-[20px]" />
+
+    <div class="collage-container">
+        <div class="collage-group">
+            <Image src={RC1} alt="Luxury bedroom 1" class="img-1" />
+            <Image src={RC5} alt="Luxury bedroom 2" class="img-2" />
         </div>
-        <div class="flex relative ">
-            <Image src={cena} alt="centa-img" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-3 relative  right-[60px] max-md:left-[30px] max-md:top-[-20px] max-sm:left-[20px] max-sm:top-[-18px]" />
-            <Image src={restaurant} alt="restaurant-img" class="max-lg:w-[230px] max-md:w-[260px] max-sm:w-[170px] max-xl:w-[290px] xl:w-[320px]  z-4 relative right-[120px] top-[70px] max-md:right-[0px] max-md:top-[0px] max-sm:right-[8px] max-sm:top-[-10px] max-md:z-1"/>
+        <div class="collage-group">
+            <Image src={cena} alt="Dinner experience" class="img-3" />
+            <Image src={restaurant} alt="Gourmet restaurant" class="img-4" />
         </div>
     </div>
 </section>
+
+<style>
+    .relais-section {
+        font-family: 'Poppins', sans-serif;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #212121;
+        overflow: hidden; 
+    }
+
+    .relais-header {
+        width: 90%;
+    }
+
+    .relais-title {
+        font-size: 36px;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+
+    .relais-description {
+        font-weight: 300; 
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .collage-container {
+        display: flex;
+        width: 90%;
+        padding-top: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .collage-group {
+        display: flex;
+        position: relative;
+    }
+
+    .collage-group img {
+        width: 300px;
+        height: auto;
+    }
+
+    .img-1 {
+        z-index: 1;
+        position: relative;
+        left: 30px;
+        bottom: 17px;
+    }
+
+    .img-2 {
+        z-index: 2;
+        position: relative;
+        right: 50px;
+        top: 30px;
+    }
+
+    .img-3 {
+        z-index: 3;
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+
+    .img-4 {
+        z-index: 4;
+        position: relative;
+        right: 120px;
+        top: 30px;
+    }
+
+
+    @media (min-width: 1536px) {
+        .relais-header {
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .collage-group img { width: 290px; }
+    }
+
+    @media (max-width: 1024px) {
+        .collage-group img { width: 230px; }
+    }
+
+    @media (max-width: 768px) {
+        .collage-container {
+            flex-direction: column;
+            padding-top: 40px;
+        }
+
+        .collage-group img { width: 260px; }
+
+        .img-1 { left: 10px; }
+        .img-2 { top: 20px; right: 30px; }
+        .img-3 { left: 30px; top: -20px; right: auto; }
+        .img-4 { 
+            right: 0; 
+            top: 0; 
+            z-index: 1; 
+        }
+    }
+
+    @media (max-width: 640px) {
+        .collage-group img { width: 170px; }
+        .relais-title { font-size: 28px; }
+        
+        .img-1 { left: 5px; }
+        .img-2 { right: 20px; }
+        .img-3 { left: 20px; top: -18px; }
+        .img-4 { right: 8px; top: -10px; }
+    }
+</style>
