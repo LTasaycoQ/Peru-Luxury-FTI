@@ -162,7 +162,7 @@ export const programs: programsData[] = [
                 Walking through Ollantaytambo Pueblo is to share the serene rhythm of Andean life, to feel history in every corner, and to connect with a community that honors its traditions with pride. A genuine, inspiring, and profoundly human experience that invites you to stop, observe… and say: I want to experience this. 
 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750028/6_10_11zon_xfdv91.webp",],
+                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819075/6_11zon_tkua6z.webp",],
             },
             {
                 ite_titulo: "Pachamanca Inca – Ancestral Gastronomic Ritual in Ollantaytambo. ",
@@ -257,7 +257,10 @@ export const programs: programsData[] = [
 
 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],
             },
 
 
