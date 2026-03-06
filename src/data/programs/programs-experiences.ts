@@ -73,7 +73,9 @@ export const programs: programsData[] = [
                 </br>
                 If time permits, complimentary visit to “The Temple of the Sun & The Temple of the Moon” at Pachacamac Archaeological Ceremonial Center. 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750026/2_14_11zon_scv4xy.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750026/2_14_11zon_scv4xy.webp",
+                ],
             },
             {
                 ite_titulo: "Day Three - Lima, Cusco & Sacred Valley. (B,L)",
@@ -111,7 +113,10 @@ export const programs: programsData[] = [
 
                 Continue to the Ollantaytambo archaeological complex, the Incas built it as a fort that included a temple, agricultural terraces, and an urban area. There are two distinct sectors: The religious and worship zone, and the residential area. Ollantaytambo was an important administrative center with probable military functions if one considers the walls and towers. There are also traces of antique roads and aqueducts.
                 `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750027/4_16_11zon_yhdrvg.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826657/4.1_11zon_vqleda.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750027/4_16_11zon_yhdrvg.webp",
+                ],
             },
             {
                 ite_titulo: "Day Five - Maras Salt Pools, Moray Terraces and time to enjoy resort’ amenities. (B)",
@@ -144,7 +149,10 @@ export const programs: programsData[] = [
 
 
              `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750033/5_9_11zon_y6t4zl.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826705/5.1_11zon_dt5nzz.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750033/5_9_11zon_y6t4zl.webp",
+                ],
             },
             {
                 ite_titulo: "Day Six - Ollantaytambo Pueblo & Journey to Machu Picchu. (B,L)",
@@ -184,7 +192,10 @@ export const programs: programsData[] = [
                 Scenic Andean Rail Adventure to Machu Picchu Pueblo - Aguas Calientes, just below the ancient Citadel. 
 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750023/7_11_11zon_c3jxa0.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826812/7.1_11zon_loxcq0.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750023/7_11_11zon_c3jxa0.webp",
+                ],
             },
             {
                 ite_titulo: "Day seven - Visit to Machu Picchu and return to Cusco. (B)",
@@ -217,7 +228,10 @@ export const programs: programsData[] = [
                 </br>
                 If time permits, before taking the train to Ollantaytambo Station and on to Cusco, complementary guided tour of the Open-Air Market of Aguas Calientes 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750024/9_17_11zon_bzbvwq.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826862/9.1_11zon_kyz8ug.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750024/9_17_11zon_bzbvwq.webp",
+                ],
             },
             {
                 ite_titulo: `Day Eight - Cusco City Tour and Sacsayhuaman; Tipón, a “Masterpiece of the Incas Hydraulic Engineering” and Andahuaylillas Historic Church, the "Sistine Chapel of the Americas". (B)  `,
