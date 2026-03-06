@@ -267,11 +267,23 @@ export const programs: programsData[] = [
         ],
 
         programIncluye: [
-            { text: "" }
+            { text: "All airport transfers listed in the itinerary" },
+            { text: "Baggage handling at airports and at hotels" },
+            { text: "All tours and excursions indicated in the itinerary " },
+            { text: "All entrance fees and transfers needed to operate tours and excursions " },
+            { text: "All train tickets, bus tickets and boat services needed to operate tours and excursions" },
+            { text: "Excursion to Machu Picchu is aboard the requested train" },
+            { text: "Service of a bilingual licensed tour guide for all tours and excursions" },
+            { text: "All meals indicated in the itinerary. B for breakfast, L for lunch. D for dinner" },
+            { text: "Hotel accommodation and hotel service charge" },
+            { text: "Hotel taxes are exempt for foreigners visiting Peru" },
+            { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
         ],
 
         programNoIncluye: [
-            { text: "" }
+            { text: "Extra expenses in case of modifying the itinerary due to flight cancelation, strikes or blocking of roads and train tracks by demonstrators or political activists. Travel insurance is strongly recommended. " },
+            { text: "When staying overnight  in Machu Picchu, the entrance fee for the 2nd day in Machu Picchu is not included. This can be added to the itinerary upon request " },
+            { text: "Expenses such us beverages on meals, tips, laundry, phone calls and other personal expenses are not included" },
         ],
     },
 
