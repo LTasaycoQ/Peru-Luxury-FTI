@@ -61,37 +61,40 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                         
                         <div class=" w-[25%]">
                             <div class="p-[15px] border-[1px] border-gray-300 rounded-[5px] bg-white  max-md:w-[100%]">
-                                <div class="bg-gray-600 text-white text-center p-[12px]">
-                                    <h3>Looking for Domething else?</h3>
+                                <div class="bg-gray-600 text-white text-center rounded-[5px] p-[12px]">
+                                    <h3>Find the Perfect Journey for You</h3>
                                 </div>
 
                                 <br>
-                                <p class="text-gray-700 text-center">Get in Touch with our Lightfoot Travel experts and they will create a bespoke itinerary designed to your exact needs and budget.</p>
+                                <p class="text-gray-700 text-center">Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel.</p>
                                 
-                                <div class="flex flex-col justify-start items-start pl-[10px] pt-[30px]">
-                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-envelope"></i> Email</span>
-                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-clipboard2-fill"></i> Enquire Now</span>
-                                    <span class="text-[15px] flex items-center justify-center gap-[10px]"><i class="text-orange-300 text-[30px] bi bi-telephone-fill"></i> +51 999999999</span>
+                                <div class="flex flex-col text-gray-700 justify-start items-start pl-[10px] pt-[30px]">
+                                    <span class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[26px] bi bi-envelope"></i> Email</span>
+                                    <span class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[25px] bi bi-clipboard2-fill"></i> Enquire Now</span>
+                                    <span class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[26px] bi bi-telephone"></i> +51 999999999</span>
                                 </div>
                                 <br>        
                                
                                 <div class="bg-green-400 relative ">
-                                    <div class="btnRight  bg-gray-700 p-[14px] rounded-full text-white swiper-button-next"></div>
-                                    <div class="btnLeft bg-gray-700 p-[14px] rounded-full text-white swiper-button-prev"></div>
+                                    <div class="btnRight p-[10px] rounded-full text-white swiper-button-next"></div>
+                                    <div class="btnLeft p-[10px] rounded-full text-white swiper-button-prev"></div>
                                     <div class="swiper mySwiper">
                                         
                                         <div class="swiper-wrapper">
                                             {imgCardLink.map((item, index) => (
                                             <div class="swiper-slide">
+                                                 <div class="text-white bg-gray-800 w-full">
+                                                    <span class="text-[14px] font-semibold uppercase">{item.link}</span>
+                                                </div>
                                                 <a href={`/destinations/${item.link}`} class="slide-link">
+                                                
                                                 <img 
                                                     src={item.imagen} 
                                                     alt={"Imagen de destino"} 
                                                     loading="lazy" 
                                                 />
-                                                <div class="slide-info">
-                                                    <span>{item.link}</span>
-                                                </div>
+                                               
+                                               
                                                 </a>
                                             </div>
                                             ))}
