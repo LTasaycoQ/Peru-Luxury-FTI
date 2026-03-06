@@ -113,7 +113,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
 </section>
 
 <script>
-    // --- LÓGICA DE TABS ---
     const tabs = document.querySelectorAll('.menu-list');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -129,7 +128,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
         });
     });
 
-    // --- LÓGICA DE ACORDEÓN (JS) ---
     const headers = document.querySelectorAll('.accordion-header');
 
     headers.forEach(header => {
@@ -138,7 +136,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
             const chevron = header.querySelector('.chevron');
             const isOpen = body.style.gridTemplateRows === "1fr";
 
-            // Cerrar todos los demás
             document.querySelectorAll('.accordion-body').forEach((b: any) => {
                 b.style.gridTemplateRows = "0fr";
             });
@@ -146,7 +143,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
                 c.style.transform = "rotate(0deg)";
             });
 
-            // Si no estaba abierto, abrirlo
             if (!isOpen) {
                 body.style.gridTemplateRows = "1fr";
                 if (chevron) (chevron as HTMLElement).style.transform = "rotate(-180deg)";
@@ -154,13 +150,11 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
         });
     });
 
-    // Inicializar el primero abierto (opcional, si el CSS inline no bastara)
     const firstChevron = document.querySelector('.accordion-item:first-child .chevron');
     if (firstChevron) (firstChevron as HTMLElement).style.transform = "rotate(-180deg)";
 </script>
 
 <style>
-/* --- ANIMACIÓN CSS --- */
 .accordion-body {
     display: grid;
     transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -176,7 +170,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
     background-color: #f0f0ff;
 }
 
-/* --- GALERÍA VERTICAL DESKTOP --- */
 .img-gallery {
     display: flex !important;
     flex-direction: column !important;
@@ -191,7 +184,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
     .img-gallery {
         flex-direction: row !important;
@@ -205,7 +197,6 @@ const { title, programBreve, programItenerario, programNoIncluye, programIncluye
     .gallery-img { width: 100% !important; }
 }
 
-/* --- ESTILOS GENERALES --- */
 .active {
     color: white;
     background-color: #d4c06d;
