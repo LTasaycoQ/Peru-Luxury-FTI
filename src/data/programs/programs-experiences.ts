@@ -46,7 +46,6 @@ export const programs: programsData[] = [
             { titulo_breve: "Day 8 - Cusco City Tour and Sacsayhuaman", text_breve: "Cusco City Tour, Sacsayhuaman, and Andahuaylillas Church." },
             { titulo_breve: "Day 9 – Cusco to Lima and Home (B) ", text_breve: "Larco Museum visit in Lima and international departure home." }
         ],
-
         programItenerario: [
             {
                 ite_titulo: "Day One - Arrival in Lima. ",
@@ -265,7 +264,6 @@ export const programs: programsData[] = [
 
 
         ],
-
         programIncluye: [
             { text: "All airport transfers listed in the itinerary" },
             { text: "Baggage handling at airports and at hotels" },
@@ -279,7 +277,6 @@ export const programs: programsData[] = [
             { text: "Hotel taxes are exempt for foreigners visiting Peru" },
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
         ],
-
         programNoIncluye: [
             { text: "Extra expenses in case of modifying the itinerary due to flight cancelation, strikes or blocking of roads and train tracks by demonstrators or political activists. Travel insurance is strongly recommended. " },
             { text: "When staying overnight  in Machu Picchu, the entrance fee for the 2nd day in Machu Picchu is not included. This can be added to the itinerary upon request " },
@@ -291,7 +288,6 @@ export const programs: programsData[] = [
         fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772127821/incas-legacy_grfvrl.webp",
         title: "Legacy of The Incas",
         text: "A two week program including Belmond hotels and trains.",
-
         name: "legacy-of-the-incas",
 
         programBreve: [
@@ -336,7 +332,6 @@ export const programs: programsData[] = [
                 text_breve: "Experience South America’s first luxury sleeper train: elegant overnight stays across the Peruvian Andes."
             }
         ],
-
         programItenerario: [
             {
                 ite_titulo: "Day 1 – Lima - Arrival",
@@ -511,7 +506,6 @@ export const programs: programsData[] = [
                 ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772744697/30_11zon_li1ocq.webp",],
             },
         ],
-
         programIncluye: [
             { text: "All airport transfers listed in the itinerary" },
             { text: "Baggage handling at airports and at hotels" },
@@ -526,7 +520,6 @@ export const programs: programsData[] = [
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
 
         ],
-
         programNoIncluye: [
             { text: "Extra expenses in case of modifying the itinerary due to flight cancelation, strikes or blocking of roads and train tracks by demonstrators or political activists. Travel insurance is strongly recommended. " },
             { text: "Expenses such us beverages on meals, tips, laundry, phone calls and other personal expenses are not included" },
@@ -588,7 +581,6 @@ export const programs: programsData[] = [
                 text_breve: "Transfer to Cusco airport for your flight to Lima and connection home."
             }
         ],
-
         programItenerario: [
             {
                 ite_titulo: "Day 1   Lima - Arrival",
@@ -661,7 +653,6 @@ export const programs: programsData[] = [
             { text: "Hotel taxes are exempt for foreigners visiting Peru" },
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
         ],
-
         programNoIncluye: [
             { text: "Any domestic and international flights" },
             { text: "Extra expenses in case of modifying the itinerary due to flight cancelation, strikes or blocking of roads and train tracks by demonstrators or political activists. Travel insurance is strongly recommended. " },
@@ -716,7 +707,6 @@ export const programs: programsData[] = [
                 text_breve: "Traslado al aeropuerto para vuelo de conexión en Lima y retorno internacional."
             }
         ],
-
         programItenerario: [
             {
                 ite_titulo: "Day 1, Dec 29 – Lima - Arrival",
@@ -805,7 +795,6 @@ export const programs: programsData[] = [
             },
 
         ],
-
         programIncluye: [
             { text: "All airport transfers listed in the itinerary " },
             { text: "Baggage handling at airports and at hotels" },
@@ -819,7 +808,6 @@ export const programs: programsData[] = [
             { text: "Hotel taxes are exempt for foreigners visiting Peru" },
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 19% Peruvian sales tax. " },
         ],
-
         programNoIncluye: [
             { text: "Airfare LIM/CUZ/LIM" },
             { text: "When staying overnight in Machu Picchu, the entrance fee for the 2nd day in Machu Picchu is not included. This can be added to the itinerary upon request " },
@@ -864,7 +852,6 @@ export const programs: programsData[] = [
                 text_breve: "Transfer to the airport for your flight to Lima and your connecting flight back home."
             }
         ],
-
         programItenerario: [
 
             {
@@ -910,7 +897,6 @@ export const programs: programsData[] = [
             },
 
         ],
-
         programIncluye: [
             { text: "6 Nights of accommodation at the select hotel" },
             { text: "All airport transfers listed in the itinerary " },
@@ -925,7 +911,6 @@ export const programs: programsData[] = [
             { text: "Hotel taxes are exempt for foreigners visiting Peru" },
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
         ],
-
         programNoIncluye: [
             { text: "Domestic and International flights." },
             { text: "Lunch in the excursion to Machu Picchu is not included" },
@@ -971,7 +956,6 @@ export const programs: programsData[] = [
                 text_breve: "Transfer to the airport for your flight to Lima and connection back home with unforgettable memories."
             }
         ],
-
         programItenerario: [
             {
                 ite_titulo: "Day 1   Lima – Arrival",
@@ -1016,7 +1000,6 @@ export const programs: programsData[] = [
 
             },
         ],
-
         programIncluye: [
             { text: "6 nights of accommodation at the select hotel" },
             { text: "All airport transfers listed in the itinerary " },
@@ -1031,7 +1014,6 @@ export const programs: programsData[] = [
             { text: "Hotel taxes are exempt for foreigners visiting Peru" },
             { text: "When domestic airfare within Peru is specified as included: Airfare includes all queues, security fee, fuel surcharges and 18% Peruvian sales tax. " },
         ],
-
         programNoIncluye: [
             { text: "Domestic and International flights" },
             { text: "Lunch in the excursion to Machu Picchu is not included" },

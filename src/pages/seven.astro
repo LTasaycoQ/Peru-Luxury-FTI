@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { programs } from '../data/programs/programs-experiences';
+import DetailPrograms from '../components/programs/ProgramsDetail/detailPrograms.astro';
+import Fondo from '../components/Fondo.astro';
+
+const data = programs.find(p => p.name === "seven"); 
+const fondo = "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp";
+if (!data) return Astro.redirect('/404');
+---
+
+<BaseLayout title={data.title}>
+    <Fondo fondo={`url(${fondo})`} />
+    <main>
+        <DetailPrograms
+            title={data.title}
+            programNoIncluye={data.programNoIncluye}
+            programIncluye={data.programIncluye}
+            programBreve={data.programBreve}
+            programItenerario={data.programItenerario}
+        />
+    </main>
+</BaseLayout>

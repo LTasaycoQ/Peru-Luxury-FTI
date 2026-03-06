@@ -1,50 +1,69 @@
 ---
-
 import { programs } from "../../data/programs/programs-experiences";
 
+const ruta = "tour-itineraries";
 ---
 
 <section class="font-[Poppins]">
     <div class="container-Experiences">
         <div class="container-title">
             <h1 class="title">
-                Exclusive Experiences to <br>
+                Exclusive Experiences to <br />
                 Discover the Best of Peru.
             </h1>
             <div class="line max-sm:hidden"></div>
         </div>
 
         <p class="text-parrafo">
-            At Peru Luxury Journeys, we craft unique itineraries for travelers striving for greatness. <br>
-            Each tour combines iconic destinations, meticulously planned details, and authentic experiences. <br>
+            At Peru Luxury Journeys, we craft unique itineraries for travelers
+            striving for greatness. <br />
+            Each tour combines iconic destinations, meticulously planned details,
+            and authentic experiences. <br />
             Let our experts guide you on an unforgettable journey.
         </p>
 
         <div class="cards-grid">
             {
-                programs.map((items) => (
-                    <a href={`/tour-itineraries/${items.name}`} class="card-link">
-                        <div class="card" data-aos="flip-left">
-                            <div class="image-container">
-                                <img  src={items.fondo} alt={items.title} class="card-image" />
+                programs.map((items) => {
+                    const urlFinal =
+                        items.name === "seven"
+                            ? `/${items.name}`
+                            : `/${ruta}/${items.name}`;
+                    return (
+                        <a href={urlFinal} class="card-link">
+                            <div class="card" data-aos="flip-left">
+                                <div class="image-container">
+                                    <img
+                                        src={items.fondo}
+                                        alt={items.title}
+                                        class="card-image"
+                                    />
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">{items.title}</h3>
+                                    <p class="card-text pb-[20px]">
+                                        {items.text}
+                                    </p>
+                                    <i class="link-read-more">Read More</i>
+                                </div>
                             </div>
-                            <div class="card-content">
-                                <h3 class="card-title">{items.title}</h3>
-                                <p class="card-text  pb-[20px]">{items.text}</p>
-                                <i class="link-read-more">Read More</i>
-                            </div>
-                        </div>
-                    </a>
-                ))
+                        </a>
+                    );
+                })
             }
         </div>
     </div>
 </section>
 
 <style>
-
-    .image-container:hover .card-image {transition: all 2s;-webkit-transform:scale(1.3);transform:scale(1.3);}
-    .image-container {overflow:hidden;}
+    .image-container:hover .card-image {
+        transition: all 2s;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    .image-container {
+        overflow: hidden;
+    }
 
     .container-Experiences {
         display: flex;
@@ -84,7 +103,7 @@ import { programs } from "../../data/programs/programs-experiences";
         color: #212121;
         margin-bottom: 10px;
     }
-    .card-text{
+    .card-text {
         color: rgb(54, 54, 54);
         font-weight: 300;
     }
@@ -95,7 +114,6 @@ import { programs } from "../../data/programs/programs-experiences";
         text-align: center;
         color: #4e4e4e;
         font-weight: 300;
-
     }
     .container-title {
         width: 100%;
@@ -111,9 +129,6 @@ import { programs } from "../../data/programs/programs-experiences";
     }
     .line {
         width: 280px;
-        border-top: 2px solid #C5A822;
+        border-top: 2px solid #c5a822;
     }
 </style>
-
-
-
