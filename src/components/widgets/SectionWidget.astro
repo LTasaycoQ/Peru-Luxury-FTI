@@ -1,36 +1,160 @@
 ---
-
 const { title, description, image1, image2, image3 } = Astro.props;
-
-
 ---
 
-<section class="font-[Poppins] bg-[#F7F7F7] w-full flex flex-col justify-center items-center py-[40px] lg:py-[80px]">
-  <div class="flex flex-col lg:flex-row items-center justify-center gap-[40px] xl:gap-[8rem] w-[90%]">
+<section class="dynamic-hero-section">
+  <div class="hero-container">
     
-    <div class="flex flex-col 2xl:w-[84rem] lg:w-[80rem] max-lg:w-full px-[20px] items-center lg:items-start text-center lg:text-left">
-      <h1 data-aos="fade-right" class="text-[32px] md:text-[47px] font-medium pb-[35px] leading-tight text-balance">{title}</h1>
-      <p class="tracking-wide text-gray-700 text-[15.4px] font-light pb-[30px] whitespace-pre-line">{description}</p>
+    <div class="hero-content">
+      <h1 data-aos="fade-right" class="hero-title">{title}</h1>
+      <p class="hero-description">{description}</p>
     </div>
 
-    <div class="flex w-full justify-center">
-      <div class="flex flex-col md:flex-row gap-[15px] w-full max-w-[850px] h-auto md:h-[400px] 2xl:h-[600px]">
+    <div class="hero-gallery">
+      <div class="mosaic-grid">
         
-        <div  data-aos="flip-down" class="w-full md:w-1/2 h-[400px] md:h-full overflow-hidden flex items-center justify-center bg-gray-200">
-            <img src={image1} alt={title} width={800} height={600} class="w-full h-full object-cover" />
+        <div data-aos="flip-down" class="img-box main-box">
+            <img src={image1} alt={title} width="800" height="600" class="mosaic-img" />
         </div>
 
-        <div class="flex flex-col gap-[15px] w-full md:w-1/2">
-          <div  data-aos="flip-down" class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
-              <img src={image2} alt={title} width={400} height={300} class="w-full h-full object-cover" />
+        <div class="mosaic-column">
+          <div data-aos="flip-down" class="img-box side-box">
+              <img src={image2} alt={title} width="400" height="300" class="mosaic-img" />
           </div>
-
-          <div  data-aos="flip-down" class="w-full h-[350px] md:h-1/2 overflow-hidden flex items-center justify-center bg-gray-200">
-              <img src={image3} alt={title} width={400} height={300} class="w-full h-full object-cover" />
+          <div data-aos="flip-down" class="img-box side-box">
+              <img src={image3} alt={title} width="400" height="300" class="mosaic-img" />
           </div>
-
         </div>
+
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .dynamic-hero-section {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F7F7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 35px;
+    line-height: 1.2;
+    margin: 0;
+    text-wrap: balance;
+    color: #1a1a1a;
+  }
+
+  .hero-description {
+    color: #374151;
+    font-size: 15.4px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.025em; 
+    white-space: pre-line;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  .hero-gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mosaic-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 850px;
+  }
+
+  .img-box {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e7eb;
+  }
+
+  .mosaic-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .main-box { height: 400px; }
+  .side-box { height: 350px; }
+
+  .mosaic-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+
+  @media (min-width: 768px) {
+    .mosaic-grid {
+      flex-direction: row;
+      height: 400px;
+    }
+    .main-box, .mosaic-column { width: 50%; }
+    .main-box { height: 100%; }
+    .side-box { height: 50%; }
+    
+    .hero-title { font-size: 47px; }
+  }
+
+  @media (min-width: 1024px) {
+    .dynamic-hero-section { padding: 80px 0; }
+    
+    .hero-container {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .hero-content {
+      width: 50%;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-container { gap: 8rem; }
+    .hero-content { width: 80rem; }
+  }
+
+  @media (min-width: 1536px) {
+    .hero-content { width: 84rem; }
+    .mosaic-grid { height: 600px; }
+  }
+</style>

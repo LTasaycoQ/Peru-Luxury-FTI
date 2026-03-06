@@ -438,7 +438,7 @@ export const hotels: Hotel[] = [
     slug: "aria-amazon",
     title: "Aria Amazon",
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/amazon-cruises_p0ij0b.webp",
-    description:"",
+    description:"Designed by innovative architect Jordi Puig, Aria Amazon is a river cruise ship that is custom-built to explore the Peruvian Amazon and the famed Pacaya-Samiria National Reserve in absolute comfort and luxury — with minimal impact to the delicate Amazon river and rainforest environment. On board, 16 spacious suites with floor-to-ceiling windows give guests a full view of the Amazon’s majestic river and rainforests. The top deck features ample amenities that include a jacuzzi, indoor lounge and bar, and an outdoor observation deck. In the dining room, guests also savor the best of Peruvian cuisine with a comprehensive dining menu created by Pedro Miguel Schiaffino, one of Peru’s most accomplished chefs known for using produce and ingredients from the Peruvian Amazon. With small-group excursions of no larger than eight conducted by highly-experienced naturalist guides, guests can be assured of the most fulfilling, life-enriching wildlife encounters they can get from an Amazon discovery cruise deep in the Amazon rainforest.",
     destination: "amazon-river-cruises",
       
     hotelImage: [
@@ -457,7 +457,7 @@ export const hotels: Hotel[] = [
     slug: "delfin-i",
     title: "Delfin I",
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772634256/DELFIN_I_1_zzodlg.jpg",
-    description:"",
+    description:"Delfin I takes you one step beyond in terms of service, intimacy and personal attention. This River vessel offers just 04 exclusive oversized suites with panoramic private terraces; 02 of these with a private whirlpool for the ultimate treat. Travelers will be spoiled by the floor-to-ceiling windows that allow nature to be part of the natural suite décor. The 3 times per day cabin service will ensure you the most optimal personalized experience. On the top deck, guests will find a lounge area, bar and entertainment center which are perfect places to relax in, while the jungle unfolds before their eyes. On the Delfin I, guests can get out on the water with the kayaks and stand up paddleboards. Lenght: 67 feet Beam: 33 feet Draft: 5´8” Capacity: 8 passengers / 12 passenger maximum",
     destination: "amazon-river-cruises",
       
     hotelImage: [
@@ -476,7 +476,7 @@ export const hotels: Hotel[] = [
     slug: "delfin-ii",
     title: "Delfin II",
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772634274/DELFIN_II_5_s13t4p.jpg",
-    description:"",
+    description:"Delfin II was built and launched in March 2009. The 14 cabins of this vessel include 04 Master Suites with 180° panoramic windows and 10 Suites, including 02 sets of Suites that can be interconnected to accomodate families. With movie screen sized windows and first-rate design, they offer both elegance and comfort while sailing through the Amazon region. An array of spaces, including the dining room, an observation deck and lounge, a bar, an entertainment center, and a lecture room, among others, provide ideal gathering places for all guests. Birdwatching, trailwalks, paddle boarding and fishing are some of the exciting activities you can practice. Lenght: 135 feet Beam: 32 feet Draft: 8´25” Capacity: 28 passengers ",
     destination: "amazon-river-cruises",
       
     hotelImage: [
