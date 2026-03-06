@@ -10,6 +10,11 @@ interface Props {
 }
 
 const { title, description, hotelImage = [] } = Astro.props;
+
+const optimizeCloudinary = (url: string) => {
+  if (!url.includes('cloudinary.com')) return url;
+  return url.replace('/upload/', '/upload/f_auto,q_auto,w_800,c_limit/');
+};
 ---
 
 <section class="hotel-section">
@@ -26,7 +31,12 @@ const { title, description, hotelImage = [] } = Astro.props;
             {hotelImage.map((item) => (
               <div class="swiper-slide">
                 <div class="image-card">
-                  <img src={item.image} alt={`${title} gallery image`} loading="lazy" />
+                  <img 
+                    src={optimizeCloudinary(item.image)} 
+                    alt={`${title} gallery image`} 
+                    loading="lazy"
+                    decoding="async" 
+                  />
                 </div>
               </div>
             ))}
@@ -43,6 +53,50 @@ const { title, description, hotelImage = [] } = Astro.props;
     )}
   </div>
 </section>
+
+<style>
+  .image-card {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #f5f5f5;
+    contain: paint; 
+  }
+  
+  .image-card img {
+    will-change: transform;
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+
+  const initSwiper = () => {
+    new Swiper(".mySwiper", {
+      modules: [Navigation, Autoplay],
+      slidesPerView: 1,
+      spaceBetween: 25,
+      loop: true,
+      autoplay: { 
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".next-btn",
+        prevEl: ".prev-btn",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      watchSlidesProgress: true,
+    });
+  };
+
+  initSwiper();
+</script>
 <style>
   .hotel-section {
     padding: 100px 20px;
@@ -138,24 +192,3 @@ const { title, description, hotelImage = [] } = Astro.props;
   }
 </style>
 
-<script>
-  import Swiper from 'swiper';
-  import { Navigation, Autoplay } from 'swiper/modules';
-  import 'swiper/css';
-
-  new Swiper(".mySwiper", {
-    modules: [Navigation, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 25,
-    loop: true,
-    autoplay: { delay: 4000 },
-    navigation: {
-      nextEl: ".next-btn",
-      prevEl: ".prev-btn",
-    },
-    breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    },
-  });
-</script>
