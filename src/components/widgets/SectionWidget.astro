@@ -1,5 +1,10 @@
 ---
 const { title, description, image1, image2, image3 } = Astro.props;
+
+function cloudinaryOptimize(url: string, width: number): string {
+  if (!url.includes('res.cloudinary.com')) return url;
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+}
 ---
 
 <section class="dynamic-hero-section">
@@ -14,15 +19,15 @@ const { title, description, image1, image2, image3 } = Astro.props;
       <div class="mosaic-grid">
         
         <div data-aos="flip-down" class="img-box main-box">
-            <img src={image1} alt={title} width="800" height="600" class="mosaic-img" />
+            <img src={cloudinaryOptimize(image1, 700)} alt={title} width="800" height="600" class="mosaic-img" />
         </div>
 
         <div class="mosaic-column">
           <div data-aos="flip-down" class="img-box side-box">
-              <img src={image2} alt={title} width="400" height="300" class="mosaic-img" />
+              <img src={cloudinaryOptimize(image2,700)} alt={title} width="400" height="300" class="mosaic-img" />
           </div>
           <div data-aos="flip-down" class="img-box side-box">
-              <img src={image3} alt={title} width="400" height="300" class="mosaic-img" />
+              <img src={cloudinaryOptimize(image3, 700)} alt={title} width="400" height="300" class="mosaic-img" />
           </div>
         </div>
 
