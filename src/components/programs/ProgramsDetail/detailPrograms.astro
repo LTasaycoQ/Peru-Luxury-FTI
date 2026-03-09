@@ -49,7 +49,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
             </div>
    
                 <div class="p-[20px] max-md:p-[0]">
-                    <div id="brief" class="tab-content flex gap-[70px]  max-lg:flex-col">
+                    <div id="brief" class="tab-content flex gap-[70px]  max-xl:flex-col">
                         <div>
                             {programBreve.map((breve) => (
                                 <div class="py-[16px] pb-[10px]">
@@ -59,7 +59,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                             ))}
                         </div>
                         
-                        <div class=" w-[25%] max-lg:w-[100%]">
+                        <div class=" w-[25%] max-xl:w-[100%]">
                             <div class="p-[15px] border-[1px] border-gray-300 rounded-[5px] bg-white  max-md:w-[100%]">
                                 <div class="bg-gray-700 text-white text-center rounded-[5px] p-[12px]">
                                     <h3>Find the Perfect Journey for You</h3>
@@ -69,7 +69,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                 <p class="text-gray-700 text-center text-[12px]">Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel.</p>
                                 
                                 <div class="flex flex-col text-gray-700 justify-start items-start pl-[10px] pt-[30px]">
-                                    <a  href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[26px] bi bi-envelope"></i> sales@PeruLuxuryJourneys.com</a>
+                                    <a  href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[26px] bi bi-envelope"></i> Email</a>
                                     <span class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[25px] bi bi-clipboard2-fill"></i> Enquire Now</span>
                                     <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="text-[14px] flex items-center justify-center gap-[10px]"><i class="text-[#D4C06D] text-[26px] bi bi-telephone"></i> +51 982 836 947</a>
                                 </div>
@@ -81,7 +81,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                     <div class="swiper mySwiper">
                                         
                                         <div class="swiper-wrapper">
-                                            {imgCardLink.map((item, index) => (
+                                            {imgCardLink.map((item) => (
                                             <div class="swiper-slide">
                                                  <div class="text-white bg-gray-800 w-full">
                                                     <span class="text-[14px] font-semibold uppercase">{item.link}</span>
@@ -134,7 +134,6 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                             </div>
                         ))}
                     </div>
-
                     <div id="include" class="tab-content hidden flex justify-center gap-[60px] max-md:flex-col">
                         <div class="flex-1">
                             <div class="p-[20px] shadow-2xl shadow-gray-300 rounded-[10px] bg-[#FAFAFF] h-full border border-gray-100">
