@@ -47,6 +47,9 @@ export const programs: programsData[] = [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812725/lima6_gpntwj.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772633988/ROOFTOP_s52xek.jpg", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865774/monasterio_v66tbl.webp", link: "cusco",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772660121/shutterstock_202551493_mt461m.webp", link: "ollantaytambo-town",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812892/catedral-cusco_z0lmgr.webp", link: "cusco",},
         ],
         programBreve: [
             { titulo_breve: "Day 1 - Arrival in Lima.", text_breve: "Arrival in Lima, the Gastronomic Capital of the Americas." },
@@ -316,9 +319,13 @@ export const programs: programsData[] = [
         title: "Legacy of The Incas",
         text: "A two week program including Belmond hotels and trains.",
         name: "legacy-of-the-incas",
- imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772659769/bell-tower-of-iglesia_cqipqe.webp", link: "chinchero-town",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_i18flh.webp", link: "luxury-trains",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812868/sacsayhuaman-cusco_ulhk25.webp", link: "cusco",},
         ],
         programBreve: [
             {
@@ -564,9 +571,13 @@ export const programs: programsData[] = [
         title: "Wonders of Peru",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "wonders-of-peru",
- imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812725/lima6_gpntwj.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772813378/Arequipa-5_11zon_gjmvmc.webp", link: "arequipa",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/Titicaca-Lake-portada2_jfbusw.webp", link: "puno",},            
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772813539/Titicaca-Lake6_11zon_kdc3up.webp", link: "puno",},
         ],
         programBreve: [
             {
@@ -701,9 +712,11 @@ export const programs: programsData[] = [
         title: "Peru Boutique",
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties.",
         name: "peru-boutique",
- imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772813011/Cusco-portada2_uaizlj.webp", link: "cusco",},
         ],
         programBreve: [
             {
@@ -857,9 +870,12 @@ export const programs: programsData[] = [
         title: "Peru Spectacular",
         text: "A two week program including Belmond hotels and trains",
         name: "peru-spectacular",
- imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812868/sacsayhuaman-cusco_ulhk25.webp", link: "cusco",},
+        
         ],
         programBreve: [
             {
@@ -964,9 +980,13 @@ export const programs: programsData[] = [
         title: "Peru Magic",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "peru-magic",
- imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772650146/banner-amazon-river-cruises_orie2a_1_ponq23.webp", link: "",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771514451/sacred-valley-portada_c39kms.webp", link: "",},
+        imgCardLink: [
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772659769/bell-tower-of-iglesia_cqipqe.webp", link: "chinchero-town",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/luxury-train_i18flh.webp", link: "luxury-trains",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812868/sacsayhuaman-cusco_ulhk25.webp", link: "cusco",},
         ],
         programBreve: [
             {
