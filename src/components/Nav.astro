@@ -180,7 +180,14 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     #menuResponsive {
         transform-origin: top center;
         animation: none;
+        animation: animation-desliz 0.5s ease-in-out;
         position: absolute;
+    }
+    
+    #submenuResponsive{
+        transform-origin: top center;
+        animation: none;
+        transition: all 0.5s;
         animation: animation-desliz 0.5s ease-in-out;
     }
 
@@ -190,6 +197,14 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         }
         from{
             transform: scaleY(0);
+        }
+    }
+    @keyframes animation-desliz2 {
+        to{
+            transform: scaleY(0);
+        }
+        from{
+            transform: scaleY(-1);
         }
     }
 
