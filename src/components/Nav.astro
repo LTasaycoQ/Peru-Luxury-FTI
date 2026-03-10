@@ -181,5 +181,16 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         transform-origin: top center;
         animation: none;
         position: absolute;
+        animation: animation-desliz 0.5s ease-in-out;
     }
+
+    @keyframes animation-desliz {
+        to{
+            transform: scaleY(1);
+        }
+        from{
+            transform: scaleY(0);
+        }
+    }
+
 </style>
