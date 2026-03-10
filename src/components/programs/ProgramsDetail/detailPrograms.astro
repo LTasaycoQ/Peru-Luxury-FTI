@@ -33,7 +33,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
 
 <section class="font-[Poppins] bg-[#FAFAF8] w-full flex flex-col justify-center items-center p-[30px]">
     <div class="w-[80%] max-lg:w-full pt-[30px]">
-        <h1 data-aos="fade-up" class="text-start text-[36px] text-gray-800 font-medium">
+        <h1 data-aos="fade-up" class="text-start text-[32px] text-gray-800 font-medium">
             {title}
         </h1>
 
@@ -49,17 +49,17 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
             </div>
    
                 <div class="p-[20px] max-md:p-[0]">
-                    <div id="brief" class="tab-content flex gap-[70px]  max-xl:flex-col">
+                    <div id="brief" class="tab-content flex gap-[90px]  max-xl:flex-col">
                         <div>
                             {programBreve.map((breve) => (
                                 <div class="py-[16px] pb-[10px]">
-                                    <h3 class="flex gap-[10px] text-gray-700 text-[20px] font-[500]">{breve.titulo_breve}</h3>
+                                    <h3 class="flex gap-[10px] text-gray-700 text-[18px] font-[500]">{breve.titulo_breve}</h3>
                                     <span class="text-gray-700 text-[15px] font-[300]">{breve.text_breve}</span>
                                 </div>
                             ))}
                         </div>
                         
-                        <div class=" w-[25%] max-xl:w-[100%]">
+                        <div class=" w-[25%] max-xl:w-[100%] relative top-[-88px]">
                             <div class="p-[15px] border-[1px] border-gray-300 rounded-[5px] bg-white  max-md:w-[100%]">
                                 <div class="bg-gray-700 text-white text-center rounded-[5px] p-[12px]">
                                     <h3>Find the Perfect Journey for You</h3>
@@ -109,7 +109,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                     <div id="itinerary" class="tab-content hidden">
                         {programItenerario.map((itenerario, index) => (
                             <div class="py-[8px] accordion-item">
-                                <button class="accordion-header bg-[#FAFAFF] max-md:text-[18px] text-[20px] font-[500] p-[13px] rounded-t-[10px] text-gray-700 border-[1px] border-gray-200 flex justify-between items-center w-full text-left" data-index={index}>
+                                <button class="accordion-header bg-[#FAFAFF] max-md:text-[17px] text-[18px] font-[500] p-[13px] rounded-t-[10px] text-gray-700 border-[1px] border-gray-200 flex justify-between items-center w-full text-left" data-index={index}>
                                     {itenerario.ite_titulo}
                                     <svg class="chevron transition-transform duration-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <polyline points="6 9 12 15 18 9"></polyline>
@@ -120,7 +120,7 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                     <div class="overflow-hidden">
                                         <div class="flex flex-row max-lg:flex-col gap-[30px] p-[30px] border-[1px] border-gray-200 border-t-0 bg-[#FAFAFF] rounded-b-[10px]">
                                             <div class="w-[60%] max-lg:w-full">
-                                                <p class="text-[15px] font-[300] text-gray-700 leading-relaxed" set:html={itenerario.ite_text}></p>
+                                                <p class="text-[14px] font-[300] text-gray-700 leading-relaxed" set:html={itenerario.ite_text}></p>
                                             </div>
                                             
                                             <div class="img-gallery w-[40%] max-lg:w-full">
