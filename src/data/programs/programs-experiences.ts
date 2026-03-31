@@ -204,7 +204,7 @@ export const programs: programsData[] = [
                     
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826862/9.1_11zon_kyz8ug.webp",
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750024/9_17_11zon_bzbvwq.webp",
-                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750029/8_12_11zon_r4mi5c.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/8_11zon_11zon_facbyt.webp",
                 ],
             },
 
