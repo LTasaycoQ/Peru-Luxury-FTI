@@ -2,12 +2,10 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DistrictInicio from "../../components/destinations/distritos/districtInicio.astro";
 import OurParners from "../../components/destinations/distritos/OurParners.astro";
-import ExceptionalExperience from "../../components/destinations/distritos/ExceptionalExperience.astro";
 import Fondo from "../../components/Fondo.astro";
 
 import { destinations } from "../../data/destinations/destinatios";
 import { hotels } from "../../data/destinations/hotels";
-import { destinationsExp } from "../../data/destinations/experienceDestinations";
 
 export async function getStaticPaths() {
   return destinations.map((dest) => ({
@@ -39,10 +37,6 @@ const partnersFormatted = destinationHotels.map((hotel) => ({
   name: hotel.title,
   link: `/parners/${hotel.slug}`,
 }));
-
-
-
-
 
 ---
 

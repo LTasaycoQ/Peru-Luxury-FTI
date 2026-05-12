@@ -1,5 +1,6 @@
 export interface programsData {
     fondo: string;
+    fondoHeader?: string;
     name: string;
     title: string;
     text: string;
@@ -41,7 +42,7 @@ export const programs: programsData[] = [
         title: "Eight Unforgettable Nights as you Step Back in Time ",
         text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
         name: "seven",
-
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812725/lima6_gpntwj.webp", link: "lima",},
@@ -280,6 +281,8 @@ export const programs: programsData[] = [
         title: "Legacy of The Incas",
         text: "A two week program including Belmond hotels and trains.",
         name: "legacy-of-the-incas",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
@@ -531,6 +534,8 @@ export const programs: programsData[] = [
         title: "Wonders of Peru",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "wonders-of-peru",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812725/lima6_gpntwj.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772813378/Arequipa-5_11zon_gjmvmc.webp", link: "arequipa",},
@@ -672,6 +677,8 @@ export const programs: programsData[] = [
         title: "Peru Boutique",
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties.",
         name: "peru-boutique",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
@@ -830,6 +837,8 @@ export const programs: programsData[] = [
         title: "Peru Spectacular",
         text: "A two week program including Belmond hotels and trains",
         name: "peru-spectacular",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
@@ -940,6 +949,8 @@ export const programs: programsData[] = [
         title: "Peru Magic",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "peru-magic",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
