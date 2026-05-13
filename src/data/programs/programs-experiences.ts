@@ -837,7 +837,7 @@ export const programs: programsData[] = [
         title: "Peru Spectacular",
         text: "A two week program including Belmond hotels and trains",
         name: "peru-spectacular",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778685759/iStock-858373544_evgxxd.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
@@ -949,7 +949,7 @@ export const programs: programsData[] = [
         title: "Peru Magic",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "peru-magic",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778687033/iStock-2210582847_tdu1ej.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},

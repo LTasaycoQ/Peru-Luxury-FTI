@@ -23,8 +23,14 @@ const { fondo } = Astro.props;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        animation: efectZoom 10s ease-in-out forwards;
     }
+
+    @media (width <= 830px) {
+        .fondo {
+            
+        }
+    }
+
     .fondo-section {
         overflow: hidden;
     }
@@ -41,4 +47,7 @@ const { fondo } = Astro.props;
             transform: scale(1.2); 
         }
     } 
+
+
+
 </style>
