@@ -91,56 +91,54 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 </header>
 
 <script>
-
+  function initNav() {
     const btnMenu = document.getElementById("btnMenu") as HTMLButtonElement;
     const openMenuIcon = document.getElementById("openMenu") as HTMLElement;
     const closeMenuIcon = document.getElementById("closeMenu") as HTMLElement;
     const menuResponsive = document.getElementById("menuResponsive") as HTMLElement;
 
-    btnMenu.addEventListener("click", () => {
-        const isHidden = menuResponsive.classList.contains("hidden");
-        
-        menuResponsive.classList.toggle("hidden");
-        
-        openMenuIcon.classList.toggle("hidden", isHidden); 
-        closeMenuIcon.classList.toggle("hidden", !isHidden);
-        
-        btnMenu.setAttribute("aria-expanded", String(isHidden));
+    btnMenu?.addEventListener("click", () => {
+      const isHidden = menuResponsive.classList.contains("hidden");
+      menuResponsive.classList.toggle("hidden");
+      openMenuIcon.classList.toggle("hidden", isHidden);
+      closeMenuIcon.classList.toggle("hidden", !isHidden);
+      btnMenu.setAttribute("aria-expanded", String(isHidden));
     });
-
 
     const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
     const submenuDesktop    = document.getElementById("submenu") as HTMLElement;
     const iconSubmenu       = document.getElementById("iconSubmenu") as HTMLElement;
 
-    btnSubmenuDesktop.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const isOpen = !submenuDesktop.classList.contains("hidden");
-        submenuDesktop.classList.toggle("hidden");
-        iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
-        btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
+    btnSubmenuDesktop?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !submenuDesktop.classList.contains("hidden");
+      submenuDesktop.classList.toggle("hidden");
+      iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+      btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
     });
 
     document.addEventListener("click", (e) => {
-        if (!btnSubmenuDesktop.contains(e.target as Node)) {
-            submenuDesktop.classList.add("hidden");
-            iconSubmenu.style.transform = "rotate(0deg)";
-            btnSubmenuDesktop.setAttribute("aria-expanded", "false");
-        }
+      if (!btnSubmenuDesktop?.contains(e.target as Node)) {
+        submenuDesktop?.classList.add("hidden");
+        if (iconSubmenu) iconSubmenu.style.transform = "rotate(0deg)";
+        btnSubmenuDesktop?.setAttribute("aria-expanded", "false");
+      }
     });
 
-    const btnSubMenuResponsive = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
-    const submenuResponsive = document.getElementById("submenuResponsive") as HTMLElement;
+    const btnSubMenuResponsive     = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
+    const submenuResponsive        = document.getElementById("submenuResponsive") as HTMLElement;
     const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon") as HTMLElement;
 
-    btnSubMenuResponsive.addEventListener("click", () => {
-        const isOpen = !submenuResponsive.classList.contains("hidden");
-        submenuResponsive.classList.toggle("hidden");
-        iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-        btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
+    btnSubMenuResponsive?.addEventListener("click", () => {
+      const isOpen = !submenuResponsive.classList.contains("hidden");
+      submenuResponsive.classList.toggle("hidden");
+      iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
     });
-</script>
+  }
 
+  document.addEventListener("astro:page-load", initNav);
+</script>
 <style>
     .linksEffect a {
         position: relative;
