@@ -26,6 +26,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             ></div>
         </form>
         <p id="form-msg-itenerary" style="">✓ Sent Successfully</p>
+        <p id="form-msg-captcha" style="">Fallo al Enviar la Solicitud</p>
       </div>
     </div>
     <div>
@@ -38,6 +39,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   </div>
 </section>
 
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <style>
@@ -45,6 +48,13 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     display: none;
     color: #dabb42;
     font-size: 13px;
+    margin-top: 6px;
+  }
+    #form-msg-captcha {
+    display: none;
+    color: #883117;
+    font-size: 14px;
+    font-weight: 700;
     margin-top: 6px;
   }
   .btn-itenerary {
@@ -152,7 +162,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
     const turnstileResponse = turnstile.getResponse();
     if (!turnstileResponse) {
-      alert("Por favor, completa la verificación de seguridad.");
+      document.getElementById("form-msg-captcha").style.display = "block";
       form.reset();
       return;
     }
