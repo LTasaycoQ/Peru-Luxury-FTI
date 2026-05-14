@@ -63,15 +63,30 @@ const topDestinations = destinations.slice(0, 9);
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoadSubscribete" async defer></script>
 
 <script is:inline>
-  let widgetIdSubscribete;
+   let widgetIdSubscribete;
 
-  window.onTurnstileLoadSubscribete = function () {
+  function initTurnstileSubscribete() {
+    if (widgetIdSubscribete !== undefined) return;
+
     widgetIdSubscribete = turnstile.render('#turnstile-subscribete', {
       sitekey: '0x4AAAAAADPSXd3qXHlO8V95',
       theme: 'light',
       size: 'normal',
     });
-  };
+  }
+
+  if (typeof turnstile !== 'undefined') {
+    initTurnstileSubscribete();
+  } else {
+    document.addEventListener('turnstile-ready', initTurnstileSubscribete);
+    const interval = setInterval(() => {
+      if (typeof turnstile !== 'undefined') {
+        clearInterval(interval);
+        initTurnstileSubscribete();
+      }
+    }, 100);
+  }
+
 
   const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
