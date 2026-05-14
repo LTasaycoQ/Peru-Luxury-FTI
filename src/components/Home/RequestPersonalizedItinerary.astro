@@ -13,8 +13,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       <div class="w-full">
         <form action="" class="formulario-itinerary">
           <div class="container-input">
-            <input name="Nombre" required placeholder="Full Name" type="text" />
-            <input name="Email" required type="email" placeholder="Email" />
+            <input name="Nombre" placeholder="Full Name" type="text" />
+            <input name="Email" type="email" placeholder="Email" />
           </div>
           <button class="btn-itenerary" type="submit">Submit</button>
           <div
@@ -40,6 +40,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 </section>
 
 
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <script is:inline>
   const apiMailEndpoint = "https://fti-emailservice.vercel.app/contact";
@@ -54,7 +55,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     btn.disabled = true;
     btn.innerText = "Sending...";
 
-    const turnstileResponse = formData.get("cf-turnstile");    
+    const turnstileResponse = turnstile.getResponse();
     if (!turnstileResponse) {
       btn.innerText = "Cancelado";
       document.getElementById("form-msg-captcha").style.display = "block";
