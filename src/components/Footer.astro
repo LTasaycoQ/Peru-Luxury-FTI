@@ -1,14 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import { destinations } from "../data/destinations/destinatios";
 import "../styles/footer.css"
 const topDestinations = destinations.slice(0, 9);
+
+import logo from "../assets/logo/PLJ-LOGO-1.webp"
 ---
 
 <footer class="footer-modern">
   <div class="footer-content">
     
     <div class="footer-brand justify-center items-start flex flex-col">
-      <img src="https://i0.wp.com/peruluxuryjourneys.com/wp-content/uploads/2025/03/PLJ-LOGO-1.png?fit=240%2C70&ssl=1" alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
+      <Image src={logo} alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
       <p class="brand-description max-sm:text-center">
         Crafting unique and unforgettable luxury experiences across the wonders of Peru.
       </p>

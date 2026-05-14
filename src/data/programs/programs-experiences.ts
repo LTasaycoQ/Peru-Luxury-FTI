@@ -281,7 +281,7 @@ export const programs: programsData[] = [
         title: "Legacy of The Incas",
         text: "A two week program including Belmond hotels and trains.",
         name: "legacy-of-the-incas",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778791322/pexels-gilmer-diaz-estela-7143997_nh3okl.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},

@@ -6,9 +6,10 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
 ---
 
-<header class="w-full flex flex-col justify-center items-center relative">
+<header class="bg-white w-full flex flex-col justify-center items-center relative">
     <HeaderTop />
-    <nav class="w-[70%] max-xl:w-[90%] p-[5px]">
+    <div class="w-full bg-white flex justify-center items-center ">
+    <nav  class="bg-white w-[70%] max-xl:w-[90%] p-[5px]">
         <div class="flex w-full justify-between items-center">
             <a href="/">
                 <Image src={logo} loading="eager" class="max-sm:w-[210px] w-[220px] max-sm:p-[7px]" alt="logo-peru-luxy" />
@@ -46,6 +47,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
             </ul>
         </div>
     </nav>
+    </div>
 
     <div class="lg:hidden w-full">
         <div id="menuResponsive" class="hidden w-full bg-[#393939] text-white z-40">
