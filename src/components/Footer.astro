@@ -64,7 +64,6 @@ const topDestinations = destinations.slice(0, 9);
   </div>
 
 </footer>
-
 <script is:inline>
   const apiMailEndpointSubscribete = "https://fti-emailservice.vercel.app/subscribe";
   const formSubscribete = document.querySelector(".form-contacto-subcribete");
@@ -73,24 +72,33 @@ const topDestinations = destinations.slice(0, 9);
     e.preventDefault();
 
     const btn = formSubscribete.querySelector("button");
+    const msgElement = document.getElementById("form-msg");
+
+    msgElement.style.display = "none";
+    msgElement.style.color = "#DABB42";
+    msgElement.innerText = "✓ You're subscribed!";
+
     btn.disabled = true;
     btn.innerText = "Sending...";
 
+    const formData = new FormData(formSubscribete);
     
-    const turnstileResponseFooter = turnstile.getResponse();
-    if (!turnstileResponseFooter) {
-      btn.innerText = "Cancelado";
-      formSubscribete.reset();
+    const turnstileResponse = formData.get("cf-turnstile-response");
+
+    if (!turnstileResponse) {
+      btn.innerText = "Subscribe";
+      btn.disabled = false;
+      msgElement.innerText = "Please verify the captcha.";
+      msgElement.style.color = "#e57373";
+      msgElement.style.display = "block";
       return;
     }
 
-
-    const formData = new FormData(formSubscribete);
     const data = {
       nombre: formData.get("Nombre"),
       apellido: formData.get("Apellido"),
       email: formData.get("Email"),
-      captcha: turnstileResponseFooter,
+      captcha: turnstileResponse,
     };
 
     try {
@@ -102,16 +110,18 @@ const topDestinations = destinations.slice(0, 9);
 
       if (!response.ok) throw new Error(`Error: ${response.status}`);
 
-      await response.json();
-
-      document.getElementById("form-msg").style.display = "block";
+      msgElement.style.display = "block";
       formSubscribete.reset();
+      
+      if (typeof turnstile !== "undefined") {
+        turnstile.reset();
+      }
 
     } catch (error) {
       console.error("Error:", error);
-      document.getElementById("form-msg").innerText = "Something went wrong. Please try again.";
-      document.getElementById("form-msg").style.color = "#e57373";
-      document.getElementById("form-msg").style.display = "block";
+      msgElement.innerText = "Something went wrong. Please try again.";
+      msgElement.style.color = "#e57373";
+      msgElement.style.display = "block";
     } finally {
       btn.disabled = false;
       btn.innerText = "Subscribe";
