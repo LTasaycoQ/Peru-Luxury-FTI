@@ -9,22 +9,17 @@ export interface rightImage {
 export interface expDestinatiosData {
   fondo: string;
   experienciaLugar: string;
-
-
   titleSEO: string;
   title: string;
   description: string;
-
   rightImage?: rightImage[];
   downImage?: downImage[];
 
 }
 
 export const destinationsExp: expDestinatiosData[] = [
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659636/pexels-eugeniofr-31746139_1_trnyji.webp",
-
     experienciaLugar: "chinchero-town",
     title: "Chinchero Town",
     titleSEO:  "Chinchero Town",
@@ -40,7 +35,6 @@ export const destinationsExp: expDestinatiosData[] = [
     ],
    
   },
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp",
     experienciaLugar: "ollantaytambo-town",
@@ -56,18 +50,14 @@ export const destinationsExp: expDestinatiosData[] = [
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659968/shutterstock_103491710_lp15kn.webp"},
     ],
-
-    
   },
-
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660222/jan-kronies-8Hzo5iZaS90-unsplash_js9fs8.webp",
-
     experienciaLugar: "seven-color",
     title: "The best way to visit Rainbow Mountain - Seven Color Mountain (Vinicunca)",
     titleSEO:  "Seven Color Mountain",
     description: `
-    Visiting Rainbow Mountain (Vinicunca) is one of the most anticipated excursions of a trip to Peru. However, the way you experience it makes a profound difference. Opting for a Private Tour, rather than a Regular Group Tour, is not just a matter of comfort, but also of quality, safety, and an authentic enjoyment of the Andean environment.<br><br>
+    Visiting <a href="https://google.com" target="_blank" style="color: #2a74b1;font-weight:500; ">Rainbow<i class="bi bi-link-45deg"></i></a> Mountain (Vinicunca) is one of the most anticipated excursions of a trip to Peru. However, the way you experience it makes a profound difference. Opting for a Private Tour, rather than a Regular Group Tour, is not just a matter of comfort, but also of quality, safety, and an authentic enjoyment of the Andean environment.<br><br>
 
     <b>Your own pace and better-planned schedules:</b><br>
     With a private tour, the itinerary is tailored to the individual, not the group. This allows for strategic departures to avoid peak hours, flexible stops along the way, and an ascent at a comfortable pace, respecting acclimatization and physical well-being.<br><br>
@@ -85,7 +75,6 @@ export const destinationsExp: expDestinatiosData[] = [
     Breakfast and lunch are served at the finest restaurants available in the region. They offer a clear improvement over the basic options usually found in typical group tour restaurants.<br><br>
 
     Thank you for taking the time to read.`,
-
     rightImage: [
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660418/mckayla-crump-hjanvZlqoB8-unsplash_ddxwll.webp"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660244/eddie-kiszka-w-CG0IqRevM-unsplash_s03naa.webp"},
@@ -97,12 +86,7 @@ export const destinationsExp: expDestinatiosData[] = [
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660222/jan-kronies-8Hzo5iZaS90-unsplash_js9fs8.webp"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660238/gabriel-silva-suares-FIMZGAXhp_c-unsplash_nfgpty.webp"},
     ],
-
   },
-
-
-
-  
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660121/shutterstock_202551493_mt461m.webp",
     experienciaLugar: "pachamanca-inca",
@@ -129,7 +113,6 @@ export const destinationsExp: expDestinatiosData[] = [
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660111/ollantaytambo-vale-sagrado_tmowys.webp"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772659968/shutterstock_103491710_lp15kn.webp"},
     ],
-
     
   },
 

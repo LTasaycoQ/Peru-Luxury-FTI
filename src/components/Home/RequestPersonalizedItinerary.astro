@@ -1,148 +1,143 @@
 ---
-import { Image } from "astro:assets"
-import contactImage from "../../assets/image/Home-img/contact-us.webp"
+import { Image } from "astro:assets";
+import contactImage from "../../assets/image/Home-img/contact-us.webp";
 ---
-<script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-  async
-  defer
-></script>
+
 <section class="section-form-Itinerary">
-    <div class="container__All--itinerary">
-        <div class="container-itinerary">
-            <h3 data-aos="fade-right" class="title-h2">Your Journey Starts Here</h3>
-            <p class="text-parrafo">Request Your personalizaed itinerary and start your <br> unforgettable journey.</p>
-            <div class="w-full">
-                <form action="" class="formulario-itinerary">
-                    <div class="container-input">
-                        <input name="Nombre" placeholder="Full Name" type="text">
-                        <input name="Email" type="email" placeholder="Email" >
-                    </div>
-                    <button class="btn-itenerary" type="submit">Submit</button>
-
-                    <div
-                        id="turnstile-itinerary"
-                        class="cf-turnstile"
-                        data-sitekey="0x4AAAAAADOng-oSlvVI2xke"
-                        data-theme="light"
-                        data-size="normal"
-                        data-callback="onSuccess"
-                        >
-                    </div>
-                </form>
-                
-                <p id="form-msg-itenerary" style="">✓ Sent Successfully</p>
-            </div>
-        </div>
-        <div>
-            <Image class="imagenItineray rounded-[12px]" alt="imagen - contact" src={contactImage} />
-        </div>
+  <div class="container__All--itinerary">
+    <div class="container-itinerary">
+      <h3 data-aos="fade-right" class="title-h2">Your Journey Starts Here</h3>
+      <p class="text-parrafo">
+        Request Your personalizaed itinerary and start your <br /> unforgettable journey.
+      </p>
+      <div class="w-full">
+        <form action="" class="formulario-itinerary">
+          <div class="container-input">
+            <input name="Nombre" placeholder="Full Name" type="text" />
+            <input name="Email" type="email" placeholder="Email" />
+          </div>
+          <button class="btn-itenerary" type="submit">Submit</button>
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADPRDCFRFmqKw5yy"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+            ></div>
+        </form>
+        <p id="form-msg-itenerary" style="">✓ Sent Successfully</p>
+      </div>
     </div>
+    <div>
+      <Image
+        class="imagenItineray rounded-[12px]"
+        alt="imagen - contact"
+        src={contactImage}
+      />
+    </div>
+  </div>
 </section>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <style>
+  #form-msg-itenerary {
+    display: none;
+    color: #dabb42;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .btn-itenerary {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #cf7b4e, #dabb42);
+  }
 
-    #form-msg-itenerary{
-        display: none;
-        color:  #DABB42;
-        font-size: 13px;
-        margin-top: 6px;
-    }
-    .btn-itenerary{
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(135deg, #cf7b4e, #DABB42);
-    }
+  .title-h2 {
+    margin-bottom: 25px;
+    font-size: 37.5px;
+  }
+  .text-parrafo {
+    margin-bottom: 65px;
+    font-size: 18.4px;
+    color: rgb(13, 29, 63);
+    font-weight: 300;
+  }
 
-    .title-h2{
-        margin-bottom: 25px;
-        font-size: 37.5px;
-    }
-    .text-parrafo{
-        margin-bottom: 65px;
-        font-size: 18.4px;
-        color: rgb(13, 29, 63);
-        font-weight: 300;
-    }
-    
-    .section-form-Itinerary{ 
-        padding: 30px;
-        margin-top: 12em;
-        width: 100%;
-        background-color: #F7F7F7;
-        font-family: 'Poppins';
-        display: flex; 
-        gap: 40px;
-        justify-content: center;
-        align-items: center;
+  .section-form-Itinerary {
+    padding: 30px;
+    margin-top: 12em;
+    width: 100%;
+    background-color: #f7f7f7;
+    font-family: "Poppins";
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    }
+  .container__All--itinerary {
+    width: 110em;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    .container__All--itinerary{
-        width: 110em;
-        margin-bottom: 100px;
-        margin-top: 50px;
-        display: flex;
-        gap:40px;
-        justify-content: space-around;
-        align-items: center;
-    }
+  .formulario-itinerary {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
 
-    .formulario-itinerary{
-        width: 100%;
-        display: flex;
-        gap:20px;
+  @media (width < 64rem) {
+    .container__All--itinerary {
+      flex-direction: column;
     }
+  }
 
-    @media (width < 64rem) { 
-        .container__All--itinerary{
-            flex-direction: column;
-        }
-        
-    }
+  .container-input {
+    display: flex;
+    gap: 20px;
+  }
 
-    .container-input{
-        display: flex;
-        gap:20px;
-    }
+  .formulario-itinerary input {
+    padding: 10px;
+    width: 50%;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+    outline: none;
+    background-color: white;
+    border: 1px solid rgb(201, 201, 201);
+  }
+  .formulario-itinerary button {
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #dabb42;
+    cursor: pointer;
+  }
+  .formulario-itinerary button:hover {
+    background-color: #f7d30e;
+  }
+  .imagenItineray {
+    width: 42em;
+  }
 
- 
+  @media (width < 48rem) {
+    .formulario-itinerary button,
+    .formulario-itinerary input,
+    .formulario-itinerary,
+    .container-input {
+      width: 100%;
 
-    .formulario-itinerary input{
-        padding: 10px;
-        width: 50%;   
-        font-weight: 300;
-        color: rgb(100, 100, 100);
-        outline: none;
-        background-color: white;
-        border: 1px solid rgb(201, 201, 201);
+      flex-direction: column;
     }
-    .formulario-itinerary button{
-        padding: 10px;
-        width: 200px;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: 700;
-        color: white;
-        background-color: #DABB42;
-        cursor: pointer;
-    }
-    .formulario-itinerary button:hover{
-        background-color: #F7D30E;
-
-    }
-    .imagenItineray{
-        width: 42em;
-    }
-
-       @media (width < 48rem) { 
-        .formulario-itinerary button,
-        .formulario-itinerary input,
-        .formulario-itinerary,
-        .container-input{
-            width: 100%;
-            
-            flex-direction: column;
-        }
-     }
+  }
 </style>
 
 <script is:inline>
@@ -151,22 +146,30 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp"
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const btn = form.querySelector("button");
     btn.disabled = true;
     btn.innerText = "Sending...";
 
+    const turnstileResponse = turnstile.getResponse();
+    if (!turnstileResponse) {
+      showError(locale === "en"
+        ? "Please complete the security check."
+        : "Por favor, completa la verificación de seguridad."
+      );
+      return;
+    }
+
     const formData = new FormData(form);
     const data = {
       nombre: formData.get("Nombre"),
-      email: formData.get("Email")
+      email: formData.get("Email"),
+      captcha: turnstileResponse,
     };
-
     try {
       const response = await fetch(apiMailEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) throw new Error(`Error: ${response.status}`);
@@ -175,10 +178,10 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp"
 
       document.getElementById("form-msg-itenerary").style.display = "block";
       form.reset();
-
     } catch (error) {
       console.error("Error:", error);
-      document.getElementById("form-msg-itenerary").innerText = "Something went wrong. Please try again.";
+      document.getElementById("form-msg-itenerary").innerText =
+        "Something went wrong. Please try again.";
       document.getElementById("form-msg-itenerary").style.color = "#e57373";
       document.getElementById("form-msg-itenerary").style.display = "block";
     } finally {
