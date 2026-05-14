@@ -61,12 +61,15 @@ const topDestinations = destinations.slice(0, 9);
 </footer>
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoadSubscribete" async defer></script>
-
 <script is:inline>
-   let widgetIdSubscribete;
+  let widgetIdSubscribete;
 
   function initTurnstileSubscribete() {
-    if (widgetIdSubscribete !== undefined) return;
+    // Limpia el div por si quedó contenido de una navegación anterior
+    const container = document.getElementById('turnstile-subscribete');
+    if (!container) return;
+    container.innerHTML = '';
+    widgetIdSubscribete = undefined;
 
     widgetIdSubscribete = turnstile.render('#turnstile-subscribete', {
       sitekey: '0x4AAAAAADPSXd3qXHlO8V95',
@@ -75,18 +78,24 @@ const topDestinations = destinations.slice(0, 9);
     });
   }
 
-  if (typeof turnstile !== 'undefined') {
-    initTurnstileSubscribete();
-  } else {
-    document.addEventListener('turnstile-ready', initTurnstileSubscribete);
-    const interval = setInterval(() => {
-      if (typeof turnstile !== 'undefined') {
-        clearInterval(interval);
-        initTurnstileSubscribete();
-      }
-    }, 100);
+  function setupTurnstile() {
+    if (typeof turnstile !== 'undefined') {
+      initTurnstileSubscribete();
+    } else {
+      const interval = setInterval(() => {
+        if (typeof turnstile !== 'undefined') {
+          clearInterval(interval);
+          initTurnstileSubscribete();
+        }
+      }, 100);
+    }
   }
 
+  // Inicial
+  setupTurnstile();
+
+  // Cada vez que Astro hace una navegación con View Transitions
+  document.addEventListener('astro:page-load', setupTurnstile);
 
   const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
@@ -97,8 +106,6 @@ const topDestinations = destinations.slice(0, 9);
     const msgElement = document.getElementById("form-msg");
 
     msgElement.style.display = "none";
-    msgElement.style.color = "#DABB42";
-    msgElement.innerText = "✓ You're subscribed!";
 
     const turnstileResponse = turnstile.getResponse(widgetIdSubscribete);
 
@@ -130,6 +137,8 @@ const topDestinations = destinations.slice(0, 9);
 
       if (!response.ok) throw new Error(`Error: ${response.status}`);
 
+      msgElement.style.color = "#DABB42";
+      msgElement.innerText = "✓ You're subscribed!";
       msgElement.style.display = "block";
       formSubscribete.reset();
       turnstile.reset(widgetIdSubscribete);
