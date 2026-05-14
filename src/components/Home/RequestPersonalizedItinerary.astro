@@ -13,8 +13,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       <div class="w-full">
         <form action="" class="formulario-itinerary">
           <div class="container-input">
-            <input name="Nombre" required placeholder="Full Name" type="text" />
-            <input name="Email" required type="email" placeholder="Email" />
+            <input name="Nombre" placeholder="Full Name" type="text" />
+            <input name="Email" type="email" placeholder="Email" />
           </div>
             <button id="btn-itinerary" class="btn-itenerary" type="submit">Submit</button>
             <div 
@@ -38,27 +38,30 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 </section>
 
 
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <script>
   declare global {
     interface Window {
-      turnstile: any;
+      turnstile?: {
+        render: (container: HTMLElement) => void;
+        getResponse: () => string | undefined;
+        reset: () => void;
+      };
     }
   }
 
   function initItineraryForm() {
-    const form = document.getElementById("itinerary-form") as HTMLFormElement;
-    const btn = document.getElementById("btn-itenerary") as HTMLButtonElement;
-    const turnstileContainer = document.getElementById("turnstile-container");
+    const form = document.querySelector(".formulario-itinerary") as HTMLFormElement;
+    const btn = document.getElementById("btn-itinerary") as HTMLButtonElement;
     const msgSuccess = document.getElementById("form-msg-itenerary");
     const msgError = document.getElementById("form-msg-captcha");
+    const turnstileContainer = document.getElementById("turnstile-container");
 
     if (!form || !btn) return;
 
     if (window.turnstile && turnstileContainer) {
-      turnstileContainer.innerHTML = ''; 
-      window.turnstile.render(turnstileContainer, {
-        sitekey: "0x4AAAAAADPRDCFRFmqKw5yy",
-      });
+      window.turnstile.render(turnstileContainer);
     }
 
     form.addEventListener("submit", async (e) => {
@@ -72,7 +75,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       
       if (!turnstileResponse) {
         if (msgError) {
-          msgError.innerText = "Please complete the captcha verification.";
+          msgError.innerText = "Please verify the captcha";
           msgError.style.display = "block";
         }
         return;
@@ -104,7 +107,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
         }
         
         form.reset();
-        window.turnstile?.reset();
+        window.turnstile?.reset(); // Limpiar captcha tras éxito
+
       } catch (error) {
         console.error("Error:", error);
         if (msgSuccess) {
@@ -121,6 +125,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
   document.addEventListener("astro:page-load", initItineraryForm);
 </script>
+
+
 
 <style>
   #form-msg-itenerary {
