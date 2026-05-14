@@ -49,15 +49,6 @@ const topDestinations = destinations.slice(0, 9);
             <input name="Apellido" type="text" required placeholder="Last Name">
           </div>
           <input name="Email" type="email" required placeholder="Email">
-         
-          <div
-            class="cf-turnstile"
-            data-sitekey="0x4AAAAAADPSXd3qXHlO8V95"
-            data-theme="light"
-            data-size="normal"
-            data-callback="onSuccess"
-            ></div>
-
           <button id="btn-submit" class="button" type="submit">Subscribe</button>
           <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
         </div>
@@ -82,25 +73,12 @@ const topDestinations = destinations.slice(0, 9);
 
     btn.disabled = true;
     btn.innerText = "Sending...";
-
     const formData = new FormData(formSubscribete);
     
-    const turnstileResponse = formData.get("cf-turnstile-response");
-
-    if (!turnstileResponse) {
-      btn.innerText = "Subscribe";
-      btn.disabled = false;
-      msgElement.innerText = "Please verify the captcha.";
-      msgElement.style.color = "#e57373";
-      msgElement.style.display = "block";
-      return;
-    }
-
     const data = {
       nombre: formData.get("Nombre"),
       apellido: formData.get("Apellido"),
-      email: formData.get("Email"),
-      captcha: turnstileResponse,
+      email: formData.get("Email")
     };
 
     try {
@@ -115,10 +93,6 @@ const topDestinations = destinations.slice(0, 9);
       msgElement.style.display = "block";
       formSubscribete.reset();
       
-      if (typeof turnstile !== "undefined") {
-        turnstile.reset();
-      }
-
     } catch (error) {
       console.error("Error:", error);
       msgElement.innerText = "Something went wrong. Please try again.";
