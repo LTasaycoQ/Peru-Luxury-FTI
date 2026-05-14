@@ -54,7 +54,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     btn.disabled = true;
     btn.innerText = "Sending...";
 
-    const turnstileResponse = formData.get("cf-turnstile-response");    
+    const turnstileResponse = formData.get("cf-turnstile");    
     if (!turnstileResponse) {
       btn.innerText = "Cancelado";
       document.getElementById("form-msg-captcha").style.display = "block";
