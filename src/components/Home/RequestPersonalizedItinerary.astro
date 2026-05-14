@@ -17,13 +17,18 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             <input name="Email" type="email" placeholder="Email" />
           </div>
           <button class="btn-itenerary" type="submit">Submit</button>
-          <div id="turnstile-itinerary"></div>
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADPRDCFRFmqKw5yy"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+            ></div>
         </form>
         <p id="form-msg-itenerary">✓ Sent Successfully</p>
-        <p id="form-msg-captcha">Please verify the captcha.</p>
+        <p id="form-msg-captcha">Fallo al Enviar la Solicitud</p>
       </div>
     </div>
-    
     <div>
       <Image
         class="imagenItineray rounded-[12px]"
@@ -34,51 +39,37 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   </div>
 </section>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoadItinerary" async defer></script>
+
 
 <script is:inline>
-  let widgetIdItinerary;
-
-  window.onTurnstileLoadItinerary = function () {
-    widgetIdItinerary = turnstile.render('#turnstile-itinerary', {
-      sitekey: '0x4AAAAAADPRDCFRFmqKw5yy',
-      theme: 'light',
-      size: 'normal',
-    });
-  };
-
+  const apiMailEndpoint = "https://fti-emailservice.vercel.app/contact";
   const form = document.querySelector(".formulario-itinerary");
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const btn = form.querySelector("button");
-    const msgCaptcha = document.getElementById("form-msg-captcha");
-    const msgSuccess = document.getElementById("form-msg-itenerary");
-
-    msgCaptcha.style.display = "none";
-    msgSuccess.style.display = "none";
-
-    const turnstileResponse = turnstile.getResponse(widgetIdItinerary);
-
-    if (!turnstileResponse) {
-      msgCaptcha.style.display = "block";
-      return;
-    }
+    document.getElementById("form-msg-captcha").style.display = "none";
+    document.getElementById("form-msg-itenerary").style.display = "none";
 
     btn.disabled = true;
     btn.innerText = "Sending...";
 
-    const formData = new FormData(form);
+    const turnstileResponse = formData.get("cf-turnstile-response");    
+    if (!turnstileResponse) {
+      btn.innerText = "Cancelado";
+      document.getElementById("form-msg-captcha").style.display = "block";
+      form.reset();
+      return;
+    }
 
+    const formData = new FormData(form);
     const data = {
       nombre: formData.get("Nombre"),
       email: formData.get("Email"),
       captcha: turnstileResponse,
     };
-
     try {
-      const response = await fetch("https://fti-emailservice.vercel.app/contact", {
+      const response = await fetch(apiMailEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -86,23 +77,25 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
       if (!response.ok) throw new Error(`Error: ${response.status}`);
 
-      msgSuccess.style.display = "block";
-      msgSuccess.innerText = "✓ Sent Successfully";
-      msgSuccess.style.color = "";
-      form.reset();
-      turnstile.reset(widgetIdItinerary);
+      await response.json();
 
+      document.getElementById("form-msg-itenerary").style.display = "block";
+      form.reset();
+      turnstile.reset();
     } catch (error) {
       console.error("Error:", error);
-      msgSuccess.innerText = "Something went wrong. Please try again.";
-      msgSuccess.style.color = "#e57373";
-      msgSuccess.style.display = "block";
+      document.getElementById("form-msg-itenerary").innerText =
+        "Something went wrong. Please try again.";
+      document.getElementById("form-msg-itenerary").style.color = "#e57373";
+      document.getElementById("form-msg-itenerary").style.display = "block";
     } finally {
       btn.disabled = false;
-      btn.innerText = "Submit";
+      btn.innerText = "Subscribe";
     }
   });
 </script>
+
+
 
 <style>
   #form-msg-itenerary {
@@ -111,15 +104,13 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     font-size: 13px;
     margin-top: 6px;
   }
-
-  #form-msg-captcha {
+    #form-msg-captcha {
     display: none;
     color: #883117;
     font-size: 14px;
     font-weight: 700;
     margin-top: 6px;
   }
-
   .btn-itenerary {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
     background: linear-gradient(135deg, #cf7b4e, #dabb42);
@@ -129,7 +120,6 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     margin-bottom: 25px;
     font-size: 37.5px;
   }
-
   .text-parrafo {
     margin-bottom: 65px;
     font-size: 18.4px;
@@ -185,7 +175,6 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     background-color: white;
     border: 1px solid rgb(201, 201, 201);
   }
-
   .formulario-itinerary button {
     padding: 10px;
     width: 200px;
@@ -196,11 +185,9 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     background-color: #dabb42;
     cursor: pointer;
   }
-
   .formulario-itinerary button:hover {
     background-color: #f7d30e;
   }
-
   .imagenItineray {
     width: 42em;
   }
@@ -211,6 +198,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     .formulario-itinerary,
     .container-input {
       width: 100%;
+
       flex-direction: column;
     }
   }

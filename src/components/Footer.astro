@@ -1,6 +1,6 @@
 ---
 import { destinations } from "../data/destinations/destinatios";
-
+import "../styles/footer.css"
 const topDestinations = destinations.slice(0, 9);
 ---
 
@@ -12,6 +12,7 @@ const topDestinations = destinations.slice(0, 9);
       <p class="brand-description max-sm:text-center">
         Crafting unique and unforgettable luxury experiences across the wonders of Peru.
       </p>
+     
     </div>
 
     <div class="flex gap-[80px] max-sm:flex-col">
@@ -48,300 +49,84 @@ const topDestinations = destinations.slice(0, 9);
             <input name="Apellido" type="text" required placeholder="Last Name">
           </div>
           <input name="Email" type="email" required placeholder="Email">
-          
-          <div id="turnstile-subscribete"></div>
+         
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADPSXd3qXHlO8V95"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+            ></div>
 
           <button id="btn-submit" class="button" type="submit">Subscribe</button>
           <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
         </div>
       </form>
     </div>
-
   </div>
+
 </footer>
-
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <script is:inline>
-  let widgetIdSubscribete;
+  const apiMailEndpointSubscribete = "https://fti-emailservice.vercel.app/subscribe";
+  const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
-  function initTurnstileSubscribete() {
-    const container = document.getElementById('turnstile-subscribete');
-    if (!container) return;
+  formSubscribete?.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    container.innerHTML = '';
-    widgetIdSubscribete = undefined;
+    const btn = formSubscribete.querySelector("button");
+    const msgElement = document.getElementById("form-msg");
 
-    widgetIdSubscribete = turnstile.render('#turnstile-subscribete', {
-      sitekey: '0x4AAAAAADPSXd3qXHlO8V95',
-      theme: 'light',
-      size: 'normal',
-    });
-  }
+    msgElement.style.display = "none";
+    msgElement.style.color = "#DABB42";
+    msgElement.innerText = "✓ You're subscribed!";
 
-  function setupTurnstile() {
-    if (typeof turnstile !== 'undefined') {
-      initTurnstileSubscribete();
-    } else {
-      const interval = setInterval(() => {
-        if (typeof turnstile !== 'undefined') {
-          clearInterval(interval);
-          initTurnstileSubscribete();
-        }
-      }, 100);
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(formSubscribete);
+    
+    const turnstileResponse = formData.get("cf-turnstile-response");
+
+    if (!turnstileResponse) {
+      btn.innerText = "Subscribe";
+      btn.disabled = false;
+      msgElement.innerText = "Please verify the captcha.";
+      msgElement.style.color = "#e57373";
+      msgElement.style.display = "block";
+      return;
     }
 
-    const formSubscribete = document.querySelector(".form-contacto-subcribete");
+    const data = {
+      nombre: formData.get("Nombre"),
+      apellido: formData.get("Apellido"),
+      email: formData.get("Email"),
+      captcha: turnstileResponse,
+    };
 
-    formSubscribete?.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    try {
+      const response = await fetch(apiMailEndpointSubscribete, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-      const btn = formSubscribete.querySelector("button");
-      const msgElement = document.getElementById("form-msg");
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
 
-      msgElement.style.display = "none";
-
-      const turnstileResponse = turnstile.getResponse(widgetIdSubscribete);
-
-      if (!turnstileResponse) {
-        msgElement.innerText = "Please verify the captcha.";
-        msgElement.style.color = "#e57373";
-        msgElement.style.display = "block";
-        return;
+      msgElement.style.display = "block";
+      formSubscribete.reset();
+      
+      if (typeof turnstile !== "undefined") {
+        turnstile.reset();
       }
 
-      btn.disabled = true;
-      btn.innerText = "Sending...";
-
-      const formData = new FormData(formSubscribete);
-
-      const data = {
-        nombre: formData.get("Nombre"),
-        apellido: formData.get("Apellido"),
-        email: formData.get("Email"),
-        captcha: turnstileResponse,
-      };
-
-      try {
-        const response = await fetch("https://fti-emailservice.vercel.app/subscribe", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-
-        if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-        msgElement.style.color = "#DABB42";
-        msgElement.innerText = "✓ You're subscribed!";
-        msgElement.style.display = "block";
-        formSubscribete.reset();
-        turnstile.reset(widgetIdSubscribete);
-
-      } catch (error) {
-        console.error("Error:", error);
-        msgElement.innerText = "Something went wrong. Please try again.";
-        msgElement.style.color = "#e57373";
-        msgElement.style.display = "block";
-      } finally {
-        btn.disabled = false;
-        btn.innerText = "Subscribe";
-      }
-    });
-  }
-
-  setupTurnstile();
-
-  document.addEventListener('astro:page-load', setupTurnstile);
+    } catch (error) {
+      console.error("Error:", error);
+      msgElement.innerText = "Something went wrong. Please try again.";
+      msgElement.style.color = "#e57373";
+      msgElement.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Subscribe";
+    }
+  });
 </script>
-
-<style>
-  .footer-modern {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 80px 5% 30px 5%;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .footer-content {
-    max-width: 1500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.6fr 3fr 2fr;
-    gap: 30px;
-  }
-
-  .footer-logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-    filter: brightness(20.2);
-  }
-
-  .brand-description {
-    color: #999;
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 15px;
-  }
-
-  .social-links a {
-    color: #DABB42;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  .social-links a:hover {
-    transform: translateY(-5px);
-    color: #fff;
-  }
-
-  .link-group h4 {
-    color: #DABB42;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-  }
-
-  .link-group ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .link-group ul li {
-    margin-bottom: 12px;
-  }
-
-  .link-group a {
-    text-decoration: none;
-    color: #ccc;
-    font-size: 13px;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
-
-  .link-group a:hover {
-    color: #fff;
-    transform: translateX(8px);
-  }
-
-  .footer-newsletter h4 {
-    color: #DABB42;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .footer-newsletter p {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 20px;
-  }
-
-  .box-input--form {
-    display: flex;
-    gap: 10px;
-  }
-
-  .input-box {
-    display: flex;
-    gap: 14px;
-    flex-direction: column;
-    padding: 5px 0;
-  }
-
-  .input-box input {
-    background: white;
-    border: none;
-    border-radius: 10px;
-    color: rgb(107, 107, 107);
-    padding: 10px;
-    width: 100%;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-  }
-
-  .input-box button {
-    background-color: #DABB42;
-    border-radius: 10px;
-    color: #1a1a1a;
-    border: none;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    padding: 11px;
-    font-size: 14px;
-    transition: background-color 0.3s;
-  }
-
-  .input-box button:hover {
-    background-color: #c9a830;
-  }
-
-  .input-box button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  .footer-bottom {
-    margin-top: 80px;
-    padding-top: 30px;
-    border-top: 1px solid #333;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #666;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .bottom-legal {
-    display: flex;
-    gap: 20px;
-  }
-
-  .bottom-legal a {
-    color: #666;
-    text-decoration: none;
-  }
-
-  .bottom-legal a:hover {
-    color: #DABB42;
-  }
-
-  @media (max-width: 1024px) {
-    .footer-content {
-      grid-template-columns: 1fr 2fr;
-    }
-    .footer-newsletter {
-      grid-column: span 2;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .footer-content {
-      grid-template-columns: 1fr;
-    }
-    .footer-newsletter {
-      grid-column: span 1;
-    }
-    .footer-bottom {
-      flex-direction: column;
-      gap: 15px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .box-input--form {
-      flex-direction: column;
-    }
-  }
-</style>
