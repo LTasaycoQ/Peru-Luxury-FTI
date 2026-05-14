@@ -57,51 +57,58 @@ const topDestinations = destinations.slice(0, 9);
   </div>
 
 </footer>
-<script is:inline>
-
-  formSubscribete?.addEventListener("submit", async (e) => {
-    const apiMailEndpointSubscribete = "https://fti-emailservice.vercel.app/subscribe";
-    const formSubscribete = document.querySelector(".form-contacto-subcribete");
-
-    e.preventDefault();
-
-    const btn = formSubscribete.querySelector("button");
+<script>
+  function initFooterForm() {
+    const formSubscribete = document.getElementById("formulario-subcription") as HTMLFormElement;
     const msgElement = document.getElementById("form-msg");
+    const btn = document.getElementById("btn-submit") as HTMLButtonElement;
 
-    msgElement.style.display = "none";
-    msgElement.style.color = "#DABB42";
-    msgElement.innerText = "✓ You're subscribed!";
+    if (!formSubscribete || !msgElement || !btn) return;
 
-    btn.disabled = true;
-    btn.innerText = "Sending...";
-    const formData = new FormData(formSubscribete);
-    
-    const data = {
-      nombre: formData.get("Nombre"),
-      apellido: formData.get("Apellido"),
-      email: formData.get("Email")
-    };
+    formSubscribete.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    try {
-      const response = await fetch(apiMailEndpointSubscribete, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+      const apiMailEndpointSubscribete = "https://fti-emailservice.vercel.app/subscribe";
 
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
+      msgElement.style.display = "none";
+      msgElement.style.color = "#DABB42";
+      msgElement.innerText = "✓ You're subscribed!";
 
-      msgElement.style.display = "block";
-      formSubscribete.reset();
-      
-    } catch (error) {
-      console.error("Error:", error);
-      msgElement.innerText = "Something went wrong. Please try again.";
-      msgElement.style.color = "#e57373";
-      msgElement.style.display = "block";
-    } finally {
-      btn.disabled = false;
-      btn.innerText = "Subscribe";
-    }
-  });
+      btn.disabled = true;
+      btn.innerText = "Sending...";
+
+      const formData = new FormData(formSubscribete);
+      const data = {
+        nombre: formData.get("Nombre"),
+        apellido: formData.get("Apellido"),
+        email: formData.get("Email")
+      };
+
+      try {
+        const response = await fetch(apiMailEndpointSubscribete, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+        msgElement.style.display = "block";
+        formSubscribete.reset();
+        
+      } catch (error) {
+        console.error("Error:", error);
+        msgElement.innerText = "Something went wrong. Please try again.";
+        msgElement.style.color = "#e57373";
+        msgElement.style.display = "block";
+      } finally {
+        // Restaurar botón
+        btn.disabled = false;
+        btn.innerText = "Subscribe";
+      }
+    });
+  }
+
+  // IMPORTANTE: Escuchar el evento de carga de página de Astro
+  document.addEventListener("astro:page-load", initFooterForm);
 </script>
