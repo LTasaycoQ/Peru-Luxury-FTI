@@ -152,10 +152,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
     const turnstileResponse = turnstile.getResponse();
     if (!turnstileResponse) {
-      showError(locale === "en"
-        ? "Please complete the security check."
-        : "Por favor, completa la verificación de seguridad."
-      );
+      showError("Por favor, completa la verificación de seguridad.");
+      form.reset();
       return;
     }
 
