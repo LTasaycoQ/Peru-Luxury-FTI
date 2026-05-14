@@ -40,7 +40,72 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 </section>
 
 
-<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script is:inline>
+  const apiMailEndpoint = "https://fti-emailservice.vercel.app/contact";
+  const form = document.querySelector(".formulario-itinerary");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector("button");
+    const msgCaptcha = document.getElementById("form-msg-captcha");
+    const msgSuccess = document.getElementById("form-msg-itenerary");
+
+    msgCaptcha.style.display = "none";
+    msgSuccess.style.display = "none";
+
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const formData = new FormData(form);
+    
+    const turnstileResponse = formData.get("cf-turnstile-response");    
+    
+    if (!turnstileResponse) {
+      btn.innerText = "Submit";
+      msgCaptcha.style.display = "block";
+      btn.disabled = false;
+      return;
+    }
+
+    const data = {
+      nombre: formData.get("Nombre"),
+      email: formData.get("Email"),
+      captcha: turnstileResponse,
+    };
+
+    try {
+      const response = await fetch(apiMailEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+      msgSuccess.style.display = "block";
+      msgSuccess.innerText = "✓ Sent Successfully";
+      msgSuccess.style.color = ""; // Reset color si cambió por error previo
+      
+      form.reset();
+      
+      // Es vital resetear el widget para que el usuario pueda enviar otro si quiere
+      if (typeof turnstile !== "undefined") {
+        turnstile.reset();
+      }
+
+    } catch (error) {
+      console.error("Error:", error);
+      msgSuccess.innerText = "Something went wrong. Please try again.";
+      msgSuccess.style.color = "#e57373";
+      msgSuccess.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Submit"; // Mantener coherencia con tu HTML
+    }
+  });
+</script>
+
 
 <style>
   #form-msg-itenerary {
@@ -148,57 +213,3 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     }
   }
 </style>
-
-<script is:inline>
-  const apiMailEndpoint = "https://fti-emailservice.vercel.app/contact";
-  const form = document.querySelector(".formulario-itinerary");
-
-  form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector("button");
-    document.getElementById("form-msg-captcha").style.display = "none";
-    document.getElementById("form-msg-itenerary").style.display = "none";
-
-    btn.disabled = true;
-    btn.innerText = "Sending...";
-
-    const turnstileResponse = turnstile.getResponse();
-    if (!turnstileResponse) {
-      btn.innerText = "Cancelado";
-      document.getElementById("form-msg-captcha").style.display = "block";
-      form.reset();
-      return;
-    }
-
-    const formData = new FormData(form);
-    const data = {
-      nombre: formData.get("Nombre"),
-      email: formData.get("Email"),
-      captcha: turnstileResponse,
-    };
-    try {
-      const response = await fetch(apiMailEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-      await response.json();
-
-      document.getElementById("form-msg-itenerary").style.display = "block";
-      form.reset();
-      turnstile.reset();
-    } catch (error) {
-      console.error("Error:", error);
-      document.getElementById("form-msg-itenerary").innerText =
-        "Something went wrong. Please try again.";
-      document.getElementById("form-msg-itenerary").style.color = "#e57373";
-      document.getElementById("form-msg-itenerary").style.display = "block";
-    } finally {
-      btn.disabled = false;
-      btn.innerText = "Subscribe";
-    }
-  });
-</script>

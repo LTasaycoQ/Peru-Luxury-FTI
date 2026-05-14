@@ -49,6 +49,13 @@ const topDestinations = destinations.slice(0, 9);
             <input name="Apellido" type="text" required placeholder="Last Name">
           </div>
           <input name="Email" type="email" required placeholder="Email">
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADPSXd3qXHlO8V95"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+            ></div>
           <button id="btn-submit" class="button" type="submit">Subscribe</button>
           <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
         </div>
@@ -69,11 +76,21 @@ const topDestinations = destinations.slice(0, 9);
     btn.disabled = true;
     btn.innerText = "Sending...";
 
+    
+    const turnstileResponseFooter = turnstile.getResponse();
+    if (!turnstileResponseFooter) {
+      btn.innerText = "Cancelado";
+      formSubscribete.reset();
+      return;
+    }
+
+
     const formData = new FormData(formSubscribete);
     const data = {
       nombre: formData.get("Nombre"),
       apellido: formData.get("Apellido"),
-      email: formData.get("Email")
+      email: formData.get("Email"),
+      captcha: turnstileResponseFooter,
     };
 
     try {
