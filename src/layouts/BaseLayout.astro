@@ -5,14 +5,10 @@ import Footer from "../components/Footer.astro";
 const {title, description, ogImage} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import 'aos/dist/aos.css';
-
-import { ClientRouter } from "astro:transitions";
-
 ---
 
 <html lang="en">
 	<head>
-		<ClientRouter />
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
