@@ -16,12 +16,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             <input name="Nombre" required placeholder="Full Name" type="text" />
             <input name="Email" required type="email" placeholder="Email" />
           </div>
-            <button id="btn-itinerary" class="btn-itenerary" type="submit">Submit</button>
-            <div 
-            id="turnstile-container" 
-            class="cf-turnstile" 
-            data-sitekey="0x4AAAAAADPRDCFRFmqKw5yy"
-            ></div>
+          <button id="btn-itinerary" class="btn-itenerary" type="submit">Submit</button>
+          <div id="turnstile-container"></div>
         </form>
         <p id="form-msg-itenerary">✓ Sent Successfully</p>
         <p id="form-msg-captcha">Fallo al Enviar la Solicitud</p>
@@ -37,12 +33,11 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   </div>
 </section>
 
-
 <script>
   declare global {
     interface Window {
       turnstile?: {
-        render: (container: HTMLElement) => void;
+        render: (container: HTMLElement, options?: { sitekey: string }) => void;
         getResponse: () => string | undefined;
         reset: () => void;
       };
@@ -54,12 +49,23 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     const btn = document.getElementById("btn-itinerary") as HTMLButtonElement;
     const msgSuccess = document.getElementById("form-msg-itenerary");
     const msgError = document.getElementById("form-msg-captcha");
-    const turnstileContainer = document.getElementById("turnstile-container");
+    const turnstileContainer = document.getElementById("turnstile-container") as HTMLElement;
 
-    if (!form || !btn) return;
+    if (!form || !btn || !turnstileContainer) return;
 
-    if (window.turnstile && turnstileContainer) {
-      window.turnstile.render(turnstileContainer);
+    // Limpiar cualquier render previo de Turnstile
+    turnstileContainer.innerHTML = "";
+
+    const renderTurnstile = () => {
+      window.turnstile?.render(turnstileContainer, {
+        sitekey: "0x4AAAAAADPRDCFRFmqKw5yy",
+      });
+    };
+
+    if (window.turnstile) {
+      renderTurnstile();
+    } else {
+      window.addEventListener("load", renderTurnstile, { once: true });
     }
 
     form.addEventListener("submit", async (e) => {
@@ -70,7 +76,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       if (msgSuccess) msgSuccess.style.display = "none";
 
       const turnstileResponse = window.turnstile?.getResponse();
-      
+
       if (!turnstileResponse) {
         if (msgError) {
           msgError.innerText = "Please verify the captcha";
@@ -103,9 +109,9 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
           msgSuccess.style.color = "#D9B244";
           msgSuccess.innerText = "✓ Sent Successfully";
         }
-        
+
         form.reset();
-        window.turnstile?.reset(); // Limpiar captcha tras éxito
+        window.turnstile?.reset();
 
       } catch (error) {
         console.error("Error:", error);
@@ -124,8 +130,6 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   document.addEventListener("astro:page-load", initItineraryForm);
 </script>
 
-
-
 <style>
   #form-msg-itenerary {
     display: none;
@@ -133,7 +137,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     font-size: 13px;
     margin-top: 6px;
   }
-    #form-msg-captcha {
+  #form-msg-captcha {
     display: none;
     color: #883117;
     font-size: 14px;
@@ -227,7 +231,6 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     .formulario-itinerary,
     .container-input {
       width: 100%;
-
       flex-direction: column;
     }
   }
