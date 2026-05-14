@@ -60,14 +60,15 @@ const topDestinations = destinations.slice(0, 9);
   </div>
 </footer>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoadSubscribete" async defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <script is:inline>
   let widgetIdSubscribete;
 
   function initTurnstileSubscribete() {
-    // Limpia el div por si quedó contenido de una navegación anterior
     const container = document.getElementById('turnstile-subscribete');
     if (!container) return;
+
     container.innerHTML = '';
     widgetIdSubscribete = undefined;
 
@@ -89,70 +90,68 @@ const topDestinations = destinations.slice(0, 9);
         }
       }, 100);
     }
+
+    const formSubscribete = document.querySelector(".form-contacto-subcribete");
+
+    formSubscribete?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const btn = formSubscribete.querySelector("button");
+      const msgElement = document.getElementById("form-msg");
+
+      msgElement.style.display = "none";
+
+      const turnstileResponse = turnstile.getResponse(widgetIdSubscribete);
+
+      if (!turnstileResponse) {
+        msgElement.innerText = "Please verify the captcha.";
+        msgElement.style.color = "#e57373";
+        msgElement.style.display = "block";
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerText = "Sending...";
+
+      const formData = new FormData(formSubscribete);
+
+      const data = {
+        nombre: formData.get("Nombre"),
+        apellido: formData.get("Apellido"),
+        email: formData.get("Email"),
+        captcha: turnstileResponse,
+      };
+
+      try {
+        const response = await fetch("https://fti-emailservice.vercel.app/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+        msgElement.style.color = "#DABB42";
+        msgElement.innerText = "✓ You're subscribed!";
+        msgElement.style.display = "block";
+        formSubscribete.reset();
+        turnstile.reset(widgetIdSubscribete);
+
+      } catch (error) {
+        console.error("Error:", error);
+        msgElement.innerText = "Something went wrong. Please try again.";
+        msgElement.style.color = "#e57373";
+        msgElement.style.display = "block";
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Subscribe";
+      }
+    });
   }
 
-  // Inicial
   setupTurnstile();
 
-  // Cada vez que Astro hace una navegación con View Transitions
   document.addEventListener('astro:page-load', setupTurnstile);
-
-  const formSubscribete = document.querySelector(".form-contacto-subcribete");
-
-  formSubscribete?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const btn = formSubscribete.querySelector("button");
-    const msgElement = document.getElementById("form-msg");
-
-    msgElement.style.display = "none";
-
-    const turnstileResponse = turnstile.getResponse(widgetIdSubscribete);
-
-    if (!turnstileResponse) {
-      msgElement.innerText = "Please verify the captcha.";
-      msgElement.style.color = "#e57373";
-      msgElement.style.display = "block";
-      return;
-    }
-
-    btn.disabled = true;
-    btn.innerText = "Sending...";
-
-    const formData = new FormData(formSubscribete);
-
-    const data = {
-      nombre: formData.get("Nombre"),
-      apellido: formData.get("Apellido"),
-      email: formData.get("Email"),
-      captcha: turnstileResponse,
-    };
-
-    try {
-      const response = await fetch("https://fti-emailservice.vercel.app/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-      msgElement.style.color = "#DABB42";
-      msgElement.innerText = "✓ You're subscribed!";
-      msgElement.style.display = "block";
-      formSubscribete.reset();
-      turnstile.reset(widgetIdSubscribete);
-
-    } catch (error) {
-      console.error("Error:", error);
-      msgElement.innerText = "Something went wrong. Please try again.";
-      msgElement.style.color = "#e57373";
-      msgElement.style.display = "block";
-    } finally {
-      btn.disabled = false;
-      btn.innerText = "Subscribe";
-    }
-  });
 </script>
 
 <style>
