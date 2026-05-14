@@ -54,7 +54,48 @@ const optimizeCloudinary = (url: string) => {
   </div>
 </section>
 
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Autoplay } from 'swiper/modules';
+
+
+  let swiperInstance: Swiper | null = null;
+
+  const initSwiper = () => {
+    const swiperEl = document.querySelector(".mySwiper");
+    
+    if (swiperEl) {
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+      }
+
+      swiperInstance = new Swiper(".mySwiper", {
+        modules: [Navigation, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: 25,
+        loop: true,
+        autoplay: { 
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".next-btn",
+          prevEl: ".prev-btn",
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+        watchSlidesProgress: true,
+      });
+    }
+  };
+
+  // 4. Se ejecuta en la carga inicial y en cada transición de página
+  document.addEventListener("astro:page-load", initSwiper);
+</script>
 <style>
+
   .image-card {
     width: 100%;
     aspect-ratio: 4/3;
@@ -66,38 +107,6 @@ const optimizeCloudinary = (url: string) => {
   .image-card img {
     will-change: transform;
   }
-</style>
-
-<script>
-  import Swiper from 'swiper';
-  import { Navigation, Autoplay } from 'swiper/modules';
-  import 'swiper/css';
-
-  const initSwiper = () => {
-    new Swiper(".mySwiper", {
-      modules: [Navigation, Autoplay],
-      slidesPerView: 1,
-      spaceBetween: 25,
-      loop: true,
-      autoplay: { 
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".next-btn",
-        prevEl: ".prev-btn",
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      },
-      watchSlidesProgress: true,
-    });
-  };
-
-  initSwiper();
-</script>
-<style>
   .hotel-section {
     padding: 100px 20px;
     background-color: #ffffff;
