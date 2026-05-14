@@ -25,8 +25,8 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             data-callback="onSuccess"
             ></div>
         </form>
-        <p id="form-msg-itenerary" style="">✓ Sent Successfully</p>
-        <p id="form-msg-captcha" style="">Fallo al Enviar la Solicitud</p>
+        <p id="form-msg-itenerary">✓ Sent Successfully</p>
+        <p id="form-msg-captcha">Fallo al Enviar la Solicitud</p>
       </div>
     </div>
     <div>
@@ -40,7 +40,6 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 </section>
 
 
-<script is:inline src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <style>
@@ -162,6 +161,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
     const turnstileResponse = turnstile.getResponse();
     if (!turnstileResponse) {
+      btn.innerText = "Cancelado";
       document.getElementById("form-msg-captcha").style.display = "block";
       form.reset();
       return;
