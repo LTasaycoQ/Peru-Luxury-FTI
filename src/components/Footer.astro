@@ -102,13 +102,10 @@ const topDestinations = destinations.slice(0, 9);
         msgElement.style.color = "#e57373";
         msgElement.style.display = "block";
       } finally {
-        // Restaurar botón
         btn.disabled = false;
         btn.innerText = "Subscribe";
       }
     });
   }
-
-  // IMPORTANTE: Escuchar el evento de carga de página de Astro
   document.addEventListener("astro:page-load", initFooterForm);
 </script>
