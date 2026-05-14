@@ -37,9 +37,10 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   declare global {
     interface Window {
       turnstile?: {
-        render: (container: HTMLElement, options?: { sitekey: string }) => void;
-        getResponse: () => string | undefined;
-        reset: () => void;
+        render: (container: HTMLElement, options?: { sitekey: string }) => string;
+        getResponse: (widgetId?: string) => string | undefined;
+        reset: (widgetId?: string) => void;
+        remove: (widgetId: string) => void;
       };
     }
   }
@@ -53,11 +54,16 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
     if (!form || !btn || !turnstileContainer) return;
 
-    // Limpiar cualquier render previo de Turnstile
-    turnstileContainer.innerHTML = "";
+    let widgetId: string | undefined;
 
     const renderTurnstile = () => {
-      window.turnstile?.render(turnstileContainer, {
+      if (widgetId !== undefined) {
+        try {
+          window.turnstile?.remove(widgetId);
+        } catch (_) {}
+      }
+      turnstileContainer.innerHTML = "";
+      widgetId = window.turnstile?.render(turnstileContainer, {
         sitekey: "0x4AAAAAADPRDCFRFmqKw5yy",
       });
     };
@@ -75,7 +81,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       if (msgError) msgError.style.display = "none";
       if (msgSuccess) msgSuccess.style.display = "none";
 
-      const turnstileResponse = window.turnstile?.getResponse();
+      const turnstileResponse = window.turnstile?.getResponse(widgetId);
 
       if (!turnstileResponse) {
         if (msgError) {
@@ -111,7 +117,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
         }
 
         form.reset();
-        window.turnstile?.reset();
+        window.turnstile?.reset(widgetId);
 
       } catch (error) {
         console.error("Error:", error);
