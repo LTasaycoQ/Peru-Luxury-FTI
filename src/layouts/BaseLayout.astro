@@ -70,7 +70,6 @@ import { ClientRouter } from "astro:transitions";
     <CargaPage />
 
     <script is:inline>
-      window.safeInit("rooms-detail-sliders", () => {
         function initAOS() {
           if (typeof AOS !== "undefined") {
             AOS.init({
@@ -82,7 +81,6 @@ import { ClientRouter } from "astro:transitions";
         }
 
         document.addEventListener("astro:page-load", initAOS);
-      });
     </script>
   </head>
   <body>

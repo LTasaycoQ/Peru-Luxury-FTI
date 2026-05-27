@@ -1,9 +1,110 @@
 ---
 ---
-<div class="max-lg:hidden bg-white w-full max-md:flex-col  flex justify-center items-end bg-green-500 border-b-[1px] border-gray-300 p-[10px] text-[16px] max-md:text-[12px] items-center gap-[60px] max-md:gap-[0px]">
-    <div class="flex justify-end items-end md:gap-[50px] md:w-[90%] max-md:flex-col max-md:justify-center max-md:items-center w-full  lg:w-[87%]  xl:w-[68%] 2xl:w-[68%]">
-        <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="linksEffect"><i class="bi bi-whatsapp"></i> +51 982 836 947 </a>
-        <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="linksEffect flex gap-[20px]"><i class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com</a>
-        
+<div class="top-bar">
+    <div class="top-bar-container">
+        <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="top-bar-link">
+            <i class="bi bi-whatsapp"></i> +51 982 836 947
+        </a>
+        <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="top-bar-link">
+            <i class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com
+        </a>
     </div>
 </div>
+
+<style>
+    .top-bar {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-bottom: 1px solid #d1d5db;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    @media (width < 64rem) {
+        .top-bar{
+            display: none;
+        }
+    }
+
+    .top-bar-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 60px;
+        width: 100%;
+    }
+
+    .top-bar-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        gap: 20px;
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    
+    .top-bar-link:hover {
+        color: rgb(153, 127, 56);
+    }
+
+    .top-bar-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        transition: width 0.3s ease;
+    }
+
+    .top-bar-link:hover::after {
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        .top-bar {
+            flex-direction: column;
+            font-size: 12px;
+        }
+
+        .top-bar-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .top-bar-link {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .top-bar-container {
+            width: 87%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .top-bar-container {
+            width: 68%;
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .top-bar-container {
+            width: 68%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .top-bar-container {
+            gap: 0px;
+        }
+    }
+</style>
