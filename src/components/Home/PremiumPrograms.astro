@@ -26,10 +26,10 @@ function cloudinaryOptimize(url: string, width: number): string {
                     return (
                     <a href={urlFinal} class="card-link" >
                         <div class="card" data-aos="flip-left">
-                            <div class="flex-1 md:max-w-[100%]">
+                            <div>
                                 <img
                                     src={cloudinaryOptimize(section.fondo, 700)}
-                                    class="w-full h-[400px] object-cover rounded-[5px] block shadow-2xl"
+                                    
                                     alt={section.name}
                                 />
                             </div>
@@ -48,137 +48,281 @@ function cloudinaryOptimize(url: string, width: number): string {
     </div>
 </section>
 <style>
+.premium-programs {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
 
-    
+.header-section {
+    padding-top: 70px;
+    text-align: center;
+    width: 90%;
+}
 
-    .premium-programs {
-        font-family: "Poppins", sans-serif;
-        background-color: #f7f7f7;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 70px;
-    }
-    .header-section {
-        padding-top: 70px;
-        text-align: center;
-        width: 90%;
-    }
+.title-accent {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    background: #c5a30c;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-    .title-accent {
-        font-size: 36px;
-        display: block;
-        margin-bottom: 10px;
-    }
+.subtitle {
+    color: #1a1a1a;
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-    .subtitle {
-        color: #1a1a1a;
-        font-weight: 300;
-        line-height: 1.4;
-        font-size: 18px;
-    }
+.grid-container {
+    padding-top: 4em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    @media (max-width: 1024px) {
-        .subtitle {
-            font-size: 22px;
-            padding: 0 20px;
-        }
-    }
-    .grid-container {
-        padding-top: 4em;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    width: 90%;
+    max-width: 1400px;
+    padding: 0 20px;
+}
 
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .flex-1 img {
+    width: 100%;
+    height: 1200px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.card:hover .flex-1 img {
+    transform: scale(1.05);
+}
+
+.flex-1 {
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 25px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #2b2b2b;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.card-text {
+    color: #4b5563;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Enlace Read More */
+.link-read-more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #dabb42;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    position: relative;
+    width: fit-content;
+}
+
+.link-read-more::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.link-read-more:hover {
+    color: #f7d30e;
+    transform: translateX(5px);
+}
+
+.link-read-more:hover::after {
+    transform: translateX(3px);
+}
+
+/* Card Link */
+.card-link {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
     .programs-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2em;
-        width: 90%;
-        max-width: 1400px;
-        padding: 0 20px;
+        gap: 1.5em;
     }
 
-    @media (max-width: 1024px) {
-        .programs-grid {
-            gap: 1.5em;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .programs-grid {
-            grid-template-columns: 1fr;
-            width: 100%;
-        }
-    }
-
-    .card {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .image {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 4px;
-        height: 400px;
-    }
-
-    @media (max-width: 1024px) {
-        .image {
-            height: 280px;
-        }
-    }
-    @media (max-width: 768px) {
-        .image {
-            height: 300px;
-        }
-    }
-
-    .card-content {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
+    .card .flex-1 img {
+        height: 280px;
     }
 
     .card-title {
         font-size: 18px;
-        color: #2b2b2b;
-        margin-bottom: 10px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
-    @media (max-width: 1024px) {
-        .card-title {
-            font-weight: 600;
-        }
+    .subtitle {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .title-accent {
+        font-size: 32px;
+    }
+
+    .card-content {
+        padding: 20px 18px 25px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-programs {
+        padding-bottom: 50px;
+    }
+
+    .header-section {
+        padding-top: 50px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 2rem;
+    }
+
+    .card .flex-1 img {
+        height: 300px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .title-accent {
+        font-size: 28px;
+    }
+
+    .card-title {
+        font-size: 18px;
     }
 
     .card-text {
-        color: #4b5563;
-        font-weight: 300;
-        font-size: 16.5px;
+        font-size: 14px;
     }
 
-    .card-link {
-        margin-top: 25px;
-        width: fit-content;
-        color: #dabb42;
-        text-decoration: none;
-        transition: all 0.3s ease;
+    .card-content {
+        padding: 18px 16px 22px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        padding-top: 2em;
     }
 
+    .card .flex-1 img {
+        height: 250px;
+    }
+
+    .title-accent {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .programs-grid {
+        gap: 1.5rem;
+        padding: 0 15px;
+    }
+
+    .card-content {
+        padding: 15px 14px 20px 14px;
+    }
+}
+
+/* Soporte para AOS (animaciones) */
+[data-aos="flip-left"] {
+    transform-style: preserve-3d;
+}
+
+/* Ajustes adicionales para Firefox */
+@-moz-document url-prefix() {
+    .card .flex-1 img {
+        border-radius: 5px;
+    }
+}
+
+/* Optimización para dispositivos táctiles */
+@media (hover: hover) {
     .card-link:hover {
         transform: translateY(-10px);
     }
-
-    .card-link:hover {
+    
+    .card-link:hover .link-read-more {
         color: #f7d30e;
-        border-color: #f7d30e;
     }
+}
+
+@media (hover: none) {
+    .card:active {
+        transform: scale(0.98);
+    }
+    
+    .link-read-more:active {
+        color: #f7d30e;
+    }
+}
 </style>
