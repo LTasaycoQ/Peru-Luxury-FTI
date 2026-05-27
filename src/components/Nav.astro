@@ -6,141 +6,180 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 ---
 
 <header class="header">
-    <HeaderTop />
-    <div class="nav-container">
-        <nav class="nav">
-            <div class="nav-wrapper">
-                <a href="/" class="logo-link">
-                    <Image format="png" src={logo} loading="eager" class="logo" alt="logo-peru-luxy" />
-                </a>
+  <HeaderTop />
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-wrapper">
+        <a href="/" class="logo-link">
+          <Image
+            format="png"
+            src={logo}
+            loading="eager"
+            class="logo"
+            alt="logo-peru-luxy"
+          />
+        </a>
 
-                <button
-                    id="btnMenu"
-                    aria-label="Abrir menú"
-                    aria-expanded="false"
-                    class="menu-button">
-                    <i id="openMenu" class="bi bi-list menu-icon-open"></i>
-                    <i id="closeMenu" class="bi bi-x-lg menu-icon-close hidden"></i>
-                </button>
+        <button
+          id="btnMenu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          class="menu-button"
+        >
+          <i id="openMenu" class="bi bi-list menu-icon-open"></i>
+          <i id="closeMenu" class="bi bi-x-lg menu-icon-close hidden"></i>
+        </button>
 
-                <ul class="nav-links">
-                    <li class="nav-item">
-                        <button id="btnSubmenuDesktop" class="nav-button">
-                            <i id="iconSubmenu" class="bi bi-caret-right-fill submenu-icon"></i>
-                            <a href="/destinations">DESTINATIONS</a>
-                        </button>
-                        <div id="submenu" class="submenu hidden">
-                            <ul class="submenu-list">
-                                {destinations.map(d => (
-                                    <li class="submenu-item">
-                                        <a class="submenu-link" href={`/destinations/${d.distrito}`}>
-                                            {d.distrito.toUpperCase().replace(/-/g, " ")}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <button id="btnSubmenuDesktop" class="nav-button">
+              <i id="iconSubmenu" class="bi bi-caret-right-fill submenu-icon"
+              ></i>
+              <a href="/destinations">DESTINATIONS</a>
+            </button>
+            <div id="submenu" class="submenu hidden">
+              <ul class="submenu-list">
+                {
+                  destinations.map((d) => (
+                    <li class="submenu-item">
+                      <a
+                        class="submenu-link"
+                        href={`/destinations/${d.distrito}`}
+                      >
+                        {d.distrito.toUpperCase().replace(/-/g, " ")}
+                      </a>
                     </li>
-                    <li class="nav-item"><a href="/tour-itineraries">TOUR ITINERARIES</a></li>
-                    <li class="nav-item"><a href="/about-us">ABOUT US</a></li>
-                </ul>
+                  ))
+                }
+              </ul>
             </div>
-        </nav>
-    </div>
+          </li>
+          <li class="nav-item">
+            <a href="/tour-itineraries">TOUR ITINERARIES</a>
+          </li>
+          <li class="nav-item"><a href="/about-us">ABOUT US</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-    <div class="mobile-menu">
-        <div id="menuResponsive" class="mobile-menu-content hidden">
-            <div class="mobile-menu-item">
-                <a class="mobile-menu-link" href="/destinations">DESTINATIONS</a>
-                <button
-                    id="btnSubMenuResponsive"
-                    aria-label="Ver destinos"
-                    aria-expanded="false"
-                    class="mobile-submenu-button">
-                    <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill"></i>
-                </button>
-            </div>
+  <div class="mobile-menu">
+    <div id="menuResponsive" class="mobile-menu-content hidden">
+      <div class="mobile-menu-item">
+        <a class="mobile-menu-link" href="/destinations">DESTINATIONS</a>
+        <button
+          id="btnSubMenuResponsive"
+          aria-label="Ver destinos"
+          aria-expanded="false"
+          class="mobile-submenu-button"
+        >
+          <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill"></i>
+        </button>
+      </div>
 
-            <div id="submenuResponsive" class="mobile-submenu hidden">
-                <ul class="mobile-submenu-list">
-                    {destinations.map(d => (
-                        <li>
-                            <a class="mobile-submenu-link" href={`/destinations/${d.distrito}`}>
-                                {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            <div class="mobile-menu-item">
-                <a class="mobile-menu-link" href="/tour-itineraries">TOUR ITINERARIES</a>
-            </div>
-            <div class="mobile-menu-item">
-                <a class="mobile-menu-link" href="/about-us">ABOUT US</a>
-            </div>
-            <div class="mobile-menu-item">
-                <a class="mobile-menu-link whatsapp-link" href="https://api.whatsapp.com/send?phone=51982836947" target="_blank">
-                    <i class="bi bi-whatsapp"></i> +51 982 836 947
+      <div id="submenuResponsive" class="mobile-submenu hidden">
+        <ul class="mobile-submenu-list">
+          {
+            destinations.map((d) => (
+              <li>
+                <a
+                  class="mobile-submenu-link"
+                  href={`/destinations/${d.distrito}`}
+                >
+                  {d.distrito.charAt(0).toUpperCase() +
+                    d.distrito.slice(1).replace(/-/g, " ")}
                 </a>
-            </div>
-            <div class="mobile-menu-item">
-                <a class="mobile-menu-link email-link" href="mailto:sales@PeruLuxuryJourneys.com" target="_blank">
-                    <i class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com
-                </a>
-            </div>
-        </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="mobile-menu-item">
+        <a class="mobile-menu-link" href="/tour-itineraries">TOUR ITINERARIES</a
+        >
+      </div>
+      <div class="mobile-menu-item">
+        <a class="mobile-menu-link" href="/about-us">ABOUT US</a>
+      </div>
+      <div class="mobile-menu-item">
+        <a
+          class="mobile-menu-link whatsapp-link"
+          href="https://api.whatsapp.com/send?phone=51982836947"
+          target="_blank"
+        >
+          <i class="bi bi-whatsapp"></i> +51 982 836 947
+        </a>
+      </div>
+      <div class="mobile-menu-item">
+        <a
+          class="mobile-menu-link email-link"
+          href="mailto:sales@PeruLuxuryJourneys.com"
+          target="_blank"
+        >
+          <i class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com
+        </a>
+      </div>
     </div>
+  </div>
 </header>
 
 <script is:inline>
-  function initNav() {
-    const btnMenu = document.getElementById("btnMenu");
-    const openMenuIcon = document.getElementById("openMenu");
-    const closeMenuIcon = document.getElementById("closeMenu");
-    const menuResponsive = document.getElementById("menuResponsive");
+  window.safeInit("rooms-detail-sliders", () => {
+    function initNav() {
+      const btnMenu = document.getElementById("btnMenu");
+      const openMenuIcon = document.getElementById("openMenu");
+      const closeMenuIcon = document.getElementById("closeMenu");
+      const menuResponsive = document.getElementById("menuResponsive");
 
-    btnMenu?.addEventListener("click", () => {
-      const isHidden = menuResponsive.classList.contains("hidden");
-      menuResponsive.classList.toggle("hidden");
-      openMenuIcon.classList.toggle("hidden", isHidden);
-      closeMenuIcon.classList.toggle("hidden", !isHidden);
-      btnMenu.setAttribute("aria-expanded", String(isHidden));
-    });
+      btnMenu?.addEventListener("click", () => {
+        const isHidden = menuResponsive.classList.contains("hidden");
+        menuResponsive.classList.toggle("hidden");
+        openMenuIcon.classList.toggle("hidden", isHidden);
+        closeMenuIcon.classList.toggle("hidden", !isHidden);
+        btnMenu.setAttribute("aria-expanded", String(isHidden));
+      });
 
-    const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop");
-    const submenuDesktop = document.getElementById("submenu");
-    const iconSubmenu = document.getElementById("iconSubmenu");
+      const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop");
+      const submenuDesktop = document.getElementById("submenu");
+      const iconSubmenu = document.getElementById("iconSubmenu");
 
-    btnSubmenuDesktop?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = !submenuDesktop.classList.contains("hidden");
-      submenuDesktop.classList.toggle("hidden");
-      iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
-      btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
-    });
+      btnSubmenuDesktop?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !submenuDesktop.classList.contains("hidden");
+        submenuDesktop.classList.toggle("hidden");
+        iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+        btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
+      });
 
-    document.addEventListener("click", (e) => {
-      if (!btnSubmenuDesktop?.contains(e.target)) {
-        submenuDesktop?.classList.add("hidden");
-        if (iconSubmenu) iconSubmenu.style.transform = "rotate(0deg)";
-        btnSubmenuDesktop?.setAttribute("aria-expanded", "false");
-      }
-    });
+      document.addEventListener("click", (e) => {
+        if (!btnSubmenuDesktop?.contains(e.target)) {
+          submenuDesktop?.classList.add("hidden");
+          if (iconSubmenu) iconSubmenu.style.transform = "rotate(0deg)";
+          btnSubmenuDesktop?.setAttribute("aria-expanded", "false");
+        }
+      });
 
-    const btnSubMenuResponsive = document.getElementById("btnSubMenuResponsive");
-    const submenuResponsive = document.getElementById("submenuResponsive");
-    const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon");
+      const btnSubMenuResponsive = document.getElementById(
+        "btnSubMenuResponsive",
+      );
+      const submenuResponsive = document.getElementById("submenuResponsive");
+      const iconSubMenuResponsiveIcon = document.getElementById(
+        "iconSubMenuResponsiveIcon",
+      );
 
-    btnSubMenuResponsive?.addEventListener("click", () => {
-      const isOpen = !submenuResponsive.classList.contains("hidden");
-      submenuResponsive.classList.toggle("hidden");
-      iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-      btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
-    });
-  }
+      btnSubMenuResponsive?.addEventListener("click", () => {
+        const isOpen = !submenuResponsive.classList.contains("hidden");
+        submenuResponsive.classList.toggle("hidden");
+        iconSubMenuResponsiveIcon.style.transform = isOpen
+          ? "rotate(0deg)"
+          : "rotate(180deg)";
+        btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
 
-  document.addEventListener("astro:page-load", initNav);
+    document.addEventListener("astro:page-load", initNav);
+  });
 </script>
 
 <style>
@@ -211,7 +250,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     cursor: pointer;
     border: none;
   }
@@ -348,7 +387,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
   .whatsapp-link i,
   .email-link i {
-    color: #D9B244;
+    color: #d9b244;
     margin-right: 10px;
   }
 
