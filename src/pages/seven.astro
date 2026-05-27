@@ -10,7 +10,7 @@ if (!data) return Astro.redirect('/404');
 ---
 
 <BaseLayout title={data.title}>
-	<Fondo  fondo={fondo} />
+    <Fondo fondo={`url(${fondo})`} />
     <main>
         <DetailPrograms
             title={data.title}

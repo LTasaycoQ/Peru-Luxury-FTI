@@ -3,11 +3,10 @@ const { fondo } = Astro.props;
 ---
 <section class="fondo-section fade-in">
     <div class="fondo">
-        <img class="hero_background" src={fondo} alt="fondo-hero">
     </div>
 </section>
 
-<style>
+<style define:vars={{ fondo }}>
     
     .fade-in {
         opacity: 0.8;
@@ -20,14 +19,10 @@ const { fondo } = Astro.props;
     .fondo {
         width: 100%;
         height: 43em;
+        background-image: var(--fondo);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-    }
-    .hero_background{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     @media (width <= 830px) {

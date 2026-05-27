@@ -16,7 +16,7 @@ const { hotel } = Astro.props;
 ---
 
 <BaseLayout title={hotel.title} description={hotel.description} ogImage={hotel.fondo}>
-  <Fondo fondo={hotel.fondo} />
+  <Fondo fondo={`${hotel.fondo})`} />
 
   <main>
     <HotelsDetail 
