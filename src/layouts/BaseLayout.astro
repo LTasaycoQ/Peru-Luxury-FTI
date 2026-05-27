@@ -68,8 +68,28 @@ import { ClientRouter } from "astro:transitions";
 		"
     />
     <CargaPage />
+<script is:inline>
+  function initAOS() {
+    if (typeof AOS !== "undefined") {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100, // Optimizado para scrolls en tabletas
+      });
+      
+      // Forzar un refresco de posiciones para WebKit (iPad)
+      AOS.refresh();
+    }
+  }
 
-    
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAOS);
+  } else {
+    initAOS();
+  }
+
+  document.addEventListener("astro:page-load", initAOS);
+</script>
   </head>
   <body>
     <Nav />
