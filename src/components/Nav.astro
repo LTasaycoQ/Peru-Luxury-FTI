@@ -125,60 +125,63 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 </header>
 
 <script is:inline>
- window.safeInit("rooms-detail-sliders", () => {
-    function initNav() {
-      const btnMenu = document.getElementById("btnMenu");
-      const openMenuIcon = document.getElementById("openMenu");
-      const closeMenuIcon = document.getElementById("closeMenu");
-      const menuResponsive = document.getElementById("menuResponsive");
+  window.safeInit("navbar-and-aos", () => {
+    
+    const btnMenu = document.getElementById("btnMenu");
+    const openMenuIcon = document.getElementById("openMenu");
+    const closeMenuIcon = document.getElementById("closeMenu");
+    const menuResponsive = document.getElementById("menuResponsive");
 
-      btnMenu?.addEventListener("click", () => {
+    if (btnMenu && menuResponsive) {
+      btnMenu.addEventListener("click", () => {
         const isHidden = menuResponsive.classList.contains("hidden");
         menuResponsive.classList.toggle("hidden");
-        openMenuIcon.classList.toggle("hidden", isHidden);
-        closeMenuIcon.classList.toggle("hidden", !isHidden);
+        openMenuIcon?.classList.toggle("hidden", isHidden);
+        closeMenuIcon?.classList.toggle("hidden", !isHidden);
         btnMenu.setAttribute("aria-expanded", String(isHidden));
       });
+    }
 
-      const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop");
-      const submenuDesktop = document.getElementById("submenu");
-      const iconSubmenu = document.getElementById("iconSubmenu");
+    const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop");
+    const submenuDesktop = document.getElementById("submenu");
+    const iconSubmenu = document.getElementById("iconSubmenu");
 
-      btnSubmenuDesktop?.addEventListener("click", (e) => {
+    if (btnSubmenuDesktop && submenuDesktop) {
+      btnSubmenuDesktop.addEventListener("click", (e) => {
         e.stopPropagation();
         const isOpen = !submenuDesktop.classList.contains("hidden");
         submenuDesktop.classList.toggle("hidden");
-        iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+        if (iconSubmenu) iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
         btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
       });
 
       document.addEventListener("click", (e) => {
-        if (!btnSubmenuDesktop?.contains(e.target)) {
-          submenuDesktop?.classList.add("hidden");
+        if (!btnSubmenuDesktop.contains(e.target)) {
+          submenuDesktop.classList.add("hidden");
           if (iconSubmenu) iconSubmenu.style.transform = "rotate(0deg)";
-          btnSubmenuDesktop?.setAttribute("aria-expanded", "false");
+          btnSubmenuDesktop.setAttribute("aria-expanded", "false");
         }
       });
+    }
 
-      const btnSubMenuResponsive = document.getElementById(
-        "btnSubMenuResponsive",
-      );
-      const submenuResponsive = document.getElementById("submenuResponsive");
-      const iconSubMenuResponsiveIcon = document.getElementById(
-        "iconSubMenuResponsiveIcon",
-      );
+    const btnSubMenuResponsive = document.getElementById("btnSubMenuResponsive");
+    const submenuResponsive = document.getElementById("submenuResponsive");
+    const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon");
 
-      btnSubMenuResponsive?.addEventListener("click", () => {
+    if (btnSubMenuResponsive && submenuResponsive) {
+      btnSubMenuResponsive.addEventListener("click", () => {
         const isOpen = !submenuResponsive.classList.contains("hidden");
         submenuResponsive.classList.toggle("hidden");
-        iconSubMenuResponsiveIcon.style.transform = isOpen
-          ? "rotate(0deg)"
-          : "rotate(180deg)";
+        if (iconSubMenuResponsiveIcon) {
+          iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+        }
         btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
       });
     }
 
-    document.addEventListener("astro:page-load", initNav);
+    
+
+    return true; 
   });
 </script>
 

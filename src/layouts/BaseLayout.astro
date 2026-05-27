@@ -74,10 +74,9 @@ import { ClientRouter } from "astro:transitions";
       AOS.init({
         duration: 1000,
         once: true,
-        offset: 100, // Optimizado para scrolls en tabletas
+        offset: 100, 
       });
       
-      // Forzar un refresco de posiciones para WebKit (iPad)
       AOS.refresh();
     }
   }
