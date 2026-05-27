@@ -8,26 +8,22 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 <header class="main-header bg-white">
     <HeaderTop />
     
-    {/* --- CONTROL INTERACTIVO DEL MENÚ MÓVIL PRINCIPAL --- */}
     <input type="checkbox" id="menu-toggle" class="css-toggle-input main-menu-checkbox" />
 
     <div class="w-full bg-white flex justify-center items-center">
         <nav class="navbar">
             <div class="navbar-container">
                 <a href="/">
-                    <Image src={logo} loading="eager" class="logo-image" alt="logo-peru-luxy" />
+                    <Image src={logo} format="png" loading="eager" class="logo-image" alt="logo-peru-luxy" />
                 </a>
 
-                {/* Este label actúa como el botón de hamburguesa nativo */}
                 <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
                     <i class="bi bi-list icon-open"></i>
                     <i class="bi bi-x-lg icon-close"></i>
                 </label>
 
-                {/* --- MENÚ DE ESCRITORIO --- */}
                 <ul class="nav-links">
                     <li class="dropdown group-desktop">
-                        {/* CONTROL INTERACTIVO SUBMENÚ ESCRITORIO */}
                         <input type="checkbox" id="desktop-submenu-toggle" class="css-toggle-input desktop-checkbox" />
                         
                         <label for="desktop-submenu-toggle" class="submenu-trigger">
@@ -54,21 +50,18 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         </nav>
     </div>
 
-    {/* --- MENÚ RESPONSIVE DESPLEGABLE MÓVIL --- */}
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu">
 
             <div class="mobile-item-group">
                 <a href="/destinations">DESTINATIONS</a>
                 
-                {/* CONTROL INTERACTIVO SUBMENÚ MÓVIL */}
                 <input type="checkbox" id="responsive-submenu-toggle" class="css-toggle-input mobile-submenu-checkbox" />
                 
                 <label for="responsive-submenu-toggle" id="btnSubMenuResponsive">
                     <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill"></i>
                 </label>
                 
-                {/* Contenedor del submenú móvil (hermano directo abajo del checkbox) */}
                 <div class="mobile-submenu">
                     <ul>
                         {destinations.map(d => (
@@ -114,7 +107,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         --accent-gold: #D9B244;
     }
 
-    /* Ocultar elementos de control estructurales */
     .css-toggle-input {
         display: none !important;
     }
@@ -146,7 +138,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         display: block;
     }
 
-    /* --- MENÚ DESKTOP --- */
     .nav-links {
         width: 40%;
         display: flex;
@@ -177,7 +168,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         letter-spacing: 0.05em;
     }
 
-    /* Efecto hover underline */
     .nav-item a::after, .submenu-trigger::after {
         content: "";
         position: absolute;
@@ -193,7 +183,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         width: 100%;
     }
 
-    /* Dropdown Desktop */
     .dropdown {
         position: relative;
     }
@@ -228,7 +217,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         background-color: var(--hover-bg);
     }
 
-    /* --- BOTÓN HAMBURGUESA --- */
     .menu-toggle {
         display: none;
         border-radius: 10px;
@@ -251,7 +239,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         display: none;
     }
 
-    /* --- CONTENEDORES RESPONSIVE MÓVIL --- */
     .mobile-menu-wrapper {
         display: none;
         width: 100%;
@@ -301,7 +288,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         align-items: center;
     }
 
-    /* Submenú móvil oculto por defecto */
     .mobile-submenu {
         display: none;
         width: 100%;
@@ -343,11 +329,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         transition: transform 0.3s ease;
     }
 
-    /* ==========================================================================
-       LÓGICA INTERACTIVA CSS PURO (SELECTORES COMPROBADOS)
-       ========================================================================== */
-
-    /* 1. COMPORTAMIENTO MENÚ MÓVIL PRINCIPAL (Abre/Cierra el bloque del menú y permuta iconos) */
+  
     .main-menu-checkbox:checked ~ .w-full .menu-toggle .icon-open {
         display: none !important;
     }
@@ -358,7 +340,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         display: block !important;
     }
 
-    /* 2. COMPORTAMIENTO SUBMENÚ DESKTOP (Abre destinos y rota el indicador flecha) */
     .desktop-checkbox:checked ~ .dropdown-content {
         display: block !important;
     }
@@ -366,7 +347,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         transform: rotate(90deg);
     }
 
-    /* 3. COMPORTAMIENTO SUBMENÚ MÓVIL */
     .mobile-submenu-checkbox:checked ~ .mobile-submenu {
         display: block !important;
     }
@@ -374,10 +354,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         transform: rotate(180deg);
     }
 
-    /* ==========================================================================
-       MEDIA QUERIES (RESPONSIVE)
-       ========================================================================== */
-    @media (max-width: 1280px) {
+       @media (max-width: 1280px) {
         .navbar { 
             width: 90%; 
         }
