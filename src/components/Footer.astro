@@ -11,7 +11,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp"
   <div class="footer-content">
     
     <div class="footer-brand justify-center items-start flex flex-col">
-      <Image src={logo} alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
+      <Image src={logo} format="png" alt="Logo" class="footer-logo max-sm:grid max-sm:grid-flow-col max-md:w-[320px] max-sm:w-[200px] max-md:pb-[10px]  max-sm:justify-items-center max-sm:items-center">
       <p class="brand-description max-sm:text-center">
         Crafting unique and unforgettable luxury experiences across the wonders of Peru.
       </p>
@@ -48,10 +48,10 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp"
       <form id="formulario-subcription" class="form-contacto-subcribete">
         <div class="input-box">
           <div class="box-input--form">
-            <input name="Nombre" type="text" required placeholder="First Name">
-            <input name="Apellido" type="text" required placeholder="Last Name">
+            <input class="input-footer" name="Nombre" type="text" required placeholder="First Name">
+            <input class="input-footer" name="Apellido" type="text" required placeholder="Last Name">
           </div>
-          <input name="Email" type="email" required placeholder="Email">
+          <input class="input-footer" name="Email" type="email" required placeholder="Email">
           <button id="btn-submit" class="button" type="submit">Subscribe</button>
           <p id="form-msg" style="display:none; color:#DABB42; font-size:13px; margin-top:6px;">✓ You're subscribed!</p>
         </div>

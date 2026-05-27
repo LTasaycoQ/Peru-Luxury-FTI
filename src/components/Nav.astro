@@ -3,152 +3,182 @@ import { destinations } from "../data/destinations/destinatios";
 import HeaderTop from "./HeaderTop.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/logo/PLJ-LOGO-1.webp";
-
 ---
 
-<header class="bg-white w-full flex flex-col justify-center items-center relative">
+<header class="main-header bg-white">
     <HeaderTop />
-    <div class="w-full bg-white flex justify-center items-center ">
-    <nav  class="bg-white w-[70%] max-xl:w-[90%] p-[5px]">
-        <div class="flex w-full justify-between items-center">
-            <a href="/">
-                <Image src={logo} loading="eager" class="max-sm:w-[210px] w-[220px] max-sm:p-[7px]" alt="logo-peru-luxy" />
-            </a>
+    
+    {/* --- CONTROL INTERACTIVO DEL MENÚ MÓVIL PRINCIPAL --- */}
+    <input type="checkbox" id="menu-toggle" class="css-toggle-input main-menu-checkbox" />
 
-            <button
-                id="btnMenu"
-                aria-label="Abrir menú"
-                aria-expanded="false"
-                class="lg:hidden rounded-[10px] p-[14px]  w-[48px] h-[48px] flex flex-col items-center justify-center bg-[#E6E6E6] cursor-pointer border-none" >
-                <i id="openMenu" class="bi bi-list text-[22px]"></i>
-                <i id="closeMenu" class="bi bi-x-lg text-[22px] hidden"></i>
-            </button>
+    <div class="w-full bg-white flex justify-center items-center">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/">
+                    <Image src={logo} loading="eager" class="logo-image" alt="logo-peru-luxy" />
+                </a>
 
-            <ul class="w-[40%] max-lg:hidden flex items-center justify-around">
-                <li class="linksEffect flex items-center gap-[5px] relative">
-                    <button id="btnSubmenuDesktop" class="flex items-center gap-[5px] bg-transparent border-none cursor-pointer linksEffect">
-                        <i id="iconSubmenu" class="bi bi-caret-right-fill transition-transform duration-300"></i>
-                        <a href="/destinations">DESTINATIONS</a>
-                    </button>
-                    <div id="submenu" class="hidden absolute top-[58px] left-[-35px] z-50 bg-[#393939] w-[225px] shadow-lg shadow-black">
-                        <ul class="text-[14px] text-white w-full">
-                            {destinations.map(d => (
-                                <li class="flex">
-                                    <a class="items-Submenu p-[15px] w-full" href={`/destinations/${d.distrito}`}>
-                                        {d.distrito.toUpperCase().replace(/-/g, " ")}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </li>
-                <li class="linksEffect"><a href="/tour-itineraries">TOUR ITINERARIES</a></li>
-                <li class="linksEffect"><a href="/about-us">ABOUT US</a></li>
-            </ul>
-        </div>
-    </nav>
-    </div>
+                {/* Este label actúa como el botón de hamburguesa nativo */}
+                <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                    <i class="bi bi-list icon-open"></i>
+                    <i class="bi bi-x-lg icon-close"></i>
+                </label>
 
-    <div class="lg:hidden w-full">
-        <div id="menuResponsive" class="hidden w-full bg-[#393939] text-white z-40">
-
-            <div class="flex items-center justify-between border-b border-[#555]">
-                <a class="p-[14px] flex-1 text-[14px] tracking-widest" href="/destinations">DESTINATIONS</a>
-                <button
-                    id="btnSubMenuResponsive"
-                    aria-label="Ver destinos"
-                    aria-expanded="false"
-                    class="p-[14px] bg-transparent border-none cursor-pointer text-white">
-                    <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill text-[14px]"></i>
-                </button>
-            </div>
-
-            <div id="submenuResponsive" class="hidden bg-[#2e2e2e] submenu-anim">
-                <ul class="text-[13px] py-[8px]">
-                    {destinations.map(d => (
-                        <li>
-                            <a class="flex p-[12px] pl-[24px] items-Submenu" href={`/destinations/${d.distrito}`}>
-                                {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
-                            </a>
-                        </li>
-                    ))}
+                {/* --- MENÚ DE ESCRITORIO --- */}
+                <ul class="nav-links">
+                    <li class="dropdown group-desktop">
+                        {/* CONTROL INTERACTIVO SUBMENÚ ESCRITORIO */}
+                        <input type="checkbox" id="desktop-submenu-toggle" class="css-toggle-input desktop-checkbox" />
+                        
+                        <label for="desktop-submenu-toggle" class="submenu-trigger">
+                            <i id="iconSubmenu" class="bi bi-caret-right-fill"></i>
+                            <span class="nav-text-desktop">DESTINATIONS</span>
+                        </label>
+                        
+                        <div class="dropdown-content">
+                            <ul>
+                                {destinations.map(d => (
+                                    <li>
+                                        <a href={`/destinations/${d.distrito}`}>
+                                            {d.distrito.toUpperCase().replace(/-/g, " ")}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="/tour-itineraries">TOUR ITINERARIES</a></li>
+                    <li class="nav-item"><a href="/about-us">ABOUT US</a></li>
                 </ul>
             </div>
+        </nav>
+    </div>
 
-            <div class="border-b border-[#555]">
-                <a class="block p-[14px] text-[14px] tracking-widest" href="/tour-itineraries">TOUR ITINERARIES</a>
+    {/* --- MENÚ RESPONSIVE DESPLEGABLE MÓVIL --- */}
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu">
+
+            <div class="mobile-item-group">
+                <a href="/destinations">DESTINATIONS</a>
+                
+                {/* CONTROL INTERACTIVO SUBMENÚ MÓVIL */}
+                <input type="checkbox" id="responsive-submenu-toggle" class="css-toggle-input mobile-submenu-checkbox" />
+                
+                <label for="responsive-submenu-toggle" id="btnSubMenuResponsive">
+                    <i id="iconSubMenuResponsiveIcon" class="bi bi-caret-down-fill"></i>
+                </label>
+                
+                {/* Contenedor del submenú móvil (hermano directo abajo del checkbox) */}
+                <div class="mobile-submenu">
+                    <ul>
+                        {destinations.map(d => (
+                            <li>
+                                <a href={`/destinations/${d.distrito}`}>
+                                    {d.distrito.charAt(0).toUpperCase() + d.distrito.slice(1).replace(/-/g, " ")}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-            <div class="border-b border-[#555]">
-                <a class="block p-[14px] text-[14px] tracking-widest" href="/about-us">ABOUT US</a>
+
+            <div class="mobile-item">
+                <a href="/tour-itineraries">TOUR ITINERARIES</a>
             </div>
-            <div  class="border-b border-[#555]">
-                <a  class=" flex gap-[10px] block p-[14px] text-[14px] tracking-widest" href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" ><i class="text-[#D9B244] bi bi-whatsapp"></i> +51 982 836 947 </a>
+            <div class="mobile-item">
+                <a href="/about-us">ABOUT US</a>
             </div>
-            <div >
-                <a  class=" flex gap-[10px] block p-[14px] text-[14px] tracking-widest"  href="mailto:sales@PeruLuxuryJourneys.com" target="_blank"><i class="text-[#D9B244] bi bi-envelope"></i>sales@PeruLuxuryJourneys.com</a>
+            <div class="mobile-item">
+                <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank">
+                    <i class="whatsapp-icon bi bi-whatsapp"></i> +51 982 836 947
+                </a>
+            </div>
+            <div class="mobile-item border-none">
+                <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank">
+                    <i class="envelope-icon bi bi-envelope"></i> sales@PeruLuxuryJourneys.com
+                </a>
             </div>
 
         </div>
     </div>
 </header>
 
-<script>
-  function initNav() {
-    const btnMenu = document.getElementById("btnMenu") as HTMLButtonElement;
-    const openMenuIcon = document.getElementById("openMenu") as HTMLElement;
-    const closeMenuIcon = document.getElementById("closeMenu") as HTMLElement;
-    const menuResponsive = document.getElementById("menuResponsive") as HTMLElement;
-
-    btnMenu?.addEventListener("click", () => {
-      const isHidden = menuResponsive.classList.contains("hidden");
-      menuResponsive.classList.toggle("hidden");
-      openMenuIcon.classList.toggle("hidden", isHidden);
-      closeMenuIcon.classList.toggle("hidden", !isHidden);
-      btnMenu.setAttribute("aria-expanded", String(isHidden));
-    });
-
-    const btnSubmenuDesktop = document.getElementById("btnSubmenuDesktop") as HTMLButtonElement;
-    const submenuDesktop    = document.getElementById("submenu") as HTMLElement;
-    const iconSubmenu       = document.getElementById("iconSubmenu") as HTMLElement;
-
-    btnSubmenuDesktop?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = !submenuDesktop.classList.contains("hidden");
-      submenuDesktop.classList.toggle("hidden");
-      iconSubmenu.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
-      btnSubmenuDesktop.setAttribute("aria-expanded", String(!isOpen));
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!btnSubmenuDesktop?.contains(e.target as Node)) {
-        submenuDesktop?.classList.add("hidden");
-        if (iconSubmenu) iconSubmenu.style.transform = "rotate(0deg)";
-        btnSubmenuDesktop?.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    const btnSubMenuResponsive     = document.getElementById("btnSubMenuResponsive") as HTMLButtonElement;
-    const submenuResponsive        = document.getElementById("submenuResponsive") as HTMLElement;
-    const iconSubMenuResponsiveIcon = document.getElementById("iconSubMenuResponsiveIcon") as HTMLElement;
-
-    btnSubMenuResponsive?.addEventListener("click", () => {
-      const isOpen = !submenuResponsive.classList.contains("hidden");
-      submenuResponsive.classList.toggle("hidden");
-      iconSubMenuResponsiveIcon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-      btnSubMenuResponsive.setAttribute("aria-expanded", String(!isOpen));
-    });
-  }
-
-  document.addEventListener("astro:page-load", initNav);
-</script>
 <style>
-    .linksEffect a {
+    :root {
+        --dark-bg: #393939;
+        --darker-bg: #2e2e2e;
+        --hover-bg: #515050;
+        --light-gray: #E6E6E6;
+        --border-color: #555555;
+        --white: #ffffff;
+        --accent-gold: #D9B244;
+    }
+
+    /* Ocultar elementos de control estructurales */
+    .css-toggle-input {
+        display: none !important;
+    }
+
+    .main-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
+    }
+
+    .navbar {
+        width: 70%;
+        padding: 5px;
+    }
+
+    .navbar-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-image {
+        width: 220px;
+        height: auto;
+        display: block;
+    }
+
+    /* --- MENÚ DESKTOP --- */
+    .nav-links {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item a, .submenu-trigger {
+        text-decoration: none;
+        color: inherit;
         font-size: 14px;
         letter-spacing: 0.05em;
-        transition: color 0.3s;
+        position: relative;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 0;
     }
-    .linksEffect a::after {
+
+    .nav-text-desktop {
+        font-size: 14px;
+        letter-spacing: 0.05em;
+    }
+
+    /* Efecto hover underline */
+    .nav-item a::after, .submenu-trigger::after {
         content: "";
         position: absolute;
         bottom: -2px;
@@ -158,54 +188,214 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         background-color: currentColor;
         transition: width 0.3s ease;
     }
-    .linksEffect a:hover::after {
+
+    .nav-item a:hover::after, .submenu-trigger:hover::after {
         width: 100%;
     }
 
-    .items-Submenu {
+    /* Dropdown Desktop */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 45px;
+        left: -35px;
+        z-index: 100;
+        background-color: var(--dark-bg);
+        width: 225px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    .dropdown-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 15px;
+        color: var(--white);
+        font-size: 14px;
+        text-decoration: none;
         transition: background-color 0.25s;
     }
-    .items-Submenu:hover {
-        background-color: #515050;
+
+    .dropdown-content a:hover {
+        background-color: var(--hover-bg);
     }
 
-    #iconSubmenu {
-        transition: transform 0.35s ease;
+    /* --- BOTÓN HAMBURGUESA --- */
+    .menu-toggle {
+        display: none;
+        border-radius: 10px;
+        width: 48px;
+        height: 48px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--light-gray);
+        cursor: pointer;
+        border: none;
     }
 
-    #iconSubMenuResponsiveIcon {
-        transition: transform 0.35s ease;
+    .menu-toggle i {
+        font-size: 22px;
+        color: #333;
     }
 
-    #menuResponsive {
-        transform-origin: top center;
-        animation: none;
-        animation: animation-desliz 0.5s ease-in-out;
+    .menu-toggle .icon-close {
+        display: none;
+    }
+
+    /* --- CONTENEDORES RESPONSIVE MÓVIL --- */
+    .mobile-menu-wrapper {
+        display: none;
+        width: 100%;
         position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 40;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        background-color: var(--dark-bg);
+        color: var(--white);
+    }
+
+    .mobile-item-group, .mobile-item {
+        position: relative;
+        border-bottom: 1px solid var(--border-color);
+        padding: 14px;
     }
     
-    #submenuResponsive{
-        transform-origin: top center;
-        animation: none;
-        transition: all 0.5s;
-        animation: animation-desliz 0.5s ease-in-out;
+    .mobile-item-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .mobile-item {
+        display: block;
     }
 
-    @keyframes animation-desliz {
-        to{
-            transform: scaleY(1);
-        }
-        from{
-            transform: scaleY(0);
-        }
+    .mobile-item-group a, .mobile-item a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 14px;
+        letter-spacing: 0.1em;
     }
-    @keyframes animation-desliz2 {
-        to{
-            transform: scaleY(0);
-        }
-        from{
-            transform: scaleY(-1);
+
+    #btnSubMenuResponsive {
+        background: transparent;
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+        padding: 4px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Submenú móvil oculto por defecto */
+    .mobile-submenu {
+        display: none;
+        width: 100%;
+        background-color: var(--darker-bg);
+        margin-top: 14px;
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+
+    .mobile-submenu ul {
+        list-style: none;
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    .mobile-submenu a {
+        display: flex;
+        padding: 12px 12px 12px 34px;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 13px;
+        transition: background-color 0.25s;
+    }
+
+    .mobile-submenu a:hover {
+        background-color: var(--hover-bg);
+    }
+
+    .whatsapp-icon, .envelope-icon {
+        color: var(--accent-gold);
+        margin-right: 10px;
+    }
+
+    .border-none {
+        border-bottom: none !important;
+    }
+
+    #iconSubmenu, #iconSubMenuResponsiveIcon {
+        transition: transform 0.3s ease;
+    }
+
+    /* ==========================================================================
+       LÓGICA INTERACTIVA CSS PURO (SELECTORES COMPROBADOS)
+       ========================================================================== */
+
+    /* 1. COMPORTAMIENTO MENÚ MÓVIL PRINCIPAL (Abre/Cierra el bloque del menú y permuta iconos) */
+    .main-menu-checkbox:checked ~ .w-full .menu-toggle .icon-open {
+        display: none !important;
+    }
+    .main-menu-checkbox:checked ~ .w-full .menu-toggle .icon-close {
+        display: block !important;
+    }
+    .main-menu-checkbox:checked ~ .mobile-menu-wrapper {
+        display: block !important;
+    }
+
+    /* 2. COMPORTAMIENTO SUBMENÚ DESKTOP (Abre destinos y rota el indicador flecha) */
+    .desktop-checkbox:checked ~ .dropdown-content {
+        display: block !important;
+    }
+    .desktop-checkbox:checked ~ .submenu-trigger #iconSubmenu {
+        transform: rotate(90deg);
+    }
+
+    /* 3. COMPORTAMIENTO SUBMENÚ MÓVIL */
+    .mobile-submenu-checkbox:checked ~ .mobile-submenu {
+        display: block !important;
+    }
+    .mobile-submenu-checkbox:checked ~ #btnSubMenuResponsive #iconSubMenuResponsiveIcon {
+        transform: rotate(180deg);
+    }
+
+    /* ==========================================================================
+       MEDIA QUERIES (RESPONSIVE)
+       ========================================================================== */
+    @media (max-width: 1280px) {
+        .navbar { 
+            width: 90%; 
         }
     }
 
+    @media (max-width: 1024px) {
+        .nav-links { 
+            display: none !important; 
+        }
+        .menu-toggle { 
+            display: flex; 
+        }
+    }
+
+    @media (max-width: 640px) {
+        .logo-image { 
+            width: 210px;
+            padding: 7px;
+        }
+    }
 </style>
