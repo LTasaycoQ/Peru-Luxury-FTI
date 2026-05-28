@@ -2,53 +2,52 @@
 import { programs } from "../../data/programs/programs-experiences";
 
 function cloudinaryOptimize(url: string, width: number): string {
-  if (!url.includes('res.cloudinary.com')) return url;
-  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+  if (!url.includes("res.cloudinary.com")) return url;
+  return url.replace("/upload/", `/upload/f_auto,q_auto,w_${width}/`);
 }
 ---
 
 <section class="premium-programs">
-    <div class="header-section">
-        <span class="title-accent">Premium Programs</span>
-        <h2 class="subtitle">
-            Need Some inspiration? <br />
-            Take a look at some of our travelers’ recommended programs
-        </h2>
+  <div class="header-section">
+    <span class="title-accent">Premium Programs</span>
+    <h2 class="subtitle">
+      Need Some inspiration? <br />
+      Take a look at some of our travelers’ recommended programs
+    </h2>
+  </div>
+  <div class="grid-container">
+    <div class="programs-grid">
+      {
+        programs.slice(0, 3).map((section) => {
+          const urlFinal =
+            section.name === "seven"
+              ? `/${section.name}`
+              : `/tour-itineraries/${section.name}`;
+          return (
+            <a href={urlFinal} class="card-link">
+              <div class="card" data-aos="flip-left">
+                <div>
+                  <img
+                    src={cloudinaryOptimize(section.fondo, 700)}
+                    alt={section.name}
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">{section.title}</h3>
+                  <p class="card-text">{section.text}</p>
+
+                  <i class="link-read-more">Read More</i>
+                </div>
+              </div>
+            </a>
+          );
+        })
+      }
     </div>
-    <!-- <div class="grid-container">
-        <div class="programs-grid ">
-            {
-                programs.slice(0, 3).map((section) => {
-                    const urlFinal =
-                        section.name === "seven"
-                            ? `/${section.name}`
-                            : `/tour-itineraries/${section.name}`;
-                    return (
-                    <a href={urlFinal} class="card-link" >
-                        <div class="card" data-aos="flip-left">
-                            <div>
-                                <img
-                                    src={cloudinaryOptimize(section.fondo, 700)}
-                                    
-                                    alt={section.name}
-                                />
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">{section.title}</h3>
-                                <p class="card-text">{section.text}</p>
-                            
-                                <i class="link-read-more">Read More</i>
-                            </div>
-                        </div>
-                    </a>
-                );
-                })
-            }
-        </div>
-    </div> -->
+  </div>
 </section>
 <style>
-.premium-programs {
+  .premium-programs {
     font-family: "Poppins", sans-serif;
     background-color: #f7f7f7;
     width: 100%;
@@ -56,15 +55,15 @@ function cloudinaryOptimize(url: string, width: number): string {
     flex-direction: column;
     align-items: center;
     padding-bottom: 70px;
-}
+  }
 
-.header-section {
+  .header-section {
     padding-top: 70px;
     text-align: center;
     width: 90%;
-}
+  }
 
-.title-accent {
+  .title-accent {
     font-size: 36px;
     display: block;
     margin-bottom: 10px;
@@ -73,48 +72,50 @@ function cloudinaryOptimize(url: string, width: number): string {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
+  }
 
-.subtitle {
+  .subtitle {
     color: #1a1a1a;
     font-weight: 300;
     line-height: 1.4;
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
-}
+  }
 
-.grid-container {
+  .grid-container {
     padding-top: 4em;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.programs-grid {
+  .programs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     width: 90%;
     max-width: 1400px;
     padding: 0 20px;
-}
+  }
 
-.card {
+  .card {
     width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
 
-.card:hover {
+  .card:hover {
     transform: translateY(-10px);
-}
+  }
 
-.card .flex-1 img {
+  .card .flex-1 img {
     width: 100%;
     height: 1200px;
     object-fit: cover;
@@ -122,42 +123,42 @@ function cloudinaryOptimize(url: string, width: number): string {
     display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
-}
+  }
 
-.card:hover .flex-1 img {
+  .card:hover .flex-1 img {
     transform: scale(1.05);
-}
+  }
 
-.flex-1 {
+  .flex-1 {
     overflow: hidden;
-}
+  }
 
-.card-content {
+  .card-content {
     padding: 25px 20px 30px 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
-}
+  }
 
-.card-title {
+  .card-title {
     font-size: 20px;
     color: #2b2b2b;
     margin-bottom: 12px;
     font-weight: 600;
     line-height: 1.3;
-}
+  }
 
-.card-text {
+  .card-text {
     color: #4b5563;
     font-weight: 300;
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 20px;
     flex: 1;
-}
+  }
 
-/* Enlace Read More */
-.link-read-more {
+  /* Enlace Read More */
+  .link-read-more {
     display: inline-flex;
     align-items: center;
     margin-top: 15px;
@@ -170,159 +171,159 @@ function cloudinaryOptimize(url: string, width: number): string {
     letter-spacing: 0.5px;
     position: relative;
     width: fit-content;
-}
+  }
 
-.link-read-more::after {
-    content: '→';
+  .link-read-more::after {
+    content: "→";
     margin-left: 8px;
     transition: transform 0.3s ease;
     display: inline-block;
-}
+  }
 
-.link-read-more:hover {
+  .link-read-more:hover {
     color: #f7d30e;
     transform: translateX(5px);
-}
+  }
 
-.link-read-more:hover::after {
+  .link-read-more:hover::after {
     transform: translateX(3px);
-}
+  }
 
-/* Card Link */
-.card-link {
+  /* Card Link */
+  .card-link {
     text-decoration: none;
     display: block;
     transition: all 0.3s ease;
-}
+  }
 
-/* Media Queries */
-@media (max-width: 1024px) {
+  /* Media Queries */
+  @media (max-width: 1024px) {
     .programs-grid {
-        gap: 1.5em;
+      gap: 1.5em;
     }
 
     .card .flex-1 img {
-        height: 280px;
+      height: 280px;
     }
 
     .card-title {
-        font-size: 18px;
-        font-weight: 600;
+      font-size: 18px;
+      font-weight: 600;
     }
 
     .subtitle {
-        font-size: 22px;
-        padding: 0 20px;
+      font-size: 22px;
+      padding: 0 20px;
     }
 
     .title-accent {
-        font-size: 32px;
+      font-size: 32px;
     }
 
     .card-content {
-        padding: 20px 18px 25px 18px;
+      padding: 20px 18px 25px 18px;
     }
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .premium-programs {
-        padding-bottom: 50px;
+      padding-bottom: 50px;
     }
 
     .header-section {
-        padding-top: 50px;
+      padding-top: 50px;
     }
 
     .programs-grid {
-        grid-template-columns: 1fr;
-        width: 95%;
-        gap: 2rem;
+      grid-template-columns: 1fr;
+      width: 95%;
+      gap: 2rem;
     }
 
     .card .flex-1 img {
-        height: 300px;
+      height: 300px;
     }
 
     .subtitle {
-        font-size: 20px;
-        line-height: 1.4;
+      font-size: 20px;
+      line-height: 1.4;
     }
 
     .title-accent {
-        font-size: 28px;
+      font-size: 28px;
     }
 
     .card-title {
-        font-size: 18px;
+      font-size: 18px;
     }
 
     .card-text {
-        font-size: 14px;
+      font-size: 14px;
     }
 
     .card-content {
-        padding: 18px 16px 22px 16px;
+      padding: 18px 16px 22px 16px;
     }
-}
+  }
 
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
     .grid-container {
-        padding-top: 2em;
+      padding-top: 2em;
     }
 
     .card .flex-1 img {
-        height: 250px;
+      height: 250px;
     }
 
     .title-accent {
-        font-size: 24px;
+      font-size: 24px;
     }
 
     .subtitle {
-        font-size: 18px;
-        padding: 0 15px;
+      font-size: 18px;
+      padding: 0 15px;
     }
 
     .programs-grid {
-        gap: 1.5rem;
-        padding: 0 15px;
+      gap: 1.5rem;
+      padding: 0 15px;
     }
 
     .card-content {
-        padding: 15px 14px 20px 14px;
+      padding: 15px 14px 20px 14px;
     }
-}
+  }
 
-/* Soporte para AOS (animaciones) */
-[data-aos="flip-left"] {
+  /* Soporte para AOS (animaciones) */
+  [data-aos="flip-left"] {
     transform-style: preserve-3d;
-}
+  }
 
-/* Ajustes adicionales para Firefox */
-@-moz-document url-prefix() {
+  /* Ajustes adicionales para Firefox */
+  @-moz-document url-prefix() {
     .card .flex-1 img {
-        border-radius: 5px;
+      border-radius: 5px;
     }
-}
+  }
 
-/* Optimización para dispositivos táctiles */
-@media (hover: hover) {
+  /* Optimización para dispositivos táctiles */
+  @media (hover: hover) {
     .card-link:hover {
-        transform: translateY(-10px);
+      transform: translateY(-10px);
     }
-    
-    .card-link:hover .link-read-more {
-        color: #f7d30e;
-    }
-}
 
-@media (hover: none) {
+    .card-link:hover .link-read-more {
+      color: #f7d30e;
+    }
+  }
+
+  @media (hover: none) {
     .card:active {
-        transform: scale(0.98);
+      transform: scale(0.98);
     }
-    
+
     .link-read-more:active {
-        color: #f7d30e;
+      color: #f7d30e;
     }
-}
+  }
 </style>
