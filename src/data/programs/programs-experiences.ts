@@ -38,17 +38,17 @@ export interface programNoIncluye {
 export const programs: programsData[] = [
 
     {
-        fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
+        fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
         title: "Eight Unforgettable Nights as you Step Back in Time ",
         text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
         name: "seven",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1778193169/iStock-2210582847_eugby5.jpg",
 
         imgCardLink: [
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772812725/lima6_gpntwj.webp", link: "lima",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772633988/ROOFTOP_s52xek.jpg", link: "lima",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1771865774/monasterio_v66tbl.webp", link: "cusco",},
-            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772812725/lima6_gpntwj.webp", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772633988/ROOFTOP_s52xek.jpg", link: "lima",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1771865774/monasterio_v66tbl.webp", link: "cusco",},
+            {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812892/catedral-cusco_z0lmgr.webp", link: "cusco",},
         ],
         programBreve: [

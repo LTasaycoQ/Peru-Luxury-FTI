@@ -101,7 +101,6 @@ function cloudinaryOptimize(url: string, width: number): string {
   }
 
   .card {
-    width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
@@ -116,12 +115,10 @@ function cloudinaryOptimize(url: string, width: number): string {
   }
 
   .card .flex-1 img {
-    width: 100%;
     height: 1200px;
     object-fit: cover;
     border-radius: 5px;
     display: block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
   }
 
@@ -157,7 +154,6 @@ function cloudinaryOptimize(url: string, width: number): string {
     flex: 1;
   }
 
-  /* Enlace Read More */
   .link-read-more {
     display: inline-flex;
     align-items: center;
@@ -189,14 +185,12 @@ function cloudinaryOptimize(url: string, width: number): string {
     transform: translateX(3px);
   }
 
-  /* Card Link */
   .card-link {
     text-decoration: none;
     display: block;
     transition: all 0.3s ease;
   }
 
-  /* Media Queries */
   @media (max-width: 1024px) {
     .programs-grid {
       gap: 1.5em;
@@ -294,19 +288,16 @@ function cloudinaryOptimize(url: string, width: number): string {
     }
   }
 
-  /* Soporte para AOS (animaciones) */
   [data-aos="flip-left"] {
     transform-style: preserve-3d;
   }
 
-  /* Ajustes adicionales para Firefox */
   @-moz-document url-prefix() {
     .card .flex-1 img {
       border-radius: 5px;
     }
   }
 
-  /* Optimización para dispositivos táctiles */
   @media (hover: hover) {
     .card-link:hover {
       transform: translateY(-10px);
