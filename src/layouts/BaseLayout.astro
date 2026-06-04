@@ -2,10 +2,11 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-const { title, description, ogImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import "aos/dist/aos.css";
-import CargaPage from "../utils/cargaPage.astro";
+
+const { title, description, ogImage } = Astro.props;
+
 ---
 
 <html lang="en">
@@ -65,28 +66,15 @@ import CargaPage from "../utils/cargaPage.astro";
 		trusted-types *;
 		"
     />
-    <CargaPage />
-<script is:inline>
-  function initAOS() {
-    if (typeof AOS !== "undefined") {
-      AOS.init({
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
         duration: 1000,
         once: true,
-        offset: 100, 
+        offset: 200,
+        });
       });
-      
-      AOS.refresh();
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initAOS);
-  } else {
-    initAOS();
-  }
-
-  document.addEventListener("astro:page-load", initAOS);
-</script>
+		</script>
   </head>
   <body>
     <Nav />

@@ -17,7 +17,13 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             <input name="Email" required type="email" placeholder="Email" />
           </div>
           <button id="btn-itinerary" class="btn-itenerary" type="submit">Submit</button>
-          <div id="turnstile-container"></div>
+         <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAADPRDCFRFmqKw5yy"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+            ></div>
         </form>
         <p id="form-msg-itenerary">✓ Sent Successfully</p>
         <p id="form-msg-captcha">Fallo al Enviar la Solicitud</p>
@@ -34,107 +40,55 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   </div>
 </section>
 
-<script>
-  declare global {
-    interface Window {
-      turnstile?: {
-        render: (container: HTMLElement, options?: { sitekey: string }) => string;
-        getResponse: (widgetId?: string) => string | undefined;
-        reset: (widgetId?: string) => void;
-        remove: (widgetId: string) => void;
-      };
+<script is:inline>
+  const apiMailEndpoint = "https://organic-florencia-fiesta-tours-f2514923.koyeb.app/contact";
+  const form = document.querySelector(".formulario-itinerary");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const turnstileResponse = turnstile.getResponse();
+    if (!turnstileResponse) {
+      showError("Por favor, completa la verificación de seguridad.");
+      alert("Por favor, completa la verificación de seguridad.");
+      form.reset();
+      return;
     }
-  }
 
-  function initItineraryForm() {
-    const form = document.querySelector(".formulario-itinerary") as HTMLFormElement;
-    const btn = document.getElementById("btn-itinerary") as HTMLButtonElement;
-    const msgSuccess = document.getElementById("form-msg-itenerary");
-    const msgError = document.getElementById("form-msg-captcha");
-    const turnstileContainer = document.getElementById("turnstile-container") as HTMLElement;
-
-    if (!form || !btn || !turnstileContainer) return;
-
-    let widgetId: string | undefined;
-
-    const renderTurnstile = () => {
-      if (widgetId !== undefined) {
-        try {
-          window.turnstile?.remove(widgetId);
-        } catch (_) {}
-      }
-      turnstileContainer.innerHTML = "";
-      widgetId = window.turnstile?.render(turnstileContainer, {
-        sitekey: "0x4AAAAAADPRDCFRFmqKw5yy",
-      });
+    const formData = new FormData(form);
+    const data = {
+      nombre: formData.get("Nombre"),
+      email: formData.get("Email"),
+      captcha: turnstileResponse,
     };
+    try {
+      const response = await fetch(apiMailEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    if (window.turnstile) {
-      renderTurnstile();
-    } else {
-      window.addEventListener("load", renderTurnstile, { once: true });
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+      await response.json();
+
+      document.getElementById("form-msg-itenerary").style.display = "block";
+      form.reset();
+      turnstile.reset();
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("form-msg-itenerary").innerText =
+        "Something went wrong. Please try again.";
+      document.getElementById("form-msg-itenerary").style.color = "#e57373";
+      document.getElementById("form-msg-itenerary").style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Subscribe";
     }
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const apiMailEndpoint = "https://organic-florencia-fiesta-tours-f2514923.koyeb.app/contact";
-
-      if (msgError) msgError.style.display = "none";
-      if (msgSuccess) msgSuccess.style.display = "none";
-
-      const turnstileResponse = window.turnstile?.getResponse(widgetId);
-
-      if (!turnstileResponse) {
-        if (msgError) {
-          msgError.innerText = "Please verify the captcha";
-          msgError.style.display = "block";
-        }
-        return;
-      }
-
-      btn.disabled = true;
-      btn.innerText = "Sending...";
-
-      const formData = new FormData(form);
-      const data = {
-        nombre: formData.get("Nombre"),
-        email: formData.get("Email"),
-        captcha: turnstileResponse,
-      };
-
-      try {
-        const response = await fetch(apiMailEndpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-
-        if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-        if (msgSuccess) {
-          msgSuccess.style.display = "block";
-          msgSuccess.style.color = "#D9B244";
-          msgSuccess.innerText = "✓ Sent Successfully";
-        }
-
-        form.reset();
-        window.turnstile?.reset(widgetId);
-
-      } catch (error) {
-        console.error("Error:", error);
-        if (msgSuccess) {
-          msgSuccess.innerText = "Something went wrong. Please try again.";
-          msgSuccess.style.color = "#e57373";
-          msgSuccess.style.display = "block";
-        }
-      } finally {
-        btn.disabled = false;
-        btn.innerText = "Submit";
-      }
-    });
-  }
-
-  document.addEventListener("astro:page-load", initItineraryForm);
+  });
 </script>
 
 <style>
