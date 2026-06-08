@@ -167,10 +167,11 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
     </div>
 </section>
 
-<script is:inline>
+
+<script >
+
   import Swiper from 'swiper';
   import { Navigation, Autoplay } from 'swiper/modules';
-
   const initSwiper = () => {
     new Swiper(".mySwiper", {
       modules: [Navigation, Autoplay],
@@ -186,50 +187,47 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
     });
   };
 
-  
-
   document.addEventListener('astro:page-load', initSwiper);
   initSwiper();
-  
-  const tabs = document.querySelectorAll('.menu-list');
-  const contents = document.querySelectorAll('.tab-content');
+    const tabs = document.querySelectorAll('.menu-list');
+    const contents = document.querySelectorAll('.tab-content');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-target');
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      contents.forEach(content => {
-        content.classList.toggle('hidden', content.id !== target);
-        if(target === 'include' && content.id === 'include') content.classList.add('include-content');
-      });
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-target');
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            contents.forEach(content => {
+                content.classList.toggle('hidden', content.id !== target);
+                if(target === 'include' && content.id === 'include') content.classList.add('flex');
+            });
+        });
     });
-  });
 
-  const headers = document.querySelectorAll('.accordion-header');
+    const headers = document.querySelectorAll('.accordion-header');
 
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const body = header.nextElementSibling;
-      const chevron = header.querySelector('.chevron');
-      const isOpen = body.style.gridTemplateRows === "1fr";
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const body = header.nextElementSibling as HTMLElement;
+            const chevron = header.querySelector('.chevron');
+            const isOpen = body.style.gridTemplateRows === "1fr";
 
-      document.querySelectorAll('.accordion-body').forEach((b) => {
-        b.style.gridTemplateRows = "0fr";
-      });
-      document.querySelectorAll('.chevron').forEach((c) => {
-        c.style.transform = "rotate(0deg)";
-      });
+            document.querySelectorAll('.accordion-body').forEach((b: any) => {
+                b.style.gridTemplateRows = "0fr";
+            });
+            document.querySelectorAll('.chevron').forEach((c: any) => {
+                c.style.transform = "rotate(0deg)";
+            });
 
-      if (!isOpen) {
-        body.style.gridTemplateRows = "1fr";
-        if (chevron) chevron.style.transform = "rotate(-180deg)";
-      }
+            if (!isOpen) {
+                body.style.gridTemplateRows = "1fr";
+                if (chevron) (chevron as HTMLElement).style.transform = "rotate(-180deg)";
+            }
+        });
     });
-  });
 
-  const firstChevron = document.querySelector('.accordion-item:first-child .chevron');
-  if (firstChevron) firstChevron.style.transform = "rotate(-180deg)";
+    const firstChevron = document.querySelector('.accordion-item:first-child .chevron');
+    if (firstChevron) (firstChevron as HTMLElement).style.transform = "rotate(-180deg)";
 </script>
 
 <style>
@@ -452,7 +450,6 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
     text-align: center;
     font-size: 18px;
     height: 200px;
-    background: #702424;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -534,7 +534,7 @@ export const programs: programsData[] = [
         title: "Wonders of Peru",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "wonders-of-peru",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778193169/iStock-2210582847_eugby5.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1780928807/iStock-547136030_lr3tsw.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812725/lima6_gpntwj.webp", link: "lima",},
@@ -949,7 +949,7 @@ export const programs: programsData[] = [
         title: "Peru Magic",
         text: "Explore the highlights of Lima and Cusco in one week.",
         name: "peru-magic",
-        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1778687033/iStock-2210582847_tdu1ej.jpg",
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1780928721/iStock-172168375_bllhpa.jpg",
 
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
