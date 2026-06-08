@@ -357,7 +357,6 @@ export const hotels: Hotel[] = [
     ],
   },
 
-  // SACRED VALLEY
   {
     slug: "tambo-del-inka",
     title: "Tambo del Inka, A Luxury Collection",

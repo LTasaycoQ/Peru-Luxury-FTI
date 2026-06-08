@@ -13,7 +13,7 @@ const { title, description, hotelImage = [] } = Astro.props;
 
 const optimizeCloudinary = (url: string) => {
   if (!url.includes('cloudinary.com')) return url;
-  return url.replace('/upload/', '/upload/f_auto,q_auto,w_800,c_limit/');
+  return url.replace('/upload/', '/upload/f_auto,q_auto,w_800/');
 };
 ---
 
@@ -59,13 +59,12 @@ const optimizeCloudinary = (url: string) => {
   import { Navigation, Autoplay } from 'swiper/modules';
 
 
-  let swiperInstance: Swiper | null = null;
+  let swiperInstance: any = null;
 
-  const initSwiper = () => {
-    const swiperEl = document.querySelector(".mySwiper");
-    
+    const swiperEl = typeof window !== 'undefined' ? document.querySelector(".mySwiper") : null;
+
     if (swiperEl) {
-      if (swiperInstance) {
+      if (swiperInstance && typeof swiperInstance.destroy === 'function') {
         swiperInstance.destroy(true, true);
       }
 
@@ -89,10 +88,7 @@ const optimizeCloudinary = (url: string) => {
         watchSlidesProgress: true,
       });
     }
-  };
 
-  // 4. Se ejecuta en la carga inicial y en cada transición de página
-  document.addEventListener("astro:page-load", initSwiper);
 </script>
 <style>
 
