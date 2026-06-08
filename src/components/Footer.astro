@@ -60,56 +60,47 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp"
 </footer>
 
 <script is:inline>
-  function initFooterForm() {
-    const formSubscribete = document.getElementById("formulario-subcription");
-    const msgElement = document.getElementById("form-msg");
-    const btn = document.getElementById("btn-submit");
+  const apiMailEndpointSubscribete = "https://organic-florencia-fiesta-tours-f2514923.koyeb.app/subscribe";
+  const formSubscribete = document.querySelector(".form-contacto-subcribete");
 
-    if (!formSubscribete || !msgElement || !btn) return;
+  formSubscribete?.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    formSubscribete.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    const btn = formSubscribete.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Sending...";
 
-      const apiMailEndpointSubscribete = "https://organic-florencia-fiesta-tours-f2514923.koyeb.app/subscribe";
+    const formData = new FormData(formSubscribete);
+    const data = {
+      nombre: formData.get("Nombre"),
+      apellido: formData.get("Apellido"),
+      email: formData.get("Email")
+    };
 
-      msgElement.style.display = "none";
-      msgElement.style.color = "#DABB42";
-      msgElement.innerText = "✓ You're subscribed!";
+    try {
+      const response = await fetch(apiMailEndpointSubscribete, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-      btn.disabled = true;
-      btn.innerText = "Sending...";
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
 
-      const formData = new FormData(formSubscribete);
-      const data = {
-        nombre: formData.get("Nombre"),
-        apellido: formData.get("Apellido"),
-        email: formData.get("Email")
-      };
+      await response.json();
 
-      try {
-        const response = await fetch(apiMailEndpointSubscribete, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+      document.getElementById("form-msg").style.display = "block";
+      formSubscribete.reset();
 
-        if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-        msgElement.style.display = "block";
-        formSubscribete.reset();
-        
-      } catch (error) {
-        console.error("Error:", error);
-        msgElement.innerText = "Something went wrong. Please try again.";
-        msgElement.style.color = "#e57373";
-        msgElement.style.display = "block";
-      } finally {
-        btn.disabled = false;
-        btn.innerText = "Subscribe";
-      }
-    });
-  }
-  document.addEventListener("astro:page-load", initFooterForm);
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("form-msg").innerText = "Something went wrong. Please try again.";
+      document.getElementById("form-msg").style.color = "#e57373";
+      document.getElementById("form-msg").style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Subscribe";
+    }
+  });
 </script>
 
 <style>
