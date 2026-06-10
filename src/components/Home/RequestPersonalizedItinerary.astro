@@ -8,7 +8,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
     <div class="container-itinerary">
       <h3 data-aos="fade-right" class="title-h2">Your Journey Starts Here</h3>
       <p class="text-parrafo">
-        Request Your personalizaed itinerary and start your <br /> unforgettable journey.
+        Request Your personalized itinerary and start your <br /> unforgettable journey.
       </p>
       <div class="container-form">
         <form action="" class="formulario-itinerary">
@@ -17,16 +17,16 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
             <input name="Email" required type="email" placeholder="Email" />
           </div>
           <button id="btn-itinerary" class="btn-itenerary" type="submit">Submit</button>
-         <div
-            class="cf-turnstile"
+          
+          <div
+            id="my-turnstile-widget"
             data-sitekey="0x4AAAAAADPRDCFRFmqKw5yy"
             data-theme="light"
             data-size="normal"
-            data-callback="onSuccess"
-            ></div>
+          ></div>
         </form>
-        <p id="form-msg-itenerary">✓ Sent Successfully</p>
-        <p id="form-msg-captcha">Fallo al Enviar la Solicitud</p>
+        <p id="form-msg-itenerary" style="display: none;">✓ Sent Successfully</p>
+        <p id="form-msg-captcha" style="display: none;">Fallo al Enviar la Solicitud</p>
       </div>
     </div>
     <div>
@@ -40,76 +40,49 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
   </div>
 </section>
 
-
-<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 
 <script is:inline>
-  const apiMailEndpoint = "https://fti-emailservice.vercel.app/contact";
-  const form = document.querySelector(".formulario-itinerary");
-
-  form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector("button");
-    document.getElementById("form-msg-captcha").style.display = "none";
-    document.getElementById("form-msg-itenerary").style.display = "none";
- btn.disabled = true;
-    btn.innerText = "Sending...";
-    const turnstileResponse = turnstile.getResponse();
-    if (!turnstileResponse) {
-      btn.innerText = "Cancelado";
-      document.getElementById("form-msg-captcha").style.display = "block";
-      form.reset();
-      return;
-    }
-   const formData = new FormData(form);
-    const data = {
-      nombre: formData.get("Nombre"),
-      email: formData.get("Email"),
-      captcha: turnstileResponse,
-    };
-    try {
-      const response = await fetch(apiMailEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-
-   });
-
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-      await response.json();
-
-      document.getElementById("form-msg-itenerary").style.display = "block";
-      form.reset();
-      turnstile.reset();
-    } catch (error) {
-      console.error("Error:", error);
-      document.getElementById("form-msg-itenerary").innerText =
-        "Something went wrong. Please try again.";
-      document.getElementById("form-msg-itenerary").style.color = "#e57373";
-      document.getElementById("form-msg-itenerary").style.display = "block";
-    } finally {
-      btn.disabled = false;
-      btn.innerText = "Subscribe";
-    }
-  });
-</script>
-
-<!-- <script is:inline>
   const apiMailEndpoint = "https://organic-florencia-fiesta-tours-f2514923.koyeb.app/contact";
   const form = document.querySelector(".formulario-itinerary");
+  let widgetId = null;
+
+  function initTurnstile() {
+    const container = document.getElementById("my-turnstile-widget");
+    if (container && window.turnstile) {
+      // Explicitly render and save the widgetId
+      widgetId = turnstile.render('#my-turnstile-widget', {
+        sitekey: container.getAttribute('data-sitekey'),
+        theme: container.getAttribute('data-theme') || 'light',
+        size: container.getAttribute('data-size') || 'normal'
+      });
+    }
+  }
+
+  // Ensure Turnstile initializes even if script loads before/after DOM
+  if (window.turnstile) {
+    initTurnstile();
+  } else {
+    window.onloadTurnstileCallback = initTurnstile;
+  }
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const btn = form.querySelector("button");
+    
+    document.getElementById("form-msg-captcha").style.display = "none";
+    document.getElementById("form-msg-itenerary").style.display = "none";
+    
     btn.disabled = true;
     btn.innerText = "Sending...";
 
-    const turnstileResponse = turnstile.getResponse();
+    // Pass the explicit widgetId to getResponse to avoid mapping issues
+    const turnstileResponse = window.turnstile ? turnstile.getResponse(widgetId) : null;
+    
     if (!turnstileResponse) {
-      showError("Por favor, completa la verificación de seguridad.");
-      alert("Por favor, completa la verificación de seguridad.");
-      form.reset();
+      btn.disabled = false;
+      btn.innerText = "Submit"; 
+      document.getElementById("form-msg-captcha").style.display = "block";
       return;
     }
 
@@ -119,6 +92,7 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       email: formData.get("Email"),
       captcha: turnstileResponse,
     };
+
     try {
       const response = await fetch(apiMailEndpoint, {
         method: "POST",
@@ -130,9 +104,12 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
 
       await response.json();
 
+      document.getElementById("form-msg-itenerary").innerText = "✓ Sent Successfully";
+      document.getElementById("form-msg-itenerary").style.color = ""; // Reset color
       document.getElementById("form-msg-itenerary").style.display = "block";
+      
       form.reset();
-      turnstile.reset();
+      if (widgetId !== null) turnstile.reset(widgetId);
     } catch (error) {
       console.error("Error:", error);
       document.getElementById("form-msg-itenerary").innerText =
@@ -141,10 +118,10 @@ import contactImage from "../../assets/image/Home-img/contact-us.webp";
       document.getElementById("form-msg-itenerary").style.display = "block";
     } finally {
       btn.disabled = false;
-      btn.innerText = "Subscribe";
+      btn.innerText = "Submit"; 
     }
   });
-</script> -->
+</script>
 
 <style>
   .container-form{
