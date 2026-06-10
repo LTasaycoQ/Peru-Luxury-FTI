@@ -677,7 +677,7 @@ export const programs: programsData[] = [
         title: "Peru Boutique",
         text: "Luxury programs featuring the exclusive Relais & Chateaux properties.",
         name: "peru-boutique",
-
+        fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1781105272/iStock-923075094_fa0wmh.jpg",
         imgCardLink: [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812676/lima4_bu8wrf.webp", link: "lima",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/sacred-valley-portada_c39kms.webp", link: "sacred-valley",},
