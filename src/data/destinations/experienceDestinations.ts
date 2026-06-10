@@ -76,9 +76,9 @@ export const destinationsExp: expDestinatiosData[] = [
 
     Thank you for taking the time to read.`,
     rightImage: [
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660418/mckayla-crump-hjanvZlqoB8-unsplash_ddxwll.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1781104089/iStock-2212291405_tmeevk.jpg"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660244/eddie-kiszka-w-CG0IqRevM-unsplash_s03naa.webp"},
-      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660388/johnson-wang-sJa0qmawWnM-unsplash-_1_npeeyk.webp"},
+      {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1781103871/iStock-2212291399_gooygx.jpg"},
       {image: "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772660375/alvaro-palacios-CYI-IPHoOgo-unsplash_gcbn0p.webp"},
     ],
     downImage: [
