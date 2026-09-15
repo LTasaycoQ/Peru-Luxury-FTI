@@ -8,7 +8,11 @@ import AmazonRiver from "../components/Home/AmazonRiver.astro"
 import LiveExclusivePeru from "../components/Home/LiveExclusivePeru.astro"
 import RequestPersonalizedItinerary from "../components/Home/RequestPersonalizedItinerary.astro"
 
+import Hero from "../components/FondoVideo.astro";
+
 import background from "../assets/backgrounds/cover-index.webp" 
+
+
 
 
 const fondoShare = "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772633980/GUEST_POOL1_f0ehsk.jpg"
@@ -17,7 +21,19 @@ const description = "Discover Peru with the leading luxury travel operator. Tail
 ---
 
 <BaseLayout title={title} description={description} ogImage={fondoShare}>
-	<Fondo  fondo={`url(${background.src})`} />
+	
+
+
+
+
+
+
+	<Hero  
+	video={[
+		"/EDITADO_COMPLETO.mp4",
+	]}
+	/>
+  
 	<main>
 		<AboutLuxury />
 		<PremiumPrograms />
