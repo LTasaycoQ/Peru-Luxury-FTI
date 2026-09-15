@@ -6,7 +6,18 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 ---
 
 <header class="header">
-  <HeaderTop />
+    <div class="top-bar">
+      <div class="top-bar-container">
+          <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="top-bar-link">
+              <i class="bi bi-telephone"></i> +51 982 836 947
+          </a>
+          <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="top-bar-link">
+              <i class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com
+          </a>
+      </div>
+  </div>
+
+
   <div class="nav-container">
     <nav class="nav">
       <div class="nav-wrapper">
@@ -182,6 +193,106 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
 </script>
 
+
+
+<style>
+    .top-bar {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-bottom: 1px solid #d1d5db;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    @media (width < 64rem) {
+        .top-bar{
+            display: none;
+        }
+    }
+
+    .top-bar-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 60px;
+        width: 100%;
+    }
+
+    .top-bar-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        gap: 20px;
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    
+    .top-bar-link:hover {
+        color: rgb(153, 127, 56);
+    }
+
+    .top-bar-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        transition: width 0.3s ease;
+    }
+
+    .top-bar-link:hover::after {
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        .top-bar {
+            flex-direction: column;
+            font-size: 12px;
+        }
+
+        .top-bar-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .top-bar-link {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .top-bar-container {
+            width: 87%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .top-bar-container {
+            width: 68%;
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .top-bar-container {
+            width: 68%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .top-bar-container {
+            gap: 0px;
+        }
+    }
+</style>
+
 <style>
   * {
     margin: 0;
@@ -190,25 +301,26 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
   }
 
   .header {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.185);
     width: 100%;
     display: flex;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    z-index: 600;
+    position: fixed;
   }
 
   .nav-container {
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .nav {
-    background-color: white;
     width: 70%;
     padding: 5px;
   }
