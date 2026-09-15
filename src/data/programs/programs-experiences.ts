@@ -64,59 +64,90 @@ export const programs: programsData[] = [
         ],
         programItenerario: [
             {
-                ite_titulo: "Day One - Arrival in Lima. ",
+                ite_titulo: "Day 1: Arrival in Lima",
                 ite_text: `
-                Arrival in Lima, the "City of Kings" famous for its Spanish Colonial architecture, extraordinary museums and cuisine. Lima is internationally recognized as the "Gastronomic Capital of the Americas", and its cuisine is considered among the most diverse and exquisite in the world on par with French cuisine. 
+                The City of Kings – The Gastronomic Capital of America – Capital of the Viceroyalty of Peru – Three Times Crowned Villa Welcome to the Capital of Flavors – Arrival in Lima. Peru's stunning capital is globally celebrated for its majestic colonial architecture, fascinating historical museums, and a legendary gastronomic scene that proudly rivals French haute cuisine, standing firmly as one of the most diverse culinary destinations on the planet.
                 </br>
-                Several Peruvian chefs have received top global honors and had their restaurants ranked as the world's best. 
-            `,
+               Upon your arrival, enjoy a seamless private transfer directly to your hotel. You will have a free evening to begin exploring the local culinary landscape. Please note that if you wish to secure a table at top award-winning restaurants across Lima, Cusco, and the Sacred Valley, these dining experiences are at your own expense. Because these exclusive gastronomic sanctuaries experience extreme demand and operate with strictly limited seating, planning and securing your reservations up to six months in advance is essential.
+               
+               </br>
+               </br>
+                Peru has firmly established itself at the pinnacle of global haute cuisine, driven by visionary masters who transform native ingredients into true edible masterpieces, consistently earning top international accolades. Among these legendary culinary temples are Central, led by Virgilio Martínez alongside Pía León, and Maido, celebrated worldwide for its Nikkei creations.
+               
+               </br>
+               </br>
+               This elite circuit also features Astrid y Gastón, founded by pioneers Astrid Gutsche and Gastón Acurio, who first introduced authentic Peruvian flavors to the global stage from the historic Casa Hacienda Moreyra.
+                
+               To complete your first day, indulge your senses at Tragaluz, located within the Belmond Miraflores Park, where contemporary art blends with the cuisine of chef Ricardo Ehni.
+               `,
                 ite_image: [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp",
                 ],
             },
             {
-                ite_titulo: "Day Two - Colonia Lima & Peruvian Paso Horse Show. (B,L)",
+                ite_titulo: "Day 2: Viceregal Lima & Peruvian Paso Horse Show (B,L)",
                 ite_text: `
-                Tour of Colonial Lima includes the lovely Plaza Mayor, the Government Palace and the Basílica and Convent of San Francisco, a monumental architectural renowned for its Baroque architecture, extensive library, and fascinating underground catacombs. It is a UNESCO World Cultural Heritage site. 
+                The Majestic "City of Kings" opens its doors to us. We will begin the tour in the historic Plaza Mayor, the colonial heart of Lima's birthplace, where independence was proclaimed, featuring its beautiful and iconic central fountain.
                 </br>
-                After the visit to Colonial Lima, the excursion continues to enjoy the majestic spectacle of the Peruvian Paso Horse. The world famous Peruvian Paso Horse is gentle and smooth-gaited. It is distinguished by a natural, four-beat, lateral gait called the “paso llano”. 
                 </br>
-                Peruvians trace their ancestry to these ambling Jennets; as well as to the Barb, which contributed strength and stamina; and to the Andalusian which added style. Lunch is included.
-                Excursion departs at 8:30 AM. 
+                Right there we will admire the Government Palace, seat of the executive branch that dazzles with its neo-baroque architecture and its martial changing of the guard. Then, we will delve into the mysticism of the Basilica and Convent of San Francisco, a world-acclaimed monumental baroque complex.
                 </br>
-                If time permits, complimentary visit to “The Temple of the Sun & The Temple of the Moon” at Pachacamac Archaeological Ceremonial Center. 
-            `,
+                </br>
+                This UNESCO World Heritage site is famous for its legendary library, its cloisters adorned with tiles, and its mysterious underground colonial catacombs.
+                </br>
+                Following this deep historical immersion, we will transfer towards an exclusive and traditional hacienda situated on the outskirts of the city. In this atmosphere of absolute distinction and surrounded by beautiful gardens, you will delight in an exquisite high-end Creole cuisine lunch.
+                </br>
+                Directly in front of your table, the arena will become the stage for a wonderful living tradition: the majestic Peruvian Paso Horse show.
+                </br>
+                This noble specimen, entirely unique in its kind, dazzles the world with its signature "Paso Llano," a rhythmic and smooth four-beat lateral gait that redefines equestrian elegance in a perfect dance, where the chalán's skill and the animal's pride merge with grace without equal.
+               </br>
+               At the end of the show, a return transfer to your hotel in Lima will be provided.
+                If time permits, we will be able to visit Pachacamac, the most important pre-Hispanic sanctuary on Peru's central coast. We will tour its imposing mud pyramids and temples dedicated to the creator god of the universe, immersing ourselves in the mysticism and living archaeology of this sacred place.
+
+                `,
                 ite_image: [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750026/2_14_11zon_scv4xy.webp",
                 ],
             },
             {
-                ite_titulo: "Day Three - Lima, Cusco & Sacred Valley. (B,L)",
+                ite_titulo: "Day 3: Lima, Cusco & Sacred Valley (B, L)",
                 ite_text: `
-                Transfer to the Lima airport for a shirt flight over snow-capped mountains of the Peruvian Andean Range, to arrive in Cusco, capital of the Inca Empire. Cusco is at an elevation of 11,440 feet. Afternoon transfer to the Sacred Valley at 8,200 feet of altitude.
-                This will allow you to adapt easily, gradually and comfortably to the altitude.
+                Cusco - The Capital of the Inca Empire - Abode of the Gods - Navel of the World.Upon your arrival in Cusco, you will be transferred to the Terra Andina Colonial Mansion. An Estate in Cusco’s Historic Center, a jewel built in the late 1700s during the Spanish Colonial Era 
                 </br>
-                Upon arrival, transfer to the “Terra Andina Colonial Mansion”. 
-                In Cusco Historic district, built in the early 1800s during the “Spanish Colonial era”. 
                 </br>
-                Light Lunch. Enjoy exquisite cuisine at the Colonial Patio restaurant. Meals are à la carte.
+               Enjoy an extraordinary included lunch, a wonderful culinary experience at the distinguished In-Terra restaurant, where you will delight in a gastronomic proposal that pays tribute to local wealth, masterfully intertwining Andean and Creole ingredients under a vanguard and modern vision, integrated harmoniously as part of today's select experiences.
                 </br>
-                Afternoon transfer to the Sacred Valley, the fertile land of the Incas. On your way to the valley, brief stop at the “Museo Vivo de Yucay” also known as “Museum of Living Culture”. 
-             `,
+                </br>
+               These meals represent the Sacred Nourishment service, a direct reference to the Inca worldview, where the earth (Pachamama) provided supplies with a nearly religious respect.
+                </br>
+               Menu Design and Local Connection: Your chefs were trained and the menu was designed under the expert advisory of professionals formed at Le Cordon Bleu.
+                </br>
+                In the afternoon, transfer to the Sacred Valley for a gradual acclimatization, featuring a brief stop at the interactive Yucay Living Museum. 
+              </br>
+              More than a visit, an absolute immersion. The Living Culture Museum is a magical interactive setting where history is touched and breathed.
+               
+              </br>
+              </br>
+              Passengers will marvel at observing closely the ancestral natural wool dyeing process, sharing moments with friendly alpacas and vicuñas in an idyllic environment, and discovering the agricultural secrets that fed the Inca Empire.
+            Free Evening: Gastronomic Discovery in the Sacred Valley. Independent dinner, the Sacred Valley houses some of the most exclusive luxury hotel sanctuaries and refuges on the continent, whose culinary proposals are authentic works of art.
+
+              `,
                 ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750035/3_15_11zon_yjd5lr.webp",],
             },
             {
-                ite_titulo: "Day Four - Pisac Andean Market, Pisac Archaeological Complex and Ollantaytambo Fortress. (B) ",
+                ite_titulo: "Day 4: Pisac Andean Market & Archaeological Site, Hacienda Huayoccari & Ollantaytambo Fortress (B, L)",
                 ite_text: `
-                    Morning departure for a drive through the fertile countryside of the Urubamba Valley to the colonial village of Pisac where a unique Indian Market takes place daily. The variety of products offered is overwhelming, from pottery with reproductions of archaeological pieces, to all kinds of textiles, jewelry and Peruvian handicrafts. During your visit to this bustling marketplace you will have the opportunity to bargain with the artisans and indigenous traders. Grab the items you like, you will hardly see the same one again.
+                   The Andean Heart of the Sacred Valley – Pisac Handicraft Market in the Sacred Valley features a wide variety of artisanal products. On Sundays, the Varayoc gather—traditional mayors and highest authorities of the indigenous communities (Ayllus). Chosen for their wisdom, they carry the Inka Varayoc: a sacred silver staff embodying order, justice, and connection to their ancestors.
                     </br>
-                    Visit the Inca archeological remnants of Pisac known as Inca Pisac, which lie atop a hill at the entrance to the valley. It features an irrigation system, an astronomical observatory, and a solar clock and calendar (Intiwatana). 
                     </br>
-                    The hillside is lined with agricultural terraces constructed by the Inca and still in use today. With military, religious, and agricultural structures, the site served at least a triple purpose. Besides a country estate, it is thought that Pisac defended the southern entrance to the Sacred Valley, while Choquequirao defended the western entrance and the fortress at Ollantaytambo the northern entrance. 
+                   Visit the Pisac Archaeological Center – The "Little Machu Picchu," situated atop a hill. It features an irrigation system, an observatory, and a solar clock (Intiwatana). Its slopes exhibit still-active Inca terraces. Due to its structures, the site served a triple purpose: military, religious, and agricultural, operating as an estate while defending the southern access to the Sacred Valley.
                     </br>
-                    Lunch at the venue of your choice. 
                     </br>
-                    Continue to the Ollantaytambo archaeological complex, the Incas built it as a fort that included a temple, agricultural terraces, and an urban area. There are two distinct sectors: The religious and worship zone, and the residential area. Ollantaytambo was an important administrative center with probable military functions if one considers the walls and towers. There are also traces of antique roads and aqueducts.
+                    Hacienda Huayoccari: The sanctuary where art and flavors tell Peru's story to the world. The Entrance: An avenue of trees guides you to a courtyard that completely isolates you from the outside world. The Labyrinth of History: Its halls form an intimate museum featuring a collection of art with pre-Inca, Inca, colonial, and republican pieces. The Window to the Infinite: Large windows frame the green immensity of the Sacred Valley; you will be dining inside a chest of historical treasures hidden within the Andes.
+                    </br>
+                    </br>
+                    The Ollantaytambo Archaeological Complex – The Ollantaytambo Fortress – The Royal House of the Sun. The Incas built a fortress that included a temple, agricultural terraces, an urban zone, a religious and ceremonial area, and a residential zone. Ollantaytambo was an administrative center with military functions, walls, and towers, featuring vestiges of ancient trails and aqueducts. This complex also stands out for the Monumental Temple of the Sun.
+                  
                 `,
                 ite_image: [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826657/4.1_11zon_vqleda.webp",
@@ -124,21 +155,23 @@ export const programs: programsData[] = [
                 ],
             },
             {
-                ite_titulo: "Day Five - Maras Salt Pools, Moray Terraces and time to enjoy resort’ amenities. (B) ",
+                ite_titulo: "Day 5: Maras Salt Mines, Moray Terraces & Garden Lunch (B, L)",
                 ite_text: `
-                The Maras Salt Pools (or Salineras de Maras) are a striking collection of thousands of shallow, terraced salt evaporation ponds located in the Sacred Valley of the Incas. Fed by a natural, mineral-rich underground spring, the more than 3,000 pools have been used for salt extraction since pre-Inca times. 
+               The Maras Salt Mines, located in the Sacred Valley, are among the region's remarkable excursions. This stunning site houses over 3,000 terraced salt ponds fed by a mineral-rich underground spring. Their extraction follows an authentic pre-Inca method: water evaporates under the warm Andean sun, and local families hand-scrape the fine layer of pink salt—a prized artisanal product preserving this living landscape today.
                 </br>
-                Moray Terraces are famous for its concentric circular terraces that acted as an agricultural laboratory to test crops in different microclimates. 
+              The Moray Terraces, another extraordinary excursion, captivate visitors with concentric circular platforms that functioned as an Inca agricultural laboratory. Their ingenious design creates natural thermal variations of up to 15 °C between levels, effectively simulating distinct ecological floors. Thanks to a flawless drainage system, this massive amphitheater never floods, standing as a brilliant testament to the advanced scientific knowledge that mastered the sacred geography.
                 </br>
-                Lunch at venue of your choice. 
                 </br>
-                Enjoy a free afternoon at your property in the Sacred Valley. Take a leisurely stroll through the gardens or along the Sacred River to unwind.
+              Lunch in the Garden of El Huerto-Muju. Delight in an exquisite garden lunch at El Huerto-Muju, a sanctuary paying tribute to the Andean pantry using fresh ingredients from its organic grounds. Savor your dishes lulled by the gentle sound of the nearby river, birdsong, and breathtaking views of the majestic mountains, connecting local culinary tradition with world-class haute cuisine.
                 </br>
-                Indulge in the hotel's amenities, such as a spa treatment or the serenity of the poolside with its breathtaking Andean landscape. Wander through the lush gardens, listening to the birdsong and discovering quiet corners for reflection amidst the flora. 
+              Enjoy a free afternoon in the Sacred Valley. Take a peaceful stroll along the flowing water or treat yourself to a relaxing spa session with mountain views. Walk among lush vegetation, listen to local wildlife, or find quiet corners for reflection. Embrace the absolute peace to fully immerse yourself in this mythical natural haven.
                 </br>
-                Take advantage of the afternoon's tranquility to fully immerse yourself in the surroundings. 
                 </br>
-                Or arrange for an optional tour of Chinchero Town and Archaeological Complex. 
+               You may also experience the "Mayu Willka - Andean Therapies" Spa, offering specialized holistic treatments and massages rooted in ancient Andean traditions.
+                </br>
+                </br>
+               Free evening and dinner on your own.
+                </br>
              `,
                 ite_image: [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826705/5.1_11zon_dt5nzz.webp",
@@ -146,31 +179,57 @@ export const programs: programsData[] = [
                 ],
             },
             {
-                ite_titulo: "Day Six - Ollantaytambo Pueblo & Journey to Machu Picchu. (B,L) ",
+                ite_titulo: "Day 6: Ollantaytambo Pueblo, - Pachamanca - Train to Machu Picchu (B, L)",
                 ite_text: `
-                Guided exploration of “Ollantaytambo Pueblo” also known as a "Living Inca Town", an ancient village in Peru's Sacred Valley that has been continuously inhabited since the 13th century and retains its original Inca street grid and stone architecture, the inhabitants maintain ancient living practices and customs. 
-                It’s antique water channels, which remain an integral part of daily life and create a unique and authentic atmosphere. 
+                Ollantaytambo Pueblo – Living Inca Town – Peru's First Charming Village. Explore an ancient town in the Sacred Valley, continuously inhabited since the 1200s.
+                It preserves its original Inca urban layout and stone architecture. Residents maintain ancient practices and customs, while traditional water channels create a unique and authentic atmosphere.
+                This extraordinary town was recognized by the World Tourism Organization (UNWTO) as one of the "Best Tourism Villages" in the world.
+
                 </br>
-                This extraordinary village was recognized by the World Tourism Organization (UNWTO) as one of the “Best Tourism Villages” in the world, an award that highlights its cultural identity, its heritage preservation, and its sustainable tourism model.
                 </br>
-                Walking through Ollantaytambo Pueblo is to share the serene rhythm of Andean life, to feel history in every corner, and to connect with a community that honors its traditions with pride. A genuine, inspiring, and profoundly human experience that invites you to stop, observe… and say: I want to experience this. 
+                
+                Walking through Ollantaytambo is sharing the serene rhythm of Andean life, feeling history in every corner, and connecting with a community that honors its traditions with pride.
+
+                </br>
+                </br>
+               Additionally, it is a delight to contemplate its clay ovens, where fire guards ancient techniques to bring artisanal bread to life. A genuine, inspiring, and deeply human experience that invites you to stop, observe, and say: "I want to experience this."
+                </br>
+                </br>
+                Inca Pachamanca: Ancestral Ritual in Ollantaytambo. After touring the Village.
+                Pachamanca - Earth Oven. Foods are cooked underground with hot stones following pre-Columbian methods. The outdoor lunch includes native potatoes, sweet potatoes, and salads facing Andean landscapes.
+                </br>
+
+                The activity includes a guided tour of its organic farm, artisanal distillery, and coffee roaster, besides the ritual process. An unforgettable experience that celebrates Peruvian gastronomy before taking the train to Aguas Calientes.
+                Panoramic Adventure on the Andean Train to Aguas Calientes Machu Picchu Pueblo,beneath the ancient citadel. While the train snakes through the imposing Sacred Valley, the landscape transforms into a lush high jungle, marking the arrival at the mystical gateway of the Incas.
+                </br>
+                </br>
+                An unforgettable journey!
+                </br>
+                </br>
+                Free evening and unscheduled dinner.
+
+
+
             `,
                 ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819075/6_11zon_tkua6z.webp",],
             },
             {
-                ite_titulo: "Pachamanca Inca – Ancestral Gastronomic Ritual in Ollantaytambo. ",
+                ite_titulo: "Day 7: Visit to Machu Picchu - Pachacutec's Refuge (B,L)",
                 ite_text: `
-                After exploring the majestic Inca Village of Ollantaytambo, we enjoy an intimate gastronomic experience deeply connected to the land and Andean traditions, before boarding the train to Machu Picchu.
+                Transfer to the bus station in Machu Picchu Town. Ascent to the legendary Lost City of the Incas along a winding, narrow gravel road, designed to overcome the considerable elevation difference between Machu Picchu Town and the archaeological site.
                 </br>
-                Set in the gardens of El Albergue Ollantaytambo, a historic hotel located within the train station, we take part in the Pachamanca, an ancestral cooking technique whose name in Quechua means “earth oven.” Chicken, pork, and lamb, together with Andean vegetables, are slowly cooked underground over heated stones, following pre-Columbian methods that continue to endure in the Andes.
                 </br>
-                The experience includes a guided visit to the organic farm, the Andean artisanal distillery, and the coffee roastery, as well as a demonstration of the traditional Pachamanca cooking process, prior to enjoying lunch.
+                The Historic Sanctuary Citadel of Machu Picchu - The Legendary Lost City of the Incas - The Sacred Citadel in the Clouds - World Heritage Site - Old Mountain, chosen as one of the New Seven Wonders of the World, is a masterpiece of Inca architecture and engineering built during the 1400s atop a mountain ridge, right at the meeting point between the Andes mountain range and the Peruvian jungle
                 </br>
-                The meal is served outdoors, in a privileged natural setting overlooking the Andean landscape and surrounding mountains. The menu features chicken, pork, and lamb, native potatoes, sweet potatoes, and organic vegetables, accompanied by homemade salads, traditional sauces, and refreshing chicha morada made from purple corn.
                 </br>
-                An authentic and memorable experience that celebrates Peru’s ancestral gastronomy, an ideal conclusion to the visit to “Ollantaytambo Pueblo” before continuing by train to Aguas Calientes – Machu Picchu Pueblo.
+               It functioned under the rule of Inca Pachacutec as an important ceremonial, political, and religious center, as well as serving as a private retreat for the imperial elite. The complex is divided with exquisite precision into two large sectors: the agricultural sector, made up of impressive cultivation terraces, and the urban sector, where plazas, royal mausoleums, and palaces are concentrated. Its structures stand out worldwide for their imposing stone walls, perfectly fitted together without the use of mortar, as well as for temples designed specifically for astronomical observation and alignment.
                 </br>
-                Scenic Andean Rail Adventure to Machu Picchu Pueblo - Aguas Calientes, just below the ancient Citadel. 
+                </br>
+               After the fall of the empire, this architectural jewel of the Inca civilization remained hidden and protected by dense vegetation for 400 years, until American explorer Hiram Bingham revealed it to the world in 1911. Today, its mystical atmosphere and spectacular natural surroundings make it Peru's most important and most visited cultural symbol.
+                </br>
+                </br>
+                Enjoy a delicious lunch at the Sanctuary Lodge, exploring the exquisite local cuisine. Lunch is included in the itinerary for this day.
+                </br>
             `,
                 ite_image: [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826812/7.1_11zon_loxcq0.webp",
@@ -178,28 +237,25 @@ export const programs: programsData[] = [
                 ],
             },
             {
-                ite_titulo: "Day seven - Visit to Machu Picchu and return to Cusco. (B) ",
+                ite_titulo: "Machu Picchu Royalty",
                 ite_text: `
-                Transfer to the bus station in Aguas Calientes (Machu Picchu Pueblo), ascent to the legendary Lost City of the Incas via a winding, narrow and gravel road, designed to overcome the considerable difference in altitude between Machu Picchu Pueblo and the archaeological site.
-                </br>
-                This impressive citadel, chosen as one of the "7 Wonders of the World," was the private retreat of the Inca Pachacutec as well as a center of worship and astronomical observation. It consists of two large areas, agricultural and urban, where temples, plazas, and royal mausoleums stand out, all built with exquisite precision. It remained hidden for 400 years until the American explorer Hiram Bingham revealed it to the world in 1911. QR
+               Throughout the walk, visitors explore up close the finest and most sacred enclosures of Machu Picchu, including the Temple of the Sun with its semicircular shape, the Royal Tomb inside a cavern, the Inca's House with its residential rooms, and the ceremonial water fountain system. The tour continues toward the northern area to admire the Sector of the Three Doorways and the Sacred Rock, a carved monolith that mimics the profile of the surrounding mountains, finally concluding at the Temple of the Condor, an exclusive area of this circuit where you can admire the stone sculpture of this sacred bird before leaving the complex.
                 </br>
                 </br>
-                <b style="font-weight:700">Optional hike to Huayna Picchu:</b>
+               Optional Hike to Huayna Picchu - The Young Mountain - The Guardian of Machu Picchu: Your tour guide is available for a morning hike along the steep stone-paved path of Huayna Picchu, the pyramid-shaped mountain that rises above Machu Picchu, to enjoy a breathtaking panoramic view of the site, a Condor's Eye View.
                 </br>
-                Your tour guide is available for a morning hike to the steep stone-paved trail (1.2 miles) of Huayna Picchu, the pyramid-shape mountain above Machu Picchu to enjoy an impressive and breathtaking “condor view” of the site. The few of those who climb the peak will enjoy a “Soul-Stirring Vista” of how Machu Picchu was carefully integrated into its natural surroundings. 
                 </br>
-                Among skyscraping Andean peaks tower in the distance while the winding Urubamba River nearly wraps itself around the main site. Do not miss it; Huayna Picchu is “what most people miss at Machu Picchu” (BBC Travel). 
-                Hikers will also take advantage of the opportunity to see the Temple of Moon. Tucked into a complex of caves hidden from the main ruins is an otherworldly shrine — possibly a burial site — built directly into the mountain rock. The Temple of the Moon features some of the finest stonework in Machu Picchu. 
+                Those who reach the summit will enjoy a moving view of how carefully Machu Picchu was integrated into its natural surroundings. Towering Andean peaks rise in the distance, while the winding Urubamba River almost completely encircles the main site. Don't miss it; Huayna Picchu is what most people miss at Machu Picchu, according to BBC Travel.
                 </br>
-                It is definitely one of the most wonderful sights on Earth!!!
+                Hikers will see the Temple of the Moon, a mystical sanctuary hidden in caves and built into the rock. It stands out for having some of the finest stonework at the site.
                 </br>
-                The secret to hike Huayna Picchu is to walk for 10 minutes and rest for 5 minutes, walk for 10 minutes and you rest for 5 minutes…
-                </br>
-                At the end of the visit, we will board the train to return to Cusco.
-                </br>
-                If time permits, before taking the train to Ollantaytambo Station and on to Cusco, complementary guided tour of the Open-Air Market of Aguas Calientes 
+                It is without a doubt one of the most wonderful landscapes in the world!
+                The secret to climbing Huayna Picchu is to walk 10 minutes and rest 5 minutes, walk 10 minutes and rest 5 minutes, and so on…
 
+                </br>
+                </br>
+              At the end of the visit, we will board the train to return to Cusco.
+               
             `,
                 ite_image: [
                     
@@ -210,41 +266,158 @@ export const programs: programsData[] = [
             },
 
             {
-                ite_titulo: `Day Eight - Cusco City Tour and Sacsayhuaman; Tipón, a “Masterpiece of the Incas Hydraulic Engineering” and Andahuaylillas Historic Church, the "Sistine Chapel of the Americas". (B)  `,
+                ite_titulo: `Day 8: Cusco City Tour - Sacsayhuaman - Tipon, a Masterpiece of Inca Hydraulic Engineering - Historic Church of Andahuaylillas - The Sistine Chapel of the Americas (B,L) `,
                 ite_text: `
-                 <b style="font-weight:700"> Tour of Cusco,</b> , visitors are caught up in the excitement of touring the ancient capital of the Inca Empire, a delightful combination of Inca and colonial architecture. The tour visits important landmarks such us Cusco's Cathedral, Plaza de Armas and Koricancha “The Temple of the Sun”, the most sacred temple of the Incan Empire. 
+                 On the Cusco tour, visitors immerse themselves in the excitement of exploring the ancient capital of the Inca Empire, a charming blend of Inca and colonial architecture.
                 </br>
                 </br>
-                This tour of the oldest continuously inhabited city in the western hemisphere also includes
-                the monumental Incan archaeological site of Sacsayhuaman fortress, an imposing example of Inca military architecture. 
+                The tour visits important sites such as Cusco Cathedral, the Plaza de Armas, and Koricancha - The Temple of the Sun - the Supreme Temple of the Incas, the most sacred temple of the Inca Empire, passing through Intik'ijllu or Callejón del Sol.
                 </br>
                 </br>
-                <b style="font-weight:700"> Afternoon excursion to Tipón and Andahuaylillas.</b> Afternoon, heading south to the Sacred Valley. Our first stop will be at Tipón, an impressive Inca archaeological complex famous for its advanced system of water channels, agricultural terraces, and ceremonial enclosures. 
+               Callejón del Sol - Street of the Inca Walls - Street of the House of the Virgins of the Sun, known as Intik'ijllu during the Inca Empire, represents one of the best-preserved urban and religious axes of the Tahuantinsuyo. In Cusco (the "navel of the world"), it was strictly reserved for the Inca, the royal families, and the elite; this particular street was an exclusive path of great historical importance for its architectural and security design.
                 </br>
-                We will continue to the village of Andahuaylillas, where we will visit the church of San Pedro Apóstol, known as the “Sistine Chapel of America” for its impressive Baroque murals, gilded altars, and colonial paintings. 
-
-            `,
+               Korikancha - Temple of the Sun - Golden Enclosure - The Golden Site - Supreme Temple of the Incas, was not a king's palace but rather the sacred religious and political temple of the Inca Empire, and it stands as one of the greatest physical ironies in human history.
+                </br>
+                </br>
+                The conquistadors arrived with the European mindset that a strong structure must be rigid, heavy, and cemented to last.
+                </br>
+                </br>
+            The Incas understood that the earth in the Andes moves constantly, and that true resilience lies in flexibility and dynamic fitting.
+                </br>
+                </br>
+            This tour of the oldest continuously inhabited city in the Western Hemisphere also includes the monumental Inca archaeological site of Sacsayhuaman.
+            
+                `,
                 ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750025/10_18_11zon_hfqrhl.webp",],
             },
             {
-                ite_titulo: "Day Nine - Cusco to Lima and Home. (B)",
+                ite_titulo: "The Fortress of Sacsayhuaman - Satisfied Falcon - Place Where the Falcon Is Sated - The Head of the Puma, an imposing example of Inca military architecture.",
                 ite_text: `
-                Transfer to the airport for your departure to Lima and your connecting international flight. Arrive home full of great memories of the rich tradition of Colonial Lima, the snowcapped roaring Andean mountains and lush valleys, and the zig-zag road to the overwhelming sight of Machu Picchu, the amazing legacy the Incas.
+                The walls of Sacsayhuaman are the stuff of legend, but one myth needs to be dispelled: the Incas did not use disorganized brute force, but rather astonishingly advanced physics.
                 </br>
                 </br>
-                If the layover between flights, Cusco-Lima-Home allows, we suggest having lunch at the “Café del Museo” followed by a visit to the Larco Museum.
+               The blocks weigh 125 tons, fitted together so perfectly that not even a pin can fit between them; you are looking at the pinnacle of pre-Hispanic stone engineering. This is how they truly achieved it, entirely on their own and without European technology.
+                Cahuide, The Titan of the Tower
+
                 </br>
                 </br>
-                If the layover between flights, Cusco-Lima-Home allows, we suggest having lunch at the “Café del Museo” followed by a visit to the Larco Museum.
+                In an agonizing hand-to-hand battle on the zigzagging terraces, the Spanish managed to corner the last Inca defenders. There, atop the cylindrical tower of Muyucmarca, an imposing figure emerged: a captain of the Inca nobility (an orejón) whom popular history came to call Cahuide.
                 </br>
                 </br>
-                <b style="font-weight:700"> Lunch at the “Café del Museo”</b>
-                A space surrounded by gardens where you can enjoy a unique mixture of culture, history, modernity and good food. The menu contains classical Peruvian dishes - cebiche, causa, stir-fried beef (Lomo Saltado, the Peru's iconic dish) - as well as original international creations or pastas using native ingredients.                </br>
+               He ran back and forth across the tower like a caged lion. He was completely alone, surrounded, and covered in both enemy and his own blood.
                 </br>
-                <b style="font-weight:700"> Visit to the Larco Museum. </b>
-                Larco Museum, founded in 1926, it displays remarkable chronological galleries providing an excellent overview on 3000 years of development of Peruvian pre-Columbian history. Located in a unique vice-royal mansion of the 18th century built over a 7th century pre-Columbian pyramid is surrounded by beautiful gardens. The Larco Museum also features the finest gold and silver collection from Ancient Peru and the famous erotic archaeological collection, one of the most visited Peruvian tourist attractions.                </br>
                 </br>
-                <b style="font-weight:700">••• End of Services. •••</b>
+              He realized he had no more stones left to throw, nor men left to command.
+                He threw himself off the top of the tower. He chose to be shattered against the ancient rocks of Sacsayhuaman rather than see his hands bound by foreign chains.
+
+                </br>
+                </br>
+               Enjoy a delicious box lunch, exploring the exquisite local cuisine. This meal is included today.
+                </br>
+                Tipon - The Water Route - The Sanctuary of the Water Masters. In the afternoon, heading south to the Sacred Valley, toward Tipon, a Masterpiece of Inca Hydraulic Engineering, an impressive Inca archaeological complex famous for its advanced system of water canals, agricultural terraces, and ceremonial enclosures.
+
+            `,
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],
+            },
+
+
+
+             {
+                ite_titulo: "The Sanctuary of the Water Masters, Tipon, is more than an archaeological site; it is a masterpiece of celestial hydraulic engineering that defies time.",
+                ite_text: `
+               At this sanctuary, the Incas achieved the impossible: they carved the mountain to tame water, turning a natural resource into a spectacle of art, mysticism, and science that continues to function perfectly after more than 500 years. In Tipon, silence does not exist. The water sings as it descends the mountain; the site is alive with the constant murmur of sacred springs that emerge from the rocks and flow with millimetric precision through channels of polished stone. Without modern technology, Inca engineers calculated exact gradients so that the water would flow without eroding the stone or overflowing.
+                </br>
+                </br>
+              Today, the channels still pour crystal-clear water with the same force and precision as in the time of the Empire. The twelve agricultural terraces, of perfect symmetry, embrace the ravine. They were not just for growing crops; they were climate laboratories and altars of worship to Pachamama (Mother Earth) and Unu (Water), where the retaining walls absorb the sun's heat to create microclimates.
+
+                </br>
+                </br>
+               We will continue on to the town of Andahuaylillas - The Sistine Chapel of the Americas - The Golden Temple of America, a charming and peaceful traditional town in Cusco's Southern Valley, famous around the world. There we will visit the monumental Church of San Pedro Apostol, rightfully dubbed the Sistine Chapel of the Americas, known for its Baroque murals, gilded altars, and colonial paintings. Its beauty lies both in its mystical colonial religious architecture and in the deep serenity of its Andean landscapes. The interior is covered in multicolored frescoes. Notable are the paintings from the renowned Cusco School and the iconic mural depicting the Path to Heaven and Hell. The main altar is covered in gold leaf, mirrors, and embossed silver.
+                </br>
+                </br>
+             Evening free at leisure.
+                </br>
+
+            `,
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],
+            },
+
+
+
+            {
+                ite_titulo: "Day 9: San Blas Hill, Cusco-Lima Flight, and Return Home (B)",
+                ite_text: `
+             In the morning, visit Cuesta de San Blas - The Hill That Tires the Fox - The Artisans' Neighborhood. Discover Cusco's magical portal and prepare for an experience that will transform the way you see the world.
+                </br>
+                </br>
+                Leave behind the bustle of conventional tourism near Calle Triunfo and get ready to cross an authentic emotional threshold.
+                </br>
+                </br>
+                As you climb, you'll notice the outside noise fade completely away, inviting you to sync your own rhythm with the mystical silence of the Andean rocks; a walk that stops being a simple journey and becomes the best therapy for disconnecting.
+                
+                A Journey Through Time Via Living Architecture
+
+                </br>
+                </br>
+                Walking up this iconic hill is to witness a visual dialogue found nowhere else on the planet. Here, the perfect, indestructible solidity of the Inca walls serves as the base that supports the fragility of white adobe and carved colonial wooden balconies.
+                </br>
+                </br>
+                It's the perfect setting for your best photographs and memories: a beautiful historical scar where two opposing worlds embraced tightly to create the most bohemian, photogenic, and vibrant neighborhood in all of Cusco.
+                </br>
+                </br>
+                The Corner Where Art Breathes and Invites You to Stay
+                </br>
+                Beyond its charming shops and specialty cafés, San Blas envelops you in the energy of a living artisan workshop that has been at work for centuries.
+                </br>
+                As you walk its streets, you'll feel the very walls breathing the creativity of the legendary Cusco master image-makers, floating in an atmosphere steeped in history, fine woods, and ancient pigments.
+                </br>
+                Forget the rush, pack your bags, and come discover why climbing Cuesta de San Blas isn't just reaching a destination, but living the true essence of the heart of the Andes.
+            `,
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],
+            },
+
+            {
+                ite_titulo: "Cuesta de San Blas is like a Stone Clock",
+                ite_text: `
+               it stops being a simple street and becomes an emotional portal, the Backbone of Cusco Art. It doesn't simply climb toward a neighborhood, but ascends backward through time; and, as you go on and the air grows thinner, the stone seems to Awaken.
+                </br>
+                </br>
+                What We'll See on Cuesta de San Blas
+                </br>
+                </br>
+                The Long-Necked Sculptures: Heirs to the style of the Mendivil family, who create virgins and saints with elongated, stylized necks.
+                </br>
+                </br>
+                Ceramicists: Master clay workers whose range spans pre-Hispanic replicas to the "Merida" style.
+                </br>
+                </br>
+                Woodcarvers: Specialists in colonial frames covered in gold leaf and fine furniture.
+                Painters of the Cusco School: Artists who keep alive the oil-painting technique with gold applications typical of the 17th century.
+                </br>
+                </br>
+                    Weavers and jewelers: Although more can be found on the side streets, on the hill itself you'll see silver jewelry set with Andean stones.
+You'll also find renowned galleries and the white facades with blue doors that house the workshops of great families such as the Mendivils, almost at the top near San Blas Plaza.
+
+
+                </br>
+                </br>
+                There is a strong presence of contemporary jewelry and small painting displays that make use of the Inca walls serving as a base along several stretches of that side.
+                </br>
+                </br>
+                The San Blas Pulpit - The Crowning Achievement in Wood
+                The pulpit of San Blas is not just a piece of liturgical furniture; it is a cedar tree that learned to speak Quechua and Latin at the same time.
+                It is the exact reflection of a clash of worlds reconciled through the hands of a craftsman.
+                </br>
+                The Solomonic columns not only spiral on their axis, but hold up the structure with a visual tension that defies gravity. It is a play of light and shadow where the empty space works as hard as the relief carving.
 
 
             `,
@@ -253,6 +426,47 @@ export const programs: programsData[] = [
                     "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
                 ],
             },
+
+
+
+              {
+                ite_titulo: "Afterward, you'll see a few cafés with balconies offering views over the street.",
+                ite_text: `
+              Transfer to the airport for your flight to Lima and connection with your international flight.
+                </br>
+                </br>
+               Return home with unforgettable memories of the rich tradition of colonial Lima, the imposing snow-capped Andean mountains, and the lush valleys along the winding road leading to the breathtaking view of Machu Picchu, the astonishing Inca legacy.
+                </br>
+                </br>
+                If the layover between your Cusco-Lima-Home flights allows, we suggest having lunch at the Museum Café and then visiting the Larco Museum.
+                </br>
+                Lunch at the Museum Café.
+
+                </br>
+                </br>
+                A space surrounded by gardens where you can enjoy a unique blend of culture, history, modernity, and good food.
+                Visit to the Larco Museum - The Guardian of Pre-Columbian Art - The Larco Museum's Open Storage
+
+                </br>
+                </br>
+               The open storage area is one of the museum's most famous and unique features. Visitors can walk directly among the shelves where more than 30,000 pre-Columbian ceramic archaeological pieces are stored and classified.
+                </br>The Gold and Silver Gallery
+                </br>
+                   This dazzling hall displays the most important collection of clothing and precious-metal jewelry used by the rulers of ancient Peru. Crowns, ear ornaments, nose rings, and chest plates showcase the extraordinary technical skill of goldsmiths from cultures such as the Moche, Chimu, and Sican, crafted to honor their gods.
+                The Larco Museum, founded in 1926, features notable chronological galleries that offer an excellent overview of 3,000 years of development in pre-Columbian Peruvian history.
+                </br>
+                </br>
+                Housed in a unique 18th-century viceregal mansion built atop a 7th-century pre-Columbian pyramid, it is surrounded by beautiful gardens.
+
+            `,
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],
+            },
+
+
+
 
 
         ],
