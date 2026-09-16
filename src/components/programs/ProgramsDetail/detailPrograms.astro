@@ -71,7 +71,7 @@ const {
                     
                 </ul>
 
-     {pdfs.length > 0 && (
+                {pdfs.length > 0 && (
                     <div class="pdf-downloads-inline">
                         {pdfs.map((pdf) => (
                             <a
@@ -92,7 +92,6 @@ const {
             </div>
 
             <div class="tab-content-wrapper">
-                <!-- ============ BRIEF TAB ============ -->
                 <div id="brief" class="tab-content brief-content">
                     <div class="brief-inner">
                         <div class="brief-text">
@@ -151,7 +150,6 @@ const {
                     </div>
                 </div>
 
-                <!-- ============ ITINERARY TAB ============ -->
                 <div id="itinerary" class="tab-content hidden">
                     {programItenerario.map((itenerario, index) => (
                         <div class="accordion-item">
@@ -417,7 +415,6 @@ const {
         align-items: center;
     }
 
-    /* ============ PDF BOTONES SOLO ICONOS (al lado del nav) ============ */
     .pdf-downloads-inline {
         display: flex;
         gap: 10px;
@@ -430,8 +427,8 @@ const {
         justify-content: center;
         width: 44px;
         height: 44px;
-        background-color: #374151;
-        color: white;
+        background-color: #e8e8e8;
+        color: rgb(54, 87, 88);
         font-size: 20px;
         border-radius: 10px;
         text-decoration: none;
@@ -441,9 +438,8 @@ const {
     }
 
     .pdf-btn-icon:hover {
-        background-color: #d4c06d;
-        color: #1f2937;
-        transform: translateY(-2px);
+        background-color: #e3a457;
+        color: white;
     }
 
     .pdf-btn-icon i {
