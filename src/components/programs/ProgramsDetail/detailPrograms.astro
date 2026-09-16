@@ -23,6 +23,7 @@ interface programBreve {
 interface PdfLink {
     label: string;
     href: string;
+    image?: string;
     icon?: string;
 }
 
@@ -83,7 +84,8 @@ const {
                                 title={pdf.label}
                                 aria-label={pdf.label}
                             >
-                                <i class={pdf.icon ?? "bi bi-file-earmark-pdf"}></i>
+                                <img  src={pdf.image}/>
+                                {pdf.label}
                             </a>
                         ))}
                     </div>
@@ -425,16 +427,21 @@ const {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 44px;
         height: 44px;
+        font-weight: 600;
         background-color: #e8e8e8;
         color: rgb(54, 87, 88);
-        font-size: 20px;
+        font-size: 14px;
+        padding: 10px 30px;
         border-radius: 10px;
         text-decoration: none;
         transition: background-color 0.3s ease, transform 0.2s ease;
         cursor: pointer;
         border: none;
+    }
+
+    .pdf-btn-icon img{
+        width: 35px;
     }
 
     .pdf-btn-icon:hover {
@@ -493,7 +500,7 @@ const {
     .sidebar-card {
         width: 25%;
         position: relative;
-        top: -88px;
+        top: -18px;
     }
 
     .sidebar-inner {

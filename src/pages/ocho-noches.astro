@@ -7,6 +7,13 @@ import Fondo from '../components/Fondo.astro';
 const data = programsEs.find(p => p.name === "ocho-noches");
 const fondo = "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772828345/jeremiah-berman-9dmycbFE7mQ-unsplash_11zon_j7htro.webp";
 if (!data) return Astro.redirect('/404');
+
+
+const pdfs = [
+    { label: "Descargar PDF", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/pdfIcon_idmrvg.webp", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
+    { label: "Descargar Word", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/imageWord_qbttzt.webp", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
+];
+
 ---
 
 <BaseLayout title={data.title}>
@@ -19,6 +26,7 @@ if (!data) return Astro.redirect('/404');
             programBreve={data.programBreve}
             programItenerario={data.programItenerario}
             imgCardLink={data.imgCardLink ?? []}
+            pdfs={pdfs}
         />
     </main>
 </BaseLayout>
