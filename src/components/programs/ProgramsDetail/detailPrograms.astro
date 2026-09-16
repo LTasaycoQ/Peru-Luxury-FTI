@@ -10,7 +10,7 @@ interface programIncluye {
 interface programNoIncluye {
     text: string;
 }
-export interface imgCardLink{
+export interface imgCardLink {
     imagen: string;
     link: string;
 }
@@ -19,16 +19,32 @@ interface programBreve {
     titulo_breve: string;
     text_breve: string;
 }
+
+interface PdfLink {
+    label: string;
+    href: string;
+    icon?: string;
+}
+
 interface Props {
     title: string;
-    imgCardLink: imgCardLink[]
+    imgCardLink: imgCardLink[];
     programBreve: programBreve[];
     programItenerario: programItenerario[];
     programIncluye: programIncluye[];
-    programNoIncluye: programNoIncluye[];    
+    programNoIncluye: programNoIncluye[];
+    pdfs?: PdfLink[];
 }
 
-const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, programIncluye } = Astro.props;
+const {
+    title,
+    imgCardLink,
+    programBreve,
+    programItenerario,
+    programNoIncluye,
+    programIncluye,
+    pdfs = [],
+} = Astro.props;
 ---
 
 <section class="program-section">
@@ -36,17 +52,47 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
         <h1 data-aos="fade-up" class="program-title">
             {title}
         </h1>
-        
+
         <div class="program-content">
             <div class="tab-header-wrapper">
                 <ul id="tab-menu" class="tab-menu">
-                    <li class="menu-list active" data-target="brief">Brief</li>
-                    <li class="menu-list" data-target="itinerary">Itinerary</li>
-                    <li class="menu-list" data-target="include">Include</li>
+                    <li class="menu-list active" data-target="brief">
+                        <i class="bi bi-list-ul tab-icon"></i>
+                        <span>Brief</span>
+                    </li>
+                    <li class="menu-list" data-target="itinerary">
+                        <i class="bi bi-geo-alt tab-icon"></i>
+                        <span>Itinerary</span>
+                    </li>
+                    <li class="menu-list" data-target="include">
+                        <i class="bi bi-check2-square tab-icon"></i>
+                        <span>Include</span>
+                    </li>
+                    
                 </ul>
+
+     {pdfs.length > 0 && (
+                    <div class="pdf-downloads-inline">
+                        {pdfs.map((pdf) => (
+                            <a
+                                href={pdf.href}
+                                download
+                                class="pdf-btn-icon"
+                                target="_blank"
+                                rel="noopener"
+                                title={pdf.label}
+                                aria-label={pdf.label}
+                            >
+                                <i class={pdf.icon ?? "bi bi-file-earmark-pdf"}></i>
+                            </a>
+                        ))}
+                    </div>
+                )}
+           
             </div>
-   
+
             <div class="tab-content-wrapper">
+                <!-- ============ BRIEF TAB ============ -->
                 <div id="brief" class="tab-content brief-content">
                     <div class="brief-inner">
                         <div class="brief-text">
@@ -57,15 +103,17 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                 </div>
                             ))}
                         </div>
-                        
+
                         <div class="sidebar-card">
                             <div class="sidebar-inner">
                                 <div class="sidebar-header">
                                     <h3>Find the Perfect Journey for You</h3>
                                 </div>
 
-                                <p class="sidebar-text">Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel.</p>
-                                
+                                <p class="sidebar-text">
+                                    Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel.
+                                </p>
+
                                 <div class="sidebar-links">
                                     <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="sidebar-link">
                                         <i class="sidebar-icon bi bi-envelope"></i> Email
@@ -77,10 +125,8 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                         <i class="sidebar-icon bi bi-telephone"></i> +51 982 836 947
                                     </a>
                                 </div>
-                               
+
                                 <div class="swiper-container">
-                                    <!-- <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div> -->
                                     <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
                                             {imgCardLink.map((item) => (
@@ -89,10 +135,10 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                                         <span class="slide-title-text">{item.link}</span>
                                                     </div>
                                                     <a href={`/destinations/${item.link}`} class="slide-link">
-                                                        <img 
-                                                            src={item.imagen} 
-                                                            alt={"Imagen de destino"} 
-                                                            loading="lazy" 
+                                                        <img
+                                                            src={item.imagen}
+                                                            alt="Imagen de destino"
+                                                            loading="lazy"
                                                         />
                                                     </a>
                                                 </div>
@@ -100,33 +146,50 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                                         </div>
                                     </div>
                                 </div>
-
-                                <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- ============ ITINERARY TAB ============ -->
                 <div id="itinerary" class="tab-content hidden">
                     {programItenerario.map((itenerario, index) => (
                         <div class="accordion-item">
                             <button class="accordion-header" data-index={index}>
                                 {itenerario.ite_titulo}
-                                <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg
+                                    class="chevron"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
                                     <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
                             </button>
 
-                            <div class="accordion-body" style={index === 0 ? "grid-template-rows: 1fr;" : "grid-template-rows: 0fr;"}>
+                            <div
+                                class="accordion-body"
+                                style={index === 0 ? "grid-template-rows: 1fr;" : "grid-template-rows: 0fr;"}
+                            >
                                 <div class="accordion-body-inner">
                                     <div class="accordion-content">
                                         <div class="accordion-text">
                                             <p set:html={itenerario.ite_text}></p>
                                         </div>
-                                        
+
                                         <div class="img-gallery">
                                             {itenerario.ite_image.map((img) => (
-                                                <img class="gallery-img" src={img} alt={itenerario.ite_titulo} />
+                                                <img
+                                                    class="gallery-img"
+                                                    src={img}
+                                                    alt={itenerario.ite_titulo}
+                                                    loading="lazy"
+                                                />
                                             ))}
                                         </div>
                                     </div>
@@ -136,29 +199,33 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
                     ))}
                 </div>
 
+                <!-- ============ INCLUDE TAB ============ -->
                 <div id="include" class="tab-content hidden include-content">
                     <div class="include-card">
                         <div class="include-card-inner">
                             <h4 class="include-title">Includes:</h4>
-                            {programIncluye.map((item) => (
-                                <ul class="include-list">
+                            <ul class="include-list">
+                                {programIncluye.map((item) => (
                                     <li class="include-list-item include-check">
-                                        <i class="include-icon bi bi-patch-check"></i> {item.text}
+                                        <i class="include-icon bi bi-patch-check"></i>
+                                        <span>{item.text}</span>
                                     </li>
-                                </ul>
-                            ))}
+                                ))}
+                            </ul>
                         </div>
                     </div>
+
                     <div class="include-card">
                         <div class="include-card-inner">
                             <h4 class="include-title">Does not include:</h4>
-                            {programNoIncluye.map((item) => (
-                                <ul class="include-list">
+                            <ul class="include-list">
+                                {programNoIncluye.map((item) => (
                                     <li class="include-list-item include-close">
-                                        <i class="include-icon bi bi-x-circle"></i> {item.text}
+                                        <i class="include-icon bi bi-x-circle"></i>
+                                        <span>{item.text}</span>
                                     </li>
-                                </ul>
-                            ))}
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -167,538 +234,637 @@ const { title, imgCardLink, programBreve, programItenerario, programNoIncluye, p
     </div>
 </section>
 
+<script>
+    import Swiper from 'swiper';
+    import { Navigation, Autoplay } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
 
-<script >
+    const initSwiper = () => {
+        document.querySelectorAll('.mySwiper').forEach((el) => {
+            const htmlEl = el as HTMLElement & { swiper?: unknown };
+            if (htmlEl.swiper) return;
 
-  import Swiper from 'swiper';
-  import { Navigation, Autoplay } from 'swiper/modules';
-  const initSwiper = () => {
-    new Swiper(".mySwiper", {
-      modules: [Navigation, Autoplay],
-      loop: true, 
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  };
-
-  document.addEventListener('astro:page-load', initSwiper);
-  initSwiper();
-    const tabs = document.querySelectorAll('.menu-list');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.getAttribute('data-target');
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            contents.forEach(content => {
-                content.classList.toggle('hidden', content.id !== target);
-                if(target === 'include' && content.id === 'include') content.classList.add('flex');
+            new Swiper(htmlEl, {
+                modules: [Navigation, Autoplay],
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             });
         });
-    });
+    };
 
-    const headers = document.querySelectorAll('.accordion-header');
+    const initTabs = () => {
+        const tabs = document.querySelectorAll<HTMLElement>('.menu-list');
+        const contents = document.querySelectorAll<HTMLElement>('.tab-content');
 
-    headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const body = header.nextElementSibling as HTMLElement;
-            const chevron = header.querySelector('.chevron');
-            const isOpen = body.style.gridTemplateRows === "1fr";
+        tabs.forEach((tab) => {
+            if (tab.dataset.bound === 'true') return;
+            tab.dataset.bound = 'true';
 
-            document.querySelectorAll('.accordion-body').forEach((b: any) => {
-                b.style.gridTemplateRows = "0fr";
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+
+                tabs.forEach((t) => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                contents.forEach((content) => {
+                    const isTarget = content.id === target;
+                    content.classList.toggle('hidden', !isTarget);
+                    if (isTarget && target === 'include') {
+                        content.classList.add('flex');
+                    } else {
+                        content.classList.remove('flex');
+                    }
+                });
             });
-            document.querySelectorAll('.chevron').forEach((c: any) => {
-                c.style.transform = "rotate(0deg)";
-            });
-
-            if (!isOpen) {
-                body.style.gridTemplateRows = "1fr";
-                if (chevron) (chevron as HTMLElement).style.transform = "rotate(-180deg)";
-            }
         });
-    });
+    };
 
-    const firstChevron = document.querySelector('.accordion-item:first-child .chevron');
-    if (firstChevron) (firstChevron as HTMLElement).style.transform = "rotate(-180deg)";
+    const initAccordions = () => {
+        const headers = document.querySelectorAll<HTMLElement>('.accordion-header');
+
+        headers.forEach((header) => {
+            if (header.dataset.bound === 'true') return;
+            header.dataset.bound = 'true';
+
+            header.addEventListener('click', () => {
+                const body = header.nextElementSibling as HTMLElement | null;
+                if (!body) return;
+
+                const chevron = header.querySelector<HTMLElement>('.chevron');
+                const isOpen = body.style.gridTemplateRows === '1fr';
+
+                document.querySelectorAll<HTMLElement>('.accordion-body').forEach((b) => {
+                    b.style.gridTemplateRows = '0fr';
+                });
+                document.querySelectorAll<HTMLElement>('.chevron').forEach((c) => {
+                    c.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    body.style.gridTemplateRows = '1fr';
+                    if (chevron) chevron.style.transform = 'rotate(-180deg)';
+                }
+            });
+        });
+
+        const firstChevron = document.querySelector<HTMLElement>(
+            '.accordion-item:first-child .chevron'
+        );
+        if (firstChevron) firstChevron.style.transform = 'rotate(-180deg)';
+    };
+
+    const initAll = () => {
+        initSwiper();
+        initTabs();
+        initAccordions();
+    };
+
+    document.addEventListener('astro:page-load', initAll);
+    initAll();
 </script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .program-section {
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-  }
-
-  .program-container {
-    width: 80%;
-    padding-top: 30px;
-  }
-
-  .program-title {
-    text-align: start;
-    font-size: 32px;
-    color: #1f2937;
-    font-weight: 500;
-    margin-bottom: 30px;
-  }
-
-  .program-content {
-    width: 100%;
-  }
-
-  .tab-header-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    text-align: center;
-    align-items: flex-start;
-  }
-
-  .tab-menu {
-    width: 50%;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    justify-content: space-between;
-    color: #6b7280;
-    font-weight: normal;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    list-style: none;
-  }
-
-  .menu-list {
-    width: 33.333%;
-    padding: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .menu-list:hover:not(.active) {
-    background-color: #f3f4f6;
-    color: #d4c06d;
-  }
-
-  .menu-list.active {
-    color: white;
-    background-color: #d4c06d;
-    font-weight: 600;
-  }
-
-  .tab-content-wrapper {
-    padding: 20px;
-  }
-
-  .tab-content {
-    display: block;
-  }
-
-  .tab-content.hidden {
-    display: none;
-  }
-
-  /* Brief Content */
-  .brief-inner {
-    display: flex;
-    gap: 90px;
-  }
-
-  .brief-text {
-    flex: 1;
-  }
-
-  .brief-item {
-    padding-top: 16px;
-    padding-bottom: 10px;
-  }
-
-  .brief-title {
-    display: flex;
-    gap: 10px;
-    color: #374151;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-
-  .brief-description {
-    color: #374151;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  /* Sidebar Card */
-  .sidebar-card {
-    width: 25%;
-    position: relative;
-    top: -88px;
-  }
-
-  .sidebar-inner {
-    padding: 15px;
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
-    background-color: white;
-  }
-
-  .sidebar-header {
-    background-color: #374151;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    padding: 12px;
-  }
-
-  .sidebar-header h3 {
-    font-size: 1.17em;
-    font-weight: bold;
-  }
-
-  .sidebar-text {
-    color: #374151;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 16px;
-  }
-
-  .sidebar-links {
-    display: flex;
-    flex-direction: column;
-    color: #374151;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10px;
-    padding-top: 30px;
-  }
-
-  .sidebar-link {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #374151;
-    margin-bottom: 8px;
-  }
-
-  .sidebar-icon {
-    color: #d4c06d;
-    font-size: 26px;
-  }
-
-  .sidebar-link .bi-telephone {
-    font-size: 26px;
-  }
-
-  /* Swiper */
-  .swiper-container {
-    position: relative;
-    margin-top: 16px;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .swiper-button-prev {
-    left: -10px;
-  }
-
-  .swiper-button-next {
-    right: -10px;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .slide-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #1f2937;
-    color: white;
-    padding: 8px;
-    z-index: 5;
-  }
-
-  .slide-title-text {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .slide-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-  }
-
-  /* Accordion */
-  .accordion-item {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  .accordion-header {
-    background-color: #fafaff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 13px;
-    border-radius: 10px 10px 0 0;
-    color: #374151;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    outline: none;
-  }
-
-  .accordion-header:hover {
-    background-color: #f0f0ff;
-  }
-
-  .chevron {
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .accordion-body {
-    display: grid;
-    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .accordion-body-inner {
-    overflow: hidden;
-  }
-
-  .accordion-content {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding: 30px;
-    border: 1px solid #e5e7eb;
-    border-top: 0;
-    background-color: #fafaff;
-    border-radius: 0 0 10px 10px;
-  }
-
-  .accordion-text {
-    width: 60%;
-  }
-
-  .accordion-text p {
-    font-size: 14px;
-    font-weight: 300;
-    color: #374151;
-    line-height: 1.625;
-  }
-
-  /* Image Gallery */
-  .img-gallery {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .gallery-img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Include Content */
-  .include-content {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-  }
-
-  .include-card {
-    flex: 1;
-  }
-
-  .include-card-inner {
-    padding: 20px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    background-color: #fafaff;
-    height: 100%;
-    border: 1px solid #f3f4f6;
-  }
-
-  .include-title {
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: #374151;
-    font-size: 1.5em;
-  }
-
-  .include-list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
-
-  .include-list-item {
-    font-size: 14px;
-    padding-bottom: 8px;
-    color: #374151;
-    display: flex;
-    gap: 13.5px;
-    align-items: center;
-  }
-
-  .include-check i {
-    color: #16a34a;
-    font-size: 15px;
-  }
-
-  .include-close i {
-    color: #f87171;
-  }
-
-  .include-icon {
-    font-size: 15px;
-  }
-
-  /* Responsive */
-  @media (max-width: 1200px) {
-    .brief-inner {
-      flex-direction: column;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    
-    .sidebar-card {
-      width: 100%;
-      top: 0;
-    }
-    
-    .accordion-content {
-      flex-direction: column;
-    }
-    
-    .accordion-text {
-      width: 100%;
-    }
-    
-    .img-gallery {
-      width: 100%;
-    }
-  }
 
-  @media (max-width: 1024px) {
-    .program-container {
-      width: 100%;
-    }
-    
-    .tab-menu {
-      width: 100%;
-    }
-    
-    .img-gallery {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .gallery-img {
-      width: 45%;
-    }
-  }
-
-  @media (max-width: 768px) {
     .program-section {
-      padding: 15px;
+        font-family: 'Poppins', sans-serif;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
     }
-    
-    .tab-content-wrapper {
-      padding: 0;
-    }
-    
-    .include-content {
-      flex-direction: column;
-      gap: 30px;
-    }
-    
-    .accordion-header {
-      font-size: 17px;
-    }
-    
-    .accordion-content {
-      padding: 20px;
-    }
-  }
 
-  @media (max-width: 640px) {
+    .program-container {
+        width: 80%;
+        padding-top: 30px;
+    }
+
     .program-title {
-      font-size: 24px;
+        text-align: start;
+        font-size: 32px;
+        color: #1f2937;
+        font-weight: 500;
+        margin-bottom: 30px;
     }
-    
-    .gallery-img {
-      width: 100%;
+
+    .program-content {
+        width: 100%;
     }
-    
+
+    /* ============ TAB HEADER + PDF ICONS AL LADO ============ */
+    .tab-header-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .tab-menu {
+        width: 50%;
+        border: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        color: #6b7280;
+        font-weight: normal;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0;
+    }
+
+    .menu-list {
+        width: 33.333%;
+        padding: 13px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu-list:hover:not(.active) {
+        background-color: #f3f4f6;
+        color: #d4c06d;
+    }
+
+    .menu-list.active {
+        color: white;
+        background-color: #d4c06d;
+        font-weight: 600;
+    }
+
+    .tab-icon {
+        font-size: 18px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* ============ PDF BOTONES SOLO ICONOS (al lado del nav) ============ */
+    .pdf-downloads-inline {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .pdf-btn-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background-color: #374151;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+        border: none;
+    }
+
+    .pdf-btn-icon:hover {
+        background-color: #d4c06d;
+        color: #1f2937;
+        transform: translateY(-2px);
+    }
+
+    .pdf-btn-icon i {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .tab-content-wrapper {
+        padding: 20px;
+    }
+
+    .tab-content {
+        display: block;
+    }
+
+    .tab-content.hidden {
+        display: none;
+    }
+
+    /* Brief Content */
+    .brief-inner {
+        display: flex;
+        gap: 90px;
+    }
+
+    .brief-text {
+        flex: 1;
+    }
+
+    .brief-item {
+        padding-top: 16px;
+        padding-bottom: 10px;
+    }
+
+    .brief-title {
+        display: flex;
+        gap: 10px;
+        color: #374151;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .brief-description {
+        color: #374151;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    /* Sidebar Card */
     .sidebar-card {
-      width: 100%;
+        width: 25%;
+        position: relative;
+        top: -88px;
     }
-  }
+
+    .sidebar-inner {
+        padding: 15px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .sidebar-header {
+        background-color: #374151;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 12px;
+    }
+
+    .sidebar-header h3 {
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+    .sidebar-text {
+        color: #374151;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        color: #374151;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    .sidebar-link {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #374151;
+        margin-bottom: 8px;
+    }
+
+    .sidebar-icon {
+        color: #d4c06d;
+        font-size: 26px;
+    }
+
+    .sidebar-link .bi-telephone {
+        font-size: 26px;
+    }
+
+    /* Swiper */
+    .swiper-container {
+        position: relative;
+        margin-top: 16px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+
+    .swiper-button-next {
+        right: -10px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slide-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1f2937;
+        color: white;
+        padding: 8px;
+        z-index: 5;
+    }
+
+    .slide-title-text {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .slide-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+
+    /* Accordion */
+    .accordion-item {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .accordion-header {
+        background-color: #fafaff;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 13px;
+        border-radius: 10px 10px 0 0;
+        color: #374151;
+        border: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        outline: none;
+    }
+
+    .accordion-header:hover {
+        background-color: #f0f0ff;
+    }
+
+    .chevron {
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        flex-shrink: 0;
+    }
+
+    .accordion-body {
+        display: grid;
+        transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .accordion-body-inner {
+        overflow: hidden;
+    }
+
+    .accordion-content {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 30px;
+        border: 1px solid #e5e7eb;
+        border-top: 0;
+        background-color: #fafaff;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .accordion-text {
+        width: 60%;
+    }
+
+    .accordion-text p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #374151;
+        line-height: 1.625;
+    }
+
+    /* Image Gallery */
+    .img-gallery {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gallery-img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Include Content */
+    .include-content {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .include-content.flex {
+        display: flex;
+    }
+
+    .include-card {
+        flex: 1;
+    }
+
+    .include-card-inner {
+        padding: 20px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-color: #fafaff;
+        height: 100%;
+        border: 1px solid #f3f4f6;
+    }
+
+    .include-title {
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #374151;
+        font-size: 1.5em;
+    }
+
+    .include-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .include-list-item {
+        font-size: 14px;
+        padding-bottom: 8px;
+        color: #374151;
+        display: flex;
+        gap: 13.5px;
+        align-items: center;
+    }
+
+    .include-check i {
+        color: #16a34a;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+
+    .include-close i {
+        color: #f87171;
+    }
+
+    .include-icon {
+        font-size: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .brief-inner {
+            flex-direction: column;
+        }
+
+        .sidebar-card {
+            width: 100%;
+            top: 0;
+        }
+
+        .accordion-content {
+            flex-direction: column;
+        }
+
+        .accordion-text {
+            width: 100%;
+        }
+
+        .img-gallery {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .program-container {
+            width: 100%;
+        }
+
+        .tab-menu {
+            width: 100%;
+        }
+
+        .img-gallery {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-img {
+            width: 45%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .program-section {
+            padding: 15px;
+        }
+
+        .tab-header-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .tab-menu {
+            width: 100%;
+        }
+
+        .pdf-downloads-inline {
+            align-self: flex-start;
+        }
+
+        .tab-content-wrapper {
+            padding: 0;
+        }
+
+        .include-content {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .accordion-header {
+            font-size: 17px;
+        }
+
+        .accordion-content {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .program-title {
+            font-size: 24px;
+        }
+
+        .gallery-img {
+            width: 100%;
+        }
+
+        .sidebar-card {
+            width: 100%;
+        }
+    }
 </style>

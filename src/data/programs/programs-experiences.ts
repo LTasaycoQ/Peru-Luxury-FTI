@@ -1269,6 +1269,3 @@ You'll also find renowned galleries and the white facades with blue doors that h
     },
 ];
 
-
-
-

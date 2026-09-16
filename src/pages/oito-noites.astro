@@ -1,18 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { programs } from '../data/programs/programs-experiences';
+import { programsPt } from '../data/programs/programs-experiences-translations';
 import DetailPrograms from '../components/programs/ProgramsDetail/detailPrograms.astro';
 import Fondo from '../components/Fondo.astro';
 
-const data = programs.find(p => p.name === "eight");
+const data = programsPt.find(p => p.name === "oito-noites");
 const fondo = "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772828345/jeremiah-berman-9dmycbFE7mQ-unsplash_11zon_j7htro.webp";
 if (!data) return Astro.redirect('/404');
-
-const pdfs = [
-    { label: "Download Itinerary (PDF)", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
-    { label: "Download Includes (PDF)", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
-    { label: "Download Map (PDF)", href: "/pdfs/eight-map-en.pdf", icon: "bi bi-file-earmark-pdf" },
-];
 ---
 
 <BaseLayout title={data.title}>
@@ -25,7 +19,6 @@ const pdfs = [
             programBreve={data.programBreve}
             programItenerario={data.programItenerario}
             imgCardLink={data.imgCardLink ?? []}
-            pdfs={pdfs}
         />
     </main>
 </BaseLayout>
