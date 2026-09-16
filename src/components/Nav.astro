@@ -6,23 +6,17 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 ---
 
 <header class="header" id="mainHeader">
-   
-
-
   <div class="nav-container">
     <nav class="nav">
       <div class="nav-wrapper">
         <a href="/" class="logo-link">
           <Image
-     
             format="png"
             src={logo}
             loading="eager"
             class="logo"
             alt="logo-peru-luxy"
           />
-
-          
         </a>
 
         <button
@@ -38,8 +32,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         <ul class="nav-links">
           <li class="nav-item">
             <button id="btnSubmenuDesktop" class="nav-button">
-              <i style="color: #B8973B" id="iconSubmenu" class="bi bi-caret-right-fill submenu-icon"
-              ></i>
+              <i id="iconSubmenu" style="color: #FFBF00;" class="bi bi-caret-right-fill submenu-icon"></i>
               <a style="font-size: 15px;" href="/destinations">DESTINATIONS</a>
             </button>
             <div id="submenu" class="submenu hidden">
@@ -65,12 +58,12 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
           <li class="nav-item"><a href="/about-us">ABOUT US</a></li>
           <li>
             <div class="top-bar-container tamano--feature" style="width: 450px;">
-                <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="top-bar-link">
-                    <i  style="color: #B8973B"  class="bi bi-telephone"></i> +51 982 836 947
-                </a>
-                <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="top-bar-link">
-                    <i  style="color: #B8973B" class="bi bi-envelope"></i>sales@PeruLuxuryJourneys.com
-                </a>
+              <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="top-bar-link">
+                <i style="color: #FFBF00" class="bi bi-telephone"></i> +51 982 836 947
+              </a>
+              <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="top-bar-link">
+                <i class="bi bi-envelope" style="color: #FFBF00"></i>sales@PeruLuxuryJourneys.com
+              </a>
             </div>
           </li>
         </ul>
@@ -81,7 +74,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
   <div class="mobile-menu">
     <div id="menuResponsive" class="mobile-menu-content hidden">
       <div class="mobile-menu-item">
-        <a class="mobile-menu-link"  href="/destinations">DESTINATIONS</a>
+        <a class="mobile-menu-link" href="/destinations">DESTINATIONS</a>
         <button
           id="btnSubMenuResponsive"
           aria-label="Ver destinos"
@@ -111,8 +104,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
       </div>
 
       <div class="mobile-menu-item">
-        <a class="mobile-menu-link" href="/tour-itineraries">TOUR ITINERARIES</a
-        >
+        <a class="mobile-menu-link" href="/tour-itineraries">TOUR ITINERARIES</a>
       </div>
       <div class="mobile-menu-item">
         <a class="mobile-menu-link" href="/about-us">ABOUT US</a>
@@ -141,7 +133,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
 <script is:inline>
     const header = document.getElementById('mainHeader');
-    
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -162,6 +154,11 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         openMenuIcon?.classList.toggle("hidden", isHidden);
         closeMenuIcon?.classList.toggle("hidden", !isHidden);
         btnMenu.setAttribute("aria-expanded", String(isHidden));
+
+        // 👇 Toggle clase menu-open en el header
+        if (header) {
+          header.classList.toggle("menu-open", isHidden);
+        }
       });
     }
 
@@ -223,16 +220,13 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
         }
     }
 
-
     .top-bar-container {
       display:flex;
       gap: 30px;
-          font-size: 15px;
+      font-size: 15px;
       align-items:center;
     }
 
-
-    
     .top-bar-link {
         text-decoration: none;
         color: white;
@@ -296,13 +290,13 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     color: #333;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  
+
   .header.scrolled .nav-item > a,
   .header.scrolled .nav-button,
   .header.scrolled .top-bar-link {
     color: #333;
   }
-  
+
   .header.scrolled .top-bar {
       border-bottom: 1px solid #eaeaea;
   }
@@ -310,10 +304,36 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
   .header.scrolled .logo-link {
     filter: none;
   }
- 
+
+  /* ============ CUANDO EL MENÚ MÓVIL ESTÁ ABIERTO ============ */
+  .header.menu-open {
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .header.menu-open .nav-item > a,
+  .header.menu-open .nav-button,
+  .header.menu-open .top-bar-link {
+    color: white;
+  }
+
+  .header.menu-open .top-bar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .header.menu-open .menu-button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+
+  .header.menu-open .logo-link {
+    filter: brightness(20);
+  }
+
   .nav-container {
     width: 100%;
-    background-color: transparent; 
+    background-color: transparent;
     display: flex;
     padding: 15px 90px;
     justify-content: center;
@@ -329,27 +349,24 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     margin-left: auto;
   }
 
-
   .nav {
     width: 100%;
     padding: 5px;
   }
+
   @media (max-width: 1400px){
      .nav-container {
           padding: 15px 10px;
-
     }
-    
-  .nav-links {
-    gap: 30px;
-  }
+
+    .nav-links {
+      gap: 30px;
+    }
   }
 
-  @media (max-width: 1280px) { 
-    
-   
-    .nav { width: 90%; } }
-
+  @media (max-width: 1280px) {
+    .nav { width: 90%; }
+  }
 
   .nav-wrapper {
     display: flex;
@@ -384,7 +401,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     color: white;
     transition: all 0.3s ease;
   }
-  
+
   .header.scrolled .menu-button {
       border: 1px solid #ccc;
       color: #333;
@@ -392,7 +409,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
   .menu-icon-open, .menu-icon-close { font-size: 22px; }
 
-  
   .nav-item { position: relative; }
 
   .nav-item > a {
