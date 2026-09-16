@@ -41,7 +41,7 @@ export const programs: programsData[] = [
         fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
         title: "Eight Unforgettable Nights as you Step Back in Time ",
         text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
-        name: "seven",
+        name: "eight",
         fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1778193169/iStock-2210582847_eugby5.jpg",
 
         imgCardLink: [

@@ -10,7 +10,7 @@ const videos = Array.isArray(video) ? video : [video];
     class="hero-video"
     autoplay
     muted
- 
+    loop={videos.length === 1}
     playsinline
     preload="auto"
   >
@@ -78,7 +78,7 @@ const videos = Array.isArray(video) ? video : [video];
         rgba(0, 0, 0, 0.555),
         #00000013, 
         #00000048 72%, 
-        #000000af
+        #00000098
     );
     pointer-events: none;
   }

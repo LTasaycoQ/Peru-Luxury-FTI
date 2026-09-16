@@ -40,7 +40,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
             <button id="btnSubmenuDesktop" class="nav-button">
               <i id="iconSubmenu" class="bi bi-caret-right-fill submenu-icon"
               ></i>
-              <a href="/destinations">DESTINATIONS</a>
+              <a style="font-size: 15px;" href="/destinations">DESTINATIONS</a>
             </button>
             <div id="submenu" class="submenu hidden">
               <ul class="submenu-list">
@@ -81,7 +81,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
   <div class="mobile-menu">
     <div id="menuResponsive" class="mobile-menu-content hidden">
       <div class="mobile-menu-item">
-        <a class="mobile-menu-link" href="/destinations">DESTINATIONS</a>
+        <a class="mobile-menu-link"  href="/destinations">DESTINATIONS</a>
         <button
           id="btnSubMenuResponsive"
           aria-label="Ver destinos"
@@ -204,7 +204,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 </script>
 
 <style>
-    /* ====== BARRA SUPERIOR ====== */
     .top-bar {
         background-color: transparent;
         width: 100%;
@@ -228,7 +227,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     .top-bar-container {
       display:flex;
       gap: 30px;
-    
+          font-size: 15px;
       align-items:center;
     }
 
@@ -321,12 +320,36 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     align-items: center;
   }
 
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 60px;
+    list-style: none;
+    margin-left: auto;
+  }
+
+
   .nav {
     width: 100%;
     padding: 5px;
   }
+  @media (max-width: 1400px){
+     .nav-container {
+          padding: 15px 10px;
 
-  @media (max-width: 1280px) { .nav { width: 90%; } }
+    }
+    
+  .nav-links {
+    gap: 30px;
+  }
+  }
+
+  @media (max-width: 1280px) { 
+    
+   
+    .nav { width: 90%; } }
+
 
   .nav-wrapper {
     display: flex;
@@ -369,19 +392,11 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
 
   .menu-icon-open, .menu-icon-close { font-size: 22px; }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 60px;
-    list-style: none;
-    margin-left: auto;
-  }
-
+  
   .nav-item { position: relative; }
 
   .nav-item > a {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -400,7 +415,7 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -467,7 +482,6 @@ import logo from "../assets/logo/PLJ-LOGO-1.webp";
   .mobile-menu-link {
     padding: 14px;
     flex: 1;
-    font-size: 14px;
     letter-spacing: 0.05em;
     text-decoration: none;
     color: white;
