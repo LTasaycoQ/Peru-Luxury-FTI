@@ -51,17 +51,47 @@ export const programs: programsData[] = [
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/mapi-portada_vvfhnw.webp", link: "machu-picchu",},
             {imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812892/catedral-cusco_z0lmgr.webp", link: "cusco",},
         ],
+       
+
         programBreve: [
-            { titulo_breve: "Day 1 - Arrival in Lima.", text_breve: "Arrival in Lima, the Gastronomic Capital of the Americas." },
-            { titulo_breve: "Day 2 - Colonia Lima & Peruvian Paso Horse Show. (B,L) ", text_breve: "Colonial Lima city tour and traditional Peruvian Paso Horse Show." },
-            { titulo_breve: "Day 3 - Lima, Cusco & Sacred Valley. (B,L)", text_breve: "Fly to Cusco and transfer to the scenic Sacred Valley." },
-            { titulo_breve: "Day 4 - Pisac Andean Market, Pisac Archaeological Complex and Ollantaytambo Fortress. (B)", text_breve: "Visit Pisac Market and the impressive Ollantaytambo Fortress." },
-            { titulo_breve: "Day 5 - Maras Salt Pools, Moray Terraces. (B) ", text_breve: "Explore the Maras Salt Pools and Moray agricultural terraces." },
-            { titulo_breve: "Day 6 - Ollantaytambo Pueblo & Journey to Machu Picchu. (B) ", text_breve: "Walk through Ollantaytambo Pueblo and travel to Machu Picchu." },
-            { titulo_breve: "Day 7 - Visit to Machu Picchu. (B) ", text_breve: "Full day at Machu Picchu with optional Huayna Picchu hike." },
-            { titulo_breve: "Day 8 - Cusco City Tour and Sacsayhuaman", text_breve: "Cusco City Tour, Sacsayhuaman, and Andahuaylillas Church." },
-            { titulo_breve: "Day 9 – Cusco to Lima and Home (B) ", text_breve: "Larco Museum visit in Lima and international departure home." }
-        ],
+  { 
+    titulo_breve: "Day 1 - Arrival in Lima", 
+    text_breve: "Arrival in Lima, the Gastronomic Capital of the Americas. Private transfer to hotel and free night to enjoy the local gastronomy." 
+  },
+  { 
+    titulo_breve: "Day 2 - Colonial Lima & Peruvian Paso Horse Show (B,L)", 
+    text_breve: "City tour of colonial Lima: Plaza Mayor, Government Palace, San Francisco Convent and its catacombs. High-end criollo cuisine lunch with a Peruvian Paso Horse show. Optional: Pachacámac." 
+  },
+  { 
+    titulo_breve: "Day 3 - Lima, Cusco & Sacred Valley (B,L)", 
+    text_breve: "Flight to Cusco and transfer to Terra Andina Colonial Mansion. Lunch at In-Terra. In the afternoon, transfer to the Sacred Valley with a visit to the Yucay Living Museum. Free evening." 
+  },
+  { 
+    titulo_breve: "Day 4 - Pisac & Ollantaytambo (B,L)", 
+    text_breve: "Pisac Artisan Market, Pisac Archaeological Complex (The Little Machu Picchu) and lunch at Hacienda Huayoccari. Visit to the Ollantaytambo Fortress and the Temple of the Sun." 
+  },
+  { 
+    titulo_breve: "Day 5 - Maras Salt Mines, Moray Terraces & Lunch at El Huerto (B,L)", 
+    text_breve: "Explore the Maras Salt Mines (3000+ pools) and the circular Moray Terraces. Lunch in the garden of El Huerto-Muju. Free afternoon in the Sacred Valley." 
+  },
+  { 
+    titulo_breve: "Day 6 - Ollantaytambo Village, Pachamanca & Journey to Machu Picchu (B,L)", 
+    text_breve: "Walk through Ollantaytambo, a Living Inca Village. Lunch with a Pachamanca ritual (earth oven). Panoramic train to Aguas Calientes. Free evening." 
+  },
+  { 
+    titulo_breve: "Day 7 - Visit to Machu Picchu - Pachacútec's Retreat (B,L)", 
+    text_breve: "Ascent to the Sacred Citadel. Guided tour of the agricultural and urban sectors. Lunch at Sanctuary Lodge. Optional hike to Huayna Picchu and the Temple of the Moon. Train back to Cusco." 
+  },
+  { 
+    titulo_breve: "Day 8 - Cusco City Tour, Sacsayhuamán, Tipón & Andahuaylillas (B,L)", 
+    text_breve: "City tour: Cathedral, Koricancha (Temple of the Sun) and Intik'ijllu (Street of the Sun). Sacsayhuamán Fortress and the legend of Cahuide. Box Lunch. Tipón (Inca hydraulic engineering) and Andahuaylillas Church (Sistine Chapel of the Americas). Free evening." 
+  },
+  { 
+    titulo_breve: "Day 9 - Cuesta de San Blas, Cusco-Lima Flight & Return Home (B)", 
+    text_breve: "Walk up the Cuesta de San Blas, the artisans' quarter. Visit the San Blas Pulpit. Flight to Lima. If time permits: lunch at Café del Museo and visit to the Larco Museum. Connection with international flight." 
+  },
+],
+
         programItenerario: [
             {
                 ite_titulo: "Day 1: Arrival in Lima",

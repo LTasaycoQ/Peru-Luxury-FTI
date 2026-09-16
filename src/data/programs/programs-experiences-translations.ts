@@ -19,17 +19,44 @@ export const programsEs: programsData[] = [
       { imagen: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto,w_700/v1772812892/catedral-cusco_z0lmgr.webp", link: "cusco" },
     ],
 
-    programBreve: [
-      { titulo_breve: "Día 1 - Llegada a Lima.", text_breve: "Llegada a Lima, la Capital Gastronómica de las Américas." },
-      { titulo_breve: "Día 2 - Lima Colonial y Show de Caballo de Paso Peruano. (D,A)", text_breve: "City tour por la Lima colonial y show tradicional de Caballo de Paso Peruano." },
-      { titulo_breve: "Día 3 - Lima, Cusco y Valle Sagrado. (D,A)", text_breve: "Vuelo a Cusco y traslado al pintoresco Valle Sagrado." },
-      { titulo_breve: "Día 4 - Mercado Andino de Pisac, Complejo Arqueológico de Pisac y Fortaleza de Ollantaytambo. (D)", text_breve: "Visita al Mercado de Pisac y la impresionante Fortaleza de Ollantaytambo." },
-      { titulo_breve: "Día 5 - Salineras de Maras, Terrazas de Moray. (D)", text_breve: "Explora las Salineras de Maras y las terrazas agrícolas de Moray." },
-      { titulo_breve: "Día 6 - Pueblo de Ollantaytambo y Viaje a Machu Picchu. (D)", text_breve: "Caminata por el Pueblo de Ollantaytambo y viaje a Machu Picchu." },
-      { titulo_breve: "Día 7 - Visita a Machu Picchu. (D)", text_breve: "Día completo en Machu Picchu con caminata opcional a Huayna Picchu." },
-      { titulo_breve: "Día 8 - City Tour Cusco y Sacsayhuamán", text_breve: "City Tour Cusco, Sacsayhuamán e Iglesia de Andahuaylillas." },
-      { titulo_breve: "Día 9 – Cusco a Lima y Regreso a Casa (D)", text_breve: "Visita al Museo Larco en Lima y salida internacional a casa." },
-    ],
+programBreve: [
+  { 
+    titulo_breve: "Día 1 - Llegada a Lima", 
+    text_breve: "Llegada a Lima, la Capital Gastronómica de las Américas. Traslado privado al hotel y noche libre para disfrutar de la gastronomía local." 
+  },
+  { 
+    titulo_breve: "Día 2 - Lima Virreinal y Show del Caballo Peruano de Paso (D,A)", 
+    text_breve: "City tour por la Lima colonial: Plaza Mayor, Palacio de Gobierno, Convento de San Francisco y sus catacumbas. Almuerzo de alta cocina criolla con espectáculo del Caballo de Paso Peruano. Opcional: Pachacámac." 
+  },
+  { 
+    titulo_breve: "Día 3 - Lima, Cusco y Valle Sagrado (D,A)", 
+    text_breve: "Vuelo a Cusco y traslado a Terra Andina Mansión Colonial. Almuerzo en In-Terra. Por la tarde, traslado al Valle Sagrado con visita al Museo Vivo de Yucay. Velada libre." 
+  },
+  { 
+    titulo_breve: "Día 4 - Pisac y Ollantaytambo (D,A)", 
+    text_breve: "Mercado Artesanal de Pisac, Complejo Arqueológico de Pisac (La Pequeña Machu Picchu) y almuerzo en Hacienda Huayoccari. Visita a la Fortaleza de Ollantaytambo y el Templo del Sol." 
+  },
+  { 
+    titulo_breve: "Día 5 - Salineras de Maras, Terrazas de Moray y Almuerzo en El Huerto (D,A)", 
+    text_breve: "Explora las Salineras de Maras (3000+ estanques) y las Terrazas circulares de Moray. Almuerzo en el jardín de El Huerto-Muju. Tarde libre en el Valle Sagrado." 
+  },
+  { 
+    titulo_breve: "Día 6 - Pueblo de Ollantaytambo, Pachamanca y Viaje a Machu Picchu (D,A)", 
+    text_breve: "Caminata por Ollantaytambo Pueblo Inca Viviente. Almuerzo con ritual de Pachamanca (horno de tierra). Tren panorámico a Aguas Calientes. Velada libre." 
+  },
+  { 
+    titulo_breve: "Día 7 - Visita a Machu Picchu - El Refugio de Pachacútec (D,A)", 
+    text_breve: "Ascenso a la Ciudadela Sagrada. Tour guiado por los sectores agrícola y urbano. Almuerzo en Sanctuary Lodge. Caminata opcional a Huayna Picchu y Templo de la Luna. Tren de regreso a Cusco." 
+  },
+  { 
+    titulo_breve: "Día 8 - Cusco City Tour, Sacsayhuamán, Tipón y Andahuaylillas (D,A)", 
+    text_breve: "City tour: Catedral, Koricancha (Templo del Sol) y Callejón del Sol. Fortaleza de Sacsayhuamán y leyenda de Cahuide. Almuerzo Box Lunch. Tipón (ingeniería hidráulica inca) e Iglesia de Andahuaylillas (Capilla Sixtina de América). Velada libre." 
+  },
+  { 
+    titulo_breve: "Día 9 - Cuesta de San Blas, Vuelo Cusco-Lima y Regreso a Casa (D)", 
+    text_breve: "Caminata por la Cuesta de San Blas, el barrio de los artesanos. Visita al Púlpito de San Blas. Vuelo a Lima. Si el tiempo permite: almuerzo en Café del Museo y visita al Museo Larco. Conexión con vuelo internacional." 
+  },
+],
 
     programItenerario: [
     
@@ -503,7 +530,6 @@ export const programsPt: programsData[] = [
     ],
 
     programItenerario: [
-      // ⚠️ AQUÍ DEBES PEGAR LOS 11 DÍAS TRADUCIDOS AL PORTUGUÉS
       {
         ite_titulo: "Dia 1: Chegada a Lima",
         ite_text: `A Cidade dos Reis – A Capital Gastronômica da América...`,
