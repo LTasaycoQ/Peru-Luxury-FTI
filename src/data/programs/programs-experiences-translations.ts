@@ -155,6 +155,298 @@ export const programsEs: programsData[] = [
 
 
 
+
+        {
+        ite_titulo: "Día Seis: Pueblo de Ollantaytambo - Pachamanca - Viaje a Machu Picchu (D, A)",
+        ite_text: `
+          Ollantaytambo Pueblo - Pueblo Inca Viviente - Primer Pueblo con Encanto del Perú, explore un antiguo pueblo en el Valle Sagrado, habitado ininterrumpidamente desde los años 1200s. 
+          Conserva su trazado urbano inca original y su arquitectura de piedra. Sus habitantes mantienen antiguas prácticas y costumbres, mientras que sus canales de agua tradicionales crean una atmósfera única y auténtica. 
+          Este extraordinario pueblo fue reconocido por la Organización Mundial del Turismo (OMT) como uno de los "Mejores Pueblos Turísticos" del mundo 
+
+          </br>
+          Caminar por Ollantaytambo es compartir el ritmo sereno de la vida andina, sentir la historia en cada rincón y conectar con una comunidad que honra sus tradiciones con orgullo. 
+          </br>
+          </br>
+         Además, es un deleite contemplar sus hornos de barro, donde el fuego custodia técnicas milenarias para dar vida al pan artesanal. Una experiencia genuina, inspiradora y profundamente humana que invita a detenerse, observar y decir: "Quiero vivir esto". 
+          </br>
+          </br>
+          <strong>Pachamanca Inca:</strong> Ritual Ancestral en Ollantaytambo. Tras recorrer El Pueblo. 
+          </br>
+          </br>
+          <strong>Pachamanca - Horno de Tierra. </strong> Alimentos se cocinan bajo tierra con piedras calientes siguiendo métodos precolombinos. El almuerzo al aire libre incluye papas nativas, camote y ensaladas frente a paisajes andinos.
+          La actividad incluye un recorrido guiado por su finca orgánica, destilería artesanal y tostadora de café, además del proceso del ritual. Una experiencia inolvidable que celebra la gastronomía peruana antes de tomar el tren a Aguas Calientes.
+          Aventura Panorámica en Tren Andino a Aguas Calientes Machu Picchu Pueblo, bajo la antigua ciudadela. Mientras el tren serpentea por el imponente Valle Sagrado, el paisaje se transforma en una exuberante selva alta, marcando la llegada a la mística puerta de entrada de los incas.
+          ¡Un viaje inolvidable!
+          </br>
+          </br>
+          Velada libre y cena no programada. 
+ 
+
+
+
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+
+        {
+        ite_titulo: "Día Siete: Visita a Machu Picchu - El Refugio de Pachacútec (B,L) ",
+        ite_text: `
+          Traslado a la estación de autobuses en Machu Picchu Pueblo. Ascenso a la legendaria Ciudad Perdida de los Incas por un sinuoso y estrecho camino de grava, diseñado para superar la considerable diferencia de altitud entre Machu Picchu Pueblo y el sitio arqueológico.
+          </br>
+          Está Ciudadela Santuario Histórico de Machu Picchu - La Legendaria Ciudad Perdida de los Incas - La Ciudadela Sagrada en las Nubes - Patrimonio de la Humanidad - Montaña Vieja, elegida como una de las Nuevas Siete Maravillas del Mundo es una obra maestra de la arquitectura e ingeniería incaica construida durante la década de 1400 en lo alto de una cresta montañosa, justo en el punto de encuentro entre la cordillera de los Andes y la selva peruana.
+          </br>
+          </br>
+        Funcionó bajo el mandato del Inca Pachacútec como un importante centro ceremonial, político y de culto, además de servir como refugio privado para la élite imperial. El complejo está dividido con exquisita precisión en dos grandes sectores: el agrícola, compuesto por imponentes terrazas de cultivo, y el urbano, donde se concentran plazas, mausoleos reales y palacios. Sus edificaciones destacan a nivel mundial por sus imponentes muros de piedra perfectamente encajados sin el uso de mortero, además de contar con templos diseñados específicamente para la observación y alineación astronómica
+          </br>
+          </br>
+          Tras la caída del imperio, está joya arquitectónica del incanato permaneció oculta y protegida por la densa vegetación durante 400 años, hasta que el explorador estadounidense Hiram Bingham la reveló al mundo en 1911. Hoy en día, su atmósfera mística y su espectacular entorno natural la convierten en el símbolo cultural más importante y visitado de Perú 
+          </br>
+          </br>
+         eleite un delicioso almuerzo en el Sanctuary Lodge, explorando la exquisita gastronomía local. El almuerzo sé encuentra contemplada en el itinerario. 
+          </br>
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+      
+
+        {
+        ite_titulo: "Machu Picchu Realeza",
+        ite_text: `
+          A lo largo de la caminata, los visitantes exploran de cerca los recintos más finos y sagrados de Machu Picchu, incluyendo el Templo del Sol con su forma semicircular, la Tumba Real en una caverna, la Casa del Inca con sus habitaciones residenciales, y el sistema de fuentes ceremoniales de agua. El recorrido continúa hacia la zona norte para admirar el Sector de las Tres Portadas y la Roca Sagrada, un monolito tallado que imita el perfil de las montañas, para finalmente concluir en el Templo del Cóndor, un área exclusiva de este circuito donde se aprecia la escultura en piedra de este ave sagrada antes de salir del complejo.
+          </br>
+          Caminata opcional a Huayna Picchu - La Montaña Joven - El Guardián de Machu Picchu: Su guía turístico está disponible para una caminata matutina por el empinado sendero empedrado de Huayna Picchu, la montaña con forma de pirámide que se alza sobre Machu Picchu, para disfrutar de una impresionante vista panorámica del sitio, Una Vista de Ojo de Cóndor. 
+          </br>
+          </br>
+          Quienes asciendan a la cima disfrutarán de una conmovedora vista de cómo Machu Picchu se integró cuidadosamente en su entorno natural. Entre los imponentes picos andinos se alzan a lo lejos, mientras el sinuoso río Urubamba rodea casi por completo el sitio principal. No se lo pierda; Huayna Picchu es "lo que la mayoría de la gente se pierde en Machu Picchu" (BBC Travel).
+          </br>
+          </br>
+         Los excursionistas verán el Templo de la Luna, un santuario místico oculto en cuevas y construido en la roca. Destaca por tener algunos de los trabajos en piedra más finos del lugar.
+          </br>
+          </br>
+          <strong>¡Es sin duda uno de los paisajes más maravillosos del mundo!</strong>
+          </br>
+          </br>
+          <strong>El secreto </strong>para subir a Huayna Picchu es caminar 10 minutos y descansar 5 minutos, caminar 10 minutos y descansar 5 minutos, y así… 
+          Al finalizar la visita, abordaremos el tren para regresar a Cusco.
+
+          </br>
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+       {
+        ite_titulo: "Día Ocho: Cusco City Tour - Sacsayhuaman - Tipón, una Obra Maestra de la Ingeniería Hidráulica Inca - Iglesia Histórica de Andahuaylillas - La Capilla Sixtina de las Américas (D, A) ",
+        ite_text: `
+         En el recorrido por Cusco, los visitantes se sumergen en la emoción de recorrer la antigua capital del Imperio Inca, una encantadora combinación de arquitectura inca y colonial. 
+          </br>
+         El recorrido visita importantes lugares como la Catedral de Cusco, la Plaza de Armas y el Koricancha - El Templo del Sol, - Templo Máximo de los Incas, el templo más sagrado del Imperio Inca, pasando por Intik'ijllu o Callejón del Sol.  
+          </br>
+          </br>
+         <strong>La Callejón del Sol - Calle de los Muros Incas - Calle de la Casa de las Vírgenes del Sol Intik'ijllu </strong>, así fue conocida durante el imperio incaico, representa uno de los ejes urbanos y religiosos mejor conservados del Tahuantinsuyo, en Cusco (el "ombligo del mundo") estaba reservada estrictamente para el Inca, las familias reales y la élite, esta calle en particular era un sendero exclusivo con importanci histórica por su diseño arquitectónico y de seguridad. 
+          </br>
+          </br>
+          <strong>Korikancha - Templo del Sol - Recinto de Oro -Sitio Dorado - Templo Máximo de los Incas</strong>, no era el palacio de un rey, más bien fue él templo religioso y político sagrado en el Imperio Incaico es una de las mayores ironías físicas de la historia de la humanidad. 
+          </br>
+          </br>
+          Los conquistadores llegaron con la mentalidad europea de que una estructura fuerte debe ser rígida, pesada y cementada para durar. 
+          </br>
+          </br>
+          Los incas entendieron que la tierra en los Andes se mueve constantemente y que la verdadera resistencia está en la flexibilidad y el encaje dinámico.
+
+          </br>
+
+          Este recorrido por la ciudad habitada más antigua del hemisferio occidental también incluye el monumental sitio arqueológico inca de Sacsayhuamán. 
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+       {
+        ite_titulo: "La Fortaleza de Sacsayhuamán - Halcón Satisfecho - Lugar Donde se Sacia el Halcón - La Cabeza del Puma, un imponente ejemplo de arquitectura militar inca. ",
+        ite_text: `
+        Las murallas de Sacsayhuamán son una leyenda mágica, hay que romper con un mito: los incas no usaban la fuerza bruta desorganizada, sino una física asombrosamente avanzada. 
+          </br>
+       Los bloques pesan 125 toneladas, encajados de forma tan perfecta que no entra un alfiler entre ellos, estás viendo la cúspide de la ingeniería lítica prehispánica. Así es como realmente lo lograron de forma original y sin tecnologías europeas. 
+          </br>
+          </br>
+         <strong>Cahuide, El Titán del Torreón </strong>
+          </br>
+        En un combate cuerpo a cuerpo agónico en las terrazas zigzagueras, los españoles lograron arrinconar a los últimos defensores incas. Allí, en la cima del torreón cilíndrico de Muyucmarca, emergió una figura imponente: un capitán de la nobleza inca (un orejón) a quien la historia popular bautizó como Cahuide. }
+
+        </br>
+        El corría de un lado a otro del torreón como un león enjaulado. Estaba completamente solo, rodeado y cubierto de sangre enemiga y propia.
+          </br>
+          Se dio cuenta de que no le quedaban más piedras que lanzar, ni hombres que comandar. 
+           
+          </br>
+          Se arrojó al vacío desde lo alto del torreón. Prefirió convertirse en pedazos contra las rocas milenarias de Sacsayhuamán. Prefirió convertirse en pedazos contra las rocas milenarias de Sacsayhuamán antes que ver sus manos atadas por cadenas extranjeras. 
+          </br>
+          Deleite un delicioso Almuerzo-Box Lunch, explorando la exquisita gastronomía local. Esta comida está incluida en el día de hoy. 
+          </br>
+          </br>
+          <strong>Tipón - La Ruta del Agua - El Santuario de los Maestros del Agua.</strong> Por la tarde, rumbo al sur, al Valle Sagrado, hacia Tipón una Obra Maestra de la Ingeniería Hidráulica Inca, un impresionante complejo arqueológico inca famoso por su avanzado sistema de canales de agua, terrazas agrícolas y recintos ceremoniales.
+          </br>
+
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+      {
+        ite_titulo: "El Santuario de los Maestros del Agua, ",
+        ite_text: `
+          Es más que un sitio arqueológico, Tipón es una obra maestra de ingeniería hidráulica celestial que desafía el tiempo. 
+En este santuario, los incas lograron lo imposible: esculpieron la montaña para domar el agua, convirtiendo un recurso natural en un espectáculo de arte, misticismo y ciencia que sigue funcionando a la perfección después de más de 500 años. En Tipón el silencio no existe. El agua canta mientras desciende por la montaña, el sitio está vivo gracias al murmullo constante de manantiales sagrados que brotan de las rocas y fluyen con precisión milimétrica por canales de piedra pulida. Sin tecnología moderna, los ingenieros incas calcularon pendientes exactas para que el agua fluyera sin erosionar la piedra ni desbordarse. 
+
+        </br>
+       </br>
+        Hoy en día, los canales siguen vertiendo agua cristalina con la misma fuerza y precisión que en la época del Imperio. Las doceterrazas agrícolas de una simetría perfecta abrazan la quebrada. No eran solo para cultivar; eran laboratorios climáticos y altares de culto a la Pachamama (Madre Tierra) y al Unu (el Agua), donde los muros de contención absorben el calor del sol para crear microclimas.
+       </br>
+         
+          </br>
+        Continuaremos hasta el pueblo de Andahuaylillas - La Capilla Sixtina de Américas - El Templo de Oro de América, un encantador y pacífico pueblo tradicional del Valle Sur de Cusco, famoso a nivel mundial. Dónde visitaremos la monumental Iglesia de San Pedro Apóstol, bautizada legítimamente como la Capilla Sixtina de América, conocida por sus murales barrocos, altares dorados y pinturas coloniales. Su belleza reside tanto en su mística arquitectura religiosa colonial como en la profunda serenidad de sus paisajes andinos. El interior está cubierto de frescos multicolores. Destacan los cuadros de la reputada Escuela Cusqueña y el icónico mural que retrata el Camino al Cielo y al Infierno. El altar principal está revestido con pan de oro, espejos y plata repujada. 
+
+        </br>
+          </br>
+          Velada por cuenta propia. 
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+
+
+      
+      {
+        ite_titulo: "Día 9: Cuesta de San Blas, Vuelo Cusco-Lima y Regreso  a Casa (D) ",
+        ite_text: `
+         Por la mañana, visita La Cuesta de San Blas - La Cuesta que Cansa al Zorro - El Barrio de los Artesanos. Descubre el portal mágico de Cusco, prepárate para una experiencia que transforme tu forma de ver el mundo. 
+        </br>
+       </br>
+       Deja atrás el bullicio del turismo convencional cerca de la calle Triunfo y prepárate para cruzar un auténtico portal emocional. </br>
+         
+          </br>
+        A medida que avanzas, notarás cómo el ruido exterior se apaga por completo, invitándote a sincronizar tu propio ritmo con el místico silencio de las rocas andinas; una caminata que deja de ser un simple trayecto para convertirse en la mejor terapia de desconexión. 
+        </br>
+          </br>
+        Un Viaje En El Tiempo A Través De La Arquitectura Viva
+      </br>
+      Caminar por esta emblemática cuesta es presenciar un diálogo visual que no encontrarás en ningún otro rincón del planeta. Aquí, la rigidez perfecta e indestructible de los muros incas sirve de base para sostener la fragilidad del adobe blanco y los balcones de madera colonial tallada. 
+          </br>   
+          Es el escenario perfecto para tus mejores fotografías y recuerdos: una hermosa cicatriz histórica donde dos mundos opuestos se abrazaron con fuerza para crear el barrio más bohemio, fotogénico y vibrante de todo el Cusco.    
+          </br>
+          </br>
+
+          El Rincón Donde El Arte Respira Y Te Invita A Quedarte
+          </br>
+          Más allá de sus encantadoras tiendas y cafeterías de especialidad, San Blas te envuelve en la energía de un taller artesanal vivo que ha funcionado por siglos.  
+          </br>
+          Al recorrer sus calles, sentirás que las paredes mismas respiran la creatividad de los legendarios maestros imagineros cuzqueños, flotando en una atmósfera impregnada de historia, maderas finas y pigmentos antiguos. 
+        </br>
+Olvídate de las prisas, empaca tus maletas y ven a descubrir por qué subir la Cuesta de San Blas no es solo llegar a un destino, sino vivir la verdadera esencia del corazón de los Andes.
+
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+ 
+
+
+
+ 
+      {
+        ite_titulo: "La Cuesta de San Blas es como un Reloj de Piedra",
+        ite_text: `
+         deja de ser una calle para convertirse en un portal emocional. Es la Columna Vertebral del Arte Cuzqueño. 
+Cuesta de San Blas no sube hacia un barrio, sino que sube hacia atrás en el tiempo. A medida que asciendes y el aire se vuelve más fino, la piedra parece Despertar. 
+ 
+        </br>
+       </br>
+     Lo Que Veremos En La Cuesta De San Blas
+         
+          </br>
+          </br>
+       Las Esculturas de Cuellos Largos: Herederos del estilo de la familia Mendívil, que crean vírgenes y santos con cuellos estilizados. 
+Ceramistas: Maestros del barro que trabajan desde réplicas prehispánicas hasta el estilo "Mérida" 
+Talladores en Madera: Especialistas en marcos coloniales cubiertos de pan de oro y muebles finos.
+Pintores de la Escuela Cusqueña: Artistas que mantienen viva la técnica del óleo con aplicaciones de oro típica del siglo XVII.
+Textileros y joyeros: Aunque hay más en las calles laterales, en la misma cuesta verás joyería en plata con piedras andinas. 
+También encontrarás galerías de renombre y las fachadas blancas con puertas azules que albergan los talleres de las grandes familias como los Mendívil casi al llegar a la plaza San Blas. 
+Hay una presencia fuerte de Joyería Contemporánea y pequeñas muestras de pintura que aprovechan los muros incas que sirven de base en varios tramos de ese lado.
+
+      </br>
+     El Púlpito de San Blas - La Obra Cumbre en Madera 
+          </br>   
+          El púlpito de San Blas no es solo un mueble litúrgico; es un árbol de cedro que aprendió a hablar en quechua y en latín al mismo tiempo. 
+Es el reflejo exacto de un choque de mundos que se reconcilió a través de las manos de un artesano.
+</br>
+Las columnas salomónicas no solo giran sobre su eje, sino que sostienen la estructura con una tensión visual que desafía la gravedad. Es un juego de luces y sombras donde el vacío trabaja tanto como el relieve.
+Luego verás, algunos cafés con balcones que ofrecen vistas hacia la calle. 
+  
+         
+        `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+
+
+
+       
+      {
+        ite_titulo: "Traslado al aeropuerto para su vuelo a Lima y conexión con el vuelo internacional. ",
+        ite_text: `
+         Regrese a casa con recuerdos inolvidables de la rica tradición de la Lima colonial, las imponentes montañas andinas nevadas y los exuberantes valles con el zigzagueante camino hacia la imponente vista de Machu Picchu, el asombroso legado inca. 
+        </br>
+       </br>
+    Si la escala entre vuelos Cusco-Lima-Regreso a Casa, él tiempo lo permite, le sugerimos almorzar en el Café del Museo y luego visitar el Museo Larco.
+         
+          </br>
+          </br>
+          Si la escala entre vuelos Cusco-Lima-Regreso a Casa, él tiempo lo permite, le sugerimos almorzar en el Café del Museo y luego visitar el Museo Larco.
+      </br>
+    Almuerzo en el Café del Museo.
+Un espacio rodeado de jardines donde podrá disfrutar de una mezcla única de cultura, historia, modernidad y buena comida. 
+
+          </br>   
+          </br>
+        Visita al Museo Larco - El Guardián del Arte Precolombino - El Depósito Abierto del Museo Larco
+        </br>
+        </br>
+        El depósito abierto es una de las características más famosas y únicas del museo. Los visitantes pueden caminar directamente entre los estantes donde se resguardan y clasifican más de 30,000 piezas arqueológicas de cerámica precolombina.
+             </br>   
+          </br>
+      La Galería de Oro y Plata
+        </br>
+        </br>
+        Esta deslumbrante sala exhibe la colección más importante de indumentaria y joyería de metales preciosos utilizada por los gobernantes del antiguo Perú. Las coronas, orejeras, narigueras y pectorales muestran el altísimo nivel técnico de los orfebres de culturas como la Mochica, Chimú y Sicán para honrar a sus dioses. 
+         </br>
+         El Museo Larco, fundado en 1926, exhibe notables galerías cronológicas que ofrecen una excelente visión general de 3000 años de desarrollo de la historia precolombina peruana. 
+        
+        </br>
+        </br>
+
+        Ubicado en una singular mansión virreinal del siglo XVIII, construida sobre una pirámide precolombina del siglo VII, está rodeado de hermosos jardines. 
+</br>
+El Museo Larco también alberga la más fina colección de oro y plata del antiguo Perú y la famosa colección arqueológica erótica, una de las atracciones turísticas peruanas más visitadas.
+
+         `,
+        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
+      },
+ 
+
+ 
+
+
+
+
     ],
 
     programIncluye: [
