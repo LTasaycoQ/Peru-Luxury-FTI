@@ -29,6 +29,19 @@ interface PdfLink {
 
 interface Props {
     title: string;
+
+
+    breve?: string;
+    itinerario?: string;
+    noInclude?: string;
+
+
+
+    textContainerTitle?: string;
+    textDescription?: string;
+    email?: string;
+    formularioTxt?: string;
+
     imgCardLink: imgCardLink[];
     programBreve: programBreve[];
     programItenerario: programItenerario[];
@@ -45,6 +58,17 @@ const {
     programNoIncluye,
     programIncluye,
     pdfs = [],
+
+    breve, 
+    itinerario,
+    noInclude,
+
+    textContainerTitle,
+    textDescription,
+    email,
+    formularioTxt,
+
+
 } = Astro.props;
 ---
 
@@ -59,15 +83,15 @@ const {
                 <ul id="tab-menu" class="tab-menu">
                     <li class="menu-list active" data-target="brief">
                         <i class="bi bi-list-ul tab-icon"></i>
-                        <span>Brief</span>
+                        <span>{breve || "Brief"}</span>
                     </li>
                     <li class="menu-list" data-target="itinerary">
                         <i class="bi bi-geo-alt tab-icon"></i>
-                        <span>Itinerary</span>
+                        <span>{itinerario || "Itinerary"}</span>
                     </li>
                     <li class="menu-list" data-target="include">
                         <i class="bi bi-check2-square tab-icon"></i>
-                        <span>Include</span>
+                        <span>{noInclude || "Include"}</span>
                     </li>
                     
                 </ul>
@@ -108,19 +132,19 @@ const {
                         <div class="sidebar-card">
                             <div class="sidebar-inner">
                                 <div class="sidebar-header">
-                                    <h3>Find the Perfect Journey for You</h3>
+                                    <h3>{textContainerTitle}</h3>
                                 </div>
 
                                 <p class="sidebar-text">
-                                    Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel.
+                                    {textDescription}
                                 </p>
 
                                 <div class="sidebar-links">
                                     <a href="mailto:sales@PeruLuxuryJourneys.com" target="_blank" class="sidebar-link">
-                                        <i class="sidebar-icon bi bi-envelope"></i> Email
+                                        <i class="sidebar-icon bi bi-envelope"></i> {email}
                                     </a>
                                     <span class="sidebar-link">
-                                        <i class="sidebar-icon bi bi-clipboard2-fill"></i> Enquire Now
+                                        <i class="sidebar-icon bi bi-clipboard2-fill"></i>{formularioTxt}
                                     </span>
                                     <a href="https://api.whatsapp.com/send?phone=51982836947" target="_blank" class="sidebar-link">
                                         <i class="sidebar-icon bi bi-telephone"></i> +51 982 836 947
@@ -366,7 +390,6 @@ const {
         width: 100%;
     }
 
-    /* ============ TAB HEADER + PDF ICONS AL LADO ============ */
     .tab-header-wrapper {
         display: flex;
         align-items: center;

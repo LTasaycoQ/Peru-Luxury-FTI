@@ -10,8 +10,8 @@ if (!data) return Astro.redirect('/404');
 
 
 const pdfs = [
-    { label: "Descargar PDF", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/pdfIcon_idmrvg.webp", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
-    { label: "Descargar Word", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/imageWord_qbttzt.webp", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
+    { label: "Baixar PDF", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/pdfIcon_idmrvg.webp", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
+    { label: "Baixar Word", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/imageWord_qbttzt.webp", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
 ];
 
 ---
@@ -27,6 +27,20 @@ const pdfs = [
             programItenerario={data.programItenerario}
             imgCardLink={data.imgCardLink ?? []}
             pdfs={pdfs}
+
+
+            breve="Apresentação"
+            itinerario="Itinerário"
+            noInclude="Inclui"
+            
+
+
+
+            textContainerTitle="Encontre a viagem perfeita para você."
+            textDescription="Cada viajante é diferente. Descubra mais ideias de roteiros e experiências por todo o Peru, ou deixe que nossos especialistas criem uma viagem totalmente personalizada, adaptada aos seus interesses, datas e estilo de viagem preferido."
+            email="E-mail"
+            formularioTxt="Confira agora"
+
         />
     </main>
 </BaseLayout>

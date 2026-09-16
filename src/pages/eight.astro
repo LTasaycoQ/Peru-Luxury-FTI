@@ -9,15 +9,19 @@ const fondo = "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v
 if (!data) return Astro.redirect('/404');
 
 const pdfs = [
-    { label: "Descargar PDF", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/pdfIcon_idmrvg.webp", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
-    { label: "Descargar Word", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/imageWord_qbttzt.webp", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
+    { label: "Download PDF", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/pdfIcon_idmrvg.webp", href: "/pdfs/eight-en.pdf", icon: "bi bi-file-earmark-pdf" },
+    { label: "Download Word", image: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789571753/imageWord_qbttzt.webp", href: "/pdfs/eight-includes-en.pdf", icon: "bi bi-file-earmark-pdf" },
 ];
+
+
+
 ---
 
 <BaseLayout title={data.title}>
     <Fondo fondo={`url(${fondo})`} />
     <main>
         <DetailPrograms
+
             title={data.title}
             programNoIncluye={data.programNoIncluye}
             programIncluye={data.programIncluye}
@@ -25,6 +29,13 @@ const pdfs = [
             programItenerario={data.programItenerario}
             imgCardLink={data.imgCardLink ?? []}
             pdfs={pdfs}
+
+
+            textContainerTitle="Find the Perfect Journey for You"
+            textDescription="Every traveler is different. Explore more itinerary ideas and experiences across Peru, or let our specialists design a fully personalized journey tailored to your interests, travel dates, and preferred style of travel."
+            email="Email"
+            formularioTxt="Enquiere Now"
+
         />
     </main>
 </BaseLayout>
