@@ -6,7 +6,7 @@ import type { programsData } from './programs-experiences';
 export const programsEs: programsData[] = [
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
-    title: "Ocho Noches Inolvidables en un viaje a través del Tiempo",
+    title: "Ocho Noches Inolvidables en un Viaje a Través del Tiempo",
     text: "Ocho noches inolvidables explorando el legado real del Imperio Inca.",
     name: "ocho-noches-inolvidables",
     fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1778193169/iStock-2210582847_eugby5.jpg",
