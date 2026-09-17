@@ -30,6 +30,8 @@ interface PdfLink {
 interface Props {
     title: string;
 
+    notincludes?: string;
+    includes?: string;
 
     breve?: string;
     itinerario?: string;
@@ -67,7 +69,8 @@ const {
     textDescription,
     email,
     formularioTxt,
-
+    includes,
+    notincludes,
 
 } = Astro.props;
 ---
@@ -227,7 +230,7 @@ const {
                 <div id="include" class="tab-content hidden include-content">
                     <div class="include-card">
                         <div class="include-card-inner">
-                            <h4 class="include-title">Includes:</h4>
+                            <h4 class="include-title">{includes || 'Includes:'}</h4>
                             <ul class="include-list">
                                 {programIncluye.map((item) => (
                                     <li class="include-list-item include-check">
@@ -241,7 +244,7 @@ const {
 
                     <div class="include-card">
                         <div class="include-card-inner">
-                            <h4 class="include-title">Does not include:</h4>
+                            <h4 class="include-title"> {notincludes || 'Does not include:'}</h4>
                             <ul class="include-list">
                                 {programNoIncluye.map((item) => (
                                     <li class="include-list-item include-close">

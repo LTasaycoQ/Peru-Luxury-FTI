@@ -41,7 +41,7 @@ export const programs: programsData[] = [
         fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
         title: "Eight Unforgettable Nights as you Step Back in Time ",
         text: "Eight unforgettable nights exploring the royal legacy of the Inca Empire.",
-        name: "eight",
+        name: "eight-unforgettable-nights",
         fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1778193169/iStock-2210582847_eugby5.jpg",
 
         imgCardLink: [
@@ -111,7 +111,8 @@ export const programs: programsData[] = [
                To complete your first day, indulge your senses at Tragaluz, located within the Belmond Miraflores Park, where contemporary art blends with the cuisine of chef Ricardo Ehni.
                `,
                 ite_image: [
-                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789593641/renzo-salvador-6aTKVkWZ0z8-unsplash_lhsyog.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789593744/iStock-1091870010_vszoap.jpg",
                 ],
             },
             {
@@ -136,7 +137,11 @@ export const programs: programsData[] = [
 
                 `,
                 ite_image: [
-                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750026/2_14_11zon_scv4xy.webp",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594243/35012987295_9b5523806a_o_cjtoks.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594144/pexels-mateusz-popek-571455082-17449746_v3buvv.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594184/cusco-3544704_ksafcb.jpg",
                 ],
             },
             {
@@ -162,7 +167,15 @@ export const programs: programsData[] = [
             Free Evening: Gastronomic Discovery in the Sacred Valley. Independent dinner, the Sacred Valley houses some of the most exclusive luxury hotel sanctuaries and refuges on the continent, whose culinary proposals are authentic works of art.
 
               `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750035/3_15_11zon_yjd5lr.webp",],
+                
+              ite_image: [
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594243/35012987295_9b5523806a_o_cjtoks.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594144/pexels-mateusz-popek-571455082-17449746_v3buvv.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594184/cusco-3544704_ksafcb.jpg",
+                ],
+              
             },
             {
                 ite_titulo: "Day 4: Pisac Andean Market & Archaeological Site, Hacienda Huayoccari & Ollantaytambo Fortress (B, L)",
@@ -180,8 +193,10 @@ export const programs: programsData[] = [
                   
                 `,
                 ite_image: [
-                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826657/4.1_11zon_vqleda.webp",
-                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750027/4_16_11zon_yhdrvg.webp",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594416/001_ME7A4181-Cusco_TREK_eqeqth.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594537/pexels-leandra-favan-174296787-37966505_ibjom9.jpg",
                 ],
             },
             {
@@ -241,7 +256,10 @@ export const programs: programsData[] = [
 
 
             `,
-                ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819075/6_11zon_tkua6z.webp",],
+                ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772826812/7.1_11zon_loxcq0.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594689/shutterstock_191087015_hswrbt.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772819075/6_11zon_tkua6z.webp",],
             },
             {
                 ite_titulo: "Day 7: Visit to Machu Picchu - Pachacutec's Refuge (B,L)",

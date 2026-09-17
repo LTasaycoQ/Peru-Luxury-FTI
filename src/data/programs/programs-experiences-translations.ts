@@ -6,9 +6,9 @@ import type { programsData } from './programs-experiences';
 export const programsEs: programsData[] = [
   {
     fondo: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772827864/iStock-1410778842_11zon_ijhdch.webp",
-    title: "Ocho Noches Inolvidables Retrocediendo en el Tiempo",
+    title: "Ocho Noches Inolvidables en un viaje a través del Tiempo",
     text: "Ocho noches inolvidables explorando el legado real del Imperio Inca.",
-    name: "ocho-noches",
+    name: "ocho-noches-inolvidables",
     fondoHeader: "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1778193169/iStock-2210582847_eugby5.jpg",
 
     imgCardLink: [
@@ -61,7 +61,7 @@ programBreve: [
     programItenerario: [
     
       {
-        ite_titulo: "Dia Uno: Llegada a Lima. ",
+        ite_titulo: "Dia 1: Llegada a Lima. ",
         ite_text: `La Ciudad de los Reyes - La Capital Gastronómica de América - Capital del Virreinato del Perú - Tres Veces Coronada Villa 
           </br>
           </br>
@@ -80,12 +80,14 @@ programBreve: [
 
           Finalmente, deléitese en Tragaluz, en el Belmond Miraflores Park, donde el arte contemporáneo se fusiona con la cocina del chef Ricardo Ehni. 
           `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789593641/renzo-salvador-6aTKVkWZ0z8-unsplash_lhsyog.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789593744/iStock-1091870010_vszoap.jpg",
+                ],},
 
 
       {
-        ite_titulo: "Día Dos: Lima Virreinal, Show del Caballo Peruano de Paso (D,A) ",
+        ite_titulo: "Día 2: Lima Virreinal, Show del Caballo Peruano de Paso (D,A) ",
         ite_text: `La Majestuosa "Ciudad de los Reyes" nos abre sus puertas. Comenzaremos el recorrido en la histórica Plaza Mayor, el corazón colonial de la cuna limeña, donde se proclamó la independencia y que destaca por su hermosa pileta central. </br></br>
         Ahí mismo admiraremos el Palacio de Gobierno, sede del poder ejecutivo que deslumbra con su arquitectura neobarroca y su marcial cambio de guardia. Luego, nos adentraremos en la mística de la Basílica y el Convento de San Francisco, un monumental complejo barroco mundialmente aclamado. 
         Este Patrimonio de la Humanidad por la UNESCO es famoso por su legendaria biblioteca, sus claustros con azulejos y sus misteriosas catacumbas subterráneas coloniales. 
@@ -97,14 +99,19 @@ programBreve: [
         Al finalizar el espectáculo, se realizará el traslado de regreso a su hotel en Lima.
         Si el tiempo lo permite, podremos visitar Pachacamac, el santuario prehispánico más importante de la costa central peruana. Recorreremos sus imponentes pirámides de barro y templos dedicados al dios creador del universo, sumergiéndonos en el misticismo y la arqueología viva de este lugar sagrado.
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594243/35012987295_9b5523806a_o_cjtoks.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594144/pexels-mateusz-popek-571455082-17449746_v3buvv.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594184/cusco-3544704_ksafcb.jpg",
+                ], },
 
 
 
 
          {
-        ite_titulo: "Día Tres: Lima, Cusco y Valle Sagrado (D,A) ",
+        ite_titulo: "Día 3: Lima, Cusco y Valle Sagrado (D,A) ",
         ite_text: `
           Cusco - La Capital del Imperio Incaico - Morada de los Dioses - Ombligo del Mundo, a su llegada a Cusco, traslado a Terra Andina Mansión Colonia, en el distrito histórico de Cusco, construida a principios del siglo XIX durante la época colonial española.
           Disfrute de un extraordinario almuerzo, el cual está incluido, una experiencia culinaria en el distinguido restaurante In-Terra, donde se deleitará con una propuesta gastronómica rinde homenaje a la riqueza local, entrelazando con maestría ingredientes andinos y criollos bajo una visión vanguardista y moderna, integrada armoniosamente como parte de las selectas vivencias del día de hoy.
@@ -125,15 +132,20 @@ programBreve: [
           </br>
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+          ite_image: [
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594243/35012987295_9b5523806a_o_cjtoks.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594144/pexels-mateusz-popek-571455082-17449746_v3buvv.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594184/cusco-3544704_ksafcb.jpg",
+                ], },
 
 
 
 
       
          {
-        ite_titulo: "Día Cuatro: Mercado Andino de Pisac, Complejo Arqueológico de Pisac y Fortaleza de Ollantaytambo. (B,L)  ",
+        ite_titulo: "Día 4: Mercado Andino de Pisac, Complejo Arqueológico de Pisac y Fortaleza de Ollantaytambo. (B,L)  ",
         ite_text: `
           El Corazón Andino del Valle Sagrado - Mercado Artesanal de Pisac en el Valle Sagrado Con gran variedad de productos artesanales. Los domingos se reúnen los Varayoc, alcaldes tradicionales y máxima autoridad de las comunidades indígenas (Ayllus). Elegidos por su sabiduría, portan el Inka Varayoc: un Bastón Sagrado de plata que encarna el orden, la justicia y la conexión con sus ancestros.
           Visite el Centro Arqueológico de Písac - La Pequeña Machu Picchu, situado en la cima de una colina. Posee un sistema deriego, un observatorio y un reloj solar (Intiwatana). Sus laderas exhiben terrazas incas aún activas. Por sus estructuras, el sitio cumplía un triple propósito: militar, religioso y agrícola. Funcionaba como hacienda y defendía el acceso sur al Valle Sagrado. 
@@ -151,15 +163,19 @@ programBreve: [
 
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+      ite_image: [
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594416/001_ME7A4181-Cusco_TREK_eqeqth.jpg",
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594537/pexels-leandra-favan-174296787-37966505_ibjom9.jpg",
+                ],},
 
 
 
 
             
          {
-        ite_titulo: "Día Cinco: Salineras de Maras, Terrazas de Moray y Almuerzo en el Huerto (D, A) ",
+        ite_titulo: "Día 5: Salineras de Maras, Terrazas de Moray y Almuerzo en el Huerto (D, A) ",
         ite_text: `
           Las Salineras de Maras, ubicadas en el Valle Sagrado, son una de las excursiones más notables. Este impresionante conjunto alberga más de 3000 estanques de sal alimentados por un manantial subterráneo rico en minerales. Su extracción sigue un método tradicional preincaico: el agua se evapora bajo el sol andino y los lugareños de Maras y Pichingoto raspan a mano la fina capa de sal rosada, un producto muy valorado que hoy protege este paisaje vivo.
           Las Terrazas de Moray,
@@ -177,14 +193,16 @@ programBreve: [
 
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826705/5.1_11zon_dt5nzz.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750033/5_9_11zon_y6t4zl.webp",
+                ],},
 
 
 
 
         {
-        ite_titulo: "Día Seis: Pueblo de Ollantaytambo - Pachamanca - Viaje a Machu Picchu (D, A)",
+        ite_titulo: "Día 6: Pueblo de Ollantaytambo - Pachamanca - Viaje a Machu Picchu (D, A)",
         ite_text: `
           Ollantaytambo Pueblo - Pueblo Inca Viviente - Primer Pueblo con Encanto del Perú, explore un antiguo pueblo en el Valle Sagrado, habitado ininterrumpidamente desde los años 1200s. 
           Conserva su trazado urbano inca original y su arquitectura de piedra. Sus habitantes mantienen antiguas prácticas y costumbres, mientras que sus canales de agua tradicionales crean una atmósfera única y auténtica. 
@@ -212,14 +230,16 @@ programBreve: [
 
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+       ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772826812/7.1_11zon_loxcq0.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1789594689/shutterstock_191087015_hswrbt.jpg",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772819075/6_11zon_tkua6z.webp",],},
 
 
 
 
         {
-        ite_titulo: "Día Siete: Visita a Machu Picchu - El Refugio de Pachacútec (B,L) ",
+        ite_titulo: "Día 7: Visita a Machu Picchu - El Refugio de Pachacútec (B,L) ",
         ite_text: `
           Traslado a la estación de autobuses en Machu Picchu Pueblo. Ascenso a la legendaria Ciudad Perdida de los Incas por un sinuoso y estrecho camino de grava, diseñado para superar la considerable diferencia de altitud entre Machu Picchu Pueblo y el sitio arqueológico.
           </br>
@@ -235,8 +255,10 @@ programBreve: [
          eleite un delicioso almuerzo en el Sanctuary Lodge, explorando la exquisita gastronomía local. El almuerzo sé encuentra contemplada en el itinerario. 
           </br>
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826812/7.1_11zon_loxcq0.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750023/7_11_11zon_c3jxa0.webp",
+                ],},
 
 
 
@@ -264,12 +286,16 @@ programBreve: [
 
           </br>
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772826862/9.1_11zon_kyz8ug.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750024/9_17_11zon_bzbvwq.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/8_11zon_11zon_facbyt.webp",
+                ],},
 
 
        {
-        ite_titulo: "Día Ocho: Cusco City Tour - Sacsayhuaman - Tipón, una Obra Maestra de la Ingeniería Hidráulica Inca - Iglesia Histórica de Andahuaylillas - La Capilla Sixtina de las Américas (D, A) ",
+        ite_titulo: "Día 8: Cusco City Tour - Sacsayhuaman - Tipón, una Obra Maestra de la Ingeniería Hidráulica Inca - Iglesia Histórica de Andahuaylillas - La Capilla Sixtina de las Américas (D, A) ",
         ite_text: `
          En el recorrido por Cusco, los visitantes se sumergen en la emoción de recorrer la antigua capital del Imperio Inca, una encantadora combinación de arquitectura inca y colonial. 
           </br>
@@ -291,8 +317,8 @@ programBreve: [
 
           Este recorrido por la ciudad habitada más antigua del hemisferio occidental también incluye el monumental sitio arqueológico inca de Sacsayhuamán. 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+          ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750025/10_18_11zon_hfqrhl.webp",],
+             },
 
 
 
@@ -323,8 +349,10 @@ programBreve: [
           </br>
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],  },
 
 
 
@@ -346,8 +374,10 @@ En este santuario, los incas lograron lo imposible: esculpieron la montaña para
           </br>
           Velada por cuenta propia. 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+         ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],  },
 
 
 
@@ -383,8 +413,10 @@ En este santuario, los incas lograron lo imposible: esculpieron la montaña para
 Olvídate de las prisas, empaca tus maletas y ven a descubrir por qué subir la Cuesta de San Blas no es solo llegar a un destino, sino vivir la verdadera esencia del corazón de los Andes.
 
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+       ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],},
  
 
 
@@ -421,8 +453,10 @@ Luego verás, algunos cafés con balcones que ofrecen vistas hacia la calle.
   
          
         `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+       ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ], },
 
 
 
@@ -465,8 +499,10 @@ Un espacio rodeado de jardines donde podrá disfrutar de una mezcla única de cu
 El Museo Larco también alberga la más fina colección de oro y plata del antiguo Perú y la famosa colección arqueológica erótica, una de las atracciones turísticas peruanas más visitadas.
 
          `,
-        ite_image: ["https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750032/1_13_11zon_nipbhx.webp"],
-      },
+        ite_image: [
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772819339/11.1_11zon_dtqdjp.webp",
+                    "https://res.cloudinary.com/dlgeap8h0/image/upload/v1772750031/11_19_11zon_bdo2w0.webp",
+                ],  },
  
 
  

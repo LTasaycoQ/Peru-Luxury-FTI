@@ -4,7 +4,7 @@ import { programsEs } from '../data/programs/programs-experiences-translations';
 import DetailPrograms from '../components/programs/ProgramsDetail/detailPrograms.astro';
 import Fondo from '../components/Fondo.astro';
 
-const data = programsEs.find(p => p.name === "ocho-noches");
+const data = programsEs.find(p => p.name === "ocho-noches-inolvidables");
 const fondo = "https://res.cloudinary.com/dlgeap8h0/image/upload/f_auto,q_auto/v1772828345/jeremiah-berman-9dmycbFE7mQ-unsplash_11zon_j7htro.webp";
 if (!data) return Astro.redirect('/404');
 
@@ -28,6 +28,9 @@ const pdfs = [
             imgCardLink={data.imgCardLink ?? []}
             pdfs={pdfs}
 
+
+            includes="Incluye:"
+            notincludes="No Incluye:"
 
             breve="Breve"
             itinerario="Itinerario"
